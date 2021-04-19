@@ -17,18 +17,24 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Current Fasting Goal" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BpN-Jg-WQo">
-                                <rect key="frame" x="121" y="73" width="172.5" height="21.5"/>
+                                <rect key="frame" x="121" y="76" width="172.5" height="21.5"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="heroID" value="goalTitle"/>
+                                </userDefinedRuntimeAttributes>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nfN-Qn-m0g" customClass="PaddedButton" customModule="Fasting" customModuleProvider="target">
-                                <rect key="frame" x="125" y="102.5" width="164" height="32"/>
+                                <rect key="frame" x="125" y="105.5" width="164" height="32"/>
                                 <color key="backgroundColor" systemColor="systemGray5Color"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
                                 <state key="normal" title="16:8 Intermittent Fast">
                                     <color key="titleColor" systemColor="secondaryLabelColor"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="heroID" value="goalButton"/>
+                                </userDefinedRuntimeAttributes>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Starting your fast now will complete it at" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.59999999999999998" translatesAutoresizingMaskIntoConstraints="NO" id="Aor-Tw-lpV">
                                 <rect key="frame" x="47.5" y="443" width="319" height="20.5"/>
@@ -49,29 +55,39 @@
                                 <state key="normal" title="Start Fast">
                                     <color key="titleColor" systemColor="secondaryLabelColor"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="heroID" value="actionButton"/>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="startFastButtonPressed:" destination="Whf-Hu-uzi" eventType="touchUpInside" id="pPA-Az-A1y"/>
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Ogt-1E-Vaf">
-                                <rect key="frame" x="132" y="251" width="150" height="75.5"/>
+                                <rect key="frame" x="132" y="252.5" width="150" height="75.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time since last fast" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yTo-Fw-5fe">
                                         <rect key="frame" x="0.0" y="0.0" width="150" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" systemColor="secondaryLabelColor"/>
                                         <nil key="highlightedColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="heroID" value="timerTitle"/>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1:45:07" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IV3-Pw-tKI">
                                         <rect key="frame" x="0.0" y="20.5" width="150" height="55"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="46"/>
                                         <color key="textColor" systemColor="secondaryLabelColor"/>
                                         <nil key="highlightedColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="heroID" value="timer"/>
+                                        </userDefinedRuntimeAttributes>
                                     </label>
                                 </subviews>
                             </stackView>
                             <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2tj-LV-xoE" userLabel="Countdown Spacer">
-                                <rect key="frame" x="404" y="134.5" width="10" height="308.5"/>
+                                <rect key="frame" x="404" y="137.5" width="10" height="305.5"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="10" id="ekg-qO-XLp"/>
@@ -93,7 +109,7 @@
                             <constraint firstItem="Ogt-1E-Vaf" firstAttribute="centerY" secondItem="2tj-LV-xoE" secondAttribute="centerY" id="gJw-FT-cRf"/>
                             <constraint firstItem="nfN-Qn-m0g" firstAttribute="top" secondItem="BpN-Jg-WQo" secondAttribute="bottom" constant="8" symbolic="YES" id="mKb-f4-A6P"/>
                             <constraint firstItem="2tj-LV-xoE" firstAttribute="top" secondItem="nfN-Qn-m0g" secondAttribute="bottom" id="nY8-Ra-1rC"/>
-                            <constraint firstItem="BpN-Jg-WQo" firstAttribute="top" secondItem="7no-kY-gdv" secondAttribute="top" constant="29" id="oFs-2o-yXR"/>
+                            <constraint firstItem="BpN-Jg-WQo" firstAttribute="top" secondItem="7no-kY-gdv" secondAttribute="top" constant="32" id="oFs-2o-yXR"/>
                             <constraint firstItem="Aor-Tw-lpV" firstAttribute="centerX" secondItem="7no-kY-gdv" secondAttribute="centerX" id="tmX-FL-3YA"/>
                             <constraint firstItem="Aor-Tw-lpV" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="7no-kY-gdv" secondAttribute="leading" constant="24" id="vaE-Kc-SZJ"/>
                             <constraint firstItem="7no-kY-gdv" firstAttribute="trailing" secondItem="2tj-LV-xoE" secondAttribute="trailing" id="yLx-1H-ZG9"/>

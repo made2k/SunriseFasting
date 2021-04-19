@@ -21,12 +21,28 @@
 		923C60F8262E0EC80055DA10 /* IdleTimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 923C60F7262E0EC80055DA10 /* IdleTimerViewController.swift */; };
 		923C60FB262E12260055DA10 /* FastingTimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 923C60FA262E12260055DA10 /* FastingTimerViewController.swift */; };
 		923C60FF262E12E60055DA10 /* DelayedImmutable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 923C60FE262E12E60055DA10 /* DelayedImmutable.swift */; };
+		923C6103262E16070055DA10 /* Hero in Frameworks */ = {isa = PBXBuildFile; productRef = 923C6102262E16070055DA10 /* Hero */; };
+		923C6104262E16070055DA10 /* Hero in Embed Frameworks */ = {isa = PBXBuildFile; productRef = 923C6102262E16070055DA10 /* Hero */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		9286D634262BBF2300C5FC42 /* FastingEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9286D633262BBF2300C5FC42 /* FastingEntry.swift */; };
 		9286D637262BBF4600C5FC42 /* FastingGoal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9286D636262BBF4600C5FC42 /* FastingGoal.swift */; };
 		9286D644262BC85000C5FC42 /* TimerContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9286D643262BC85000C5FC42 /* TimerContainerViewController.swift */; };
 		9286D649262BC91500C5FC42 /* UIViewController+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9286D648262BC91500C5FC42 /* UIViewController+Additions.swift */; };
 		92EDA5E0262BCD6700AAF516 /* IdleTimerViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92EDA5DF262BCD6700AAF516 /* IdleTimerViewController.storyboard */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		923C6105262E16070055DA10 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				923C6104262E16070055DA10 /* Hero in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		920296E6262A22ED00C85B22 /* Fasting.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Fasting.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -56,6 +72,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				923C6103262E16070055DA10 /* Hero in Frameworks */,
 				92029703262A2FB700C85B22 /* MKRingProgressView in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -211,6 +228,7 @@
 				920296E2262A22ED00C85B22 /* Sources */,
 				920296E3262A22ED00C85B22 /* Frameworks */,
 				920296E4262A22ED00C85B22 /* Resources */,
+				923C6105262E16070055DA10 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -219,6 +237,7 @@
 			name = Fasting;
 			packageProductDependencies = (
 				92029702262A2FB700C85B22 /* MKRingProgressView */,
+				923C6102262E16070055DA10 /* Hero */,
 			);
 			productName = Fasting;
 			productReference = 920296E6262A22ED00C85B22 /* Fasting.app */;
@@ -249,6 +268,7 @@
 			mainGroup = 920296DD262A22ED00C85B22;
 			packageReferences = (
 				92029701262A2FB700C85B22 /* XCRemoteSwiftPackageReference "MKRingProgressView" */,
+				923C6101262E16070055DA10 /* XCRemoteSwiftPackageReference "Hero" */,
 			);
 			productRefGroup = 920296E7262A22ED00C85B22 /* Products */;
 			projectDirPath = "";
@@ -495,6 +515,14 @@
 				minimumVersion = 2.2.3;
 			};
 		};
+		923C6101262E16070055DA10 /* XCRemoteSwiftPackageReference "Hero" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/HeroTransitions/Hero.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.6.1;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -502,6 +530,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 92029701262A2FB700C85B22 /* XCRemoteSwiftPackageReference "MKRingProgressView" */;
 			productName = MKRingProgressView;
+		};
+		923C6102262E16070055DA10 /* Hero */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 923C6101262E16070055DA10 /* XCRemoteSwiftPackageReference "Hero" */;
+			productName = Hero;
 		};
 /* End XCSwiftPackageProductDependency section */
 
