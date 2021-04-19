@@ -3,16 +3,24 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		920296EA262A22ED00C85B22 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920296E9262A22ED00C85B22 /* AppDelegate.swift */; };
 		920296EC262A22ED00C85B22 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920296EB262A22ED00C85B22 /* SceneDelegate.swift */; };
 		920296EE262A22ED00C85B22 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920296ED262A22ED00C85B22 /* ViewController.swift */; };
-		920296F1262A22ED00C85B22 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 920296EF262A22ED00C85B22 /* Main.storyboard */; };
 		920296F3262A22ED00C85B22 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 920296F2262A22ED00C85B22 /* Assets.xcassets */; };
 		920296F6262A22ED00C85B22 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 920296F4262A22ED00C85B22 /* LaunchScreen.storyboard */; };
+		92029703262A2FB700C85B22 /* MKRingProgressView in Frameworks */ = {isa = PBXBuildFile; productRef = 92029702262A2FB700C85B22 /* MKRingProgressView */; };
+		92029707262A4BF100C85B22 /* PersistData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92029706262A4BF100C85B22 /* PersistData.swift */; };
+		923C60E2262DDAC40055DA10 /* PaddedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 923C60E1262DDAC40055DA10 /* PaddedButton.swift */; };
+		923C60E6262DE18A0055DA10 /* FastingTimer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 923C60E5262DE18A0055DA10 /* FastingTimer.storyboard */; };
+		9286D634262BBF2300C5FC42 /* FastingEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9286D633262BBF2300C5FC42 /* FastingEntry.swift */; };
+		9286D637262BBF4600C5FC42 /* FastingGoal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9286D636262BBF4600C5FC42 /* FastingGoal.swift */; };
+		9286D644262BC85000C5FC42 /* TimerContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9286D643262BC85000C5FC42 /* TimerContainerViewController.swift */; };
+		9286D649262BC91500C5FC42 /* UIViewController+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9286D648262BC91500C5FC42 /* UIViewController+Additions.swift */; };
+		92EDA5E0262BCD6700AAF516 /* IdleTimerViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92EDA5DF262BCD6700AAF516 /* IdleTimerViewController.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,10 +28,17 @@
 		920296E9262A22ED00C85B22 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		920296EB262A22ED00C85B22 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		920296ED262A22ED00C85B22 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		920296F0262A22ED00C85B22 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		920296F2262A22ED00C85B22 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		920296F5262A22ED00C85B22 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		920296F7262A22ED00C85B22 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		92029706262A4BF100C85B22 /* PersistData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistData.swift; sourceTree = "<group>"; };
+		923C60E1262DDAC40055DA10 /* PaddedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaddedButton.swift; sourceTree = "<group>"; };
+		923C60E5262DE18A0055DA10 /* FastingTimer.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FastingTimer.storyboard; sourceTree = "<group>"; };
+		9286D633262BBF2300C5FC42 /* FastingEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FastingEntry.swift; sourceTree = "<group>"; };
+		9286D636262BBF4600C5FC42 /* FastingGoal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FastingGoal.swift; sourceTree = "<group>"; };
+		9286D643262BC85000C5FC42 /* TimerContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerContainerViewController.swift; sourceTree = "<group>"; };
+		9286D648262BC91500C5FC42 /* UIViewController+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Additions.swift"; sourceTree = "<group>"; };
+		92EDA5DF262BCD6700AAF516 /* IdleTimerViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = IdleTimerViewController.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +46,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				92029703262A2FB700C85B22 /* MKRingProgressView in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,15 +72,102 @@
 		920296E8262A22ED00C85B22 /* Fasting */ = {
 			isa = PBXGroup;
 			children = (
-				920296E9262A22ED00C85B22 /* AppDelegate.swift */,
-				920296EB262A22ED00C85B22 /* SceneDelegate.swift */,
+				9286D639262BC6A800C5FC42 /* Application */,
+				9286D63C262BC75500C5FC42 /* Flows */,
+				9286D632262BBF0E00C5FC42 /* Models */,
+				9286D646262BC8E800C5FC42 /* Utilities */,
+				923C60E0262DDAAD0055DA10 /* Views */,
 				920296ED262A22ED00C85B22 /* ViewController.swift */,
-				920296EF262A22ED00C85B22 /* Main.storyboard */,
-				920296F2262A22ED00C85B22 /* Assets.xcassets */,
 				920296F4262A22ED00C85B22 /* LaunchScreen.storyboard */,
-				920296F7262A22ED00C85B22 /* Info.plist */,
+				92029706262A4BF100C85B22 /* PersistData.swift */,
 			);
 			path = Fasting;
+			sourceTree = "<group>";
+		};
+		923C60E0262DDAAD0055DA10 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				923C60E1262DDAC40055DA10 /* PaddedButton.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		923C60E4262DE1790055DA10 /* Fasting */ = {
+			isa = PBXGroup;
+			children = (
+				923C60E5262DE18A0055DA10 /* FastingTimer.storyboard */,
+			);
+			path = Fasting;
+			sourceTree = "<group>";
+		};
+		9286D632262BBF0E00C5FC42 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				9286D633262BBF2300C5FC42 /* FastingEntry.swift */,
+				9286D636262BBF4600C5FC42 /* FastingGoal.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		9286D639262BC6A800C5FC42 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				920296E9262A22ED00C85B22 /* AppDelegate.swift */,
+				920296EB262A22ED00C85B22 /* SceneDelegate.swift */,
+				920296F2262A22ED00C85B22 /* Assets.xcassets */,
+				920296F7262A22ED00C85B22 /* Info.plist */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		9286D63C262BC75500C5FC42 /* Flows */ = {
+			isa = PBXGroup;
+			children = (
+				9286D63D262BC7AD00C5FC42 /* Timer */,
+			);
+			path = Flows;
+			sourceTree = "<group>";
+		};
+		9286D63D262BC7AD00C5FC42 /* Timer */ = {
+			isa = PBXGroup;
+			children = (
+				9286D63E262BC7EE00C5FC42 /* Container */,
+				923C60E4262DE1790055DA10 /* Fasting */,
+				92EDA5DE262BCD5000AAF516 /* Idle */,
+			);
+			path = Timer;
+			sourceTree = "<group>";
+		};
+		9286D63E262BC7EE00C5FC42 /* Container */ = {
+			isa = PBXGroup;
+			children = (
+				9286D643262BC85000C5FC42 /* TimerContainerViewController.swift */,
+			);
+			path = Container;
+			sourceTree = "<group>";
+		};
+		9286D646262BC8E800C5FC42 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				9286D647262BC8F200C5FC42 /* Extensions */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		9286D647262BC8F200C5FC42 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				9286D648262BC91500C5FC42 /* UIViewController+Additions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		92EDA5DE262BCD5000AAF516 /* Idle */ = {
+			isa = PBXGroup;
+			children = (
+				92EDA5DF262BCD6700AAF516 /* IdleTimerViewController.storyboard */,
+			);
+			path = Idle;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +186,9 @@
 			dependencies = (
 			);
 			name = Fasting;
+			packageProductDependencies = (
+				92029702262A2FB700C85B22 /* MKRingProgressView */,
+			);
 			productName = Fasting;
 			productReference = 920296E6262A22ED00C85B22 /* Fasting.app */;
 			productType = "com.apple.product-type.application";
@@ -110,6 +216,9 @@
 				Base,
 			);
 			mainGroup = 920296DD262A22ED00C85B22;
+			packageReferences = (
+				92029701262A2FB700C85B22 /* XCRemoteSwiftPackageReference "MKRingProgressView" */,
+			);
 			productRefGroup = 920296E7262A22ED00C85B22 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -126,7 +235,8 @@
 			files = (
 				920296F6262A22ED00C85B22 /* LaunchScreen.storyboard in Resources */,
 				920296F3262A22ED00C85B22 /* Assets.xcassets in Resources */,
-				920296F1262A22ED00C85B22 /* Main.storyboard in Resources */,
+				92EDA5E0262BCD6700AAF516 /* IdleTimerViewController.storyboard in Resources */,
+				923C60E6262DE18A0055DA10 /* FastingTimer.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,8 +247,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9286D644262BC85000C5FC42 /* TimerContainerViewController.swift in Sources */,
 				920296EE262A22ED00C85B22 /* ViewController.swift in Sources */,
+				9286D634262BBF2300C5FC42 /* FastingEntry.swift in Sources */,
 				920296EA262A22ED00C85B22 /* AppDelegate.swift in Sources */,
+				9286D649262BC91500C5FC42 /* UIViewController+Additions.swift in Sources */,
+				92029707262A4BF100C85B22 /* PersistData.swift in Sources */,
+				9286D637262BBF4600C5FC42 /* FastingGoal.swift in Sources */,
+				923C60E2262DDAC40055DA10 /* PaddedButton.swift in Sources */,
 				920296EC262A22ED00C85B22 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -146,14 +262,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		920296EF262A22ED00C85B22 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				920296F0262A22ED00C85B22 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		920296F4262A22ED00C85B22 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -288,7 +396,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8QEC3K9K4B;
-				INFOPLIST_FILE = Fasting/Info.plist;
+				INFOPLIST_FILE = Fasting/Application/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -296,7 +404,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.zachmcgaughey.Fasting;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -307,7 +415,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8QEC3K9K4B;
-				INFOPLIST_FILE = Fasting/Info.plist;
+				INFOPLIST_FILE = Fasting/Application/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -315,7 +423,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.zachmcgaughey.Fasting;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -341,6 +449,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		92029701262A2FB700C85B22 /* XCRemoteSwiftPackageReference "MKRingProgressView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/maxkonovalov/MKRingProgressView";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.2.3;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		92029702262A2FB700C85B22 /* MKRingProgressView */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 92029701262A2FB700C85B22 /* XCRemoteSwiftPackageReference "MKRingProgressView" */;
+			productName = MKRingProgressView;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 920296DE262A22ED00C85B22 /* Project object */;
 }
