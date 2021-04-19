@@ -17,23 +17,49 @@ final class TimerContainerViewController: UIViewController {
   
   private func loadCurrentState() {
     
-    if let _: FastingModel = UserDefaults.standard.getObject(forKey: "currentFast") {
-      
-      let storyboard = UIStoryboard(name: "FastingTimer", bundle: nil)
-      let controller = storyboard.instantiateViewController(identifier: "controller")
+    if let currentFast = DataManger.shared.loadCurrentFast() {
+      showTimerState(currentFast)
 
-      add(controller, to: view)
-      
     } else {
-      
-      let storyboard = UIStoryboard(name: "IdleTimerViewController", bundle: nil)
-      let controller = storyboard.instantiateViewController(identifier: "controller")
-      
-      add(controller, to: view)
-      
+      showIdleState()
     }
     
+  }
+  
+  private func showIdleState() {
+    children.forEach { $0.remove() }
     
+    let controller = IdleTimerViewController.create()
+    controller.onFastStarted = { [weak self] in
+      self?.startFast()
+    }
+    
+    add(controller, to: view)
+  }
+  
+  private func showTimerState(_ model: FastingModel) {
+    children.forEach { $0.remove() }
+    
+    let controller = FastingTimerViewController.create(model)
+    controller.onFastEnded = { [weak self] in
+      self?.stopFast($0)
+    }
+
+    add(controller, to: view)
+  }
+  
+  private func startFast() {
+    let model = FastingModel(goal: .sixteen)
+    model.saveToDisk()
+    
+    showTimerState(model)
+  }
+  
+  private func stopFast(_ model: FastingModel) {
+    model.endTime = Date()
+    model.saveToDisk()
+    
+    showIdleState()
   }
   
 }

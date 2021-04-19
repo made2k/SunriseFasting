@@ -16,6 +16,11 @@
 		92029707262A4BF100C85B22 /* PersistData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92029706262A4BF100C85B22 /* PersistData.swift */; };
 		923C60E2262DDAC40055DA10 /* PaddedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 923C60E1262DDAC40055DA10 /* PaddedButton.swift */; };
 		923C60E6262DE18A0055DA10 /* FastingTimer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 923C60E5262DE18A0055DA10 /* FastingTimer.storyboard */; };
+		923C60EC262DF0B50055DA10 /* Fasting.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 923C60EA262DF0B50055DA10 /* Fasting.xcdatamodeld */; };
+		923C60F2262E003C0055DA10 /* DataManger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 923C60F1262E003C0055DA10 /* DataManger.swift */; };
+		923C60F8262E0EC80055DA10 /* IdleTimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 923C60F7262E0EC80055DA10 /* IdleTimerViewController.swift */; };
+		923C60FB262E12260055DA10 /* FastingTimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 923C60FA262E12260055DA10 /* FastingTimerViewController.swift */; };
+		923C60FF262E12E60055DA10 /* DelayedImmutable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 923C60FE262E12E60055DA10 /* DelayedImmutable.swift */; };
 		9286D634262BBF2300C5FC42 /* FastingEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9286D633262BBF2300C5FC42 /* FastingEntry.swift */; };
 		9286D637262BBF4600C5FC42 /* FastingGoal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9286D636262BBF4600C5FC42 /* FastingGoal.swift */; };
 		9286D644262BC85000C5FC42 /* TimerContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9286D643262BC85000C5FC42 /* TimerContainerViewController.swift */; };
@@ -34,6 +39,11 @@
 		92029706262A4BF100C85B22 /* PersistData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistData.swift; sourceTree = "<group>"; };
 		923C60E1262DDAC40055DA10 /* PaddedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaddedButton.swift; sourceTree = "<group>"; };
 		923C60E5262DE18A0055DA10 /* FastingTimer.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FastingTimer.storyboard; sourceTree = "<group>"; };
+		923C60EB262DF0B50055DA10 /* Fasting.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Fasting.xcdatamodel; sourceTree = "<group>"; };
+		923C60F1262E003C0055DA10 /* DataManger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManger.swift; sourceTree = "<group>"; };
+		923C60F7262E0EC80055DA10 /* IdleTimerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdleTimerViewController.swift; sourceTree = "<group>"; };
+		923C60FA262E12260055DA10 /* FastingTimerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FastingTimerViewController.swift; sourceTree = "<group>"; };
+		923C60FE262E12E60055DA10 /* DelayedImmutable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DelayedImmutable.swift; sourceTree = "<group>"; };
 		9286D633262BBF2300C5FC42 /* FastingEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FastingEntry.swift; sourceTree = "<group>"; };
 		9286D636262BBF4600C5FC42 /* FastingGoal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FastingGoal.swift; sourceTree = "<group>"; };
 		9286D643262BC85000C5FC42 /* TimerContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerContainerViewController.swift; sourceTree = "<group>"; };
@@ -77,6 +87,7 @@
 				9286D632262BBF0E00C5FC42 /* Models */,
 				9286D646262BC8E800C5FC42 /* Utilities */,
 				923C60E0262DDAAD0055DA10 /* Views */,
+				923C60E9262DF09F0055DA10 /* Storage */,
 				920296ED262A22ED00C85B22 /* ViewController.swift */,
 				920296F4262A22ED00C85B22 /* LaunchScreen.storyboard */,
 				92029706262A4BF100C85B22 /* PersistData.swift */,
@@ -96,8 +107,26 @@
 			isa = PBXGroup;
 			children = (
 				923C60E5262DE18A0055DA10 /* FastingTimer.storyboard */,
+				923C60FA262E12260055DA10 /* FastingTimerViewController.swift */,
 			);
 			path = Fasting;
+			sourceTree = "<group>";
+		};
+		923C60E9262DF09F0055DA10 /* Storage */ = {
+			isa = PBXGroup;
+			children = (
+				923C60EA262DF0B50055DA10 /* Fasting.xcdatamodeld */,
+				923C60F1262E003C0055DA10 /* DataManger.swift */,
+			);
+			path = Storage;
+			sourceTree = "<group>";
+		};
+		923C60FD262E12D80055DA10 /* PropertyWrappers */ = {
+			isa = PBXGroup;
+			children = (
+				923C60FE262E12E60055DA10 /* DelayedImmutable.swift */,
+			);
+			path = PropertyWrappers;
 			sourceTree = "<group>";
 		};
 		9286D632262BBF0E00C5FC42 /* Models */ = {
@@ -149,6 +178,7 @@
 		9286D646262BC8E800C5FC42 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				923C60FD262E12D80055DA10 /* PropertyWrappers */,
 				9286D647262BC8F200C5FC42 /* Extensions */,
 			);
 			path = Utilities;
@@ -166,6 +196,7 @@
 			isa = PBXGroup;
 			children = (
 				92EDA5DF262BCD6700AAF516 /* IdleTimerViewController.storyboard */,
+				923C60F7262E0EC80055DA10 /* IdleTimerViewController.swift */,
 			);
 			path = Idle;
 			sourceTree = "<group>";
@@ -249,10 +280,15 @@
 			files = (
 				9286D644262BC85000C5FC42 /* TimerContainerViewController.swift in Sources */,
 				920296EE262A22ED00C85B22 /* ViewController.swift in Sources */,
+				923C60FB262E12260055DA10 /* FastingTimerViewController.swift in Sources */,
 				9286D634262BBF2300C5FC42 /* FastingEntry.swift in Sources */,
 				920296EA262A22ED00C85B22 /* AppDelegate.swift in Sources */,
 				9286D649262BC91500C5FC42 /* UIViewController+Additions.swift in Sources */,
 				92029707262A4BF100C85B22 /* PersistData.swift in Sources */,
+				923C60F8262E0EC80055DA10 /* IdleTimerViewController.swift in Sources */,
+				923C60EC262DF0B50055DA10 /* Fasting.xcdatamodeld in Sources */,
+				923C60FF262E12E60055DA10 /* DelayedImmutable.swift in Sources */,
+				923C60F2262E003C0055DA10 /* DataManger.swift in Sources */,
 				9286D637262BBF4600C5FC42 /* FastingGoal.swift in Sources */,
 				923C60E2262DDAC40055DA10 /* PaddedButton.swift in Sources */,
 				920296EC262A22ED00C85B22 /* SceneDelegate.swift in Sources */,
@@ -468,6 +504,19 @@
 			productName = MKRingProgressView;
 		};
 /* End XCSwiftPackageProductDependency section */
+
+/* Begin XCVersionGroup section */
+		923C60EA262DF0B50055DA10 /* Fasting.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				923C60EB262DF0B50055DA10 /* Fasting.xcdatamodel */,
+			);
+			currentVersion = 923C60EB262DF0B50055DA10 /* Fasting.xcdatamodel */;
+			path = Fasting.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 920296DE262A22ED00C85B22 /* Project object */;
 }

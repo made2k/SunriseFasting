@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Idle Timer View Controller-->
         <scene sceneID="N5J-at-ZOG">
             <objects>
-                <viewController storyboardIdentifier="controller" id="Whf-Hu-uzi" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="controller" id="Whf-Hu-uzi" customClass="IdleTimerViewController" customModule="Fasting" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="VhA-go-Vpj">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -49,6 +49,9 @@
                                 <state key="normal" title="Start Fast">
                                     <color key="titleColor" systemColor="secondaryLabelColor"/>
                                 </state>
+                                <connections>
+                                    <action selector="startFastButtonPressed:" destination="Whf-Hu-uzi" eventType="touchUpInside" id="pPA-Az-A1y"/>
+                                </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Ogt-1E-Vaf">
                                 <rect key="frame" x="132" y="251" width="150" height="75.5"/>

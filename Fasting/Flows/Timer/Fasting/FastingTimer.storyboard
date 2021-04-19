@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Fasting Timer View Controller-->
         <scene sceneID="0dI-rH-SGf">
             <objects>
-                <viewController storyboardIdentifier="controller" id="xUa-Di-n0f" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="controller" id="xUa-Di-n0f" customClass="FastingTimerViewController" customModule="Fasting" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="MeC-Z1-Sli">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -122,6 +122,9 @@
                                 <state key="normal" title="End Fast">
                                     <color key="titleColor" systemColor="secondaryLabelColor"/>
                                 </state>
+                                <connections>
+                                    <action selector="endFastButtonPressed:" destination="xUa-Di-n0f" eventType="touchUpInside" id="Onu-qF-pp7"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDw-2r-5md"/>
