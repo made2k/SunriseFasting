@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "MKRingProgressView",
+        "repositoryURL": "https://github.com/maxkonovalov/MKRingProgressView",
+        "state": {
+          "branch": null,
+          "revision": "01ba2b4c24a0874bc53bbd846916d993547eda16",
+          "version": "2.2.3"
+        }
+      }
+    ]
+  },
+  "version": 1
+}
