@@ -35,6 +35,9 @@
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="heroID" value="goalButton"/>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="fastingGoalButtonPressed:" destination="Whf-Hu-uzi" eventType="touchUpInside" id="MGO-IY-khF"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Starting your fast now will complete it at" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.59999999999999998" translatesAutoresizingMaskIntoConstraints="NO" id="Aor-Tw-lpV">
                                 <rect key="frame" x="47.5" y="443" width="319" height="20.5"/>
@@ -119,6 +122,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="fastingGoalButton" destination="nfN-Qn-m0g" id="Fwx-2r-aD1"/>
                         <outlet property="lastFastIntervalLabel" destination="IV3-Pw-tKI" id="XfP-Du-Nj9"/>
                         <outlet property="lastFastTitleLabel" destination="yTo-Fw-5fe" id="xQE-AQ-aY2"/>
                         <outlet property="upcomingFastEndLabel" destination="WkC-Yr-aqK" id="40d-yk-RER"/>

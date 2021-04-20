@@ -19,6 +19,7 @@ final class IdleTimerViewController: UIViewController {
   }
   
   var onFastStarted: (() -> Void)?
+  var onGoalChange: GoalSelectionHandler?
   
   @DelayedImmutable
   private var lastFast: FastingModel?
@@ -26,9 +27,10 @@ final class IdleTimerViewController: UIViewController {
   private var clockTimer: Timer?
   private var completionTimer: Timer?
   
-  @IBOutlet var lastFastTitleLabel: UILabel!
-  @IBOutlet var lastFastIntervalLabel: UILabel!
-  @IBOutlet var upcomingFastEndLabel: UILabel!
+  @IBOutlet private var fastingGoalButton: UIButton!
+  @IBOutlet private var lastFastTitleLabel: UILabel!
+  @IBOutlet private var lastFastIntervalLabel: UILabel!
+  @IBOutlet private var upcomingFastEndLabel: UILabel!
   
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -42,7 +44,14 @@ final class IdleTimerViewController: UIViewController {
     }
     
   }
-    
+  
+  @IBAction func fastingGoalButtonPressed(_ sender: Any) {
+    onGoalChange?() { [weak self] newGoal in
+      self?.fastingGoalButton.setTitle(newGoal.title, for: .normal)
+      self?.updateCompletionInfo()
+    }
+  }
+  
   @IBAction private func startFastButtonPressed(_ sender: Any) {
     onFastStarted?()
   }
@@ -56,10 +65,15 @@ extension IdleTimerViewController {
   private func setupView() {
     setupFonts()
     setupCompletionUpdated()
+    setupButtons()
   }
   
   private func setupFonts() {
     lastFastIntervalLabel.font = UIFont.monospacedDigitSystemFont(ofSize: 46, weight: .regular)
+  }
+  
+  private func setupButtons() {
+    fastingGoalButton.setTitle(FastingGoal.current.title, for: .normal)
   }
   
   private func setupLastFastTimer(_ model: FastingModel) {
@@ -72,7 +86,6 @@ extension IdleTimerViewController {
     intervalTimer?.tolerance = 0.3
     
   }
-
   
   private func setupCompletionUpdated() {
     updateCompletionInfo()
@@ -115,7 +128,7 @@ extension IdleTimerViewController {
   }
 
   private func updateCompletionInfo() {
-    let targetEnd: Date = Date().dateByAdding(16, .hour).date
+    let targetEnd: Date = Date().addingTimeInterval(FastingGoal.current.duration)
     upcomingFastEndLabel.text = StringFormatter.colloquialDateTime(from: targetEnd)
   }
   

@@ -29,10 +29,16 @@
 		923C6112262E36B20055DA10 /* DatePicker.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 923C6111262E36B20055DA10 /* DatePicker.storyboard */; };
 		923C6114262E37520055DA10 /* DatePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 923C6113262E37520055DA10 /* DatePickerViewController.swift */; };
 		9250ECCC262E4D41001B9DA8 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9250ECCB262E4D41001B9DA8 /* Colors.xcassets */; };
+		9285302A262F39A000053A7E /* FastingGoal.strings in Resources */ = {isa = PBXBuildFile; fileRef = 92853029262F39A000053A7E /* FastingGoal.strings */; };
 		9286D634262BBF2300C5FC42 /* FastingEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9286D633262BBF2300C5FC42 /* FastingEntry.swift */; };
 		9286D637262BBF4600C5FC42 /* FastingGoal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9286D636262BBF4600C5FC42 /* FastingGoal.swift */; };
 		9286D644262BC85000C5FC42 /* TimerContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9286D643262BC85000C5FC42 /* TimerContainerViewController.swift */; };
 		9286D649262BC91500C5FC42 /* UIViewController+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9286D648262BC91500C5FC42 /* UIViewController+Additions.swift */; };
+		928F44D7262F7B9400EB4B56 /* CustomGoalModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 928F44D5262F786500EB4B56 /* CustomGoalModalViewController.swift */; };
+		928F44D8262F7B9700EB4B56 /* CustomGoalModal.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 928F44D6262F786500EB4B56 /* CustomGoalModal.storyboard */; };
+		928F44DB262F8BDB00EB4B56 /* GoalSelectionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 928F44DA262F8BDB00EB4B56 /* GoalSelectionHandler.swift */; };
+		92B3ED2A262F245F001370C1 /* GoalPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B3ED29262F245F001370C1 /* GoalPickerView.swift */; };
+		92B3ED2C262F2874001370C1 /* GoalPickerItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B3ED2B262F2874001370C1 /* GoalPickerItemView.swift */; };
 		92EDA5E0262BCD6700AAF516 /* IdleTimerViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92EDA5DF262BCD6700AAF516 /* IdleTimerViewController.storyboard */; };
 /* End PBXBuildFile section */
 
@@ -71,10 +77,16 @@
 		923C6111262E36B20055DA10 /* DatePicker.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DatePicker.storyboard; sourceTree = "<group>"; };
 		923C6113262E37520055DA10 /* DatePickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerViewController.swift; sourceTree = "<group>"; };
 		9250ECCB262E4D41001B9DA8 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		92853029262F39A000053A7E /* FastingGoal.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = FastingGoal.strings; sourceTree = "<group>"; };
 		9286D633262BBF2300C5FC42 /* FastingEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FastingEntry.swift; sourceTree = "<group>"; };
 		9286D636262BBF4600C5FC42 /* FastingGoal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FastingGoal.swift; sourceTree = "<group>"; };
 		9286D643262BC85000C5FC42 /* TimerContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerContainerViewController.swift; sourceTree = "<group>"; };
 		9286D648262BC91500C5FC42 /* UIViewController+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Additions.swift"; sourceTree = "<group>"; };
+		928F44D5262F786500EB4B56 /* CustomGoalModalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomGoalModalViewController.swift; sourceTree = "<group>"; };
+		928F44D6262F786500EB4B56 /* CustomGoalModal.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CustomGoalModal.storyboard; sourceTree = "<group>"; };
+		928F44DA262F8BDB00EB4B56 /* GoalSelectionHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalSelectionHandler.swift; sourceTree = "<group>"; };
+		92B3ED29262F245F001370C1 /* GoalPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalPickerView.swift; sourceTree = "<group>"; };
+		92B3ED2B262F2874001370C1 /* GoalPickerItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalPickerItemView.swift; sourceTree = "<group>"; };
 		92EDA5DF262BCD6700AAF516 /* IdleTimerViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = IdleTimerViewController.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -169,17 +181,26 @@
 		923C6110262E36A70055DA10 /* DatePicker */ = {
 			isa = PBXGroup;
 			children = (
-				923C6111262E36B20055DA10 /* DatePicker.storyboard */,
 				923C6113262E37520055DA10 /* DatePickerViewController.swift */,
+				923C6111262E36B20055DA10 /* DatePicker.storyboard */,
 			);
 			path = DatePicker;
+			sourceTree = "<group>";
+		};
+		92853028262F398C00053A7E /* FastingGoal */ = {
+			isa = PBXGroup;
+			children = (
+				9286D636262BBF4600C5FC42 /* FastingGoal.swift */,
+				92853029262F39A000053A7E /* FastingGoal.strings */,
+			);
+			path = FastingGoal;
 			sourceTree = "<group>";
 		};
 		9286D632262BBF0E00C5FC42 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				92853028262F398C00053A7E /* FastingGoal */,
 				9286D633262BBF2300C5FC42 /* FastingEntry.swift */,
-				9286D636262BBF4600C5FC42 /* FastingGoal.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -199,6 +220,8 @@
 		9286D63C262BC75500C5FC42 /* Flows */ = {
 			isa = PBXGroup;
 			children = (
+				928F44D4262F784400EB4B56 /* CustomGoalModal */,
+				92B3ED28262F2433001370C1 /* GoalPicker */,
 				923C6110262E36A70055DA10 /* DatePicker */,
 				9286D63D262BC7AD00C5FC42 /* Timer */,
 			);
@@ -226,9 +249,10 @@
 		9286D646262BC8E800C5FC42 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				9286D647262BC8F200C5FC42 /* Extensions */,
 				923C6107262E23690055DA10 /* Formatters */,
 				923C60FD262E12D80055DA10 /* PropertyWrappers */,
-				9286D647262BC8F200C5FC42 /* Extensions */,
+				928F44D9262F8BCC00EB4B56 /* TypeAliases */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -241,11 +265,37 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		928F44D4262F784400EB4B56 /* CustomGoalModal */ = {
+			isa = PBXGroup;
+			children = (
+				928F44D5262F786500EB4B56 /* CustomGoalModalViewController.swift */,
+				928F44D6262F786500EB4B56 /* CustomGoalModal.storyboard */,
+			);
+			path = CustomGoalModal;
+			sourceTree = "<group>";
+		};
+		928F44D9262F8BCC00EB4B56 /* TypeAliases */ = {
+			isa = PBXGroup;
+			children = (
+				928F44DA262F8BDB00EB4B56 /* GoalSelectionHandler.swift */,
+			);
+			path = TypeAliases;
+			sourceTree = "<group>";
+		};
+		92B3ED28262F2433001370C1 /* GoalPicker */ = {
+			isa = PBXGroup;
+			children = (
+				92B3ED29262F245F001370C1 /* GoalPickerView.swift */,
+				92B3ED2B262F2874001370C1 /* GoalPickerItemView.swift */,
+			);
+			path = GoalPicker;
+			sourceTree = "<group>";
+		};
 		92EDA5DE262BCD5000AAF516 /* Idle */ = {
 			isa = PBXGroup;
 			children = (
-				92EDA5DF262BCD6700AAF516 /* IdleTimerViewController.storyboard */,
 				923C60F7262E0EC80055DA10 /* IdleTimerViewController.swift */,
+				92EDA5DF262BCD6700AAF516 /* IdleTimerViewController.storyboard */,
 			);
 			path = Idle;
 			sourceTree = "<group>";
@@ -322,6 +372,8 @@
 				920296F3262A22ED00C85B22 /* Assets.xcassets in Resources */,
 				92EDA5E0262BCD6700AAF516 /* IdleTimerViewController.storyboard in Resources */,
 				9250ECCC262E4D41001B9DA8 /* Colors.xcassets in Resources */,
+				928F44D8262F7B9700EB4B56 /* CustomGoalModal.storyboard in Resources */,
+				9285302A262F39A000053A7E /* FastingGoal.strings in Resources */,
 				923C60E6262DE18A0055DA10 /* FastingTimer.storyboard in Resources */,
 				923C6112262E36B20055DA10 /* DatePicker.storyboard in Resources */,
 			);
@@ -334,6 +386,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				92B3ED2C262F2874001370C1 /* GoalPickerItemView.swift in Sources */,
 				9286D644262BC85000C5FC42 /* TimerContainerViewController.swift in Sources */,
 				920296EE262A22ED00C85B22 /* ViewController.swift in Sources */,
 				923C60FB262E12260055DA10 /* FastingTimerViewController.swift in Sources */,
@@ -345,8 +398,11 @@
 				92029707262A4BF100C85B22 /* PersistData.swift in Sources */,
 				923C60F8262E0EC80055DA10 /* IdleTimerViewController.swift in Sources */,
 				923C60EC262DF0B50055DA10 /* Fasting.xcdatamodeld in Sources */,
+				928F44DB262F8BDB00EB4B56 /* GoalSelectionHandler.swift in Sources */,
 				923C60FF262E12E60055DA10 /* DelayedImmutable.swift in Sources */,
+				92B3ED2A262F245F001370C1 /* GoalPickerView.swift in Sources */,
 				923C60F2262E003C0055DA10 /* DataManger.swift in Sources */,
+				928F44D7262F7B9400EB4B56 /* CustomGoalModalViewController.swift in Sources */,
 				9286D637262BBF4600C5FC42 /* FastingGoal.swift in Sources */,
 				923C60E2262DDAC40055DA10 /* PaddedButton.swift in Sources */,
 				920296EC262A22ED00C85B22 /* SceneDelegate.swift in Sources */,

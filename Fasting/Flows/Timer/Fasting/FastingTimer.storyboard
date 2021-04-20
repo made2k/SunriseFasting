@@ -3,7 +3,6 @@
     <device id="retina4_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
-        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -36,9 +35,12 @@
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="heroID" value="goalButton"/>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="editGoalButtonPressed:" destination="xUa-Di-n0f" eventType="touchUpInside" id="0T6-0r-BAJ"/>
+                                </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="hl9-ic-CNz">
-                                <rect key="frame" x="18" y="125.5" width="124.5" height="60.5"/>
+                                <rect key="frame" x="18" y="125.5" width="124.5" height="72.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" text="Fast Started" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eos-mf-j7W">
                                         <rect key="frame" x="14.5" y="0.0" width="95.5" height="20.5"/>
@@ -53,10 +55,9 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="1000" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LVv-i7-kfM">
-                                        <rect key="frame" x="17" y="38.5" width="90" height="22"/>
+                                        <rect key="frame" x="24.5" y="38.5" width="75" height="34"/>
                                         <state key="normal" title="Edit Start">
                                             <color key="titleColor" systemColor="systemBlueColor"/>
-                                            <imageReference key="image" image="pencil" catalog="system" symbolScale="small"/>
                                         </state>
                                         <connections>
                                             <action selector="editStartButtonPressed:" destination="xUa-Di-n0f" eventType="touchUpInside" id="uMJ-hQ-0h4"/>
@@ -82,7 +83,7 @@
                                 </subviews>
                             </stackView>
                             <view contentMode="scaleToFill" verticalCompressionResistancePriority="749" translatesAutoresizingMaskIntoConstraints="NO" id="Tur-Hm-s51" customClass="MKRingProgressView">
-                                <rect key="frame" x="24" y="202" width="272" height="272"/>
+                                <rect key="frame" x="24" y="214" width="272" height="272"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="i6x-Ds-7c3">
                                         <rect key="frame" x="42.5" y="99" width="187.5" height="74.5"/>
@@ -117,7 +118,7 @@
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KL6-HJ-dfh" customClass="PaddedButton" customModule="Fasting" customModuleProvider="target">
-                                <rect key="frame" x="127.5" y="498" width="65" height="32"/>
+                                <rect key="frame" x="127.5" y="510" width="65" height="32"/>
                                 <color key="backgroundColor" systemColor="systemGray5Color"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
                                 <state key="normal" title="End Fast">
@@ -155,6 +156,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="currentGoalButton" destination="R8x-Vw-SRy" id="Ona-Nw-CEp"/>
                         <outlet property="elapsedTimeLabel" destination="Ftx-NK-Uiy" id="qV0-IX-WLC"/>
                         <outlet property="elapsedTimeTitleLabel" destination="45z-r4-8yf" id="MOi-kp-4dI"/>
                         <outlet property="fastStartedLabel" destination="7wg-kt-te1" id="cc7-iu-ynI"/>
@@ -168,7 +170,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="pencil" catalog="system" width="128" height="113"/>
         <systemColor name="secondaryLabelColor">
             <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

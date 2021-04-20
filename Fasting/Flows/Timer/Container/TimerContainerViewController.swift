@@ -6,6 +6,7 @@
 //
 
 import Hero
+import SwiftUI
 import UIKit
 
 final class TimerContainerViewController: UIViewController {
@@ -86,6 +87,59 @@ extension TimerContainerViewController {
   
 }
 
+// MARK: - Goal Updating
+
+extension TimerContainerViewController {
+
+  private func presentGoalSelection(_ callback: @escaping (FastingGoal) -> Void) {
+    
+    // the completion block saves the goal and calls back to the original caller
+    // with the newly selected goal.
+    let completionBlock: (FastingGoal) -> Void = { newGoal in
+      FastingGoal.current = newGoal
+      callback(newGoal)
+    }
+    
+    let goalSelectedBlock: (FastingGoal) -> Void = { [weak self] newGoal in
+      completionBlock(newGoal)
+      self?.presentedViewController?.dismiss(animated: true, completion: nil)
+    }
+    
+    // The custom block will present the custom entry, then callback to the completion block
+    let customBlock: () -> Void = { [weak self] in
+      
+      // Dismiss the goal selection controller then present our custom modal
+      self?.presentedViewController?.dismiss(animated: true) {
+        self?.presentCustomGoalSelection(completionBlock)
+      }
+      
+    }
+    
+    let view = GoalPickerView(onGoalSelected: goalSelectedBlock, onCustomSelected: customBlock)
+    let controller = UIHostingController(rootView: view)
+    
+    present(controller, animated: true, completion: nil)
+  }
+
+  private func presentCustomGoalSelection(_ callback: @escaping (FastingGoal) -> Void) {
+    
+    let controller = CustomGoalModalViewController.create()
+    
+    controller.onIntervalSaved = { interval in
+      
+      // Dismiss our newly presented controller
+      controller.dismiss(animated: true, completion: nil)
+      
+      // Callback with the goal
+      let goal = FastingGoal(from: interval)
+      callback(goal)
+    }
+    
+    present(controller, animated: true, completion: nil)
+  }
+  
+}
+
 // MARK: - Children Management
 
 extension TimerContainerViewController {
@@ -95,6 +149,9 @@ extension TimerContainerViewController {
     let controller = IdleTimerViewController.create()
     controller.onFastStarted = { [weak self] in
       self?.startFast()
+    }
+    controller.onGoalChange = { [weak self] callback in
+      self?.presentGoalSelection(callback)
     }
     
     transition(children.first, new: controller)
@@ -106,6 +163,9 @@ extension TimerContainerViewController {
     let controller = FastingTimerViewController.create(model)
     controller.onFastEnded = { [weak self] in
       self?.stopFast($0)
+    }
+    controller.onGoalUpdate = { [weak self] callback in
+      self?.presentGoalSelection(callback)
     }
     
     transition(children.first, new: controller)

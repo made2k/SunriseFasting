@@ -1,0 +1,23 @@
+/* 
+  FastingGoal.strings
+  Fasting
+
+  Created by Zach McGaughey on 4/20/21.
+  
+*/
+
+// Goal Titles
+"fourteen title" = "14:10 Intermittent Fast";
+"sixteen title" = "16:8 Intermittent Fast";
+"nineteen title" = "19:5 Intermittent Fast";
+"twenty three title" = "23:1 Intermittent Fast";
+"custom title" = "Custom Fast";
+
+
+// Goal Picker
+"fourteen description" = "This time restricted fast gives you a 10 hour eating window, with a 14 hour fast. Usually this involves a final meal at dinner and a late breakfast.";
+"sixteen description" = "This fast is pretty common. It gives you an 8 hour eating window (typically lunch and dinner) with a 16 hour fast.";
+"nineteen description" = "This fast is more restrictive only giving you a 5 hour eating window.";
+"twenty three description" = "This fast is known as the One Meal a Day fast. It has only a 1 hour eating window, typically enough for a single meal.";
+"custom description" = "Don't be restricted by these presets. You can choose your own fasting goals that fit with your life style.";
+

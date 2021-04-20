@@ -25,9 +25,10 @@ final class FastingTimerViewController: UIViewController {
   private var usingCompletedColors: Bool?
   
   var onFastEnded: ((FastingModel) -> Void)?
-
+  var onGoalUpdate: GoalSelectionHandler?
   
   // MARK: Outlets
+  @IBOutlet private var currentGoalButton: UIButton!
   @IBOutlet private var fastStartedLabel: UILabel!
   @IBOutlet private var targetEndLabel: UILabel!
   @IBOutlet private var elapsedTimeTitleLabel: UILabel!
@@ -42,6 +43,22 @@ final class FastingTimerViewController: UIViewController {
   }
   
   // MARK: - Actions
+  
+  @IBAction private func editGoalButtonPressed(_ sender: Any) {
+    
+    onGoalUpdate? { [weak self] newGoal in
+      
+      // Update our model
+      self?.model.duration = newGoal.duration
+      self?.model.saveToDisk()
+      
+      // Update visual state
+      self?.currentGoalButton.setTitle(newGoal.title, for: .normal)
+      self?.updateIntervalInfo()
+      self?.updateStaticInfo()
+    }
+    
+  }
   
   @IBAction func editStartButtonPressed(_ sender: Any) {
     let controller = DatePickerViewController.create(model.startTime, maxDate: Date())
@@ -142,6 +159,7 @@ extension FastingTimerViewController {
   }
   
   private func updateStaticInfo() {
+    currentGoalButton.setTitle(FastingGoal.current.title, for: .normal)
     fastStartedLabel.text = StringFormatter.colloquialDateTime(from: model.startTime)
     targetEndLabel.text = StringFormatter.colloquialDateTime(from: model.targetEndTime)
   }
