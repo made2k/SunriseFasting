@@ -3,6 +3,7 @@
     <device id="retina4_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -37,7 +38,7 @@
                                 </userDefinedRuntimeAttributes>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="hl9-ic-CNz">
-                                <rect key="frame" x="18" y="125.5" width="124.5" height="68.5"/>
+                                <rect key="frame" x="18" y="125.5" width="124.5" height="60.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" text="Fast Started" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eos-mf-j7W">
                                         <rect key="frame" x="14.5" y="0.0" width="95.5" height="20.5"/>
@@ -48,12 +49,18 @@
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" text="Yesterday 7:08pm" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7wg-kt-te1">
                                         <rect key="frame" x="0.0" y="20.5" width="124.5" height="18"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                        <nil key="textColor"/>
+                                        <color key="textColor" systemColor="secondaryLabelColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="1000" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LVv-i7-kfM">
-                                        <rect key="frame" x="29.5" y="38.5" width="65" height="30"/>
-                                        <state key="normal" title="Edit Start"/>
+                                    <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="1000" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LVv-i7-kfM">
+                                        <rect key="frame" x="17" y="38.5" width="90" height="22"/>
+                                        <state key="normal" title="Edit Start">
+                                            <color key="titleColor" systemColor="systemBlueColor"/>
+                                            <imageReference key="image" image="pencil" catalog="system" symbolScale="small"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="editStartButtonPressed:" destination="xUa-Di-n0f" eventType="touchUpInside" id="uMJ-hQ-0h4"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -69,13 +76,13 @@
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="7:08pm" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4hf-IM-cbf">
                                         <rect key="frame" x="15.5" y="20.5" width="53" height="18"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                        <nil key="textColor"/>
+                                        <color key="textColor" systemColor="secondaryLabelColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
                             </stackView>
                             <view contentMode="scaleToFill" verticalCompressionResistancePriority="749" translatesAutoresizingMaskIntoConstraints="NO" id="Tur-Hm-s51" customClass="MKRingProgressView">
-                                <rect key="frame" x="24" y="210" width="272" height="272"/>
+                                <rect key="frame" x="24" y="202" width="272" height="272"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="i6x-Ds-7c3">
                                         <rect key="frame" x="42.5" y="99" width="187.5" height="74.5"/>
@@ -83,13 +90,13 @@
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Elapsed time (100%)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="45z-r4-8yf">
                                                 <rect key="frame" x="26.5" y="0.0" width="134" height="17"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <nil key="textColor"/>
+                                                <color key="textColor" systemColor="secondaryLabelColor"/>
                                                 <nil key="highlightedColor"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="string" keyPath="heroID" value="timerTitle"/>
                                                 </userDefinedRuntimeAttributes>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.89999997615814209" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="15:06:32" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ftx-NK-Uiy">
+                                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.80000000000000004" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="15:06:32" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ftx-NK-Uiy">
                                                 <rect key="frame" x="0.0" y="17" width="187.5" height="57.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="48"/>
                                                 <nil key="textColor"/>
@@ -108,27 +115,9 @@
                                     <constraint firstItem="i6x-Ds-7c3" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Tur-Hm-s51" secondAttribute="leading" constant="36" id="QwF-ck-pRJ"/>
                                     <constraint firstAttribute="width" secondItem="Tur-Hm-s51" secondAttribute="height" multiplier="1:1" id="jLT-fe-OYU"/>
                                 </constraints>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="ringWidth">
-                                        <real key="value" value="32"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="progress">
-                                        <real key="value" value="0.67000000000000004"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="startColor">
-                                        <color key="value" systemColor="systemOrangeColor"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="endColor">
-                                        <color key="value" systemColor="systemRedColor"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
-                                        <real key="value" value="0.25"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="hidesRingForZeroProgress" value="NO"/>
-                                </userDefinedRuntimeAttributes>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KL6-HJ-dfh" customClass="PaddedButton" customModule="Fasting" customModuleProvider="target">
-                                <rect key="frame" x="127.5" y="506" width="65" height="32"/>
+                                <rect key="frame" x="127.5" y="498" width="65" height="32"/>
                                 <color key="backgroundColor" systemColor="systemGray5Color"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
                                 <state key="normal" title="End Fast">
@@ -165,6 +154,13 @@
                             <constraint firstItem="wew-4B-BGz" firstAttribute="centerX" secondItem="vDw-2r-5md" secondAttribute="centerX" id="zsg-n8-Nt7"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="elapsedTimeLabel" destination="Ftx-NK-Uiy" id="qV0-IX-WLC"/>
+                        <outlet property="elapsedTimeTitleLabel" destination="45z-r4-8yf" id="MOi-kp-4dI"/>
+                        <outlet property="fastStartedLabel" destination="7wg-kt-te1" id="cc7-iu-ynI"/>
+                        <outlet property="progressView" destination="Tur-Hm-s51" id="Vbm-bi-0Pm"/>
+                        <outlet property="targetEndLabel" destination="4hf-IM-cbf" id="ExF-s6-0au"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Avo-xJ-WMA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -172,20 +168,18 @@
         </scene>
     </scenes>
     <resources>
+        <image name="pencil" catalog="system" width="128" height="113"/>
         <systemColor name="secondaryLabelColor">
             <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="secondarySystemBackgroundColor">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemGray5Color">
             <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemOrangeColor">
-            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemRedColor">
-            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

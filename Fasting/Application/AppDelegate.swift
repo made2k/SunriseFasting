@@ -5,14 +5,16 @@
 //  Created by Zach McGaughey on 4/16/21.
 //
 
-import CoreData
+import SwiftDate
 import UIKit
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
   
   func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-    // Override point for customization after application launch.
+    
+    SwiftDate.defaultRegion = Region.local
+    
     return true
   }
   

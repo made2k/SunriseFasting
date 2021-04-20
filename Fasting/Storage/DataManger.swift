@@ -128,6 +128,31 @@ extension DataManger {
     }
     
   }
+  
+  func loadLastCompletedFast() -> FastingModel? {
+    
+    let request: NSFetchRequest<Fast> = Fast.fetchRequest()
+    request.predicate = NSPredicate(format: "endTime != nil")
+    request.fetchLimit = 1
+
+    let sortDescriptor = NSSortDescriptor(keyPath: \Fast.endTime, ascending: false)
+    request.sortDescriptors = [sortDescriptor]
+    
+    do {
+      
+      if let lastFast: Fast = try context.fetch(request).first {
+        return FastingModel(lastFast)
+      }
+      
+      return nil
+      
+    } catch {
+      print(error)
+      return nil
+    }
+
+    
+  }
 
   
 }

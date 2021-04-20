@@ -13,8 +13,15 @@ class FastingModel {
 
   var startTime: Date
   var endTime: Date?
-  var targetEndTime: Date { startTime.addingTimeInterval(duration) }
   var duration: TimeInterval
+  
+  var targetEndTime: Date {
+    startTime.addingTimeInterval(duration)
+  }
+  var progress: Double {
+    let interval: TimeInterval = abs(startTime.timeIntervalSince(endTime ?? Date()))
+    return interval / duration
+  }
   
   init(startTime: Date = Date(), endTime: Date? = nil, goal: FastingGoal) {
     self.entity = DataManger.shared.newFast(startTime, endTime: endTime, interval: goal.duration)

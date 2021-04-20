@@ -43,9 +43,45 @@ extension TimerContainerViewController {
   
   private func stopFast(_ model: FastingModel) {
     model.endTime = Date()
-    model.saveToDisk()
     
-    showIdleState()
+    showStopActions(for: model)
+  }
+  
+  private func showStopActions(for model: FastingModel) {
+    
+    let alert = UIAlertController(title: "Stop Fasting?", message: nil, preferredStyle: .alert)
+    
+    let saveAction = UIAlertAction(title: "Save fast", style: .default) { [weak self] _ in
+      model.saveToDisk()
+      self?.showIdleState()
+    }
+    alert.addAction(saveAction)
+    
+    let editAction = UIAlertAction(title: "Edit end time", style: .default) { [weak self] _ in
+      
+      let controller = DatePickerViewController.create(model.endTime ?? Date(), minDate: model.startTime, maxDate: Date())
+      controller.onDateSaved = { (newDate: Date) in
+        model.endTime = newDate
+        model.saveToDisk()
+        self?.showIdleState()
+      }
+      
+      self?.present(controller, animated: true, completion: nil)
+      
+    }
+    alert.addAction(editAction)
+    
+    let deleteAction = UIAlertAction(title: "Delete fast", style: .destructive) { [weak self] _ in
+      model.delete()
+      self?.showIdleState()
+    }
+    alert.addAction(deleteAction)
+    
+    let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+    alert.addAction(cancelAction)
+    
+    present(alert, animated: true, completion: nil)
+    
   }
   
 }

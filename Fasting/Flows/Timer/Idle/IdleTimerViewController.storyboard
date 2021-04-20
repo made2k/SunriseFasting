@@ -62,11 +62,11 @@
                                     <action selector="startFastButtonPressed:" destination="Whf-Hu-uzi" eventType="touchUpInside" id="pPA-Az-A1y"/>
                                 </connections>
                             </button>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Ogt-1E-Vaf">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Ogt-1E-Vaf">
                                 <rect key="frame" x="132" y="252.5" width="150" height="75.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time since last fast" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yTo-Fw-5fe">
-                                        <rect key="frame" x="0.0" y="0.0" width="150" height="20.5"/>
+                                        <rect key="frame" x="2" y="0.0" width="146.5" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" systemColor="secondaryLabelColor"/>
                                         <nil key="highlightedColor"/>
@@ -75,7 +75,7 @@
                                             <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="YES"/>
                                         </userDefinedRuntimeAttributes>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1:45:07" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IV3-Pw-tKI">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1:45:07" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="IV3-Pw-tKI">
                                         <rect key="frame" x="0.0" y="20.5" width="150" height="55"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="46"/>
                                         <color key="textColor" systemColor="secondaryLabelColor"/>
@@ -107,6 +107,7 @@
                             <constraint firstItem="WkC-Yr-aqK" firstAttribute="top" secondItem="Aor-Tw-lpV" secondAttribute="bottom" id="VOs-fn-fRR"/>
                             <constraint firstItem="Aor-Tw-lpV" firstAttribute="centerY" secondItem="7no-kY-gdv" secondAttribute="centerY" id="dFL-RI-Zr7"/>
                             <constraint firstItem="Ogt-1E-Vaf" firstAttribute="centerY" secondItem="2tj-LV-xoE" secondAttribute="centerY" id="gJw-FT-cRf"/>
+                            <constraint firstItem="Ogt-1E-Vaf" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="7no-kY-gdv" secondAttribute="leading" constant="24" id="gpq-PO-hB7"/>
                             <constraint firstItem="nfN-Qn-m0g" firstAttribute="top" secondItem="BpN-Jg-WQo" secondAttribute="bottom" constant="8" symbolic="YES" id="mKb-f4-A6P"/>
                             <constraint firstItem="2tj-LV-xoE" firstAttribute="top" secondItem="nfN-Qn-m0g" secondAttribute="bottom" id="nY8-Ra-1rC"/>
                             <constraint firstItem="BpN-Jg-WQo" firstAttribute="top" secondItem="7no-kY-gdv" secondAttribute="top" constant="32" id="oFs-2o-yXR"/>
@@ -117,6 +118,11 @@
                             <constraint firstItem="BpN-Jg-WQo" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="VhA-go-Vpj" secondAttribute="leading" constant="24" id="yxS-Xr-Mne"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="lastFastIntervalLabel" destination="IV3-Pw-tKI" id="XfP-Du-Nj9"/>
+                        <outlet property="lastFastTitleLabel" destination="yTo-Fw-5fe" id="xQE-AQ-aY2"/>
+                        <outlet property="upcomingFastEndLabel" destination="WkC-Yr-aqK" id="40d-yk-RER"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jIj-jI-mcJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

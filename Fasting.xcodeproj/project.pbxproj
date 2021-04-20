@@ -23,6 +23,12 @@
 		923C60FF262E12E60055DA10 /* DelayedImmutable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 923C60FE262E12E60055DA10 /* DelayedImmutable.swift */; };
 		923C6103262E16070055DA10 /* Hero in Frameworks */ = {isa = PBXBuildFile; productRef = 923C6102262E16070055DA10 /* Hero */; };
 		923C6104262E16070055DA10 /* Hero in Embed Frameworks */ = {isa = PBXBuildFile; productRef = 923C6102262E16070055DA10 /* Hero */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		923C6109262E23730055DA10 /* StringFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 923C6108262E23730055DA10 /* StringFormatter.swift */; };
+		923C610C262E270F0055DA10 /* SwiftDateDynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 923C610B262E270F0055DA10 /* SwiftDateDynamic */; };
+		923C610D262E270F0055DA10 /* SwiftDateDynamic in Embed Frameworks */ = {isa = PBXBuildFile; productRef = 923C610B262E270F0055DA10 /* SwiftDateDynamic */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		923C6112262E36B20055DA10 /* DatePicker.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 923C6111262E36B20055DA10 /* DatePicker.storyboard */; };
+		923C6114262E37520055DA10 /* DatePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 923C6113262E37520055DA10 /* DatePickerViewController.swift */; };
+		9250ECCC262E4D41001B9DA8 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9250ECCB262E4D41001B9DA8 /* Colors.xcassets */; };
 		9286D634262BBF2300C5FC42 /* FastingEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9286D633262BBF2300C5FC42 /* FastingEntry.swift */; };
 		9286D637262BBF4600C5FC42 /* FastingGoal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9286D636262BBF4600C5FC42 /* FastingGoal.swift */; };
 		9286D644262BC85000C5FC42 /* TimerContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9286D643262BC85000C5FC42 /* TimerContainerViewController.swift */; };
@@ -37,6 +43,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				923C610D262E270F0055DA10 /* SwiftDateDynamic in Embed Frameworks */,
 				923C6104262E16070055DA10 /* Hero in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -60,6 +67,10 @@
 		923C60F7262E0EC80055DA10 /* IdleTimerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdleTimerViewController.swift; sourceTree = "<group>"; };
 		923C60FA262E12260055DA10 /* FastingTimerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FastingTimerViewController.swift; sourceTree = "<group>"; };
 		923C60FE262E12E60055DA10 /* DelayedImmutable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DelayedImmutable.swift; sourceTree = "<group>"; };
+		923C6108262E23730055DA10 /* StringFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringFormatter.swift; sourceTree = "<group>"; };
+		923C6111262E36B20055DA10 /* DatePicker.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DatePicker.storyboard; sourceTree = "<group>"; };
+		923C6113262E37520055DA10 /* DatePickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerViewController.swift; sourceTree = "<group>"; };
+		9250ECCB262E4D41001B9DA8 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		9286D633262BBF2300C5FC42 /* FastingEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FastingEntry.swift; sourceTree = "<group>"; };
 		9286D636262BBF4600C5FC42 /* FastingGoal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FastingGoal.swift; sourceTree = "<group>"; };
 		9286D643262BC85000C5FC42 /* TimerContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerContainerViewController.swift; sourceTree = "<group>"; };
@@ -74,6 +85,7 @@
 			files = (
 				923C6103262E16070055DA10 /* Hero in Frameworks */,
 				92029703262A2FB700C85B22 /* MKRingProgressView in Frameworks */,
+				923C610C262E270F0055DA10 /* SwiftDateDynamic in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -146,6 +158,23 @@
 			path = PropertyWrappers;
 			sourceTree = "<group>";
 		};
+		923C6107262E23690055DA10 /* Formatters */ = {
+			isa = PBXGroup;
+			children = (
+				923C6108262E23730055DA10 /* StringFormatter.swift */,
+			);
+			path = Formatters;
+			sourceTree = "<group>";
+		};
+		923C6110262E36A70055DA10 /* DatePicker */ = {
+			isa = PBXGroup;
+			children = (
+				923C6111262E36B20055DA10 /* DatePicker.storyboard */,
+				923C6113262E37520055DA10 /* DatePickerViewController.swift */,
+			);
+			path = DatePicker;
+			sourceTree = "<group>";
+		};
 		9286D632262BBF0E00C5FC42 /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -161,6 +190,7 @@
 				920296E9262A22ED00C85B22 /* AppDelegate.swift */,
 				920296EB262A22ED00C85B22 /* SceneDelegate.swift */,
 				920296F2262A22ED00C85B22 /* Assets.xcassets */,
+				9250ECCB262E4D41001B9DA8 /* Colors.xcassets */,
 				920296F7262A22ED00C85B22 /* Info.plist */,
 			);
 			path = Application;
@@ -169,6 +199,7 @@
 		9286D63C262BC75500C5FC42 /* Flows */ = {
 			isa = PBXGroup;
 			children = (
+				923C6110262E36A70055DA10 /* DatePicker */,
 				9286D63D262BC7AD00C5FC42 /* Timer */,
 			);
 			path = Flows;
@@ -195,6 +226,7 @@
 		9286D646262BC8E800C5FC42 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				923C6107262E23690055DA10 /* Formatters */,
 				923C60FD262E12D80055DA10 /* PropertyWrappers */,
 				9286D647262BC8F200C5FC42 /* Extensions */,
 			);
@@ -238,6 +270,7 @@
 			packageProductDependencies = (
 				92029702262A2FB700C85B22 /* MKRingProgressView */,
 				923C6102262E16070055DA10 /* Hero */,
+				923C610B262E270F0055DA10 /* SwiftDateDynamic */,
 			);
 			productName = Fasting;
 			productReference = 920296E6262A22ED00C85B22 /* Fasting.app */;
@@ -269,6 +302,7 @@
 			packageReferences = (
 				92029701262A2FB700C85B22 /* XCRemoteSwiftPackageReference "MKRingProgressView" */,
 				923C6101262E16070055DA10 /* XCRemoteSwiftPackageReference "Hero" */,
+				923C610A262E270F0055DA10 /* XCRemoteSwiftPackageReference "SwiftDate" */,
 			);
 			productRefGroup = 920296E7262A22ED00C85B22 /* Products */;
 			projectDirPath = "";
@@ -287,7 +321,9 @@
 				920296F6262A22ED00C85B22 /* LaunchScreen.storyboard in Resources */,
 				920296F3262A22ED00C85B22 /* Assets.xcassets in Resources */,
 				92EDA5E0262BCD6700AAF516 /* IdleTimerViewController.storyboard in Resources */,
+				9250ECCC262E4D41001B9DA8 /* Colors.xcassets in Resources */,
 				923C60E6262DE18A0055DA10 /* FastingTimer.storyboard in Resources */,
+				923C6112262E36B20055DA10 /* DatePicker.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -302,6 +338,8 @@
 				920296EE262A22ED00C85B22 /* ViewController.swift in Sources */,
 				923C60FB262E12260055DA10 /* FastingTimerViewController.swift in Sources */,
 				9286D634262BBF2300C5FC42 /* FastingEntry.swift in Sources */,
+				923C6114262E37520055DA10 /* DatePickerViewController.swift in Sources */,
+				923C6109262E23730055DA10 /* StringFormatter.swift in Sources */,
 				920296EA262A22ED00C85B22 /* AppDelegate.swift in Sources */,
 				9286D649262BC91500C5FC42 /* UIViewController+Additions.swift in Sources */,
 				92029707262A4BF100C85B22 /* PersistData.swift in Sources */,
@@ -523,6 +561,14 @@
 				minimumVersion = 1.6.1;
 			};
 		};
+		923C610A262E270F0055DA10 /* XCRemoteSwiftPackageReference "SwiftDate" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/malcommac/SwiftDate";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.3.1;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -535,6 +581,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 923C6101262E16070055DA10 /* XCRemoteSwiftPackageReference "Hero" */;
 			productName = Hero;
+		};
+		923C610B262E270F0055DA10 /* SwiftDateDynamic */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 923C610A262E270F0055DA10 /* XCRemoteSwiftPackageReference "SwiftDate" */;
+			productName = SwiftDateDynamic;
 		};
 /* End XCSwiftPackageProductDependency section */
 
