@@ -10,20 +10,28 @@
 		92021AD026326D06006C00C1 /* AppModel+DataLoading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92021ACF26326D06006C00C1 /* AppModel+DataLoading.swift */; };
 		92021AD226326F2A006C00C1 /* FastModel+FastActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92021AD126326F2A006C00C1 /* FastModel+FastActions.swift */; };
 		92021AD426327238006C00C1 /* FastModel+Equatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92021AD326327238006C00C1 /* FastModel+Equatable.swift */; };
+		920E50E62633C21A0014E7B5 /* Algorithms in Frameworks */ = {isa = PBXBuildFile; productRef = 920E50E52633C21A0014E7B5 /* Algorithms */; };
+		920E50E92633C79D0014E7B5 /* FastGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920E50E82633C79D0014E7B5 /* FastGroup.swift */; };
+		920E50EB2633C7BC0014E7B5 /* FastGroup+Identifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920E50EA2633C7BC0014E7B5 /* FastGroup+Identifiable.swift */; };
+		920E50ED2633C7FF0014E7B5 /* FastGroup+Parsing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920E50EC2633C7FF0014E7B5 /* FastGroup+Parsing.swift */; };
+		920E50EF2633DAA00014E7B5 /* RingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920E50EE2633DAA00014E7B5 /* RingView.swift */; };
 		92124A0E263234E100A33968 /* FastingGoal+AllCases.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92124A0D263234E100A33968 /* FastingGoal+AllCases.swift */; };
 		922A9A942631167700CBC0EF /* DatePickerSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922A9A932631167700CBC0EF /* DatePickerSelectionView.swift */; };
+		92534CDF2634752300D95681 /* Fast+Properties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92534CDE2634752300D95681 /* Fast+Properties.swift */; };
 		9254F9A0262FBAB300589377 /* FastingApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9254F99F262FBAB300589377 /* FastingApp.swift */; };
 		9254F9A4262FBAB300589377 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9254F9A3262FBAB300589377 /* Assets.xcassets */; };
 		9254F9A7262FBAB300589377 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9254F9A6262FBAB300589377 /* Preview Assets.xcassets */; };
 		9254F9A9262FBAB300589377 /* PersistenceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9254F9A8262FBAB300589377 /* PersistenceController.swift */; };
 		9254F9AC262FBAB300589377 /* Fasting.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9254F9AA262FBAB300589377 /* Fasting.xcdatamodeld */; };
+		9261A13A26339CF7005E8AAD /* TimelineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9261A13926339CF7005E8AAD /* TimelineView.swift */; };
+		9261A13C26339EF7005E8AAD /* TimelineItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9261A13B26339EF7005E8AAD /* TimelineItemView.swift */; };
 		92656CCA2631B00C00C9C232 /* CustomFastingGoalEntryScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92656CC92631B00C00C9C232 /* CustomFastingGoalEntryScreen.swift */; };
 		926B23A526331BB2000E3373 /* Fast+Preview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 926B23A426331BB2000E3373 /* Fast+Preview.swift */; };
 		927030882630F5FB006EDB13 /* ProgressUpdater.swift in Sources */ = {isa = PBXBuildFile; fileRef = 927030872630F5FB006EDB13 /* ProgressUpdater.swift */; };
 		9278B7F2262FBECF00893C7D /* IdleFastHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9278B7F1262FBECF00893C7D /* IdleFastHomeView.swift */; };
 		9278B7F6262FC01A00893C7D /* ActiveFastHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9278B7F5262FC01A00893C7D /* ActiveFastHomeView.swift */; };
-		9278B7FA262FC66F00893C7D /* MKRingProgressView in Frameworks */ = {isa = PBXBuildFile; productRef = 9278B7F9262FC66F00893C7D /* MKRingProgressView */; };
 		9278B802262FD20A00893C7D /* AppModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9278B801262FD20A00893C7D /* AppModel.swift */; };
+		92792B442633984B00ECF89F /* HomeTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92792B432633984B00ECF89F /* HomeTabView.swift */; };
 		927DD7BE2630AA0E00E6C33A /* PaddedButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 927DD7BD2630AA0E00E6C33A /* PaddedButtonStyle.swift */; };
 		927DD7C42630AC6F00E6C33A /* TextButtonGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 927DD7C32630AC6F00E6C33A /* TextButtonGroup.swift */; };
 		927DD7C72630AD0300E6C33A /* IntervalCountingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 927DD7C62630AD0300E6C33A /* IntervalCountingView.swift */; };
@@ -32,7 +40,7 @@
 		927DD7DE2630B39300E6C33A /* FastForecastedEndView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 927DD7DD2630B39300E6C33A /* FastForecastedEndView.swift */; };
 		927DD7E22630B3C100E6C33A /* SwiftDateDynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 927DD7E12630B3C100E6C33A /* SwiftDateDynamic */; };
 		927DD7E32630B3C100E6C33A /* SwiftDateDynamic in Embed Frameworks */ = {isa = PBXBuildFile; productRef = 927DD7E12630B3C100E6C33A /* SwiftDateDynamic */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		927DD7E62630BFC000E6C33A /* HomeScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 927DD7E52630BFC000E6C33A /* HomeScreenView.swift */; };
+		927DD7E62630BFC000E6C33A /* TrackerHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 927DD7E52630BFC000E6C33A /* TrackerHomeView.swift */; };
 		9282A89A26332F0E00CA24A6 /* View+Connections.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9282A89926332F0E00CA24A6 /* View+Connections.swift */; };
 		9282A89C26332F1A00CA24A6 /* Connectable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9282A89B26332F1A00CA24A6 /* Connectable.swift */; };
 		9282A89E26332FB800CA24A6 /* PreviewUpdater.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9282A89D26332FB800CA24A6 /* PreviewUpdater.swift */; };
@@ -45,7 +53,6 @@
 		92978B2526331D1400944D12 /* FastProgressUpdatingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92978B2426331D1400944D12 /* FastProgressUpdatingViewModel.swift */; };
 		92978B2926331FD800944D12 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 92978B2826331FD800944D12 /* Colors.xcassets */; };
 		92A8ED1F2630D2B700BE00F0 /* StartTimeInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A8ED1E2630D2B700BE00F0 /* StartTimeInfoView.swift */; };
-		92A8ED212630D9B800BE00F0 /* RingProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A8ED202630D9B800BE00F0 /* RingProgress.swift */; };
 		92A8ED232630DA4C00BE00F0 /* EndTimeInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A8ED222630DA4C00BE00F0 /* EndTimeInfoView.swift */; };
 		92B7398626323607002D5261 /* FastingGoal+Descriptors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B7398526323607002D5261 /* FastingGoal+Descriptors.swift */; };
 		92B73988263238BD002D5261 /* FastingGoal+Equality.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B73987263238BD002D5261 /* FastingGoal+Equality.swift */; };
@@ -86,8 +93,13 @@
 		92021ACF26326D06006C00C1 /* AppModel+DataLoading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppModel+DataLoading.swift"; sourceTree = "<group>"; };
 		92021AD126326F2A006C00C1 /* FastModel+FastActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FastModel+FastActions.swift"; sourceTree = "<group>"; };
 		92021AD326327238006C00C1 /* FastModel+Equatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FastModel+Equatable.swift"; sourceTree = "<group>"; };
+		920E50E82633C79D0014E7B5 /* FastGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FastGroup.swift; sourceTree = "<group>"; };
+		920E50EA2633C7BC0014E7B5 /* FastGroup+Identifiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FastGroup+Identifiable.swift"; sourceTree = "<group>"; };
+		920E50EC2633C7FF0014E7B5 /* FastGroup+Parsing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FastGroup+Parsing.swift"; sourceTree = "<group>"; };
+		920E50EE2633DAA00014E7B5 /* RingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RingView.swift; sourceTree = "<group>"; };
 		92124A0D263234E100A33968 /* FastingGoal+AllCases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FastingGoal+AllCases.swift"; sourceTree = "<group>"; };
 		922A9A932631167700CBC0EF /* DatePickerSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerSelectionView.swift; sourceTree = "<group>"; };
+		92534CDE2634752300D95681 /* Fast+Properties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Fast+Properties.swift"; sourceTree = "<group>"; };
 		9254F99C262FBAB300589377 /* Fasting.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Fasting.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9254F99F262FBAB300589377 /* FastingApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FastingApp.swift; sourceTree = "<group>"; };
 		9254F9A3262FBAB300589377 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -95,19 +107,22 @@
 		9254F9A8262FBAB300589377 /* PersistenceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceController.swift; sourceTree = "<group>"; };
 		9254F9AB262FBAB300589377 /* Fasting.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Fasting.xcdatamodel; sourceTree = "<group>"; };
 		9254F9AD262FBAB300589377 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9261A13926339CF7005E8AAD /* TimelineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelineView.swift; sourceTree = "<group>"; };
+		9261A13B26339EF7005E8AAD /* TimelineItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelineItemView.swift; sourceTree = "<group>"; };
 		92656CC92631B00C00C9C232 /* CustomFastingGoalEntryScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomFastingGoalEntryScreen.swift; sourceTree = "<group>"; };
 		926B23A426331BB2000E3373 /* Fast+Preview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Fast+Preview.swift"; sourceTree = "<group>"; };
 		927030872630F5FB006EDB13 /* ProgressUpdater.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressUpdater.swift; sourceTree = "<group>"; };
 		9278B7F1262FBECF00893C7D /* IdleFastHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdleFastHomeView.swift; sourceTree = "<group>"; };
 		9278B7F5262FC01A00893C7D /* ActiveFastHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveFastHomeView.swift; sourceTree = "<group>"; };
 		9278B801262FD20A00893C7D /* AppModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppModel.swift; sourceTree = "<group>"; };
+		92792B432633984B00ECF89F /* HomeTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabView.swift; sourceTree = "<group>"; };
 		927DD7BD2630AA0E00E6C33A /* PaddedButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaddedButtonStyle.swift; sourceTree = "<group>"; };
 		927DD7C32630AC6F00E6C33A /* TextButtonGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextButtonGroup.swift; sourceTree = "<group>"; };
 		927DD7C62630AD0300E6C33A /* IntervalCountingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntervalCountingView.swift; sourceTree = "<group>"; };
 		927DD7CA2630ADAE00E6C33A /* StringFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringFormatter.swift; sourceTree = "<group>"; };
 		927DD7D02630B12F00E6C33A /* Fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
 		927DD7DD2630B39300E6C33A /* FastForecastedEndView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FastForecastedEndView.swift; sourceTree = "<group>"; };
-		927DD7E52630BFC000E6C33A /* HomeScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenView.swift; sourceTree = "<group>"; };
+		927DD7E52630BFC000E6C33A /* TrackerHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackerHomeView.swift; sourceTree = "<group>"; };
 		9282A89926332F0E00CA24A6 /* View+Connections.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Connections.swift"; sourceTree = "<group>"; };
 		9282A89B26332F1A00CA24A6 /* Connectable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Connectable.swift; sourceTree = "<group>"; };
 		9282A89D26332FB800CA24A6 /* PreviewUpdater.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewUpdater.swift; sourceTree = "<group>"; };
@@ -120,7 +135,6 @@
 		92978B2426331D1400944D12 /* FastProgressUpdatingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FastProgressUpdatingViewModel.swift; sourceTree = "<group>"; };
 		92978B2826331FD800944D12 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		92A8ED1E2630D2B700BE00F0 /* StartTimeInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartTimeInfoView.swift; sourceTree = "<group>"; };
-		92A8ED202630D9B800BE00F0 /* RingProgress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RingProgress.swift; sourceTree = "<group>"; };
 		92A8ED222630DA4C00BE00F0 /* EndTimeInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndTimeInfoView.swift; sourceTree = "<group>"; };
 		92B7398526323607002D5261 /* FastingGoal+Descriptors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FastingGoal+Descriptors.swift"; sourceTree = "<group>"; };
 		92B73987263238BD002D5261 /* FastingGoal+Equality.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FastingGoal+Equality.swift"; sourceTree = "<group>"; };
@@ -148,14 +162,24 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				920E50E62633C21A0014E7B5 /* Algorithms in Frameworks */,
 				927DD7E22630B3C100E6C33A /* SwiftDateDynamic in Frameworks */,
-				9278B7FA262FC66F00893C7D /* MKRingProgressView in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		920E50E72633C7910014E7B5 /* FastGroup */ = {
+			isa = PBXGroup;
+			children = (
+				920E50E82633C79D0014E7B5 /* FastGroup.swift */,
+				920E50EA2633C7BC0014E7B5 /* FastGroup+Identifiable.swift */,
+				920E50EC2633C7FF0014E7B5 /* FastGroup+Parsing.swift */,
+			);
+			path = FastGroup;
+			sourceTree = "<group>";
+		};
 		92124A082632304100A33968 /* Storage */ = {
 			isa = PBXGroup;
 			children = (
@@ -186,6 +210,7 @@
 		92124A0C2632345700A33968 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				920E50E72633C7910014E7B5 /* FastGroup */,
 				92B7398F26323E26002D5261 /* FastModel */,
 				92D81A8326310902007E884A /* FastingGoal */,
 			);
@@ -249,6 +274,15 @@
 				9254F9A6262FBAB300589377 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		9261A13826339CEC005E8AAD /* Timeline */ = {
+			isa = PBXGroup;
+			children = (
+				9261A13926339CF7005E8AAD /* TimelineView.swift */,
+				9261A13B26339EF7005E8AAD /* TimelineItemView.swift */,
+			);
+			path = Timeline;
 			sourceTree = "<group>";
 		};
 		92656CCB26324C8700C9C232 /* Formatting */ = {
@@ -334,9 +368,9 @@
 		92978B2326331CFE00944D12 /* ProgressRing */ = {
 			isa = PBXGroup;
 			children = (
-				92A8ED202630D9B800BE00F0 /* RingProgress.swift */,
 				92978B2626331D2500944D12 /* Protocols */,
 				92978B2726331EB000944D12 /* ViewModels */,
+				920E50EE2633DAA00014E7B5 /* RingView.swift */,
 			);
 			path = ProgressRing;
 			sourceTree = "<group>";
@@ -374,6 +408,7 @@
 			children = (
 				92B7399326323F73002D5261 /* Fast+Initialization.swift */,
 				926B23A426331BB2000E3373 /* Fast+Preview.swift */,
+				92534CDE2634752300D95681 /* Fast+Properties.swift */,
 				92D739D726326667008DD386 /* UserDefaultKeys.swift */,
 				92D739D526326187008DD386 /* UserDefaults+Publishing.swift */,
 			);
@@ -383,10 +418,12 @@
 		92B96C452633185400ED1758 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				9261A13826339CEC005E8AAD /* Timeline */,
 				92808AD5263366A500420603 /* Common */,
 				92EB3FB926334243006D6C44 /* DatePicker */,
 				9282A8A1263334AD00CA24A6 /* FastGoalSelection */,
-				92B96C47263318AB00ED1758 /* HomeScreen */,
+				92E8B8A526339951007DD3B8 /* Tracker */,
+				92B96C47263318AB00ED1758 /* HomeTab */,
 				92808AD62633673500420603 /* Intervals */,
 				92978B2326331CFE00944D12 /* ProgressRing */,
 				92F2EBA42633476C001EBCFD /* ViewStyles */,
@@ -395,14 +432,12 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
-		92B96C47263318AB00ED1758 /* HomeScreen */ = {
+		92B96C47263318AB00ED1758 /* HomeTab */ = {
 			isa = PBXGroup;
 			children = (
-				92E0128C263376D900EE3848 /* Inactive */,
-				92E0128B263376D400EE3848 /* Active */,
-				927DD7E52630BFC000E6C33A /* HomeScreenView.swift */,
+				92792B432633984B00ECF89F /* HomeTabView.swift */,
 			);
-			path = HomeScreen;
+			path = HomeTab;
 			sourceTree = "<group>";
 		};
 		92CC52F926337BDC00D82E6C /* Colors */ = {
@@ -466,6 +501,16 @@
 			path = Inactive;
 			sourceTree = "<group>";
 		};
+		92E8B8A526339951007DD3B8 /* Tracker */ = {
+			isa = PBXGroup;
+			children = (
+				92E0128C263376D900EE3848 /* Inactive */,
+				92E0128B263376D400EE3848 /* Active */,
+				927DD7E52630BFC000E6C33A /* TrackerHomeView.swift */,
+			);
+			path = Tracker;
+			sourceTree = "<group>";
+		};
 		92EB3FB926334243006D6C44 /* DatePicker */ = {
 			isa = PBXGroup;
 			children = (
@@ -518,8 +563,8 @@
 			);
 			name = Fasting;
 			packageProductDependencies = (
-				9278B7F9262FC66F00893C7D /* MKRingProgressView */,
 				927DD7E12630B3C100E6C33A /* SwiftDateDynamic */,
+				920E50E52633C21A0014E7B5 /* Algorithms */,
 			);
 			productName = Fasting;
 			productReference = 9254F99C262FBAB300589377 /* Fasting.app */;
@@ -549,8 +594,8 @@
 			);
 			mainGroup = 9254F993262FBAB300589377;
 			packageReferences = (
-				9278B7F8262FC66F00893C7D /* XCRemoteSwiftPackageReference "MKRingProgressView" */,
 				927DD7E02630B3C100E6C33A /* XCRemoteSwiftPackageReference "SwiftDate" */,
+				920E50E42633C21A0014E7B5 /* XCRemoteSwiftPackageReference "swift-algorithms" */,
 			);
 			productRefGroup = 9254F99D262FBAB300589377 /* Products */;
 			projectDirPath = "";
@@ -592,10 +637,13 @@
 				92B73988263238BD002D5261 /* FastingGoal+Equality.swift in Sources */,
 				92B7398626323607002D5261 /* FastingGoal+Descriptors.swift in Sources */,
 				9295C31B263282C00084C3AA /* StringFormatter+DateTime.swift in Sources */,
+				920E50EF2633DAA00014E7B5 /* RingView.swift in Sources */,
 				9282A89E26332FB800CA24A6 /* PreviewUpdater.swift in Sources */,
 				922A9A942631167700CBC0EF /* DatePickerSelectionView.swift in Sources */,
-				927DD7E62630BFC000E6C33A /* HomeScreenView.swift in Sources */,
+				927DD7E62630BFC000E6C33A /* TrackerHomeView.swift in Sources */,
 				9295C31A263282C00084C3AA /* StringFormatter+TimeIntervals.swift in Sources */,
+				9261A13C26339EF7005E8AAD /* TimelineItemView.swift in Sources */,
+				920E50E92633C79D0014E7B5 /* FastGroup.swift in Sources */,
 				927DD7D12630B12F00E6C33A /* Fonts.swift in Sources */,
 				927DD7CB2630ADAE00E6C33A /* StringFormatter.swift in Sources */,
 				9254F9AC262FBAB300589377 /* Fasting.xcdatamodeld in Sources */,
@@ -605,6 +653,7 @@
 				927030882630F5FB006EDB13 /* ProgressUpdater.swift in Sources */,
 				92D739D626326187008DD386 /* UserDefaults+Publishing.swift in Sources */,
 				9282A89C26332F1A00CA24A6 /* Connectable.swift in Sources */,
+				9261A13A26339CF7005E8AAD /* TimelineView.swift in Sources */,
 				9282A89A26332F0E00CA24A6 /* View+Connections.swift in Sources */,
 				9278B802262FD20A00893C7D /* AppModel.swift in Sources */,
 				927DD7DE2630B39300E6C33A /* FastForecastedEndView.swift in Sources */,
@@ -614,18 +663,21 @@
 				92B7398E26323D88002D5261 /* FastModel.swift in Sources */,
 				92B7399426323F73002D5261 /* Fast+Initialization.swift in Sources */,
 				92879421263339BF00F949EF /* FastingGoal+Identifiable.swift in Sources */,
+				92792B442633984B00ECF89F /* HomeTabView.swift in Sources */,
 				92124A0E263234E100A33968 /* FastingGoal+AllCases.swift in Sources */,
 				92D81A80263106CD007E884A /* FastingGoalPickerItemView.swift in Sources */,
 				92021AD426327238006C00C1 /* FastModel+Equatable.swift in Sources */,
 				92D739D426325F44008DD386 /* DataManager.swift in Sources */,
-				92A8ED212630D9B800BE00F0 /* RingProgress.swift in Sources */,
+				920E50EB2633C7BC0014E7B5 /* FastGroup+Identifiable.swift in Sources */,
 				9254F9A9262FBAB300589377 /* PersistenceController.swift in Sources */,
 				92CC52FB26337BEC00D82E6C /* Color+Custom.swift in Sources */,
+				92534CDF2634752300D95681 /* Fast+Properties.swift in Sources */,
 				92978B2526331D1400944D12 /* FastProgressUpdatingViewModel.swift in Sources */,
 				927DD7C42630AC6F00E6C33A /* TextButtonGroup.swift in Sources */,
 				926B23A526331BB2000E3373 /* Fast+Preview.swift in Sources */,
 				92B7398C26323A47002D5261 /* FastingGoal+RawRepresentable.swift in Sources */,
 				9254F9A0262FBAB300589377 /* FastingApp.swift in Sources */,
+				920E50ED2633C7FF0014E7B5 /* FastGroup+Parsing.swift in Sources */,
 				92F1D21E2630814400ED6F81 /* FastingGoal.swift in Sources */,
 				928ED21A2631C72900F496F7 /* NumberTextField.swift in Sources */,
 				92021AD226326F2A006C00C1 /* FastModel+FastActions.swift in Sources */,
@@ -822,12 +874,12 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		9278B7F8262FC66F00893C7D /* XCRemoteSwiftPackageReference "MKRingProgressView" */ = {
+		920E50E42633C21A0014E7B5 /* XCRemoteSwiftPackageReference "swift-algorithms" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/maxkonovalov/MKRingProgressView";
+			repositoryURL = "https://github.com/apple/swift-algorithms/";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 2.2.3;
+				minimumVersion = 0.1.1;
 			};
 		};
 		927DD7E02630B3C100E6C33A /* XCRemoteSwiftPackageReference "SwiftDate" */ = {
@@ -841,10 +893,10 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		9278B7F9262FC66F00893C7D /* MKRingProgressView */ = {
+		920E50E52633C21A0014E7B5 /* Algorithms */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 9278B7F8262FC66F00893C7D /* XCRemoteSwiftPackageReference "MKRingProgressView" */;
-			productName = MKRingProgressView;
+			package = 920E50E42633C21A0014E7B5 /* XCRemoteSwiftPackageReference "swift-algorithms" */;
+			productName = Algorithms;
 		};
 		927DD7E12630B3C100E6C33A /* SwiftDateDynamic */ = {
 			isa = XCSwiftPackageProductDependency;

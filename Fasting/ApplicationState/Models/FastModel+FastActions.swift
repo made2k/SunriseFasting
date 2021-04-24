@@ -69,12 +69,17 @@ extension AppModel {
   /// Delete a fast from storage.
   /// - Parameter model: The model that will be deleted
   func deleteFast(_ model: FastModel) {
-    manager.delete(model.entity)
+    deleteFast(model.entity)
 
     if model == currentFast {
       currentFast = nil
     }
     
+  }
+  
+  func deleteFast(_ fast: Fast) {
+    manager.delete(fast)
+    loadCompletedFasts()
   }
   
 }

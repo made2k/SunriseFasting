@@ -9,11 +9,11 @@ import Foundation
 
 extension StringFormatter {
   
-  /// Format a TimeInterval as a coundown string in the form `00:00:00`
+  /// Format a TimeInterval as a countdown string in the form `00:00:00`
   /// - Parameters:
   ///   - interval: The TimeInterval to use for formatting
   ///   - absoluteValue:
-  ///   If true the formatted string will use the aboslute value resulting in positive representation
+  ///   If true the formatted string will use the absolute value resulting in positive representation
   ///   of the string even if TimeInterval is negative.
   /// - Returns: A string formatted like `00:00:00`
   static func countdown(from interval: TimeInterval, absoluteValue: Bool = true) -> String {

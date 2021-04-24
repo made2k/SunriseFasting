@@ -12,7 +12,9 @@ import SwiftUI
 final class AppModel: ObservableObject {
   
   static let preview: AppModel = {
-    return AppModel(preview: true)
+    let model = AppModel(preview: true)
+    model.loadDataFromStore()
+    return model
   }()
   
   // MARK: - Properties

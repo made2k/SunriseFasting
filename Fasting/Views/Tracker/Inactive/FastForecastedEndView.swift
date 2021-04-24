@@ -17,6 +17,8 @@ struct FastForecastedEndView: View {
     
     VStack {
       Text("Starting your fast now will complete it:")
+        .lineLimit(1)
+        .minimumScaleFactor(0.7)
       Text(StringFormatter.colloquialDateTime(from: now.addingTimeInterval(fastingGoal.duration)))
         .foregroundColor(Color(UIColor.secondaryLabel))
         .onReceive(timer.$value) { (date: Date) in
