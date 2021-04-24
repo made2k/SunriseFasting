@@ -24,13 +24,19 @@ struct ActiveFastHomeView: View {
   @State private var showingEndOptions: Bool = false
   /// Our cachedEndDate is saved as soon as the user taps to end fast.
   /// We will commit this value, or update it depending on the users selection.
-  @State private var cachedEndDate: Date? 
+  @State private var cachedEndDate: Date?
+  
+  private var thickness: CGFloat
   
   init(fast: FastModel, namespace: Namespace.ID) {
     
     self.fast = fast
     self.namespace = namespace
     self._progressViewModel = StateObject(wrappedValue: FastProgressUpdatingViewModel(fast))
+    
+    // Workaround for geometry readers positioning issues
+    // Thickness needs to be shrunk on small devices like SE
+    thickness = UIScreen.main.bounds.height > 568 ? 32 : 24
   }
   
   var body: some View {
@@ -53,14 +59,15 @@ struct ActiveFastHomeView: View {
           }
         }
         
-        Spacer(minLength: 32)
+        Spacer()
         
         ZStack {
-          RingView(progressViewModel)
-            .startColor(progressViewModel.progress < 1 ? .ringIncompleteStart : .ringCompleteStart)
-            .endColor(progressViewModel.progress < 1 ? .ringIncompleteEnd : .ringCompleteEnd)
-            .backgroundColor(progressViewModel.progress < 1 ? Color.ringIncompleteStart.opacity(0.1) : Color.ringIncompleteEnd.opacity(0.1))
-            .thickness(32)
+            RingView(progressViewModel)
+              .startColor(progressViewModel.progress < 1 ? .ringIncompleteStart : .ringCompleteStart)
+              .endColor(progressViewModel.progress < 1 ? .ringIncompleteEnd : .ringCompleteEnd)
+              .backgroundColor(progressViewModel.progress < 1 ? Color.ringIncompleteStart.opacity(0.1) : Color.ringIncompleteEnd.opacity(0.1))
+              .thickness(thickness)
+              .aspectRatio(contentMode: .fit)
           VStack {
             Text("Elapsed time (\(StringFormatter.percent(from: progressViewModel.progress)))")
               .monospaced(font: .footnote)
@@ -72,7 +79,7 @@ struct ActiveFastHomeView: View {
         }
         .autoConnect(progressViewModel)
         
-        Spacer(minLength: 24)
+        Spacer()
         
         Button("End Fast", action: endFastAction)
           .actionSheet(isPresented: $showingEndOptions) {
@@ -86,7 +93,7 @@ struct ActiveFastHomeView: View {
           .buttonStyle(PaddedButtonStyle())
           .matchedGeometryEffect(id: "action", in: namespace)
         
-        Spacer(minLength: 48)
+        Spacer()
         
       }
       .padding()

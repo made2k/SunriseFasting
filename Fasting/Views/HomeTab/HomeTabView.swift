@@ -29,7 +29,18 @@ struct HomeTabView: View {
 
 struct HomeTabView_Previews: PreviewProvider {
   static var previews: some View {
-    HomeTabView()
-      .environmentObject(AppModel.preview)
+    Group {
+      HomeTabView()
+        .previewDevice("iPhone 8")
+        .environmentObject(AppModel.preview)
+      
+      HomeTabView()
+        .previewDevice("iPhone 12")
+        .environmentObject(AppModel.preview)
+      
+      HomeTabView()
+        .previewDevice("iPhone SE (1st generation)")
+        .environmentObject(AppModel.preview)
+    }
   }
 }
