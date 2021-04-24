@@ -39,7 +39,7 @@
 		927DD7DE2630B39300E6C33A /* FastForecastedEndView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 927DD7DD2630B39300E6C33A /* FastForecastedEndView.swift */; };
 		927DD7E22630B3C100E6C33A /* SwiftDateDynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 927DD7E12630B3C100E6C33A /* SwiftDateDynamic */; };
 		927DD7E32630B3C100E6C33A /* SwiftDateDynamic in Embed Frameworks */ = {isa = PBXBuildFile; productRef = 927DD7E12630B3C100E6C33A /* SwiftDateDynamic */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		927DD7E62630BFC000E6C33A /* HomeScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 927DD7E52630BFC000E6C33A /* HomeScreenView.swift */; };
+		927DD7E62630BFC000E6C33A /* TrackerHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 927DD7E52630BFC000E6C33A /* TrackerHomeView.swift */; };
 		9282A89A26332F0E00CA24A6 /* View+Connections.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9282A89926332F0E00CA24A6 /* View+Connections.swift */; };
 		9282A89C26332F1A00CA24A6 /* Connectable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9282A89B26332F1A00CA24A6 /* Connectable.swift */; };
 		9282A89E26332FB800CA24A6 /* PreviewUpdater.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9282A89D26332FB800CA24A6 /* PreviewUpdater.swift */; };
@@ -120,7 +120,7 @@
 		927DD7CA2630ADAE00E6C33A /* StringFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringFormatter.swift; sourceTree = "<group>"; };
 		927DD7D02630B12F00E6C33A /* Fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
 		927DD7DD2630B39300E6C33A /* FastForecastedEndView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FastForecastedEndView.swift; sourceTree = "<group>"; };
-		927DD7E52630BFC000E6C33A /* HomeScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenView.swift; sourceTree = "<group>"; };
+		927DD7E52630BFC000E6C33A /* TrackerHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackerHomeView.swift; sourceTree = "<group>"; };
 		9282A89926332F0E00CA24A6 /* View+Connections.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Connections.swift"; sourceTree = "<group>"; };
 		9282A89B26332F1A00CA24A6 /* Connectable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Connectable.swift; sourceTree = "<group>"; };
 		9282A89D26332FB800CA24A6 /* PreviewUpdater.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewUpdater.swift; sourceTree = "<group>"; };
@@ -503,7 +503,7 @@
 			children = (
 				92E0128C263376D900EE3848 /* Inactive */,
 				92E0128B263376D400EE3848 /* Active */,
-				927DD7E52630BFC000E6C33A /* HomeScreenView.swift */,
+				927DD7E52630BFC000E6C33A /* TrackerHomeView.swift */,
 			);
 			path = Tracker;
 			sourceTree = "<group>";
@@ -637,7 +637,7 @@
 				920E50EF2633DAA00014E7B5 /* RingView.swift in Sources */,
 				9282A89E26332FB800CA24A6 /* PreviewUpdater.swift in Sources */,
 				922A9A942631167700CBC0EF /* DatePickerSelectionView.swift in Sources */,
-				927DD7E62630BFC000E6C33A /* HomeScreenView.swift in Sources */,
+				927DD7E62630BFC000E6C33A /* TrackerHomeView.swift in Sources */,
 				9295C31A263282C00084C3AA /* StringFormatter+TimeIntervals.swift in Sources */,
 				9261A13C26339EF7005E8AAD /* TimelineItemView.swift in Sources */,
 				920E50E92633C79D0014E7B5 /* FastGroup.swift in Sources */,

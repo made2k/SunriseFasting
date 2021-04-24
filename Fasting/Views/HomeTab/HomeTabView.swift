@@ -10,7 +10,7 @@ import SwiftUI
 struct HomeTabView: View {
   var body: some View {
     TabView {
-      HomeScreenView()
+      TrackerHomeView()
         .tabItem {
           Image(systemName: "person.crop.circle")
           Text("Fasts")

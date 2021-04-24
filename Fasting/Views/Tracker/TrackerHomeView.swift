@@ -1,5 +1,5 @@
 //
-//  HomeScreenView.swift
+//  TrackerHomeView.swift
 //  Fasting
 //
 //  Created by Zach McGaughey on 4/21/21.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct HomeScreenView: View {
+struct TrackerHomeView: View {
   
   @EnvironmentObject private var model: AppModel
   @Namespace var namespace
@@ -38,7 +38,7 @@ struct HomeScreenView: View {
 
 struct TimerContainerScreen_Previews: PreviewProvider {
   static var previews: some View {
-    HomeScreenView()
+    TrackerHomeView()
       .environmentObject(AppModel.preview)
   }
 }
