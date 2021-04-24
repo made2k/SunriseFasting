@@ -22,9 +22,8 @@ struct FastingApp: App {
 
     WindowGroup {
       
-      HomeScreenView()
+      HomeTabView()
         .environmentObject(model)
-        .environment(\.managedObjectContext, model.manager.context)
 
     }
   }

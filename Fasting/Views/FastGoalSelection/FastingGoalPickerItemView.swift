@@ -17,22 +17,20 @@ struct FastingGoalPickerItemView: View {
   
   var body: some View {
     
-    ZStack {
-      Color(.systemBackground)
-      HStack{
-        VStack(alignment: .leading, spacing: 7.0) {
-          Text(goal.caseTitle)
-            .font(.headline)
-            .fontWeight(.heavy)
-          Text(goal.caseDescription)
-            .font(.footnote)
-        }
-        .padding()
-        
-        Spacer()
-        
+    HStack{
+      VStack(alignment: .leading, spacing: 7.0) {
+        Text(goal.caseTitle)
+          .font(.headline)
+          .fontWeight(.heavy)
+        Text(goal.caseDescription)
+          .font(.footnote)
       }
+      .padding()
+      
+      Spacer()
+      
     }
+    .background(Color(UIColor.secondarySystemGroupedBackground))
     .cornerRadius(8)
     
   }

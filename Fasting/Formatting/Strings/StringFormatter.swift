@@ -17,6 +17,12 @@ enum StringFormatter {
    https://thostark.medium.com/speed-up-your-dateformatter-63efec7b6723
    */
   
+  static var monthGroupTitleFormatter: DateFormatter = {
+    let formatter = DateFormatter()
+    formatter.setLocalizedDateFormatFromTemplate("MMMM yyyy")
+    return formatter
+  }()
+  
   static var timeFormatter: DateFormatter = {
     let formatter = DateFormatter()
     formatter.timeStyle = .short
@@ -28,7 +34,7 @@ enum StringFormatter {
     formatter.dateStyle = .short
     return formatter
   }()
-  
+    
   static var percentFormatter: NumberFormatter = {
     let formatter = NumberFormatter()
     formatter.numberStyle = .percent

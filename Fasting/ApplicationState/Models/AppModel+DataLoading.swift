@@ -53,7 +53,7 @@ extension AppModel {
     let request: NSFetchRequest<Fast> = Fast.fetchRequest()
     request.predicate = NSPredicate(format: "endDate != nil")
     
-    let sortDescriptor = NSSortDescriptor(keyPath: \Fast.endDate, ascending: true)
+    let sortDescriptor = NSSortDescriptor(keyPath: \Fast.endDate, ascending: false)
     request.sortDescriptors = [sortDescriptor]
     
     do {
