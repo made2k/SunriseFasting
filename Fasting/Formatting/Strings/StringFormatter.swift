@@ -34,13 +34,13 @@ enum StringFormatter {
     formatter.dateStyle = .short
     return formatter
   }()
-    
+  
   static var percentFormatter: NumberFormatter = {
     let formatter = NumberFormatter()
     formatter.numberStyle = .percent
     formatter.minimumIntegerDigits = 1
     formatter.maximumFractionDigits = 0
-
+    
     return formatter
   }()
   

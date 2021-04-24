@@ -10,17 +10,17 @@ import SwiftUI
 struct TimelineItemView: View {
   
   private let fast: Fast
-  @StateObject private var updater: ConstantUpdater
+  @StateObject private var progressUpdater: ConstantUpdater
   
   init(_ fast: Fast) {
     self.fast = fast
-    self._updater = StateObject(wrappedValue: ConstantUpdater(fast.progress))
+    self._progressUpdater = StateObject(wrappedValue: ConstantUpdater(fast.progress))
   }
   
   var body: some View {
     
     HStack(spacing: 24) {
-      RingView(ConstantUpdater(fast.progress))
+      RingView(progressUpdater)
         .thickness(8)
         .startColor(fast.progress < 1 ? .ringIncompleteStart : .ringCompleteStart)
         .endColor(fast.progress < 1 ? .ringIncompleteEnd : .ringCompleteEnd)
@@ -30,13 +30,13 @@ struct TimelineItemView: View {
         Text(StringFormatter.shortDateFormatter.string(from: fast.startDate!))
           .foregroundColor(Color(.secondaryLabel))
         Text(StringFormatter.percent(from: fast.progress))
-        Text("\(StringFormatter.roundedHours(from: fast.interval, includeSuffix: false))/\(StringFormatter.roundedHours(from: fast.targetInterval, includeSuffix: true))")
+        Text("\(StringFormatter.roundedHours(from: fast.currentInterval, includeSuffix: false))/\(StringFormatter.roundedHours(from: fast.targetInterval, includeSuffix: true))")
       }
       
       Spacer()
     }
     .cornerRadius(8)
-    .autoConnect(updater)
+    .autoConnect(progressUpdater)
     
   }
 }
@@ -47,20 +47,3 @@ struct TimelineItemView_Previews: PreviewProvider {
   }
 }
 
-extension Fast {
-  
-  var progress: Double {
-    return interval / targetInterval
-  }
-  
-  var inProgress: Bool {
-    return endDate == nil
-  }
-  
-  var interval: TimeInterval {
-    let endDate = self.endDate ?? Date()
-    let interval = endDate.timeIntervalSince(startDate!)
-    return interval
-  }
-  
-}

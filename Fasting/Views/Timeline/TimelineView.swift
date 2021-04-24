@@ -12,24 +12,21 @@ struct TimelineView: View {
   @EnvironmentObject private var model: AppModel
   
   var body: some View {
-    ZStack {
-      List {
-        ForEach(FastGroup.group(model.completedFasts)) { (group: FastGroup) in
-          Section(header: Text(group.title).font(.title3).fontWeight(.bold)) {
-            ForEach(group.fasts) { (fast: Fast) in
-              TimelineItemView(fast)
-            }
+    List {
+      ForEach(FastGroup.group(model.completedFasts)) { (group: FastGroup) in
+        Section(header: Text(group.title).font(.title3).fontWeight(.bold)) {
+          ForEach(group.fasts) { (fast: Fast) in
+            TimelineItemView(fast)
           }
         }
-        .onDelete { indexSet in
-          guard let index = indexSet.first else { return }
-          let fast = model.completedFasts[index]
-          model.deleteFast(fast)
-        }
       }
-      .listStyle(InsetGroupedListStyle())
-      
+      .onDelete { indexSet in
+        guard let index = indexSet.first else { return }
+        let fast = model.completedFasts[index]
+        model.deleteFast(fast)
+      }
     }
+    .listStyle(InsetGroupedListStyle())
     .navigationTitle("Timeline")
   }
 }

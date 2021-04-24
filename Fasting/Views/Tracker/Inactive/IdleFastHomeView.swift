@@ -41,7 +41,6 @@ struct IdleFastHomeView: View {
           Text("Get started with your first fast.")
             .font(.title)
             .multilineTextAlignment(.center)
-          
         }
         
         Spacer()

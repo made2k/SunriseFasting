@@ -17,6 +17,7 @@
 		920E50EF2633DAA00014E7B5 /* RingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920E50EE2633DAA00014E7B5 /* RingView.swift */; };
 		92124A0E263234E100A33968 /* FastingGoal+AllCases.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92124A0D263234E100A33968 /* FastingGoal+AllCases.swift */; };
 		922A9A942631167700CBC0EF /* DatePickerSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922A9A932631167700CBC0EF /* DatePickerSelectionView.swift */; };
+		92534CDF2634752300D95681 /* Fast+Properties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92534CDE2634752300D95681 /* Fast+Properties.swift */; };
 		9254F9A0262FBAB300589377 /* FastingApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9254F99F262FBAB300589377 /* FastingApp.swift */; };
 		9254F9A4262FBAB300589377 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9254F9A3262FBAB300589377 /* Assets.xcassets */; };
 		9254F9A7262FBAB300589377 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9254F9A6262FBAB300589377 /* Preview Assets.xcassets */; };
@@ -98,6 +99,7 @@
 		920E50EE2633DAA00014E7B5 /* RingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RingView.swift; sourceTree = "<group>"; };
 		92124A0D263234E100A33968 /* FastingGoal+AllCases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FastingGoal+AllCases.swift"; sourceTree = "<group>"; };
 		922A9A932631167700CBC0EF /* DatePickerSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerSelectionView.swift; sourceTree = "<group>"; };
+		92534CDE2634752300D95681 /* Fast+Properties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Fast+Properties.swift"; sourceTree = "<group>"; };
 		9254F99C262FBAB300589377 /* Fasting.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Fasting.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9254F99F262FBAB300589377 /* FastingApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FastingApp.swift; sourceTree = "<group>"; };
 		9254F9A3262FBAB300589377 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -406,6 +408,7 @@
 			children = (
 				92B7399326323F73002D5261 /* Fast+Initialization.swift */,
 				926B23A426331BB2000E3373 /* Fast+Preview.swift */,
+				92534CDE2634752300D95681 /* Fast+Properties.swift */,
 				92D739D726326667008DD386 /* UserDefaultKeys.swift */,
 				92D739D526326187008DD386 /* UserDefaults+Publishing.swift */,
 			);
@@ -668,6 +671,7 @@
 				920E50EB2633C7BC0014E7B5 /* FastGroup+Identifiable.swift in Sources */,
 				9254F9A9262FBAB300589377 /* PersistenceController.swift in Sources */,
 				92CC52FB26337BEC00D82E6C /* Color+Custom.swift in Sources */,
+				92534CDF2634752300D95681 /* Fast+Properties.swift in Sources */,
 				92978B2526331D1400944D12 /* FastProgressUpdatingViewModel.swift in Sources */,
 				927DD7C42630AC6F00E6C33A /* TextButtonGroup.swift in Sources */,
 				926B23A526331BB2000E3373 /* Fast+Preview.swift in Sources */,

@@ -56,8 +56,7 @@ final class TimerObservable: ObservableObject, Connectable {
     // Create a new timer we subscribe to
     self.timer = Timer.publish(every: interval, tolerance: tolerance, on: loop, in: mode, options: options)
     
-    sinkCancel = timer
-      .sink { [weak self] value in
+    sinkCancel = timer.sink { [weak self] value in
       self?.value = value
     }
     

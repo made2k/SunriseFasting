@@ -17,7 +17,8 @@ struct PersistenceController {
   /// In memory store that does not write any data to disk
   static var preview: PersistenceController = {
     let result = PersistenceController(inMemory: true)
-    
+
+    // Backfill history data
     for value in 2..<34 {
       let entity = Fast(context: result.container.viewContext)
       entity.startDate = Date().dateByAdding(-1 * value, .day).date

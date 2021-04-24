@@ -12,15 +12,13 @@ struct HomeTabView: View {
     TabView {
       TrackerHomeView()
         .tabItem {
-          Image(systemName: "person.crop.circle")
-          Text("Fasts")
+          Label("Fasts", systemImage: "person.crop.circle")
         }
       NavigationView {
         TimelineView()
       }
       .tabItem {
-        Image(systemName: "list.bullet")
-        Text("Timeline")
+        Label("Timeline", systemImage: "list.bullet")
       }
       
     }
