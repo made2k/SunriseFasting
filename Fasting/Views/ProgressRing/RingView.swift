@@ -1,51 +1,72 @@
-//
-//  RingView.swift
-//  Fasting
-//
-//  Created by Zach McGaughey on 4/23/21.
-//
+/*
+ MIT License
+
+ Copyright (c) 2021 Exyte
+
+ Permission is hereby granted, free of charge, to any person obtaining a copy
+ of this software and associated documentation files (the "Software"), to deal
+ in the Software without restriction, including without limitation the rights
+ to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ copies of the Software, and to permit persons to whom the Software is
+ furnished to do so, subject to the following conditions:
+
+ The above copyright notice and this permission notice shall be included in all
+ copies or substantial portions of the Software.
+
+ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+ SOFTWARE.
+ */
+
+// RingView modified by code from exyte
+// repo: https://github.com/exyte/replicating
 
 import SwiftUI
 
 struct RingView<T>: View where T: ProgressUpdater {
-  
+
+  // ViewModel that will update the progress
   @ObservedObject var viewModel: T
+  @State private var currentPercentage: Double
   
-  @State var currentPercentage: Double
-  
-  @State var percentage: Double
-  var backgroundColor: Color
-  var startColor: Color
-  var endColor: Color
-  var thickness: CGFloat
-  
+  private var backgroundColor: Color
+  private var startColor: Color
+  private var endColor: Color
+  private var thickness: CGFloat
+
   private let minValue: Double = 0.001
-  
-  var animation: Animation {
-    Animation.easeInOut(duration: 1)
-  }
-  
+
   init(_ model: T) {
     self.viewModel = model
-    
+
+    // Initialize with default values
     _currentPercentage = State(initialValue: max(model.progress, minValue))
-    _percentage = State(initialValue: model.progress)
     startColor = .ringIncompleteStart
     endColor = .ringIncompleteEnd
     backgroundColor = Color.ringIncompleteStart.opacity(0.1)
     thickness = 10
-    
   }
   
   var body: some View {
     
     let colors: [Color]
+    // When the percentage is low, multiple colors can
+    // appear clipped. If low, use only one color
     if currentPercentage > 0.1 {
       colors = [startColor, endColor]
     } else {
       colors = [startColor, startColor]
     }
-    let gradient = AngularGradient(gradient: Gradient(colors: colors), center: .center, startAngle: Angle(degrees: 0), endAngle: Angle(degrees: 360 * currentPercentage))
+    let gradient = AngularGradient(
+      gradient: Gradient(colors: colors),
+      center: .center,
+      startAngle: Angle(degrees: 0),
+      endAngle: Angle(degrees: 360 * currentPercentage)
+    )
     
     return ZStack {
       RingBackgroundShape(thickness: thickness)
@@ -55,30 +76,16 @@ struct RingView<T>: View where T: ProgressUpdater {
         .rotationEffect(.init(degrees: -90))
         .shadow(radius: 2)
         .drawingGroup()
-        .onAppear() {
-          DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
-            withAnimation(self.animation) {
-              self.currentPercentage = self.percentage
-            }
-          }
-        }
       RingTipShape(currentPercentage: currentPercentage, thickness: thickness)
         .fill(currentPercentage > 0.5 ? endColor : .clear)
         .rotationEffect(.init(degrees: -90))
-        .onAppear() {
-          DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
-            withAnimation(self.animation) {
-              self.currentPercentage = self.percentage
-            }
-          }
-        }
-    }.onReceive(viewModel.progressPublisher) { progress in
+    }
+    .onReceive(viewModel.progressPublisher) { progress in
       currentPercentage = max(progress, minValue)
-      self.percentage = max(progress, minValue)
     }
   }
   
-  // Modifiers
+  // MARK: Modifiers
   
   func progress(_ value: Double) -> Self {
     let view = self
@@ -112,7 +119,9 @@ struct RingView<T>: View where T: ProgressUpdater {
   
 }
 
-struct RingShape: Shape {
+// MARK: - Ring Shape
+
+private struct RingShape: Shape {
   
   var currentPercentage: Double
   var thickness: CGFloat
@@ -128,8 +137,9 @@ struct RingShape: Shape {
       clockwise: false
     )
     
-    return path
-      .strokedPath(.init(lineWidth: thickness, lineCap: .round, lineJoin: .round))
+    return path.strokedPath(
+      .init(lineWidth: thickness, lineCap: .round, lineJoin: .round)
+    )
   }
   
   var animatableData: Double {
@@ -139,7 +149,9 @@ struct RingShape: Shape {
   
 }
 
-struct RingTipShape: Shape {
+// MARK: - Ring Tip Shape
+
+private struct RingTipShape: Shape {
   
   @State var currentPercentage: Double
   @State var thickness: CGFloat
@@ -173,7 +185,9 @@ struct RingTipShape: Shape {
   
 }
 
-struct RingBackgroundShape: Shape {
+// MARK: - Ring Background Shape
+
+private struct RingBackgroundShape: Shape {
   
   @State var thickness: CGFloat
   

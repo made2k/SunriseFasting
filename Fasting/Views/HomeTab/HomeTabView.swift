@@ -9,6 +9,7 @@ import SwiftUI
 
 struct HomeTabView: View {
   var body: some View {
+
     TabView {
       TrackerHomeView()
         .tabItem {
@@ -20,8 +21,8 @@ struct HomeTabView: View {
       .tabItem {
         Label("Timeline", systemImage: "list.bullet")
       }
-      
     }
+
   }
 }
 

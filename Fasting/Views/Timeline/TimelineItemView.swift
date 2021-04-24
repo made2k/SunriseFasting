@@ -30,7 +30,7 @@ struct TimelineItemView: View {
         Text(StringFormatter.shortDateFormatter.string(from: fast.startDate!))
           .foregroundColor(Color(.secondaryLabel))
         Text(StringFormatter.percent(from: fast.progress))
-        Text("\(StringFormatter.roundedHours(from: fast.currentInterval, includeSuffix: false))/\(StringFormatter.roundedHours(from: fast.targetInterval, includeSuffix: true))")
+        Text("\(Self.roundedHours(from: fast.currentInterval))/\(Self.roundedHours(from: fast.targetInterval))h")
       }
       
       Spacer()
@@ -39,6 +39,20 @@ struct TimelineItemView: View {
     .autoConnect(progressUpdater)
     
   }
+
+  /// Format a TimeInterval into a short hour description (ie 16h)
+  /// - Parameter interval: The TimeInterval to use for formatting
+  /// - Returns: A string formatted like 16h
+  private static func roundedHours(from interval: TimeInterval) -> String {
+    let hours: TimeInterval = interval / 3600
+
+    let formatter = NumberFormatter()
+    formatter.roundingMode = .halfUp
+    formatter.maximumFractionDigits = 0
+
+    return formatter.string(from: NSNumber(value: hours)) ?? "0"
+  }
+
 }
 
 struct TimelineItemView_Previews: PreviewProvider {

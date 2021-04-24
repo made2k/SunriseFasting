@@ -36,25 +36,4 @@ extension StringFormatter {
     
   }
   
-  /// Format a TimeInterval into a short hour description (ie 16h)
-  /// - Parameter interval: The TimeInterval to use for formatting
-  /// - Returns: A string formatted like 16h
-  static func roundedHours(from interval: TimeInterval, includeSuffix: Bool) -> String {
-    
-    let hours: TimeInterval = interval / 3600
-
-    let formatter = NumberFormatter()
-    formatter.roundingMode = .halfUp
-    formatter.maximumFractionDigits = 0
-    
-    let number = formatter.string(from: NSNumber(value: hours)) ?? "0"
-    
-    if includeSuffix {
-      return "\(number)h"
-      
-    } else {
-      return number
-    }
-  }
-  
 }
