@@ -7,6 +7,7 @@
 
 import CoreData
 import Foundation
+import OSLog
 
 extension Fast {
   
@@ -16,6 +17,8 @@ extension Fast {
     self.startDate = startDate
     self.endDate = endDate
     self.targetInterval = interval
+
+    Logger.create(.coreData).trace("Fast Entity created")
   }
   
 }

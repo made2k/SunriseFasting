@@ -7,10 +7,13 @@
 
 import CoreData
 import Foundation
+import OSLog
 
-/// Class to help manage data persistance.
+/// Class to help manage data persistence.
 final class DataManager {
-  
+
+  let logger = Logger.create(.coreData)
+
   /// Shared persisted DataManager
   static let shared = DataManager()
   /// A preview DataManager that does not persist data to disk
@@ -64,7 +67,7 @@ final class DataManager {
       try context.save()
       
     } catch {
-      print("error saving changes: \(error)")
+      logger.error("error saving changes: \(error.localizedDescription)")
     }
     
   }

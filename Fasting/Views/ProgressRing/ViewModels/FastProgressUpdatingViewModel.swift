@@ -7,9 +7,12 @@
 
 import Combine
 import Foundation
+import OSLog
 
 /// ProgressUpdater that updates updates based on a provided FastModel
 final class FastProgressUpdatingViewModel: ProgressUpdater {
+
+  let logger = Logger.create(.interface)
   
   private let model: FastModel
   
@@ -35,6 +38,8 @@ final class FastProgressUpdatingViewModel: ProgressUpdater {
   // MARK: - Connections
   
   func connect() {
+
+    logger.trace("FastProgressUpdater connected")
     
     let startDateChanged = model.$startDate.removeDuplicates()
     let durationChanged = model.$duration.removeDuplicates()
@@ -47,12 +52,14 @@ final class FastProgressUpdatingViewModel: ProgressUpdater {
         return percent
       }
       .sink { [weak self] progress in
+        self?.logger.trace("FastProgressUpdater was updated from publisher")
         self?.progress = progress
       }
     
   }
   
   func disconnect() {
+    logger.trace("FastProgressUpdater disconnected")
     cancellable?.cancel()
   }
   

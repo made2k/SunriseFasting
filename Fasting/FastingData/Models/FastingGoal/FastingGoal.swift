@@ -6,8 +6,11 @@
 //
 
 import Foundation
+import OSLog
 
 enum FastingGoal {
+
+  static var logger: Logger { Logger.create() }
   
   static var `default`: FastingGoal = .sixteen
 

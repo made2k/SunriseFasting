@@ -5,6 +5,7 @@
 //  Created by Zach McGaughey on 4/21/21.
 //
 
+import OSLog
 import SwiftUI
 
 struct DatePickerSelectionView: View {
@@ -94,9 +95,11 @@ struct DatePickerSelectionView: View {
   private func saveButtonPressed() {
     
     if let callback = onDateSelected {
+      Logger.viewLogger.debug("DatePicker saving via callback")
       callback(localDate)
       
     } else {
+      Logger.viewLogger.debug("DatePicker saving via binding")
       persistedDate = localDate
     }
     

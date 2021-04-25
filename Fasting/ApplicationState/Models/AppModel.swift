@@ -7,9 +7,12 @@
 
 import Combine
 import Foundation
+import OSLog
 import SwiftUI
 
 final class AppModel: ObservableObject {
+
+  let logger = Logger.create()
   
   static let preview: AppModel = {
     let model = AppModel(preview: true)
@@ -44,6 +47,8 @@ final class AppModel: ObservableObject {
       manager = DataManager.shared
       setupSubscriptions()
     }
+
+    logger.trace("AppModel initialized")
     
   }
   
@@ -57,6 +62,7 @@ final class AppModel: ObservableObject {
       .removeDuplicates()
       .dropFirst() // Drop first since we don't care about the initial value, only changes
       .sink { [weak self] (newGoal: FastingGoal) in
+        self?.logger.debug("New FastingGoal set from Defaults: \(newGoal.rawValue, privacy: .private)")
         self?.currentFast?.duration = newGoal.duration
       }
 

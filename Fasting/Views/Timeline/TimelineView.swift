@@ -5,10 +5,11 @@
 //  Created by Zach McGaughey on 4/23/21.
 //
 
+import OSLog
 import SwiftUI
 
 struct TimelineView: View {
-  
+
   @EnvironmentObject private var model: AppModel
   
   var body: some View {
@@ -21,6 +22,7 @@ struct TimelineView: View {
         }
       }
       .onDelete { indexSet in
+        Logger.viewLogger.debug("Entry deleted from timeline with: \(indexSet)")
         guard let index = indexSet.first else { return }
         let fast = model.completedFasts[index]
         model.deleteFast(fast)
