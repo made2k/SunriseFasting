@@ -24,6 +24,7 @@
 		9254F9A7262FBAB300589377 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9254F9A6262FBAB300589377 /* Preview Assets.xcassets */; };
 		9254F9A9262FBAB300589377 /* PersistenceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9254F9A8262FBAB300589377 /* PersistenceController.swift */; };
 		9254F9AC262FBAB300589377 /* Fasting.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9254F9AA262FBAB300589377 /* Fasting.xcdatamodeld */; };
+		9260D5D9263521D3003B2F3D /* Comparable+Clamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9260D5D8263521D3003B2F3D /* Comparable+Clamp.swift */; };
 		9261A13A26339CF7005E8AAD /* TimelineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9261A13926339CF7005E8AAD /* TimelineView.swift */; };
 		9261A13C26339EF7005E8AAD /* TimelineItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9261A13B26339EF7005E8AAD /* TimelineItemView.swift */; };
 		92656CCA2631B00C00C9C232 /* CustomFastingGoalEntryScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92656CC92631B00C00C9C232 /* CustomFastingGoalEntryScreen.swift */; };
@@ -110,6 +111,7 @@
 		9254F9A8262FBAB300589377 /* PersistenceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceController.swift; sourceTree = "<group>"; };
 		9254F9AB262FBAB300589377 /* Fasting.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Fasting.xcdatamodel; sourceTree = "<group>"; };
 		9254F9AD262FBAB300589377 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9260D5D8263521D3003B2F3D /* Comparable+Clamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Comparable+Clamp.swift"; sourceTree = "<group>"; };
 		9261A13926339CF7005E8AAD /* TimelineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelineView.swift; sourceTree = "<group>"; };
 		9261A13B26339EF7005E8AAD /* TimelineItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelineItemView.swift; sourceTree = "<group>"; };
 		92656CC92631B00C00C9C232 /* CustomFastingGoalEntryScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomFastingGoalEntryScreen.swift; sourceTree = "<group>"; };
@@ -279,6 +281,7 @@
 				9246FCF8262FBE4200B6375D /* Application */,
 				92D739D926326946008DD386 /* ApplicationState */,
 				9282A89826332EF400CA24A6 /* Connections */,
+				9260D5D7263521B8003B2F3D /* Extensions */,
 				92124A0B2632343700A33968 /* FastingData */,
 				92656CCB26324C8700C9C232 /* Formatting */,
 				9236BA3D263508920056EFDD /* Logging */,
@@ -296,6 +299,14 @@
 				9254F9A6262FBAB300589377 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		9260D5D7263521B8003B2F3D /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				9260D5D8263521D3003B2F3D /* Comparable+Clamp.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		9261A13826339CEC005E8AAD /* Timeline */ = {
@@ -698,6 +709,7 @@
 				927DD7DE2630B39300E6C33A /* FastForecastedEndView.swift in Sources */,
 				92B7399126323EB4002D5261 /* FastModel+Previewing.swift in Sources */,
 				92F2EBA22633472C001EBCFD /* DatePickerRangeFactory.swift in Sources */,
+				9260D5D9263521D3003B2F3D /* Comparable+Clamp.swift in Sources */,
 				9282A8A02633311900CA24A6 /* ConstantUpdater.swift in Sources */,
 				92B7398E26323D88002D5261 /* FastModel.swift in Sources */,
 				92B7399426323F73002D5261 /* Fast+Initialization.swift in Sources */,

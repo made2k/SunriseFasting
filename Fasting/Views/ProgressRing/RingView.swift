@@ -44,7 +44,7 @@ struct RingView<T>: View where T: ProgressUpdater {
     self.viewModel = model
 
     // Initialize with default values
-    _currentPercentage = State(initialValue: max(model.progress, minValue))
+    _currentPercentage = State(initialValue: Self.safeMax(from: model.progress))
     startColor = .ringIncompleteStart
     endColor = .ringIncompleteEnd
     backgroundColor = Color.ringIncompleteStart.opacity(0.1)
@@ -81,15 +81,19 @@ struct RingView<T>: View where T: ProgressUpdater {
         .rotationEffect(.init(degrees: -90))
     }
     .onReceive(viewModel.progressPublisher) { progress in
-      currentPercentage = max(progress, minValue)
+      currentPercentage = Self.safeMax(from: progress)
     }
+  }
+
+  private static func safeMax(from value: Double) -> Double {
+    value.clamped(to: 0.001...1.999)
   }
   
   // MARK: Modifiers
   
   func progress(_ value: Double) -> Self {
     let view = self
-    view.currentPercentage = max(value, minValue)
+    view.currentPercentage = Self.safeMax(from: value)
     return view
   }
   
