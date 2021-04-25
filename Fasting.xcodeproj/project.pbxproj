@@ -75,7 +75,6 @@
 		92F1D21E2630814400ED6F81 /* FastingGoal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92F1D21D2630814400ED6F81 /* FastingGoal.swift */; };
 		92F2EBA02633465C001EBCFD /* BlurView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92F2EB9F2633465C001EBCFD /* BlurView.swift */; };
 		92F2EBA22633472C001EBCFD /* DatePickerRangeFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92F2EBA12633472C001EBCFD /* DatePickerRangeFactory.swift */; };
-		92F7D51C26353E2B0008BE68 /* View+Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92F7D51B26353E2B0008BE68 /* View+Notifications.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -160,7 +159,6 @@
 		92F1D21D2630814400ED6F81 /* FastingGoal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FastingGoal.swift; sourceTree = "<group>"; };
 		92F2EB9F2633465C001EBCFD /* BlurView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlurView.swift; sourceTree = "<group>"; };
 		92F2EBA12633472C001EBCFD /* DatePickerRangeFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerRangeFactory.swift; sourceTree = "<group>"; };
-		92F7D51B26353E2B0008BE68 /* View+Notifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Notifications.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -285,7 +283,6 @@
 				92124A0B2632343700A33968 /* FastingData */,
 				92656CCB26324C8700C9C232 /* Formatting */,
 				9236BA3D263508920056EFDD /* Logging */,
-				92F7D51926353E130008BE68 /* NotificationCenter */,
 				9254F9A5262FBAB300589377 /* Preview Content */,
 				92124A082632304100A33968 /* Storage */,
 				92B96C452633185400ED1758 /* Views */,
@@ -578,22 +575,6 @@
 			path = ViewStyles;
 			sourceTree = "<group>";
 		};
-		92F7D51926353E130008BE68 /* NotificationCenter */ = {
-			isa = PBXGroup;
-			children = (
-				92F7D51A26353E1F0008BE68 /* Extensions */,
-			);
-			path = NotificationCenter;
-			sourceTree = "<group>";
-		};
-		92F7D51A26353E1F0008BE68 /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				92F7D51B26353E2B0008BE68 /* View+Notifications.swift */,
-			);
-			path = Extensions;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -677,7 +658,6 @@
 				92D739D226325500008DD386 /* StringFormatter+Percentage.swift in Sources */,
 				9278B7F6262FC01A00893C7D /* ActiveFastHomeView.swift in Sources */,
 				92A8ED1F2630D2B700BE00F0 /* StartTimeInfoView.swift in Sources */,
-				92F7D51C26353E2B0008BE68 /* View+Notifications.swift in Sources */,
 				92A8ED232630DA4C00BE00F0 /* EndTimeInfoView.swift in Sources */,
 				92D81A82263106FD007E884A /* FastingGoalPickerView.swift in Sources */,
 				92F2EBA02633465C001EBCFD /* BlurView.swift in Sources */,

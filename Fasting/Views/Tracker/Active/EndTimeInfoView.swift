@@ -5,17 +5,14 @@
 //  Created by Zach McGaughey on 4/21/21.
 //
 
-import OSLog
 import SwiftUI
 
 struct EndTimeInfoView: View {
-  
-  let referenceDate: Date
-  @State private var dateText: String
+
+  private var dateText: String
 
   init(referenceDate: Date) {
-    self.referenceDate = referenceDate
-    self._dateText = State<String>(initialValue: Self.getDateText(for: referenceDate))
+    self.dateText = StringFormatter.colloquialDateTime(from: referenceDate)
   }
   
   var body: some View {
@@ -26,18 +23,7 @@ struct EndTimeInfoView: View {
       Text(dateText)
         .foregroundColor(Color(UIColor.secondaryLabel))
         .font(.callout)
-        .onNotification(UIApplication.significantTimeChangeNotification) {
-          Logger.viewLogger.debug("EndTimeInfo updating due to signification time notification")
-          // Since our reference state is constant, we need to
-          // trigger an update when the day changes. Listen to the notification
-          // and update our text when the clock strikes midnight.
-          dateText = Self.getDateText(for: referenceDate)
-        }
     }
-  }
-
-  private static func getDateText(for date: Date) -> String {
-    StringFormatter.colloquialDateTime(from: date)
   }
 
 }
