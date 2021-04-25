@@ -53,7 +53,7 @@ extension AppModel {
   func endFast(_ model: FastModel, endDate: Date) {
 
     guard model.endDate == nil else {
-      print("attempting to end an already ended fast")
+      logger.warning("attempting to end a fast with existing end date")
       return
     }
     

@@ -25,7 +25,7 @@ extension FastingGoal: RawRepresentable {
       self = result
       
     } catch {
-      print("unable to decode FastingGoal from data: \(error)")
+      Self.logger.error("Unable to decode FastingGoal from data: \(error.localizedDescription)")
       return nil
     }
     
@@ -37,14 +37,14 @@ extension FastingGoal: RawRepresentable {
       let data = try JSONEncoder().encode(self)
       
       guard let result = String(data: data, encoding: .utf8) else {
-        print("Unable to produce String from FastingGoal data")
+        Self.logger.error("Unable to produce String from FastingGoal data")
         return ""
       }
       
       return result
       
     } catch {
-      print("unable to encode FastingGoal to data: \(error)")
+      Self.logger.error("Unable to encode FastingGoal to data: \(error.localizedDescription)")
       return ""
     }
 

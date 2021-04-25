@@ -7,9 +7,12 @@
 
 import Combine
 import Foundation
+import OSLog
 import SwiftUI
 
 final class AppModel: ObservableObject {
+
+  let logger = Logger.create()
   
   static let preview: AppModel = {
     let model = AppModel(preview: true)
@@ -44,6 +47,8 @@ final class AppModel: ObservableObject {
       manager = DataManager.shared
       setupSubscriptions()
     }
+
+    logger.trace("AppModel initialized")
     
   }
   

@@ -5,12 +5,15 @@
 //  Created by Zach McGaughey on 4/22/21.
 //
 
+import Combine
 import CoreData
 import Foundation
-import Combine
+import OSLog
 
 /// Wrapper data model around our CoreData entity
 final class FastModel: ObservableObject {
+
+  let logger = Logger.create(.dataModel)
     
   /// Our managed object reference
   let entity: Fast
@@ -51,10 +54,10 @@ final class FastModel: ObservableObject {
   }
   
   private func persistToDisk(_ startDate: Date, endDate: Date?, duration: TimeInterval) {
-    print("FastModel is updating entity on disk")
+    logger.debug("FastModel is updating entity on disk")
     
     guard let context = entity.managedObjectContext else {
-      print("FastModel entity did not have a managedObjectContext. Aborting save")
+      logger.warning("FastModel entity did not have a managedObjectContext. Aborting save")
       return
     }
     
@@ -63,7 +66,7 @@ final class FastModel: ObservableObject {
     entity.targetInterval = duration
     
     guard context.hasChanges else {
-      print("FastModel has no changes, aborting update")
+      logger.debug("FastModel has no changes, aborting update")
       return
     }
 
@@ -71,7 +74,7 @@ final class FastModel: ObservableObject {
       try context.save()
       
     } catch {
-      print("Error saving entity to disk: \(error)")
+      logger.error("Error saving entity to disk: \(error.localizedDescription)")
     }
     
   }

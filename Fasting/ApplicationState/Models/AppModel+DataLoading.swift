@@ -43,7 +43,7 @@ extension AppModel {
       }
       
     } catch {
-      print("error fetching current fast: \(error)")
+      logger.error("failed to fetch current fast: \(error.localizedDescription)")
     }
   }
   
@@ -61,9 +61,9 @@ extension AppModel {
       self.completedFasts = results
       
     } catch {
-      print("error fetching completed fasts: \(error)")
+      logger.error("failed to fetch completed fasts: \(error.localizedDescription)")
     }
-    
+
   }
   
 }

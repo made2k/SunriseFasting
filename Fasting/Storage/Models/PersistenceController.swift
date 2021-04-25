@@ -6,9 +6,12 @@
 //
 
 import CoreData
+import OSLog
 
 struct PersistenceController {
-  
+
+  static let logger = Logger.create(.coreData)
+
   // MARK: - Static Accessors
   
   /// The shared controller that will persist data to disk.
@@ -30,7 +33,7 @@ struct PersistenceController {
       try result.container.viewContext.save()
       
     } catch {
-      print("error creating preview data")
+      logger.error("Error creating preview data: \(error.localizedDescription)")
     }
     
     /*
