@@ -15,7 +15,7 @@ struct ActiveFastHomeView: View {
   @ObservedObject var fast: FastModel
   
   @StateObject var progressViewModel: FastProgressUpdatingViewModel
-  @AppStorage(UserDefaultKey.fastingGoal.rawValue) var fastingGoal: FastingGoal = .sixteen
+  @AppStorage(UserDefaultKey.fastingGoal.rawValue) var fastingGoal: FastingGoal = .default
   
   private var namespace: Namespace.ID
   @State private var showingGoalSelection: Bool = false

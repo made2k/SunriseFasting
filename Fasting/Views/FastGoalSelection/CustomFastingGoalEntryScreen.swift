@@ -5,6 +5,7 @@
 //  Created by Zach McGaughey on 4/22/21.
 //
 
+import OSLog
 import SwiftUI
 
 struct CustomFastingGoalEntryScreen: View {
@@ -75,6 +76,7 @@ struct CustomFastingGoalEntryScreen: View {
   private func saveAction() {
     // If no value was set, or the value is 0, don't save a new goal.
     if let value = hours, value > 0 {
+      Logger.viewLogger.debug("Custom fast entry saving new value with value: \(value)")
       fastGoal = FastingGoal(from: value.hours.timeInterval)
     }
     

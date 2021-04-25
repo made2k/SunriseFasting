@@ -26,14 +26,18 @@ extension AppModel {
     endDate: Date? = nil,
     interval: TimeInterval
   ) -> FastModel {
+
+    logger.info("Starting a new fast")
     
     let entity: Fast = manager.createNewFast(startDate, endDate: endDate, interval: interval)
     let model = FastModel(entity)
     
     if endDate == nil {
+      logger.debug("New fast has no endDate, assigning as currentFast")
       currentFast = model
       
     } else {
+      logger.debug("New fast has an endDate, reloading completed fasts")
       // Since this fast has been saved, our list is now outdated.
       // Load our completed fasts and overwrite our stored value.
       loadCompletedFasts()
@@ -52,13 +56,15 @@ extension AppModel {
   ///   - endDate: The Date to apply to the FastModel
   func endFast(_ model: FastModel, endDate: Date) {
 
+    logger.info("Ending fast with date: \(endDate)")
+
     guard model.endDate == nil else {
       logger.warning("attempting to end a fast with existing end date")
       return
     }
-    
+
     model.endDate = endDate
-    
+
     // Now that we've updated our fast, load our completed fasts to keep up to date
     loadCompletedFasts()
     
@@ -69,6 +75,9 @@ extension AppModel {
   /// Delete a fast from storage.
   /// - Parameter model: The model that will be deleted
   func deleteFast(_ model: FastModel) {
+
+    logger.info("Deleting FastModel")
+
     deleteFast(model.entity)
 
     if model == currentFast {
@@ -78,6 +87,7 @@ extension AppModel {
   }
   
   func deleteFast(_ fast: Fast) {
+    logger.info("Deleting Fast Entity: \(fast.description, privacy: .private)")
     manager.delete(fast)
     loadCompletedFasts()
   }

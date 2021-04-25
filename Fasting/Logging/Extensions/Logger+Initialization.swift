@@ -25,4 +25,8 @@ extension Logger {
     return Logger(subsystem: bundle, category: category.rawValue)
   }
 
+  static let viewLogger: Logger = {
+    create(.interface)
+  }()
+
 }

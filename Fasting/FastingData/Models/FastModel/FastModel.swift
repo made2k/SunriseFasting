@@ -31,11 +31,14 @@ final class FastModel: ObservableObject {
     self.startDate = fast.startDate!
     self.endDate = fast.endDate
     self.duration = fast.targetInterval
+
+    logger.trace("FastModel created from: \(fast.description, privacy: .private)")
     
     setupPersistSubscription()
   }
   
   deinit {
+    logger.trace("FastModel deinit")
     cancellable?.cancel()
   }
   
@@ -49,6 +52,7 @@ final class FastModel: ObservableObject {
     cancellable = Publishers.CombineLatest3($startDate, $endDate, $duration)
       .dropFirst() // This subscription only cares for updates, not initial value
       .sink { [weak self] (startDate: Date, endDate: Date?, duration: TimeInterval) in
+        self?.logger.debug("FastModel publishers caused persist to disk.")
         self?.persistToDisk(startDate, endDate: endDate, duration: duration)
       }
   }
@@ -72,6 +76,7 @@ final class FastModel: ObservableObject {
 
     do {
       try context.save()
+      logger.trace("FastModel save completed")
       
     } catch {
       logger.error("Error saving entity to disk: \(error.localizedDescription)")

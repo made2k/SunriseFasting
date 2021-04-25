@@ -5,6 +5,7 @@
 //  Created by Zach McGaughey on 4/21/21.
 //
 
+import OSLog
 import SwiftUI
 
 struct EndTimeInfoView: View {
@@ -26,6 +27,7 @@ struct EndTimeInfoView: View {
         .foregroundColor(Color(UIColor.secondaryLabel))
         .font(.callout)
         .onNotification(UIApplication.significantTimeChangeNotification) {
+          Logger.viewLogger.debug("EndTimeInfo updating due to signification time notification")
           // Since our reference state is constant, we need to
           // trigger an update when the day changes. Listen to the notification
           // and update our text when the clock strikes midnight.

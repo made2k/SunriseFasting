@@ -5,6 +5,7 @@
 //  Created by Zach McGaughey on 4/21/21.
 //
 
+import OSLog
 import SwiftUI
 
 struct FastingGoalPickerView: View {
@@ -41,12 +42,14 @@ struct FastingGoalPickerView: View {
     switch goal {
     // If custom is selected, we need to get input from the user
     case .custom:
+      Logger.viewLogger.trace("FastingGoal picker chose custom selection")
       isPresented = false
       appModel.appPresentation = AnyView(
         CustomFastingGoalEntryScreen(fastingGoal: $fastingGoal, presented: $appModel.appPresentation, animate: true)
       )
       
     default:
+      Logger.viewLogger.trace("FastingGoal picker chose value: \(goal.rawValue)")
       fastingGoal = goal
       isPresented = false
     }

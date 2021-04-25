@@ -22,6 +22,8 @@ extension AppModel {
   
   /// Load and set the `currentFast` if it exists from disk.
   func loadCurrentFast() {
+
+    logger.trace("Loading current fast data")
     
     let request: NSFetchRequest<Fast> = Fast.fetchRequest()
     request.predicate = NSPredicate(format: "endDate == nil")
@@ -32,23 +34,28 @@ extension AppModel {
       // Data check here. We should only ever have 1 or 0 current fasts
       // If we have more, our data has become corrupted.
       guard results.count <= 1 else {
-        preconditionFailure("Corrupted data, multiple in progress fasts")
+        logger.fault("Corrupted data, multiple in progress fasts")
+        preconditionFailure("data corruption")
       }
       
       if let fast = results.first {
+        logger.debug("Current fast loaded. Setting value")
         self.currentFast = FastModel(fast)
         
       } else {
+        logger.debug("No current fast loaded")
         self.currentFast = nil
       }
       
     } catch {
-      logger.error("failed to fetch current fast: \(error.localizedDescription)")
+      logger.error("Failed to fetch current fast: \(error.localizedDescription)")
     }
   }
   
   /// Load and set all `completedFasts` from disk
   func loadCompletedFasts() {
+
+    logger.trace("Loading completed fast data")
     
     let request: NSFetchRequest<Fast> = Fast.fetchRequest()
     request.predicate = NSPredicate(format: "endDate != nil")
@@ -58,6 +65,7 @@ extension AppModel {
     
     do {
       let results: [Fast] = try manager.fetch(request)
+      logger.debug("Loaded \(results.count) completed fasts")
       self.completedFasts = results
       
     } catch {

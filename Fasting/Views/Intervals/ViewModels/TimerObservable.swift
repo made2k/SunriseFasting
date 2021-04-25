@@ -7,6 +7,7 @@
 
 import Combine
 import Foundation
+import OSLog
 
 /// A class that mirrors a timer that can be observed
 ///
@@ -17,6 +18,8 @@ import Foundation
 /// ~~~
 ///
 final class TimerObservable: ObservableObject, Connectable {
+
+  let logger = Logger.create(.interface)
   
   @Published private(set) var value: Date = Date()
   
@@ -49,6 +52,9 @@ final class TimerObservable: ObservableObject, Connectable {
   }
   
   func connect() {
+
+    logger.trace("TimerObservable connected")
+
     // Publish the current value, without this the timer will be
     // outdated by up to 1 second on reconnection.
     value = Date()
@@ -64,6 +70,7 @@ final class TimerObservable: ObservableObject, Connectable {
   }
   
   func disconnect() {
+    logger.trace("TimerObservable cancelled")
     connectCancel?.cancel()
     timer = nil
   }
