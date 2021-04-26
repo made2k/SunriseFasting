@@ -8,6 +8,7 @@
 import Foundation
 import OSLog
 import SharedData
+import WidgetKit
 
 enum WidgetDataLoader {
   
@@ -50,7 +51,7 @@ enum WidgetDataLoader {
   }
   
   private static func getIdleTimeline(with lastFastDate: Date?) -> [WidgetEntry] {
-    [WidgetEntry(date: Date(), data: .idle(lastFastDate: lastFastDate))]
+    [WidgetEntry(date: Date(), relevance: nil, data: .idle(lastFastDate: lastFastDate))]
   }
   
   private static func getActiveTimeline(from fastInfo: SharedFastInfo) -> [WidgetEntry] {
@@ -65,17 +66,22 @@ enum WidgetDataLoader {
     
     // If over 100% we don't need further updates
     if currentPercent > 100 {
-      return [WidgetEntry(date: Date(), data: .active(fastInfo: fastInfo))]
+      return [WidgetEntry(date: Date(), relevance: TimelineEntryRelevance(score: 1), data: .active(fastInfo: fastInfo))]
     }
     
+    // We will update the widget every 1 percent to ensure smooth counter as well as ring.
     let now: Date = Date()
     // How many updates will we need to perform. Add one for good measure
     // to make sure we end above 100%
-    let requiredTicks: Int = Int(100 - currentPercent) + 1
+    let requiredTicks: Int = Int(100 - currentPercent)
+    let relevancyStart: Int = 100 - requiredTicks
     
     for tick in 0...requiredTicks {
       let targetDate: Date = now.addingTimeInterval(TimeInterval(tick) * percentInterval)
-      let entry = WidgetEntry(date: targetDate, data: .active(fastInfo: fastInfo))
+      // relevancy is equal to our percent
+      let relevancy: Float = Float(relevancyStart + tick) / 100.0
+      
+      let entry = WidgetEntry(date: targetDate, relevance: TimelineEntryRelevance(score: relevancy, duration: percentInterval), data: .active(fastInfo: fastInfo))
       returnInfo.append(entry)
     }
     

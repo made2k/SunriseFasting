@@ -12,12 +12,12 @@ import WidgetKit
 struct Provider: TimelineProvider {
   
   func placeholder(in context: Context) -> WidgetEntry {
-    WidgetEntry(date: Date(), data: .idle(lastFastDate: nil))
+    WidgetEntry(date: Date(), relevance: nil, data: .idle(lastFastDate: nil))
   }
   
   func getSnapshot(in context: Context, completion: @escaping (WidgetEntry) -> ()) {
     let data = WidgetDataLoader.loadSharedData()
-    let entry = WidgetEntry(date: Date(), data: data)
+    let entry = WidgetEntry(date: Date(), relevance: nil, data: data)
     completion(entry)
   }
   
@@ -67,13 +67,13 @@ struct FastingWidget_Previews: PreviewProvider {
     
     Group {
       
-      FastingWidgetEntryView(entry: WidgetEntry(date: Date(), data: .idle(lastFastDate: nil)))
+      FastingWidgetEntryView(entry: WidgetEntry(date: Date(), relevance: nil, data: .idle(lastFastDate: nil)))
         .previewContext(WidgetPreviewContext(family: .systemSmall))
       
-      FastingWidgetEntryView(entry: WidgetEntry(date: Date(), data: .idle(lastFastDate: Date())))
+      FastingWidgetEntryView(entry: WidgetEntry(date: Date(), relevance: nil, data: .idle(lastFastDate: Date())))
         .previewContext(WidgetPreviewContext(family: .systemSmall))
       
-      FastingWidgetEntryView(entry: WidgetEntry(date: Date(), data: .active(fastInfo: SharedFastInfo(Date(), interval: 60*60))))
+      FastingWidgetEntryView(entry: WidgetEntry(date: Date(), relevance: nil, data: .active(fastInfo: SharedFastInfo(Date(), interval: 60*60))))
         .previewContext(WidgetPreviewContext(family: .systemSmall))
       
     }
