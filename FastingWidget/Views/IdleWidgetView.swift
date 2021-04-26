@@ -47,6 +47,7 @@ struct IdleWidgetView: View {
           .font(.headline)
         Text(lastStart, style: .relative)
           .font(.body)
+          .minimumScaleFactor(0.5)
       } else {
         Text("Get Started!")
           .font(.title)
@@ -66,6 +67,7 @@ struct IdleWidgetView: View {
         if let lastFast = lastFastDate {
           Text("Time Since Last Fast")
             .font(.headline)
+            .minimumScaleFactor(0.5)
           Text(lastFast, style: .relative)
             .font(Font.monospacedDigit(.largeTitle)())
             .lineLimit(1)
