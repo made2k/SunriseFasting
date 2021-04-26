@@ -6,8 +6,8 @@
 //
 
 import Combine
+import RingView
 import SwiftUI
-
 
 struct ActiveFastHomeView: View {
   
@@ -63,9 +63,7 @@ struct ActiveFastHomeView: View {
         
         ZStack {
             RingView(progressViewModel)
-              .startColor(progressViewModel.progress < 1 ? .ringIncompleteStart : .ringCompleteStart)
-              .endColor(progressViewModel.progress < 1 ? .ringIncompleteEnd : .ringCompleteEnd)
-              .backgroundColor(progressViewModel.progress < 1 ? Color.ringIncompleteStart.opacity(0.1) : Color.ringIncompleteEnd.opacity(0.1))
+              .applyProgressiveStyle(progressViewModel.progress)
               .thickness(thickness)
               .aspectRatio(contentMode: .fit)
           VStack {

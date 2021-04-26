@@ -1,18 +1,18 @@
 /*
  MIT License
-
+ 
  Copyright (c) 2021 Exyte
-
+ 
  Permission is hereby granted, free of charge, to any person obtaining a copy
  of this software and associated documentation files (the "Software"), to deal
  in the Software without restriction, including without limitation the rights
  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
  copies of the Software, and to permit persons to whom the Software is
  furnished to do so, subject to the following conditions:
-
+ 
  The above copyright notice and this permission notice shall be included in all
  copies or substantial portions of the Software.
-
+ 
  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
@@ -27,8 +27,8 @@
 
 import SwiftUI
 
-struct RingView<T>: View where T: ProgressUpdater {
-
+public struct RingView<T>: View where T: ProgressUpdater {
+  
   // ViewModel that will update the progress
   @ObservedObject var viewModel: T
   @State private var currentPercentage: Double
@@ -37,21 +37,23 @@ struct RingView<T>: View where T: ProgressUpdater {
   private var startColor: Color
   private var endColor: Color
   private var thickness: CGFloat
-
+  private var showEmptyRing: Bool
+  
   private let minValue: Double = 0.001
-
-  init(_ model: T) {
+  
+  public init(_ model: T) {
     self.viewModel = model
-
+    
     // Initialize with default values
-    _currentPercentage = State(initialValue: Self.safeMax(from: model.progress))
-    startColor = .ringIncompleteStart
-    endColor = .ringIncompleteEnd
-    backgroundColor = Color.ringIncompleteStart.opacity(0.1)
+    _currentPercentage = State(initialValue: Self.safeMax(from: model.progress, allowZero: false))
+    startColor = Color.red
+    endColor = Color.orange
+    backgroundColor = Color.red.opacity(0.1)
     thickness = 10
+    showEmptyRing = false
   }
   
-  var body: some View {
+  public var body: some View {
     
     let colors: [Color]
     // When the percentage is low, multiple colors can
@@ -81,136 +83,58 @@ struct RingView<T>: View where T: ProgressUpdater {
         .rotationEffect(.init(degrees: -90))
     }
     .onReceive(viewModel.progressPublisher) { progress in
-      currentPercentage = Self.safeMax(from: progress)
+      currentPercentage = Self.safeMax(from: progress, allowZero: showEmptyRing)
     }
   }
-
-  private static func safeMax(from value: Double) -> Double {
-    value.clamped(to: 0.001...1.999)
+  
+  private static func safeMax(from value: Double, allowZero: Bool) -> Double {
+    if allowZero {
+      return value.clamped(to: 0.0...1.999)
+      
+    } else {
+      return value.clamped(to: 0.001...1.999)
+    }
   }
   
   // MARK: Modifiers
   
-  func progress(_ value: Double) -> Self {
+  public func progress(_ value: Double) -> Self {
     let view = self
-    view.currentPercentage = Self.safeMax(from: value)
+    view.currentPercentage = Self.safeMax(from: value, allowZero: showEmptyRing)
     return view
   }
   
-  func backgroundColor(_ value: Color) -> Self {
+  public func backgroundColor(_ value: Color) -> Self {
     var view = self
     view.backgroundColor = value
     return view
   }
   
-  func startColor(_ value: Color) -> Self {
+  public func startColor(_ value: Color) -> Self {
     var view = self
     view.startColor = value
     return view
   }
   
-  func endColor(_ value: Color) -> Self {
+  public func endColor(_ value: Color) -> Self {
     var view = self
     view.endColor = value
     return view
   }
   
-  func thickness(_ value: CGFloat) -> Self {
+  public func thickness(_ value: CGFloat) -> Self {
     var view = self
     view.thickness = value
     return view
   }
   
-}
-
-// MARK: - Ring Shape
-
-private struct RingShape: Shape {
-  
-  var currentPercentage: Double
-  var thickness: CGFloat
-  
-  func path(in rect: CGRect) -> Path {
-    var path = Path()
-    
-    path.addArc(
-      center: CGPoint(x: rect.width / 2, y: rect.height / 2),
-      radius: rect.width / 2 - thickness,
-      startAngle: Angle(degrees: 0),
-      endAngle: Angle(degrees: 360 * currentPercentage),
-      clockwise: false
-    )
-    
-    return path.strokedPath(
-      .init(lineWidth: thickness, lineCap: .round, lineJoin: .round)
-    )
-  }
-  
-  var animatableData: Double {
-    get { return currentPercentage }
-    set { currentPercentage = newValue }
+  public func showEmptyRing(_ value: Bool) -> Self {
+    var view = self
+    view.showEmptyRing = value
+    return view
   }
   
 }
-
-// MARK: - Ring Tip Shape
-
-private struct RingTipShape: Shape {
-  
-  @State var currentPercentage: Double
-  @State var thickness: CGFloat
-  
-  func path(in rect: CGRect) -> Path {
-    var path = Path()
-    
-    let angle = CGFloat((360 * currentPercentage) * .pi / 180)
-    let controlRadius: CGFloat = rect.width / 2 - thickness
-    let center = CGPoint(x: rect.width / 2, y: rect.height / 2)
-    let x = center.x + controlRadius * cos(angle)
-    let y = center.y + controlRadius * sin(angle)
-    let pointCenter = CGPoint(x: x, y: y)
-    
-    path.addEllipse(in:
-                      CGRect(
-                        x: pointCenter.x - thickness / 2,
-                        y: pointCenter.y - thickness / 2,
-                        width: thickness,
-                        height: thickness
-                      )
-    )
-    
-    return path
-  }
-  
-  var animatableData: Double {
-    get { return currentPercentage }
-    set { currentPercentage = newValue }
-  }
-  
-}
-
-// MARK: - Ring Background Shape
-
-private struct RingBackgroundShape: Shape {
-  
-  @State var thickness: CGFloat
-  
-  func path(in rect: CGRect) -> Path {
-    var path = Path()
-    path.addArc(
-      center: CGPoint(x: rect.width / 2, y: rect.height / 2),
-      radius: rect.width / 2 - thickness,
-      startAngle: Angle(degrees: 0),
-      endAngle: Angle(degrees: 360),
-      clockwise: false
-    )
-    
-    return path
-      .strokedPath(.init(lineWidth: thickness, lineCap: .round, lineJoin: .round))
-  }
-  
-}
-
 
 struct RingView_Previews: PreviewProvider {
   
@@ -220,7 +144,13 @@ struct RingView_Previews: PreviewProvider {
     RingView(viewModel)
       .thickness(32)
       .padding()
-      .autoConnect(viewModel)
+      .onAppear {
+        viewModel.connect()
+      }
+      .onDisappear {
+        viewModel.disconnect()
+      }
+    
   }
   
 }

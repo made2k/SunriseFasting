@@ -9,7 +9,7 @@ import Combine
 import Foundation
 
 /// A ProgressUpdater meant for use in previews. It advances to 100% ever 10 seconds
-final class PreviewUpdater: ProgressUpdater {
+internal final class PreviewUpdater: ProgressUpdater {
   
   @Published var progress: Double = 0
   var progressPublished: Published<Double> { _progress }
