@@ -7,6 +7,8 @@
 
 import Foundation
 
+/// Codable struct that allows for sharing data between the main application and
+/// other targets like the widgets.
 public struct SharedFastInfo: Codable {
   public let startDate: Date
   public let targetInterval: TimeInterval

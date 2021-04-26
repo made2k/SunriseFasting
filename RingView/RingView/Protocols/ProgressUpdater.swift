@@ -7,7 +7,7 @@
 
 import Combine
 
-public protocol ProgressUpdater: ObservableObject { //Connectable, ObservableObject {
+public protocol ProgressUpdater: ObservableObject {
   
   var progress: Double { get }
   var progressPublished: Published<Double> { get }
