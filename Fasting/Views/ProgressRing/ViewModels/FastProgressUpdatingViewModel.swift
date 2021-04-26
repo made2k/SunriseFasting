@@ -8,9 +8,10 @@
 import Combine
 import Foundation
 import OSLog
+import RingView
 
 /// ProgressUpdater that updates updates based on a provided FastModel
-final class FastProgressUpdatingViewModel: ProgressUpdater {
+final class FastProgressUpdatingViewModel: ProgressUpdater, Connectable {
 
   let logger = Logger.create(.interface)
   

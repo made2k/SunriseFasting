@@ -24,6 +24,7 @@ final class AppModel: ObservableObject {
   
   /// DataManager to help persist data
   let manager: DataManager
+  let widgetProvider: WidgetDataProvider
   
   /// The currently active FastModel if it exists.
   @Published var currentFast: FastModel?
@@ -41,10 +42,12 @@ final class AppModel: ObservableObject {
   init(preview: Bool = false) {
     
     if preview {
-      manager = DataManager.preview
+      self.manager = DataManager.preview
+      self.widgetProvider = WidgetDataProvider(manager.persistenceController.container)
       
     } else {
-      manager = DataManager.shared
+      self.manager = DataManager.shared
+      self.widgetProvider = WidgetDataProvider(manager.persistenceController.container)
       setupSubscriptions()
     }
 

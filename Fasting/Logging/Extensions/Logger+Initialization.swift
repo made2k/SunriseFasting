@@ -13,6 +13,7 @@ enum LogCategory: String {
   case coreData = "CoreData"
   case dataModel = "DataModel"
   case interface = "Interface"
+  case widget = "Widget"
 }
 
 extension Logger {
