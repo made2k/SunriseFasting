@@ -13,7 +13,7 @@ import WidgetKit
 enum WidgetDataLoader {
   
   static let sharedDataFileURL: URL = {
-    let appGroupIdentifier = "group.com.zachmcgaughey.Fast"
+    let appGroupIdentifier = "group.com.zachmcgaughey.Fasting"
     if let url = FileManager.default.containerURL(forSecurityApplicationGroupIdentifier: appGroupIdentifier) {
       return url.appendingPathComponent("SharedData.json")
     }
