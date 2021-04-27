@@ -40,6 +40,7 @@ enum StringFormatter {
     formatter.numberStyle = .percent
     formatter.minimumIntegerDigits = 1
     formatter.maximumFractionDigits = 0
+    formatter.roundingMode = .down
     return formatter
   }()
   

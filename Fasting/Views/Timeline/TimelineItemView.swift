@@ -46,7 +46,7 @@ struct TimelineItemView: View {
 
     let formatter = NumberFormatter()
     formatter.roundingMode = .halfUp
-    formatter.maximumFractionDigits = 0
+    formatter.maximumFractionDigits = 1
 
     return formatter.string(from: NSNumber(value: hours)) ?? "0"
   }
