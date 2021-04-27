@@ -38,8 +38,10 @@ struct FastingWidgetEntryView : View {
     switch entry.data {
     case .idle(let value):
       IdleWidgetView(lastFastDate: value)
+        .background(Color(UIColor.systemBackground))
     case .active(let value):
       ActiveWidgetView(date: entry.date, data: value)
+        .background(Color(UIColor.systemBackground))
     }
   }
 }
