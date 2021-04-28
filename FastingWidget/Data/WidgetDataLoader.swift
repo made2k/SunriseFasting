@@ -68,16 +68,24 @@ enum WidgetDataLoader {
     if currentPercent > 100 {
       return [WidgetEntry(date: Date(), relevance: TimelineEntryRelevance(score: 1), data: .active(fastInfo: fastInfo))]
     }
-    
-    // We will update the widget every 1 percent to ensure smooth counter as well as ring.
-    let now: Date = Date()
-    // How many updates will we need to perform. Add one for good measure
-    // to make sure we end above 100%
+
+    /*
+     We will update the widget every 1 percent to ensure smooth counter as well as ring.
+     We determine the timeline by setting the times that each percent value will occur.
+     End at 100% so that our widget stops updating when complete.
+     */
+
     let requiredTicks: Int = Int(100 - currentPercent)
-    let relevancyStart: Int = 100 - requiredTicks
+    let startPercent: Int = 100 - requiredTicks
+    // Keep our relevancy the same as the starting percent and increment each percent.
+    let relevancyStart: Int = startPercent
+
+    // Set our initial date based on the percent as opposed to now. Starting at the
+    // percent start time will keep our timing in sync with the actual percent
+    let widgetStart: Date = fastInfo.startDate.addingTimeInterval(Double(startPercent) * percentInterval)
     
     for tick in 0...requiredTicks {
-      let targetDate: Date = now.addingTimeInterval(TimeInterval(tick) * percentInterval)
+      let targetDate: Date = widgetStart.addingTimeInterval(TimeInterval(tick) * percentInterval)
       // relevancy is equal to our percent
       let relevancy: Float = Float(relevancyStart + tick) / 100.0
       
