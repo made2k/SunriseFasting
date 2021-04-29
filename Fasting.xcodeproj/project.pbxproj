@@ -15,6 +15,9 @@
 		920E50EB2633C7BC0014E7B5 /* FastGroup+Identifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920E50EA2633C7BC0014E7B5 /* FastGroup+Identifiable.swift */; };
 		920E50ED2633C7FF0014E7B5 /* FastGroup+Parsing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920E50EC2633C7FF0014E7B5 /* FastGroup+Parsing.swift */; };
 		92124A0E263234E100A33968 /* FastingGoal+AllCases.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92124A0D263234E100A33968 /* FastingGoal+AllCases.swift */; };
+		9219DD51263B041A00FBE9C5 /* WatchManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9219DD50263B041A00FBE9C5 /* WatchManager.swift */; };
+		9219DD53263B392A00FBE9C5 /* WatchAPIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9219DD52263B392A00FBE9C5 /* WatchAPIError.swift */; };
+		9219DD55263B3C9F00FBE9C5 /* SaveFastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9219DD54263B3C9F00FBE9C5 /* SaveFastView.swift */; };
 		92250A4E26371A6100DF1A87 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92250A4D26371A6100DF1A87 /* WidgetKit.framework */; };
 		92250A5026371A6100DF1A87 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92250A4F26371A6100DF1A87 /* SwiftUI.framework */; };
 		92250A5326371A6100DF1A87 /* FastingWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92250A5226371A6100DF1A87 /* FastingWidget.swift */; };
@@ -40,9 +43,9 @@
 		922C1D0C263A573500F34AE9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 922C1D0B263A573500F34AE9 /* Assets.xcassets */; };
 		922C1D0F263A573500F34AE9 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 922C1D0E263A573500F34AE9 /* Preview Assets.xcassets */; };
 		922C1D14263A573500F34AE9 /* WatchFasting.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 922C1CF3263A573400F34AE9 /* WatchFasting.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		922C1D41263A5EFA00F34AE9 /* WatchSharedData.h in Headers */ = {isa = PBXBuildFile; fileRef = 922C1D31263A5EFA00F34AE9 /* WatchSharedData.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		922C1D44263A5EFA00F34AE9 /* WatchSharedData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 922C1D2F263A5EF900F34AE9 /* WatchSharedData.framework */; };
-		922C1D45263A5EFA00F34AE9 /* WatchSharedData.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 922C1D2F263A5EF900F34AE9 /* WatchSharedData.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		922C1D41263A5EFA00F34AE9 /* SharedDataWatch.h in Headers */ = {isa = PBXBuildFile; fileRef = 922C1D31263A5EFA00F34AE9 /* SharedDataWatch.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		922C1D44263A5EFA00F34AE9 /* SharedDataWatch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 922C1D2F263A5EF900F34AE9 /* SharedDataWatch.framework */; };
+		922C1D45263A5EFA00F34AE9 /* SharedDataWatch.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 922C1D2F263A5EF900F34AE9 /* SharedDataWatch.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		9236BA40263508AF0056EFDD /* Logger+Initialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9236BA3F263508AF0056EFDD /* Logger+Initialization.swift */; };
 		92534CDF2634752300D95681 /* Fast+Properties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92534CDE2634752300D95681 /* Fast+Properties.swift */; };
 		9254F9A0262FBAB300589377 /* FastingApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9254F99F262FBAB300589377 /* FastingApp.swift */; };
@@ -165,7 +168,7 @@
 			containerPortal = 9254F994262FBAB300589377 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 922C1D2E263A5EF900F34AE9;
-			remoteInfo = WatchSharedData;
+			remoteInfo = SharedDataWatch;
 		};
 		92656EFD2637380000AD5F67 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -235,7 +238,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				922C1D45263A5EFA00F34AE9 /* WatchSharedData.framework in Embed Frameworks */,
+				922C1D45263A5EFA00F34AE9 /* SharedDataWatch.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -264,6 +267,9 @@
 		920E50EC2633C7FF0014E7B5 /* FastGroup+Parsing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FastGroup+Parsing.swift"; sourceTree = "<group>"; };
 		920E50EE2633DAA00014E7B5 /* RingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RingView.swift; sourceTree = "<group>"; };
 		92124A0D263234E100A33968 /* FastingGoal+AllCases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FastingGoal+AllCases.swift"; sourceTree = "<group>"; };
+		9219DD50263B041A00FBE9C5 /* WatchManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchManager.swift; sourceTree = "<group>"; };
+		9219DD52263B392A00FBE9C5 /* WatchAPIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchAPIError.swift; sourceTree = "<group>"; };
+		9219DD54263B3C9F00FBE9C5 /* SaveFastView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveFastView.swift; sourceTree = "<group>"; };
 		92250A4B26371A6100DF1A87 /* FastingWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = FastingWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		92250A4D26371A6100DF1A87 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
 		92250A4F26371A6100DF1A87 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
@@ -294,8 +300,8 @@
 		922C1D10263A573500F34AE9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		922C1D11263A573500F34AE9 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
 		922C1D1D263A5E0400F34AE9 /* WatchDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchDataModel.swift; sourceTree = "<group>"; };
-		922C1D2F263A5EF900F34AE9 /* WatchSharedData.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = WatchSharedData.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		922C1D31263A5EFA00F34AE9 /* WatchSharedData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WatchSharedData.h; sourceTree = "<group>"; };
+		922C1D2F263A5EF900F34AE9 /* SharedDataWatch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SharedDataWatch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		922C1D31263A5EFA00F34AE9 /* SharedDataWatch.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SharedDataWatch.h; sourceTree = "<group>"; };
 		922C1D32263A5EFA00F34AE9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9236BA3F263508AF0056EFDD /* Logger+Initialization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Logger+Initialization.swift"; sourceTree = "<group>"; };
 		92534CDE2634752300D95681 /* Fast+Properties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Fast+Properties.swift"; sourceTree = "<group>"; };
@@ -394,7 +400,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				922C1D44263A5EFA00F34AE9 /* WatchSharedData.framework in Frameworks */,
+				922C1D44263A5EFA00F34AE9 /* SharedDataWatch.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -554,13 +560,13 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		922C1D30263A5EFA00F34AE9 /* WatchSharedData */ = {
+		922C1D30263A5EFA00F34AE9 /* SharedDataWatch */ = {
 			isa = PBXGroup;
 			children = (
-				922C1D31263A5EFA00F34AE9 /* WatchSharedData.h */,
+				922C1D31263A5EFA00F34AE9 /* SharedDataWatch.h */,
 				922C1D32263A5EFA00F34AE9 /* Info.plist */,
 			);
-			path = WatchSharedData;
+			path = SharedDataWatch;
 			sourceTree = "<group>";
 		};
 		92339E8626327B8C007BEBB9 /* DataModels */ = {
@@ -606,10 +612,10 @@
 				9254F99E262FBAB300589377 /* Fasting */,
 				92250A5126371A6100DF1A87 /* FastingWidget */,
 				92250A6B26371D1900DF1A87 /* SharedData */,
+				922C1D30263A5EFA00F34AE9 /* SharedDataWatch */,
 				92656EF92637380000AD5F67 /* RingView */,
 				922C1CF4263A573400F34AE9 /* WatchFasting */,
 				922C1D00263A573500F34AE9 /* WatchFasting Extension */,
-				922C1D30263A5EFA00F34AE9 /* WatchSharedData */,
 				92250A4C26371A6100DF1A87 /* Frameworks */,
 				9254F99D262FBAB300589377 /* Products */,
 			);
@@ -624,7 +630,7 @@
 				92656EF82637380000AD5F67 /* RingView.framework */,
 				922C1CF3263A573400F34AE9 /* WatchFasting.app */,
 				922C1CFC263A573500F34AE9 /* WatchFasting Extension.appex */,
-				922C1D2F263A5EF900F34AE9 /* WatchSharedData.framework */,
+				922C1D2F263A5EF900F34AE9 /* SharedDataWatch.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -832,17 +838,9 @@
 		92978B2326331CFE00944D12 /* ProgressRing */ = {
 			isa = PBXGroup;
 			children = (
-				92978B2626331D2500944D12 /* Protocols */,
 				92978B2726331EB000944D12 /* ViewModels */,
 			);
 			path = ProgressRing;
-			sourceTree = "<group>";
-		};
-		92978B2626331D2500944D12 /* Protocols */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Protocols;
 			sourceTree = "<group>";
 		};
 		92978B2726331EB000944D12 /* ViewModels */ = {
@@ -1008,7 +1006,9 @@
 		92F4F859263A6CB400205600 /* Watch */ = {
 			isa = PBXGroup;
 			children = (
+				9219DD50263B041A00FBE9C5 /* WatchManager.swift */,
 				92F4F85A263A6CD200205600 /* WatchDataProvider.swift */,
+				9219DD52263B392A00FBE9C5 /* WatchAPIError.swift */,
 			);
 			path = Watch;
 			sourceTree = "<group>";
@@ -1020,6 +1020,7 @@
 				92F4F85D263AE9A400205600 /* IdleFastView.swift */,
 				92F4F85F263AECB800205600 /* ActiveFastView.swift */,
 				92F4F861263AEF1300205600 /* LoadingView.swift */,
+				9219DD54263B3C9F00FBE9C5 /* SaveFastView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -1039,7 +1040,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				922C1D41263A5EFA00F34AE9 /* WatchSharedData.h in Headers */,
+				922C1D41263A5EFA00F34AE9 /* SharedDataWatch.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1129,9 +1130,9 @@
 			productReference = 922C1CFC263A573500F34AE9 /* WatchFasting Extension.appex */;
 			productType = "com.apple.product-type.watchkit2-extension";
 		};
-		922C1D2E263A5EF900F34AE9 /* WatchSharedData */ = {
+		922C1D2E263A5EF900F34AE9 /* SharedDataWatch */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 922C1D46263A5EFA00F34AE9 /* Build configuration list for PBXNativeTarget "WatchSharedData" */;
+			buildConfigurationList = 922C1D46263A5EFA00F34AE9 /* Build configuration list for PBXNativeTarget "SharedDataWatch" */;
 			buildPhases = (
 				922C1D2A263A5EF900F34AE9 /* Headers */,
 				922C1D2B263A5EF900F34AE9 /* Sources */,
@@ -1142,9 +1143,9 @@
 			);
 			dependencies = (
 			);
-			name = WatchSharedData;
-			productName = WatchSharedData;
-			productReference = 922C1D2F263A5EF900F34AE9 /* WatchSharedData.framework */;
+			name = SharedDataWatch;
+			productName = SharedDataWatch;
+			productReference = 922C1D2F263A5EF900F34AE9 /* SharedDataWatch.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		9254F99B262FBAB300589377 /* Fasting */ = {
@@ -1245,11 +1246,11 @@
 			targets = (
 				9254F99B262FBAB300589377 /* Fasting */,
 				92250A4A26371A6100DF1A87 /* FastingWidgetExtension */,
-				92250A6926371D1900DF1A87 /* SharedData */,
 				92656EF72637380000AD5F67 /* RingView */,
+				92250A6926371D1900DF1A87 /* SharedData */,
+				922C1D2E263A5EF900F34AE9 /* SharedDataWatch */,
 				922C1CF2263A573400F34AE9 /* WatchFasting */,
 				922C1CFB263A573500F34AE9 /* WatchFasting Extension */,
-				922C1D2E263A5EF900F34AE9 /* WatchSharedData */,
 			);
 		};
 /* End PBXProject section */
@@ -1342,6 +1343,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				922C1D06263A573500F34AE9 /* NotificationController.swift in Sources */,
+				9219DD55263B3C9F00FBE9C5 /* SaveFastView.swift in Sources */,
 				922C1D04263A573500F34AE9 /* ContentView.swift in Sources */,
 				922C1D0A263A573500F34AE9 /* ComplicationController.swift in Sources */,
 				92F4F856263A603B00205600 /* WatchDataModel.swift in Sources */,
@@ -1392,8 +1394,10 @@
 				92D739D626326187008DD386 /* UserDefaults+Publishing.swift in Sources */,
 				9282A89C26332F1A00CA24A6 /* Connectable.swift in Sources */,
 				9261A13A26339CF7005E8AAD /* TimelineView.swift in Sources */,
+				9219DD51263B041A00FBE9C5 /* WatchManager.swift in Sources */,
 				9282A89A26332F0E00CA24A6 /* View+Connections.swift in Sources */,
 				9278B802262FD20A00893C7D /* AppModel.swift in Sources */,
+				9219DD53263B392A00FBE9C5 /* WatchAPIError.swift in Sources */,
 				927DD7DE2630B39300E6C33A /* FastForecastedEndView.swift in Sources */,
 				92B7399126323EB4002D5261 /* FastModel+Previewing.swift in Sources */,
 				92F2EBA22633472C001EBCFD /* DatePickerRangeFactory.swift in Sources */,
@@ -1473,7 +1477,7 @@
 		};
 		922C1D43263A5EFA00F34AE9 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 922C1D2E263A5EF900F34AE9 /* WatchSharedData */;
+			target = 922C1D2E263A5EF900F34AE9 /* SharedDataWatch */;
 			targetProxy = 922C1D42263A5EFA00F34AE9 /* PBXContainerItemProxy */;
 		};
 		92656EFE2637380000AD5F67 /* PBXTargetDependency */ = {
@@ -1699,14 +1703,14 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = WatchSharedData/Info.plist;
+				INFOPLIST_FILE = SharedDataWatch/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.zachmcgaughey.WatchSharedData;
+				PRODUCT_BUNDLE_IDENTIFIER = com.zachmcgaughey.SharedDataWatch;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -1729,14 +1733,14 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = WatchSharedData/Info.plist;
+				INFOPLIST_FILE = SharedDataWatch/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.zachmcgaughey.WatchSharedData;
+				PRODUCT_BUNDLE_IDENTIFIER = com.zachmcgaughey.SharedDataWatch;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -2003,7 +2007,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		922C1D46263A5EFA00F34AE9 /* Build configuration list for PBXNativeTarget "WatchSharedData" */ = {
+		922C1D46263A5EFA00F34AE9 /* Build configuration list for PBXNativeTarget "SharedDataWatch" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				922C1D47263A5EFA00F34AE9 /* Debug */,

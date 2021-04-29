@@ -22,6 +22,8 @@ struct IdleFastView: View {
       Button("Start Fast") {
         model.requestToStart()
       }
+      .disabled(model.currentDataState == .idlePending)
+
     }
     .padding()
 

@@ -15,8 +15,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "922C1D2E263A5EF900F34AE9"
-               BuildableName = "WatchSharedData.framework"
-               BlueprintName = "WatchSharedData"
+               BuildableName = "SharedDataWatch.framework"
+               BlueprintName = "SharedDataWatch"
                ReferencedContainer = "container:Fasting.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -51,8 +51,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "922C1D2E263A5EF900F34AE9"
-            BuildableName = "WatchSharedData.framework"
-            BlueprintName = "WatchSharedData"
+            BuildableName = "SharedDataWatch.framework"
+            BlueprintName = "SharedDataWatch"
             ReferencedContainer = "container:Fasting.xcodeproj">
          </BuildableReference>
       </MacroExpansion>

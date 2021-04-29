@@ -33,8 +33,12 @@ final class WatchDataProvider {
 
     reloadData()
   }
+  
+  func forceDataUpdate() {
+    reloadData(force: true)
+  }
 
-  private func reloadData() {
+  private func reloadData(force: Bool = false) {
 
     container.performBackgroundTask { [weak self] context in
 
@@ -48,21 +52,30 @@ final class WatchDataProvider {
       let sortDescriptor = NSSortDescriptor(keyPath: \Fast.endDate, ascending: false)
       completedFastsRequest.sortDescriptors = [sortDescriptor]
 
-      func sendIfNeeded(_ data: SharedWidgetDataType) throws {
-        guard data != self?.existingData else {
-          Self.logger.debug("The existing widget data was the same as our new data, not updating")
-          return
+      func sendIfNeeded(_ payloadData: SharedWidgetDataType) throws {
+        
+        if !force {
+          
+          // Check that our data needs to be sent
+          guard payloadData != self?.existingData else {
+            Self.logger.debug("The existing widget data was the same as our new data, not updating")
+            return
+          }
+          
         }
+        
+        self?.existingData = payloadData
+
 
         Self.logger.debug("Writing data to file and updating widgets")
 
         let encoder = JSONEncoder()
-        let data = try encoder.encode(data)
+        let data = try encoder.encode(payloadData)
 
         self?.session.sendMessageData(data, replyHandler: nil) { error in
           Self.logger.error("Error sending data to watch: \(error.localizedDescription)")
         }
-
+        
       }
 
       do {

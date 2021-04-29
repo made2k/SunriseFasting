@@ -12,19 +12,30 @@ struct ContentView: View {
   @EnvironmentObject var model: WatchDataModel
 
   var body: some View {
-
-    switch model.currentFastData {
-    case .idle:
-      IdleFastView()
-
-    case .active(let info):
-      ActiveFastView(info)
-
-    case .none:
-      LoadingView()
-
+    
+    ZStack {
+      
+      switch model.currentDataState {
+      
+      case .uninitialized:
+        LoadingView()
+        
+      case .idlePending, .idle:
+        IdleFastView()
+      
+      case .activePending:
+        ActiveFastView(nil)
+        
+      case .active(fastInfo: let fastInfo):
+        ActiveFastView(fastInfo)
+        
+      case .savingData(fastInfo: let fastInfo, endDate: let endDate):
+        SaveFastView(fastInfo, stopDate: endDate)
+        
+      }
+      
     }
-
+    
   }
 }
 
