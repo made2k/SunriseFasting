@@ -13,26 +13,22 @@ struct ContentView: View {
 
   var body: some View {
     
-    ZStack {
+    switch model.interfaceState {
+    
+    case .uninitialized:
+      LoadingView()
       
-      switch model.currentDataState {
+    case .idlePending, .idle:
+      IdleFastView()
       
-      case .uninitialized:
-        LoadingView()
-        
-      case .idlePending, .idle:
-        IdleFastView()
+    case .activePending:
+      ActiveFastView(nil)
       
-      case .activePending:
-        ActiveFastView(nil)
-        
-      case .active(fastInfo: let fastInfo):
-        ActiveFastView(fastInfo)
-        
-      case .savingData(fastInfo: let fastInfo, endDate: let endDate):
-        SaveFastView(fastInfo, stopDate: endDate)
-        
-      }
+    case .active(fastInfo: let fastInfo):
+      ActiveFastView(fastInfo)
+      
+    case .savingData(fastInfo: let fastInfo, endDate: let endDate):
+      SaveFastView(fastInfo, stopDate: endDate)
       
     }
     

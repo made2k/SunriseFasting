@@ -9,9 +9,9 @@ import SwiftUI
 
 @main
 struct FastingApp: App {
-
+  
   private let model: WatchDataModel = WatchDataModel()
-
+  
   @SceneBuilder var body: some Scene {
     WindowGroup {
       NavigationView {
@@ -19,7 +19,6 @@ struct FastingApp: App {
           .environmentObject(model)
       }
     }
-    
-    WKNotificationScene(controller: NotificationController.self, category: "myCategory")
   }
+  
 }

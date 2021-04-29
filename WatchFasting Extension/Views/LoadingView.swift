@@ -15,11 +15,11 @@ struct LoadingView: View {
     
     ZStack {
       Circle()
-        .stroke(Color(UIColor.gray), lineWidth: 14)
+        .stroke(Color(UIColor.gray), lineWidth: 8)
         .frame(maxWidth: 100, maxHeight: 100)
       Circle()
         .trim(from: 0, to: 0.2)
-        .stroke(Color.green, lineWidth: 7)
+        .stroke(Color.orange, lineWidth: 7)
         .frame(maxWidth: 100, maxHeight: 100)
         .rotationEffect(Angle(degrees: isLoading ? 360 : 0))
         .animation(Animation.linear(duration: 1).repeatForever(autoreverses: false))
@@ -29,7 +29,7 @@ struct LoadingView: View {
     }
     
   }
-
+  
 }
 
 struct LoadingView_Previews: PreviewProvider {

@@ -12,34 +12,28 @@ import SwiftUI
 struct ActiveFastView: View {
 
   @EnvironmentObject var model: WatchDataModel
-  let fastInfo: SharedFastInfo?
-
-  let startDateText: String
-  let endDateText: String
-
-  @State var progress: Double// = 0.0
-  @State var durationText: String// = "00:00:00"
+  
+  private let fastInfo: SharedFastInfo?
+  
+  private let startDateText: String
+  private let endDateText: String
+  
+  @State private var progress: Double = 0.0
+  @State private var progressColor: Color = .orange
+  @State private var durationText: String = "--:--:--"
 
   init(_ fastInfo: SharedFastInfo?) {
     self.fastInfo = fastInfo
-    
-    if let fastInfo = fastInfo {
-      startDateText = Self.dateText(from: fastInfo.startDate)
-      
-      let targetEnd: Date = fastInfo.startDate.addingTimeInterval(fastInfo.targetInterval)
-      endDateText = Self.dateText(from: targetEnd)
-      
-      let now: Date = Date()
-      
-      _progress = State<Double>(wrappedValue: now.timeIntervalSince(fastInfo.startDate) / fastInfo.targetInterval)
-      _durationText = State<String>(wrappedValue: Self.countdown(from: now.timeIntervalSince(fastInfo.startDate)))
+
+    if let info = fastInfo {
+      startDateText = StringFormatter.dateText(from: info.startDate)
+      endDateText = StringFormatter.dateText(from: info.targetEndDate)
       
     } else {
-      startDateText = "--"
-      endDateText = "--"
-      _progress = State<Double>(wrappedValue: 0.0)
-      _durationText = State<String>(wrappedValue: "--:--:--")
+      startDateText = "--:--"
+      endDateText = "--:--"
     }
+    
   }
 
   var timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
@@ -51,8 +45,8 @@ struct ActiveFastView: View {
         .lineLimit(1)
         .font(Font.monospacedDigit(.title)())
         .minimumScaleFactor(0.6)
-
       ProgressView(value: progress)
+        .progressViewStyle(LinearProgressViewStyle(tint: progressColor))
 
       Spacer(minLength: 12)
 
@@ -73,46 +67,50 @@ struct ActiveFastView: View {
       }
       Button("Stop Fast") {
         guard let fastInfo = fastInfo else { return }
-        model.askToSaveData(fastInfo)
+        model.askToSaveFastingData(fastInfo)
       }
-      .disabled(fastInfo == nil)
-      
+      .disabled(model.isPending)
     }
     .padding()
     .onReceive(timer) { (currentDate: Date) in
-      guard let fastInfo = fastInfo else { return }
-      let interval = currentDate.timeIntervalSince(fastInfo.startDate)
-      durationText = Self.countdown(from: interval)
-      progress = interval / fastInfo.targetInterval
+      updateView(with: fastInfo, date: currentDate)
     }
 
   }
-
-  static func countdown(from interval: TimeInterval) -> String {
-
-    // Since we don't care about values less that a complete second, convert to integer
-    let integerInterval: Int = Int(abs(interval))
-
-    let seconds = integerInterval % 60
-    let minutes = (integerInterval / 60) % 60
-    let hours = (integerInterval / 3600)
-
-    return String(format: "%0.2d:%0.2d:%0.2d", hours , minutes, seconds)
-
+  
+  private func updateView(with fastingInfo: SharedFastInfo?, date: Date) {
+    
+    if let info = fastInfo {
+      updateViewWithInfo(info, now: date)
+      
+    } else {
+      updateViewWithPending()
+    }
+    
   }
+  
+  private func updateViewWithInfo(_ info: SharedFastInfo, now: Date) {
 
-  static func dateText(from date: Date) -> String {
-    let formatter = DateFormatter()
-    formatter.timeStyle = .short
-    return formatter.string(from: date)
+    let now: Date = Date()
+    let currentInterval: TimeInterval = now.timeIntervalSince(info.startDate)
+    
+    progress = min(currentInterval / info.targetInterval, 1.0)
+    progressColor = progress < 1 ? .orange : .green
+    durationText = StringFormatter.countdown(from: currentInterval)
+  }
+  
+  private func updateViewWithPending() {
+    progress = 0.0
+    progressColor = .gray
+    durationText = "--:--:--"
   }
 
 }
 
 struct ActiveFastView_Previews: PreviewProvider {
-    static var previews: some View {
-      ActiveFastView(SharedFastInfo(Date(), interval: 60*60))
-          .environmentObject(WatchDataModel())
-
-    }
+  static var previews: some View {
+    ActiveFastView(SharedFastInfo(Date(), interval: 60))
+      .environmentObject(WatchDataModel())
+    
+  }
 }

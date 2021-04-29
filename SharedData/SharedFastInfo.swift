@@ -13,6 +13,10 @@ public struct SharedFastInfo: Codable {
   public let startDate: Date
   public let targetInterval: TimeInterval
   
+  public var targetEndDate: Date {
+    startDate.addingTimeInterval(targetInterval)
+  }
+  
   public init(_ startDate: Date, interval: TimeInterval) {
     self.startDate = startDate
     self.targetInterval = interval

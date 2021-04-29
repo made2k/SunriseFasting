@@ -37,8 +37,6 @@
 		922C1CFD263A573500F34AE9 /* WatchFasting Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 922C1CFC263A573500F34AE9 /* WatchFasting Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		922C1D02263A573500F34AE9 /* FastingApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922C1D01263A573500F34AE9 /* FastingApp.swift */; };
 		922C1D04263A573500F34AE9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922C1D03263A573500F34AE9 /* ContentView.swift */; };
-		922C1D06263A573500F34AE9 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922C1D05263A573500F34AE9 /* NotificationController.swift */; };
-		922C1D08263A573500F34AE9 /* NotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922C1D07263A573500F34AE9 /* NotificationView.swift */; };
 		922C1D0A263A573500F34AE9 /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922C1D09263A573500F34AE9 /* ComplicationController.swift */; };
 		922C1D0C263A573500F34AE9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 922C1D0B263A573500F34AE9 /* Assets.xcassets */; };
 		922C1D0F263A573500F34AE9 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 922C1D0E263A573500F34AE9 /* Preview Assets.xcassets */; };
@@ -101,6 +99,10 @@
 		92978B2526331D1400944D12 /* FastProgressUpdatingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92978B2426331D1400944D12 /* FastProgressUpdatingViewModel.swift */; };
 		92A8ED1F2630D2B700BE00F0 /* StartTimeInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A8ED1E2630D2B700BE00F0 /* StartTimeInfoView.swift */; };
 		92A8ED232630DA4C00BE00F0 /* EndTimeInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A8ED222630DA4C00BE00F0 /* EndTimeInfoView.swift */; };
+		92ADC097263B5E8F009B348F /* InterfaceState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92ADC096263B5E8F009B348F /* InterfaceState.swift */; };
+		92ADC09A263B5FF3009B348F /* WatchDataModel+API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92ADC099263B5FF3009B348F /* WatchDataModel+API.swift */; };
+		92ADC09C263B6486009B348F /* WatchDataModel+WCSessionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92ADC09B263B6486009B348F /* WatchDataModel+WCSessionDelegate.swift */; };
+		92ADC09F263B66AF009B348F /* StringFormater.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92ADC09E263B66AF009B348F /* StringFormater.swift */; };
 		92B7398626323607002D5261 /* FastingGoal+Descriptors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B7398526323607002D5261 /* FastingGoal+Descriptors.swift */; };
 		92B73988263238BD002D5261 /* FastingGoal+Equality.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B73987263238BD002D5261 /* FastingGoal+Equality.swift */; };
 		92B7398A26323913002D5261 /* FastingGoal+Codable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B7398926323913002D5261 /* FastingGoal+Codable.swift */; };
@@ -292,8 +294,6 @@
 		922C1CFC263A573500F34AE9 /* WatchFasting Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "WatchFasting Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		922C1D01263A573500F34AE9 /* FastingApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FastingApp.swift; sourceTree = "<group>"; };
 		922C1D03263A573500F34AE9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		922C1D05263A573500F34AE9 /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
-		922C1D07263A573500F34AE9 /* NotificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationView.swift; sourceTree = "<group>"; };
 		922C1D09263A573500F34AE9 /* ComplicationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicationController.swift; sourceTree = "<group>"; };
 		922C1D0B263A573500F34AE9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		922C1D0E263A573500F34AE9 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -352,6 +352,10 @@
 		92978B2826331FD800944D12 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		92A8ED1E2630D2B700BE00F0 /* StartTimeInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartTimeInfoView.swift; sourceTree = "<group>"; };
 		92A8ED222630DA4C00BE00F0 /* EndTimeInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndTimeInfoView.swift; sourceTree = "<group>"; };
+		92ADC096263B5E8F009B348F /* InterfaceState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceState.swift; sourceTree = "<group>"; };
+		92ADC099263B5FF3009B348F /* WatchDataModel+API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WatchDataModel+API.swift"; sourceTree = "<group>"; };
+		92ADC09B263B6486009B348F /* WatchDataModel+WCSessionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WatchDataModel+WCSessionDelegate.swift"; sourceTree = "<group>"; };
+		92ADC09E263B66AF009B348F /* StringFormater.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringFormater.swift; sourceTree = "<group>"; };
 		92B7398526323607002D5261 /* FastingGoal+Descriptors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FastingGoal+Descriptors.swift"; sourceTree = "<group>"; };
 		92B73987263238BD002D5261 /* FastingGoal+Equality.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FastingGoal+Equality.swift"; sourceTree = "<group>"; };
 		92B7398926323913002D5261 /* FastingGoal+Codable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FastingGoal+Codable.swift"; sourceTree = "<group>"; };
@@ -538,12 +542,11 @@
 		922C1D00263A573500F34AE9 /* WatchFasting Extension */ = {
 			isa = PBXGroup;
 			children = (
+				92ADC0A0263B6D9E009B348F /* Application */,
+				92ADC09D263B6696009B348F /* Formatting */,
+				92ADC095263B5E64009B348F /* Data */,
 				92F4F85C263AE97C00205600 /* Views */,
-				922C1D01263A573500F34AE9 /* FastingApp.swift */,
-				922C1D05263A573500F34AE9 /* NotificationController.swift */,
-				922C1D07263A573500F34AE9 /* NotificationView.swift */,
 				922C1D09263A573500F34AE9 /* ComplicationController.swift */,
-				922C1D1D263A5E0400F34AE9 /* WatchDataModel.swift */,
 				922C1D0B263A573500F34AE9 /* Assets.xcassets */,
 				922C1D10263A573500F34AE9 /* Info.plist */,
 				922C1D11263A573500F34AE9 /* PushNotificationPayload.apns */,
@@ -851,6 +854,41 @@
 			path = ViewModels;
 			sourceTree = "<group>";
 		};
+		92ADC095263B5E64009B348F /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				92ADC098263B5FDA009B348F /* DataModel */,
+				92ADC096263B5E8F009B348F /* InterfaceState.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		92ADC098263B5FDA009B348F /* DataModel */ = {
+			isa = PBXGroup;
+			children = (
+				922C1D1D263A5E0400F34AE9 /* WatchDataModel.swift */,
+				92ADC099263B5FF3009B348F /* WatchDataModel+API.swift */,
+				92ADC09B263B6486009B348F /* WatchDataModel+WCSessionDelegate.swift */,
+			);
+			path = DataModel;
+			sourceTree = "<group>";
+		};
+		92ADC09D263B6696009B348F /* Formatting */ = {
+			isa = PBXGroup;
+			children = (
+				92ADC09E263B66AF009B348F /* StringFormater.swift */,
+			);
+			path = Formatting;
+			sourceTree = "<group>";
+		};
+		92ADC0A0263B6D9E009B348F /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				922C1D01263A573500F34AE9 /* FastingApp.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
 		92B7398F26323E26002D5261 /* FastModel */ = {
 			isa = PBXGroup;
 			children = (
@@ -1016,9 +1054,9 @@
 		92F4F85C263AE97C00205600 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				92F4F85F263AECB800205600 /* ActiveFastView.swift */,
 				922C1D03263A573500F34AE9 /* ContentView.swift */,
 				92F4F85D263AE9A400205600 /* IdleFastView.swift */,
-				92F4F85F263AECB800205600 /* ActiveFastView.swift */,
 				92F4F861263AEF1300205600 /* LoadingView.swift */,
 				9219DD54263B3C9F00FBE9C5 /* SaveFastView.swift */,
 			);
@@ -1342,14 +1380,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				922C1D06263A573500F34AE9 /* NotificationController.swift in Sources */,
 				9219DD55263B3C9F00FBE9C5 /* SaveFastView.swift in Sources */,
+				92ADC09A263B5FF3009B348F /* WatchDataModel+API.swift in Sources */,
 				922C1D04263A573500F34AE9 /* ContentView.swift in Sources */,
+				92ADC097263B5E8F009B348F /* InterfaceState.swift in Sources */,
 				922C1D0A263A573500F34AE9 /* ComplicationController.swift in Sources */,
+				92ADC09F263B66AF009B348F /* StringFormater.swift in Sources */,
 				92F4F856263A603B00205600 /* WatchDataModel.swift in Sources */,
 				92F4F860263AECB800205600 /* ActiveFastView.swift in Sources */,
 				922C1D02263A573500F34AE9 /* FastingApp.swift in Sources */,
-				922C1D08263A573500F34AE9 /* NotificationView.swift in Sources */,
+				92ADC09C263B6486009B348F /* WatchDataModel+WCSessionDelegate.swift in Sources */,
 				92F4F85E263AE9A400205600 /* IdleFastView.swift in Sources */,
 				92F4F862263AEF1300205600 /* LoadingView.swift in Sources */,
 			);

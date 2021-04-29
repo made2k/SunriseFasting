@@ -58,6 +58,9 @@ extension WatchManager {
     case "load":
       loadData()
       requestError = nil
+      
+    case "delete":
+      requestError = deleteFast()
     
     default:
       requestError = WatchAPIError.invalidRequest
@@ -104,7 +107,6 @@ extension WatchManager {
       return .noActiveFast
     }
     
-    
     var endDate: Date = Date()
     
     if let date = payload?["date"] as? Date {
@@ -113,6 +115,19 @@ extension WatchManager {
     
     DispatchQueue.main.async {
       self.appModel.endFast(model, endDate: endDate)
+    }
+    
+    return nil
+  }
+  
+  private func deleteFast() -> WatchAPIError? {
+    
+    guard let model = appModel.currentFast else {
+      return .noActiveFast
+    }
+    
+    DispatchQueue.main.async {
+      self.appModel.deleteFast(model)
     }
     
     return nil

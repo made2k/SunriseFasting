@@ -14,15 +14,18 @@ struct IdleFastView: View {
   var body: some View {
 
     VStack {
+      
+      Spacer()
+      
       Text("No ongoing fasts")
         .font(.title3)
       
       Spacer()
 
       Button("Start Fast") {
-        model.requestToStart()
+        model.sendRequestToStartFast()
       }
-      .disabled(model.currentDataState == .idlePending)
+      .disabled(model.isPending)
 
     }
     .padding()
