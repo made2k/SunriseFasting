@@ -8,9 +8,11 @@
 import Combine
 import Foundation
 import OSLog
+import SharedData
 import SwiftUI
+import WatchConnectivity
 
-final class AppModel: ObservableObject {
+final class AppModel: NSObject, ObservableObject {
 
   let logger = Logger.create()
   
@@ -25,9 +27,15 @@ final class AppModel: ObservableObject {
   /// DataManager to help persist data
   let manager: DataManager
   let widgetProvider: WidgetDataProvider
+  var watchProvider: WatchDataProvider?
+  let watchSession = WCSession.default
   
   /// The currently active FastModel if it exists.
-  @Published var currentFast: FastModel?
+  @Published var currentFast: FastModel? {
+    didSet {
+      sendStateToWatch(nil)
+    }
+  }
   /// Array of all completed Fasts (ie not active)
   @Published var completedFasts: [Fast] = []
   
@@ -44,11 +52,19 @@ final class AppModel: ObservableObject {
     if preview {
       self.manager = DataManager.preview
       self.widgetProvider = WidgetDataProvider(manager.persistenceController.container)
+      self.watchProvider = WatchDataProvider(manager.persistenceController.container)
+
+      super.init()
       
     } else {
       self.manager = DataManager.shared
       self.widgetProvider = WidgetDataProvider(manager.persistenceController.container)
+      self.watchProvider = WatchDataProvider(manager.persistenceController.container)
+
+      super.init()
+
       setupSubscriptions()
+      setupWatchConnection()
     }
 
     logger.trace("AppModel initialized")
@@ -70,5 +86,75 @@ final class AppModel: ObservableObject {
       }
 
   }
+
+  private func setupWatchConnection() {
+    guard WCSession.isSupported() else {
+      logger.info("WCSession not supported")
+      return
+    }
+
+    watchSession.delegate = self
+    watchSession.activate()
+  }
   
+}
+
+extension AppModel: WCSessionDelegate {
+
+  func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
+    logger.debug("WCSession activation did complete, error? \(String(describing: error?.localizedDescription))")
+  }
+
+  func sessionDidBecomeInactive(_ session: WCSession) {
+    logger.debug("WCSession did become inactive")
+  }
+
+  func sessionDidDeactivate(_ session: WCSession) {
+    logger.debug("WCSession did deactivate")
+  }
+
+  func session(_ session: WCSession, didReceiveMessageData messageData: Data, replyHandler: @escaping (Data) -> Void) {
+    let string = String(data: messageData, encoding: .utf8)
+    if string == "load" {
+      sendStateToWatch(replyHandler)
+    } else if string == "start" {
+      guard currentFast == nil else { return }
+      var interval: TimeInterval = UserDefaults.standard.double(forKey: UserDefaultKey.fastingGoal.rawValue)
+      if interval <= 0 {
+        interval = FastingGoal.default.duration
+      }
+      startFast(interval: interval)
+    } else if string == "stop" {
+      guard let fast = currentFast else { return }
+      endFast(fast, endDate: Date())
+    }
+  }
+
+  private func sendStateToWatch(_ replyHandler: ((Data) -> Void)?) {
+    let dataType: SharedWidgetDataType
+    if let currentFast = currentFast {
+      dataType = .active(fastInfo: SharedFastInfo(currentFast.startDate, interval: currentFast.duration))
+
+    } else {
+      dataType = .idle(lastFastDate: completedFasts.last?.endDate)
+    }
+
+    do {
+      let encoder = JSONEncoder()
+      let data = try encoder.encode(dataType)
+
+      if let handler = replyHandler {
+        handler(data)
+      } else {
+        watchSession.sendMessageData(data, replyHandler: nil) { error in
+          self.logger.error("Error sending data to watch: \(error.localizedDescription)")
+        }
+      }
+
+    } catch {
+      logger.error("Error encoding data to send to watch")
+    }
+
+  }
+
 }

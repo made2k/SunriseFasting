@@ -30,6 +30,19 @@
 		92250A8D2637286300DF1A87 /* SharedData.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 92250A6A26371D1900DF1A87 /* SharedData.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		92250A9626372E3900DF1A87 /* ActiveWidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92250A9226372E3500DF1A87 /* ActiveWidgetView.swift */; };
 		922A9A942631167700CBC0EF /* DatePickerSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922A9A932631167700CBC0EF /* DatePickerSelectionView.swift */; };
+		922C1CF6263A573500F34AE9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 922C1CF5263A573500F34AE9 /* Assets.xcassets */; };
+		922C1CFD263A573500F34AE9 /* WatchFasting Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 922C1CFC263A573500F34AE9 /* WatchFasting Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		922C1D02263A573500F34AE9 /* FastingApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922C1D01263A573500F34AE9 /* FastingApp.swift */; };
+		922C1D04263A573500F34AE9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922C1D03263A573500F34AE9 /* ContentView.swift */; };
+		922C1D06263A573500F34AE9 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922C1D05263A573500F34AE9 /* NotificationController.swift */; };
+		922C1D08263A573500F34AE9 /* NotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922C1D07263A573500F34AE9 /* NotificationView.swift */; };
+		922C1D0A263A573500F34AE9 /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922C1D09263A573500F34AE9 /* ComplicationController.swift */; };
+		922C1D0C263A573500F34AE9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 922C1D0B263A573500F34AE9 /* Assets.xcassets */; };
+		922C1D0F263A573500F34AE9 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 922C1D0E263A573500F34AE9 /* Preview Assets.xcassets */; };
+		922C1D14263A573500F34AE9 /* WatchFasting.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 922C1CF3263A573400F34AE9 /* WatchFasting.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		922C1D41263A5EFA00F34AE9 /* WatchSharedData.h in Headers */ = {isa = PBXBuildFile; fileRef = 922C1D31263A5EFA00F34AE9 /* WatchSharedData.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		922C1D44263A5EFA00F34AE9 /* WatchSharedData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 922C1D2F263A5EF900F34AE9 /* WatchSharedData.framework */; };
+		922C1D45263A5EFA00F34AE9 /* WatchSharedData.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 922C1D2F263A5EF900F34AE9 /* WatchSharedData.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		9236BA40263508AF0056EFDD /* Logger+Initialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9236BA3F263508AF0056EFDD /* Logger+Initialization.swift */; };
 		92534CDF2634752300D95681 /* Fast+Properties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92534CDE2634752300D95681 /* Fast+Properties.swift */; };
 		9254F9A0262FBAB300589377 /* FastingApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9254F99F262FBAB300589377 /* FastingApp.swift */; };
@@ -102,6 +115,13 @@
 		92F1D21E2630814400ED6F81 /* FastingGoal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92F1D21D2630814400ED6F81 /* FastingGoal.swift */; };
 		92F2EBA02633465C001EBCFD /* BlurView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92F2EB9F2633465C001EBCFD /* BlurView.swift */; };
 		92F2EBA22633472C001EBCFD /* DatePickerRangeFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92F2EBA12633472C001EBCFD /* DatePickerRangeFactory.swift */; };
+		92F4F856263A603B00205600 /* WatchDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922C1D1D263A5E0400F34AE9 /* WatchDataModel.swift */; };
+		92F4F857263A604300205600 /* SharedWidgetDataType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92250A7C26371D4200DF1A87 /* SharedWidgetDataType.swift */; };
+		92F4F858263A604300205600 /* SharedFastInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92250A7826371D2B00DF1A87 /* SharedFastInfo.swift */; };
+		92F4F85B263A6CD200205600 /* WatchDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92F4F85A263A6CD200205600 /* WatchDataProvider.swift */; };
+		92F4F85E263AE9A400205600 /* IdleFastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92F4F85D263AE9A400205600 /* IdleFastView.swift */; };
+		92F4F860263AECB800205600 /* ActiveFastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92F4F85F263AECB800205600 /* ActiveFastView.swift */; };
+		92F4F862263AEF1300205600 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92F4F861263AEF1300205600 /* LoadingView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -125,6 +145,27 @@
 			proxyType = 1;
 			remoteGlobalIDString = 92250A6926371D1900DF1A87;
 			remoteInfo = SharedData;
+		};
+		922C1CFE263A573500F34AE9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9254F994262FBAB300589377 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 922C1CFB263A573500F34AE9;
+			remoteInfo = "WatchFasting Extension";
+		};
+		922C1D12263A573500F34AE9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9254F994262FBAB300589377 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 922C1CF2263A573400F34AE9;
+			remoteInfo = WatchFasting;
+		};
+		922C1D42263A5EFA00F34AE9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9254F994262FBAB300589377 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 922C1D2E263A5EF900F34AE9;
+			remoteInfo = WatchSharedData;
 		};
 		92656EFD2637380000AD5F67 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -162,6 +203,39 @@
 			files = (
 				92250A8D2637286300DF1A87 /* SharedData.framework in Embed Frameworks */,
 				92656F4C26373FB900AD5F67 /* RingView.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		922C1D15263A573500F34AE9 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				922C1D14263A573500F34AE9 /* WatchFasting.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		922C1D18263A573500F34AE9 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				922C1CFD263A573500F34AE9 /* WatchFasting Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		922C1D23263A5E3A00F34AE9 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				922C1D45263A5EFA00F34AE9 /* WatchSharedData.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -206,6 +280,23 @@
 		92250A7C26371D4200DF1A87 /* SharedWidgetDataType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedWidgetDataType.swift; sourceTree = "<group>"; };
 		92250A9226372E3500DF1A87 /* ActiveWidgetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveWidgetView.swift; sourceTree = "<group>"; };
 		922A9A932631167700CBC0EF /* DatePickerSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerSelectionView.swift; sourceTree = "<group>"; };
+		922C1CF3263A573400F34AE9 /* WatchFasting.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WatchFasting.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		922C1CF5263A573500F34AE9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		922C1CF7263A573500F34AE9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		922C1CFC263A573500F34AE9 /* WatchFasting Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "WatchFasting Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		922C1D01263A573500F34AE9 /* FastingApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FastingApp.swift; sourceTree = "<group>"; };
+		922C1D03263A573500F34AE9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		922C1D05263A573500F34AE9 /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
+		922C1D07263A573500F34AE9 /* NotificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationView.swift; sourceTree = "<group>"; };
+		922C1D09263A573500F34AE9 /* ComplicationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicationController.swift; sourceTree = "<group>"; };
+		922C1D0B263A573500F34AE9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		922C1D0E263A573500F34AE9 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		922C1D10263A573500F34AE9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		922C1D11263A573500F34AE9 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		922C1D1D263A5E0400F34AE9 /* WatchDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchDataModel.swift; sourceTree = "<group>"; };
+		922C1D2F263A5EF900F34AE9 /* WatchSharedData.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = WatchSharedData.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		922C1D31263A5EFA00F34AE9 /* WatchSharedData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WatchSharedData.h; sourceTree = "<group>"; };
+		922C1D32263A5EFA00F34AE9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9236BA3F263508AF0056EFDD /* Logger+Initialization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Logger+Initialization.swift"; sourceTree = "<group>"; };
 		92534CDE2634752300D95681 /* Fast+Properties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Fast+Properties.swift"; sourceTree = "<group>"; };
 		9254F99C262FBAB300589377 /* Fasting.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Fasting.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -274,6 +365,10 @@
 		92F1D21D2630814400ED6F81 /* FastingGoal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FastingGoal.swift; sourceTree = "<group>"; };
 		92F2EB9F2633465C001EBCFD /* BlurView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlurView.swift; sourceTree = "<group>"; };
 		92F2EBA12633472C001EBCFD /* DatePickerRangeFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerRangeFactory.swift; sourceTree = "<group>"; };
+		92F4F85A263A6CD200205600 /* WatchDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchDataProvider.swift; sourceTree = "<group>"; };
+		92F4F85D263AE9A400205600 /* IdleFastView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdleFastView.swift; sourceTree = "<group>"; };
+		92F4F85F263AECB800205600 /* ActiveFastView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveFastView.swift; sourceTree = "<group>"; };
+		92F4F861263AEF1300205600 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -289,6 +384,28 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		92250A6726371D1900DF1A87 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		922C1CF9263A573500F34AE9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				922C1D44263A5EFA00F34AE9 /* WatchSharedData.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		922C1D28263A5E6D00F34AE9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		922C1D2C263A5EF900F34AE9 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -403,6 +520,49 @@
 			path = SharedData;
 			sourceTree = "<group>";
 		};
+		922C1CF4263A573400F34AE9 /* WatchFasting */ = {
+			isa = PBXGroup;
+			children = (
+				922C1CF5263A573500F34AE9 /* Assets.xcassets */,
+				922C1CF7263A573500F34AE9 /* Info.plist */,
+			);
+			path = WatchFasting;
+			sourceTree = "<group>";
+		};
+		922C1D00263A573500F34AE9 /* WatchFasting Extension */ = {
+			isa = PBXGroup;
+			children = (
+				92F4F85C263AE97C00205600 /* Views */,
+				922C1D01263A573500F34AE9 /* FastingApp.swift */,
+				922C1D05263A573500F34AE9 /* NotificationController.swift */,
+				922C1D07263A573500F34AE9 /* NotificationView.swift */,
+				922C1D09263A573500F34AE9 /* ComplicationController.swift */,
+				922C1D1D263A5E0400F34AE9 /* WatchDataModel.swift */,
+				922C1D0B263A573500F34AE9 /* Assets.xcassets */,
+				922C1D10263A573500F34AE9 /* Info.plist */,
+				922C1D11263A573500F34AE9 /* PushNotificationPayload.apns */,
+				922C1D0D263A573500F34AE9 /* Preview Content */,
+			);
+			path = "WatchFasting Extension";
+			sourceTree = "<group>";
+		};
+		922C1D0D263A573500F34AE9 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				922C1D0E263A573500F34AE9 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		922C1D30263A5EFA00F34AE9 /* WatchSharedData */ = {
+			isa = PBXGroup;
+			children = (
+				922C1D31263A5EFA00F34AE9 /* WatchSharedData.h */,
+				922C1D32263A5EFA00F34AE9 /* Info.plist */,
+			);
+			path = WatchSharedData;
+			sourceTree = "<group>";
+		};
 		92339E8626327B8C007BEBB9 /* DataModels */ = {
 			isa = PBXGroup;
 			children = (
@@ -447,6 +607,9 @@
 				92250A5126371A6100DF1A87 /* FastingWidget */,
 				92250A6B26371D1900DF1A87 /* SharedData */,
 				92656EF92637380000AD5F67 /* RingView */,
+				922C1CF4263A573400F34AE9 /* WatchFasting */,
+				922C1D00263A573500F34AE9 /* WatchFasting Extension */,
+				922C1D30263A5EFA00F34AE9 /* WatchSharedData */,
 				92250A4C26371A6100DF1A87 /* Frameworks */,
 				9254F99D262FBAB300589377 /* Products */,
 			);
@@ -459,6 +622,9 @@
 				92250A4B26371A6100DF1A87 /* FastingWidgetExtension.appex */,
 				92250A6A26371D1900DF1A87 /* SharedData.framework */,
 				92656EF82637380000AD5F67 /* RingView.framework */,
+				922C1CF3263A573400F34AE9 /* WatchFasting.app */,
+				922C1CFC263A573500F34AE9 /* WatchFasting Extension.appex */,
+				922C1D2F263A5EF900F34AE9 /* WatchSharedData.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -475,6 +641,7 @@
 				9254F9A5262FBAB300589377 /* Preview Content */,
 				92124A082632304100A33968 /* Storage */,
 				92B96C452633185400ED1758 /* Views */,
+				92F4F859263A6CB400205600 /* Watch */,
 				92250A6126371AF400DF1A87 /* Widget */,
 			);
 			path = Fasting;
@@ -838,6 +1005,25 @@
 			path = ViewStyles;
 			sourceTree = "<group>";
 		};
+		92F4F859263A6CB400205600 /* Watch */ = {
+			isa = PBXGroup;
+			children = (
+				92F4F85A263A6CD200205600 /* WatchDataProvider.swift */,
+			);
+			path = Watch;
+			sourceTree = "<group>";
+		};
+		92F4F85C263AE97C00205600 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				922C1D03263A573500F34AE9 /* ContentView.swift */,
+				92F4F85D263AE9A400205600 /* IdleFastView.swift */,
+				92F4F85F263AECB800205600 /* ActiveFastView.swift */,
+				92F4F861263AEF1300205600 /* LoadingView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -846,6 +1032,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				92250A6E26371D1900DF1A87 /* SharedData.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		922C1D2A263A5EF900F34AE9 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				922C1D41263A5EFA00F34AE9 /* WatchSharedData.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -898,6 +1092,61 @@
 			productReference = 92250A6A26371D1900DF1A87 /* SharedData.framework */;
 			productType = "com.apple.product-type.framework";
 		};
+		922C1CF2263A573400F34AE9 /* WatchFasting */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 922C1D1C263A573500F34AE9 /* Build configuration list for PBXNativeTarget "WatchFasting" */;
+			buildPhases = (
+				922C1CF1263A573400F34AE9 /* Resources */,
+				922C1D18263A573500F34AE9 /* Embed App Extensions */,
+				922C1D28263A5E6D00F34AE9 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				922C1CFF263A573500F34AE9 /* PBXTargetDependency */,
+			);
+			name = WatchFasting;
+			productName = WatchFasting;
+			productReference = 922C1CF3263A573400F34AE9 /* WatchFasting.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		922C1CFB263A573500F34AE9 /* WatchFasting Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 922C1D1B263A573500F34AE9 /* Build configuration list for PBXNativeTarget "WatchFasting Extension" */;
+			buildPhases = (
+				922C1CF8263A573500F34AE9 /* Sources */,
+				922C1CF9263A573500F34AE9 /* Frameworks */,
+				922C1CFA263A573500F34AE9 /* Resources */,
+				922C1D23263A5E3A00F34AE9 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				922C1D43263A5EFA00F34AE9 /* PBXTargetDependency */,
+			);
+			name = "WatchFasting Extension";
+			productName = "WatchFasting Extension";
+			productReference = 922C1CFC263A573500F34AE9 /* WatchFasting Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
+		};
+		922C1D2E263A5EF900F34AE9 /* WatchSharedData */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 922C1D46263A5EFA00F34AE9 /* Build configuration list for PBXNativeTarget "WatchSharedData" */;
+			buildPhases = (
+				922C1D2A263A5EF900F34AE9 /* Headers */,
+				922C1D2B263A5EF900F34AE9 /* Sources */,
+				922C1D2C263A5EF900F34AE9 /* Frameworks */,
+				922C1D2D263A5EF900F34AE9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WatchSharedData;
+			productName = WatchSharedData;
+			productReference = 922C1D2F263A5EF900F34AE9 /* WatchSharedData.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 		9254F99B262FBAB300589377 /* Fasting */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9254F9B0262FBAB300589377 /* Build configuration list for PBXNativeTarget "Fasting" */;
@@ -907,6 +1156,7 @@
 				9254F99A262FBAB300589377 /* Resources */,
 				927DD7E42630B3C100E6C33A /* Embed Frameworks */,
 				92250A5A26371A6200DF1A87 /* Embed App Extensions */,
+				922C1D15263A573500F34AE9 /* Embed Watch Content */,
 			);
 			buildRules = (
 			);
@@ -914,6 +1164,7 @@
 				92250A5826371A6200DF1A87 /* PBXTargetDependency */,
 				92250A7026371D1900DF1A87 /* PBXTargetDependency */,
 				92656EFE2637380000AD5F67 /* PBXTargetDependency */,
+				922C1D13263A573500F34AE9 /* PBXTargetDependency */,
 			);
 			name = Fasting;
 			packageProductDependencies = (
@@ -948,7 +1199,7 @@
 		9254F994262FBAB300589377 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1240;
+				LastSwiftUpdateCheck = 1250;
 				LastUpgradeCheck = 1240;
 				TargetAttributes = {
 					92250A4A26371A6100DF1A87 = {
@@ -957,6 +1208,15 @@
 					92250A6926371D1900DF1A87 = {
 						CreatedOnToolsVersion = 12.4;
 						LastSwiftMigration = 1240;
+					};
+					922C1CF2263A573400F34AE9 = {
+						CreatedOnToolsVersion = 12.5;
+					};
+					922C1CFB263A573500F34AE9 = {
+						CreatedOnToolsVersion = 12.5;
+					};
+					922C1D2E263A5EF900F34AE9 = {
+						CreatedOnToolsVersion = 12.5;
 					};
 					9254F99B262FBAB300589377 = {
 						CreatedOnToolsVersion = 12.4;
@@ -987,6 +1247,9 @@
 				92250A4A26371A6100DF1A87 /* FastingWidgetExtension */,
 				92250A6926371D1900DF1A87 /* SharedData */,
 				92656EF72637380000AD5F67 /* RingView */,
+				922C1CF2263A573400F34AE9 /* WatchFasting */,
+				922C1CFB263A573500F34AE9 /* WatchFasting Extension */,
+				922C1D2E263A5EF900F34AE9 /* WatchSharedData */,
 			);
 		};
 /* End PBXProject section */
@@ -1002,6 +1265,30 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		92250A6826371D1900DF1A87 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		922C1CF1263A573400F34AE9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				922C1CF6263A573500F34AE9 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		922C1CFA263A573500F34AE9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				922C1D0F263A573500F34AE9 /* Preview Assets.xcassets in Resources */,
+				922C1D0C263A573500F34AE9 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		922C1D2D263A5EF900F34AE9 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -1050,6 +1337,31 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		922C1CF8263A573500F34AE9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				922C1D06263A573500F34AE9 /* NotificationController.swift in Sources */,
+				922C1D04263A573500F34AE9 /* ContentView.swift in Sources */,
+				922C1D0A263A573500F34AE9 /* ComplicationController.swift in Sources */,
+				92F4F856263A603B00205600 /* WatchDataModel.swift in Sources */,
+				92F4F860263AECB800205600 /* ActiveFastView.swift in Sources */,
+				922C1D02263A573500F34AE9 /* FastingApp.swift in Sources */,
+				922C1D08263A573500F34AE9 /* NotificationView.swift in Sources */,
+				92F4F85E263AE9A400205600 /* IdleFastView.swift in Sources */,
+				92F4F862263AEF1300205600 /* LoadingView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		922C1D2B263A5EF900F34AE9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				92F4F858263A604300205600 /* SharedFastInfo.swift in Sources */,
+				92F4F857263A604300205600 /* SharedWidgetDataType.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		9254F998262FBAB300589377 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1068,6 +1380,7 @@
 				922A9A942631167700CBC0EF /* DatePickerSelectionView.swift in Sources */,
 				927DD7E62630BFC000E6C33A /* TrackerHomeView.swift in Sources */,
 				9295C31A263282C00084C3AA /* StringFormatter+TimeIntervals.swift in Sources */,
+				92F4F85B263A6CD200205600 /* WatchDataProvider.swift in Sources */,
 				9261A13C26339EF7005E8AAD /* TimelineItemView.swift in Sources */,
 				920E50E92633C79D0014E7B5 /* FastGroup.swift in Sources */,
 				927DD7D12630B12F00E6C33A /* Fonts.swift in Sources */,
@@ -1147,6 +1460,21 @@
 			isa = PBXTargetDependency;
 			target = 92250A6926371D1900DF1A87 /* SharedData */;
 			targetProxy = 92250A8E2637286300DF1A87 /* PBXContainerItemProxy */;
+		};
+		922C1CFF263A573500F34AE9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 922C1CFB263A573500F34AE9 /* WatchFasting Extension */;
+			targetProxy = 922C1CFE263A573500F34AE9 /* PBXContainerItemProxy */;
+		};
+		922C1D13263A573500F34AE9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 922C1CF2263A573400F34AE9 /* WatchFasting */;
+			targetProxy = 922C1D12263A573500F34AE9 /* PBXContainerItemProxy */;
+		};
+		922C1D43263A5EFA00F34AE9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 922C1D2E263A5EF900F34AE9 /* WatchSharedData */;
+			targetProxy = 922C1D42263A5EFA00F34AE9 /* PBXContainerItemProxy */;
 		};
 		92656EFE2637380000AD5F67 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -1261,6 +1589,162 @@
 				TARGETED_DEVICE_FAMILY = 1;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		922C1D16263A573500F34AE9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8QEC3K9K4B;
+				IBSC_MODULE = WatchFasting_Extension;
+				INFOPLIST_FILE = WatchFasting/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.zachmcgaughey.Fasting.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 7.4;
+			};
+			name = Debug;
+		};
+		922C1D17263A573500F34AE9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8QEC3K9K4B;
+				IBSC_MODULE = WatchFasting_Extension;
+				INFOPLIST_FILE = WatchFasting/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.zachmcgaughey.Fasting.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 7.4;
+			};
+			name = Release;
+		};
+		922C1D19263A573500F34AE9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"WatchFasting Extension/Preview Content\"";
+				DEVELOPMENT_TEAM = 8QEC3K9K4B;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "WatchFasting Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.zachmcgaughey.Fasting.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 7.4;
+			};
+			name = Debug;
+		};
+		922C1D1A263A573500F34AE9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"WatchFasting Extension/Preview Content\"";
+				DEVELOPMENT_TEAM = 8QEC3K9K4B;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "WatchFasting Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.zachmcgaughey.Fasting.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 7.4;
+			};
+			name = Release;
+		};
+		922C1D47263A5EFA00F34AE9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 8QEC3K9K4B;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = WatchSharedData/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.zachmcgaughey.WatchSharedData;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+				WATCHOS_DEPLOYMENT_TARGET = 7.4;
+			};
+			name = Debug;
+		};
+		922C1D48263A5EFA00F34AE9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 8QEC3K9K4B;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = WatchSharedData/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.zachmcgaughey.WatchSharedData;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+				WATCHOS_DEPLOYMENT_TARGET = 7.4;
 			};
 			name = Release;
 		};
@@ -1497,6 +1981,33 @@
 			buildConfigurations = (
 				92250A7426371D1900DF1A87 /* Debug */,
 				92250A7526371D1900DF1A87 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		922C1D1B263A573500F34AE9 /* Build configuration list for PBXNativeTarget "WatchFasting Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				922C1D19263A573500F34AE9 /* Debug */,
+				922C1D1A263A573500F34AE9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		922C1D1C263A573500F34AE9 /* Build configuration list for PBXNativeTarget "WatchFasting" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				922C1D16263A573500F34AE9 /* Debug */,
+				922C1D17263A573500F34AE9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		922C1D46263A5EFA00F34AE9 /* Build configuration list for PBXNativeTarget "WatchSharedData" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				922C1D47263A5EFA00F34AE9 /* Debug */,
+				922C1D48263A5EFA00F34AE9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -13,6 +13,7 @@ enum LogCategory: String {
   case coreData = "CoreData"
   case dataModel = "DataModel"
   case interface = "Interface"
+  case watch = "Watch"
   case widget = "Widget"
 }
 
