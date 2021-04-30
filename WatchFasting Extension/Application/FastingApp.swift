@@ -21,7 +21,7 @@ struct FastingApp: App {
       }
     }.onChange(of: scenePhase) { phase in
       if phase == .active {
-//          model.refreshDataFromApp()
+        model.refreshDataFromApp()
       }
     }
     
