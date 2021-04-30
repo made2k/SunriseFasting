@@ -1,5 +1,5 @@
 //
-//  TestComplication.swift
+//  CircularComplication.swift
 //  WatchFasting Extension
 //
 //  Created by Zach McGaughey on 4/29/21.
@@ -9,7 +9,7 @@ import ClockKit
 import SharedDataWatch
 import SwiftUI
 
-struct TestComplication: View {
+struct CircularComplication: View {
   
   var date: Date
   var data: SharedWidgetDataType
@@ -26,8 +26,14 @@ struct TestComplication: View {
   }
   
   func idleView() -> some View {
-    ProgressView(value: 0.0)
-      .progressViewStyle(CircularProgressViewStyle(tint: .orange))
+    ZStack {
+      ProgressView(value: 0.0)
+        .progressViewStyle(CircularProgressViewStyle(tint: .orange))
+      // TODO: App Icon here
+      Circle()
+        .foregroundColor(.blue)
+        .padding()
+    }
   }
   
   func activeView(_ info: SharedFastInfo) -> some View {
@@ -46,9 +52,16 @@ struct TestComplication_Previews: PreviewProvider {
     
     Group {
       CLKComplicationTemplateGraphicCircularView(
-        TestComplication(date: Date(), data: .active(fastInfo: .init(Date().addingTimeInterval(-33), interval: 60)))
+        CircularComplication(date: Date(), data: .active(fastInfo: .init(Date().addingTimeInterval(-33), interval: 60)))
       )
       .previewContext()
+      
+      CLKComplicationTemplateGraphicCircularView(
+        CircularComplication(date: Date(), data: .idle(lastFastDate: nil))
+      )
+      .previewContext()
+
+
     }
     
   }

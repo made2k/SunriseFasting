@@ -45,7 +45,7 @@ class ComplicationController: NSObject, CLKComplicationDataSource {
 
   func getComplicationDescriptors(handler: @escaping ([CLKComplicationDescriptor]) -> Void) {
     let descriptors = [
-      CLKComplicationDescriptor(identifier: "complication", displayName: "Fasting", supportedFamilies: CLKComplicationFamily.allCases)
+      CLKComplicationDescriptor(identifier: "complication", displayName: "Fasting", supportedFamilies: [.circularSmall, .modularSmall, .utilitarianSmall, .graphicCorner, .graphicCircular, .graphicExtraLarge])
       // Multiple complication support can be added here with more descriptors
     ]
 
@@ -61,7 +61,7 @@ class ComplicationController: NSObject, CLKComplicationDataSource {
 
   func getTimelineEndDate(for complication: CLKComplication, withHandler handler: @escaping (Date?) -> Void) {
     // Call the handler with the last entry date you can currently provide or nil if you can't support future timelines
-//    return handler(nil)
+
     loadIfNeeded { data in
       
       switch data {
@@ -86,8 +86,7 @@ class ComplicationController: NSObject, CLKComplicationDataSource {
 
   func getCurrentTimelineEntry(for complication: CLKComplication, withHandler handler: @escaping (CLKComplicationTimelineEntry?) -> Void) {
     // Call the handler with the current timeline entry
-//    handler(nil)
-//    return handler(nil)
+
     loadIfNeeded { data in
       
       // calculate date so we're at proper offset
@@ -106,7 +105,7 @@ class ComplicationController: NSObject, CLKComplicationDataSource {
         date = tickDate
       }
       
-      guard let template = self.makeTemplate(for: date, with: data, complication: complication) else {
+      guard let template = ComplicationTemplateFactory.makeTemplate(for: date, with: data, complication: complication) else {
         return handler(nil)
       }
       
@@ -120,22 +119,30 @@ class ComplicationController: NSObject, CLKComplicationDataSource {
 
   func getTimelineEntries(for complication: CLKComplication, after date: Date, limit: Int, withHandler handler: @escaping ([CLKComplicationTimelineEntry]?) -> Void) {
     // Call the handler with the timeline entries after the given date
-//    return handler(nil)
+
     loadIfNeeded { data in
 
       switch data {
       case .idle:
-        if let template = self.makeTemplate(for: date, with: data, complication: complication) {
+        if let template = ComplicationTemplateFactory.makeTemplate(for: date, with: data, complication: complication) {
           let entry = CLKComplicationTimelineEntry(date: date, complicationTemplate: template)
           return handler([entry])
         }
         
       case .active(let info):
+        
+        let onlyOneFamilies: [CLKComplicationFamily] = [.graphicCorner, .graphicExtraLarge, .graphicCircular]
+        
+        if onlyOneFamilies.contains(complication.family), let template = ComplicationTemplateFactory.makeTemplate(for: date, with: data, complication: complication) {
+          let entry = CLKComplicationTimelineEntry(date: date, complicationTemplate: template)
+          return handler([entry])
+        }
+        
         var current: Date = date
         var entries: [CLKComplicationTimelineEntry] = []
         while current < info.startDate.addingTimeInterval(info.targetInterval) && entries.count < limit {
           
-          if let template = self.makeTemplate(for: current, with: data, complication: complication) {
+          if let template = ComplicationTemplateFactory.makeTemplate(for: current, with: data, complication: complication) {
             let entry = CLKComplicationTimelineEntry(date: current, complicationTemplate: template)
             entries.append(entry)
           }
@@ -157,21 +164,4 @@ class ComplicationController: NSObject, CLKComplicationDataSource {
     // This method will be called once per supported complication, and the results will be cached
     handler(nil)
   }
-}
-
-extension ComplicationController {
-  
-  func makeTemplate(for date: Date, with data: SharedWidgetDataType, complication: CLKComplication) -> CLKComplicationTemplate? {
-    
-    switch complication.family {
-    case .graphicCircular:
-      let view = TestComplication(date: date, data: data)
-      return CLKComplicationTemplateGraphicCircularView(view)
-
-    default:
-      return nil
-    }
-    
-  }
-  
 }
