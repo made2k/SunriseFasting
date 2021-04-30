@@ -19,6 +19,16 @@ enum StringFormatter {
     return formatter
   }()
   
+  private static let percentFormatter: NumberFormatter = {
+    let formatter = NumberFormatter()
+    formatter.numberStyle = .percent
+    formatter.minimumIntegerDigits = 1
+    formatter.maximumFractionDigits = 0
+    formatter.roundingMode = .down
+    return formatter
+  }()
+
+  
   static func countdown(from interval: TimeInterval) -> String {
 
     let integerInterval: Int = Int(abs(interval))
@@ -35,4 +45,9 @@ enum StringFormatter {
     return timeFormatter.string(from: date)
   }
   
+  static func percent(from value: Double) -> String {
+    let number: NSNumber = NSNumber(value: value)
+    return percentFormatter.string(from: number) ?? "??"
+  }
+
 }

@@ -39,7 +39,7 @@ struct IdleFastView_Previews: PreviewProvider {
   static var previews: some View {
     Group {
       IdleFastView()
-        .environmentObject(WatchDataModel())
+        .environmentObject(WatchDataModel.preview())
     }
   }
 }

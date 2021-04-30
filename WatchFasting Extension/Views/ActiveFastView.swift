@@ -110,7 +110,7 @@ struct ActiveFastView: View {
 struct ActiveFastView_Previews: PreviewProvider {
   static var previews: some View {
     ActiveFastView(SharedFastInfo(Date(), interval: 60))
-      .environmentObject(WatchDataModel())
+      .environmentObject(WatchDataModel.preview())
     
   }
 }

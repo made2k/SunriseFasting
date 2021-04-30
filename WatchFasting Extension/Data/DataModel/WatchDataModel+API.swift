@@ -14,6 +14,10 @@ extension WatchDataModel {
   // MARK: - Companion App Requests
   
   func refreshDataFromApp() {
+    guard hasOutstandingRefresh == false else {
+      logger.info("Aborting app refresh, already waiting on data")
+      return
+    }
     
     sendRequest("load") { [weak self] response in
       switch response {

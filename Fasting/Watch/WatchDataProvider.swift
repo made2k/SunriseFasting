@@ -39,7 +39,7 @@ final class WatchDataProvider {
   }
 
   private func reloadData(force: Bool = false) {
-
+    
     container.performBackgroundTask { [weak self] context in
 
       let activeFastRequest: NSFetchRequest<Fast> = Fast.fetchRequest()
@@ -66,11 +66,11 @@ final class WatchDataProvider {
         
         self?.existingData = payloadData
 
-
         Self.logger.debug("Writing data to file and updating widgets")
 
         let encoder = JSONEncoder()
         let data = try encoder.encode(payloadData)
+        
 
         self?.session.sendMessageData(data, replyHandler: nil) { error in
           Self.logger.error("Error sending data to watch: \(error.localizedDescription)")

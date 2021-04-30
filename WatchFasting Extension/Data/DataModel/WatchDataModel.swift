@@ -11,6 +11,14 @@ import WatchConnectivity
 import os
 
 final class WatchDataModel: NSObject, ObservableObject {
+  
+  static let shared: WatchDataModel = WatchDataModel(activateSession: true)
+  
+  static func preview(_ state: InterfaceState? = nil) -> WatchDataModel {
+    let model = WatchDataModel(activateSession: false)
+    model.interfaceState = state ?? .uninitialized
+    return model
+  }
 
   @Published var interfaceState: InterfaceState = .uninitialized
   var isPending: Bool {
@@ -27,12 +35,18 @@ final class WatchDataModel: NSObject, ObservableObject {
   
   let session: WCSession = WCSession.default
   let logger: Logger = Logger(subsystem: Bundle.main.bundleIdentifier!, category: "WatchApp")
+  
+  var dataReceiveHooks: [(SharedWidgetDataType) -> Void] = []
+  var hasOutstandingRefresh: Bool = false
 
-  override init() {
+  private init(activateSession: Bool) {
     super.init()
     
-    session.delegate = self
-    session.activate()
+    if activateSession {
+      session.delegate = self
+      session.activate()
+    }
+    
   }
   
   func askToSaveFastingData(_ fastData: SharedFastInfo) {
