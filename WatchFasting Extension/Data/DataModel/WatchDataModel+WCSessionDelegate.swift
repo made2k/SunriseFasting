@@ -5,16 +5,22 @@
 //  Created by Zach McGaughey on 4/29/21.
 //
 
+import ClockKit
 import Foundation
 import SharedDataWatch
 import WatchConnectivity
-import ClockKit
 
 extension WatchDataModel: WCSessionDelegate {
 
   func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
-    logger.debug("WCSession activation completed. Error? \(String(describing: error?.localizedDescription))")
-    refreshDataFromApp()
+    if let error = error {
+      logger.debug("WCSession failed with error: \(error.localizedDescription)")
+    } else {
+      logger.debug("WCSession successfully activated")
+      // Immediately refresh app data
+      refreshDataFromApp()
+    }
+
   }
 
   /// Our app sends us data when the data is updated via the main application. We can consume that data
@@ -33,13 +39,19 @@ extension WatchDataModel: WCSessionDelegate {
       let decoder = JSONDecoder()
       let data = try decoder.decode(SharedWidgetDataType.self, from: data)
       self.interfaceState = .init(from: data)
+
+      // If our complication hooks are empty, this update happened outside
+      // of a complication which means they're no longer valid. Force a
+      // refresh of all complications.
       if complicationHooks.isEmpty {
-        // need to schedule update
-        for complication in CLKComplicationServer.sharedInstance().activeComplications ?? [] {
-          CLKComplicationServer.sharedInstance().reloadTimeline(for: complication)
+
+        CLKComplicationServer.sharedInstance().activeComplications?.forEach {
+          CLKComplicationServer.sharedInstance().reloadTimeline(for: $0)
         }
+
+      } else {
+        flushComplicationHooks(with: data)
       }
-      flushHandlers(with: data)
 
     } catch {
       logger.error("Unable to decode data \(error.localizedDescription)")
@@ -47,9 +59,10 @@ extension WatchDataModel: WCSessionDelegate {
 
   }
   
-  private func flushHandlers(with data: SharedWidgetDataType) {
-    complicationHooks.forEach {
-      $0(data)
+  private func flushComplicationHooks(with data: SharedWidgetDataType) {
+
+    complicationHooks.forEach { hook in
+      hook(data)
     }
     
     complicationHooks.removeAll()

@@ -98,7 +98,12 @@ extension WatchDataModel {
   
   // MARK: - Data Sender
   
-  private func sendRequest(_ query: String, payload: [String: Any]? = nil, attempt: Int = 0, responseHandler: @escaping (Result<Void, Error>) -> Void) {
+  private func sendRequest(
+    _ query: String,
+    payload: [String: Any]? = nil,
+    attempt: Int = 0,
+    responseHandler: @escaping (Result<Void, Error>) -> Void
+  ) {
         
     var requestDictionary: [String: Any] = ["query": query]
     

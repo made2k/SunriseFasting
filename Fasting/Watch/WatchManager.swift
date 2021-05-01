@@ -9,6 +9,7 @@ import Foundation
 import OSLog
 import WatchConnectivity
 
+/// This class acts as the API receiver for our watchOS app.
 final class WatchManager: NSObject {
   
   private let appModel: AppModel
@@ -68,10 +69,10 @@ extension WatchManager {
     }
     
     if let error = requestError {
-      replyHandler(generateErrorData(error: error))
+      replyHandler(generateErrorResponse(error: error))
       
     } else {
-      replyHandler(generateSuccessData())
+      replyHandler(generateSuccessResponse())
     }
     
   }
@@ -98,6 +99,7 @@ extension WatchManager {
     DispatchQueue.main.async {
       self.appModel.startFast(startDate, interval: goal.duration)
     }
+
     return nil
   }
   
@@ -134,14 +136,17 @@ extension WatchManager {
   }
   
   private func loadData() {
+    // Load data does not return a response, but instead will
+    // trigger an async update that will be delivered via data and
+    // not dictionary
     provider.forceDataUpdate()
   }
   
-  private func generateErrorData(error: WatchAPIError) -> [String: Any] {
+  private func generateErrorResponse(error: WatchAPIError) -> [String: Any] {
     return ["error": error]
   }
   
-  private func generateSuccessData() -> [String: Any] {
+  private func generateSuccessResponse() -> [String: Any] {
     return [:]
   }
   
@@ -153,7 +158,12 @@ extension WatchManager {
 extension WatchManager: WCSessionDelegate {
   
   func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
-    logger.debug("WCSession activation did complete, error? \(String(describing: error?.localizedDescription))")
+    if let error = error {
+      logger.debug("WCSession failed to activate with error: \(error.localizedDescription)")
+
+    } else {
+      logger.debug("WCSession successfully activated")
+    }
   }
 
   func sessionDidBecomeInactive(_ session: WCSession) {
@@ -167,7 +177,7 @@ extension WatchManager: WCSessionDelegate {
   func session(_ session: WCSession, didReceiveMessage message: [String : Any], replyHandler: @escaping ([String : Any]) -> Void) {
     
     guard let query = message["query"] as? String else {
-      return replyHandler(generateErrorData(error: .invalidRequest))
+      return replyHandler(generateErrorResponse(error: .invalidRequest))
     }
     
     handleAPIRequest(query, payload: message, replyHandler: replyHandler)

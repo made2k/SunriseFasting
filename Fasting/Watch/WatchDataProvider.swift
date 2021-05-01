@@ -12,6 +12,8 @@ import OSLog
 import SharedData
 import WatchConnectivity
 
+/// This class observes our managed object for changes and will
+/// send an updated state to the watch when changed.
 final class WatchDataProvider {
 
   private static let logger = Logger.create(.watch)
@@ -20,16 +22,17 @@ final class WatchDataProvider {
 
   private var existingData: SharedWidgetDataType?
 
-  private var cancellables = Set<AnyCancellable>()
+  private var cancellable: AnyCancellable?
 
   init(_ container: NSPersistentContainer) {
     self.container = container
 
-    NotificationCenter.default.publisher(for: .NSManagedObjectContextDidSave, object: container.viewContext).sink { [weak self] _ in
-      Self.logger.debug("Widget data update triggered from notification center")
-      self?.reloadData()
-    }
-    .store(in: &cancellables)
+    cancellable = NotificationCenter.default
+      .publisher(for: .NSManagedObjectContextDidSave, object: container.viewContext)
+      .sink { [weak self] _ in
+        Self.logger.debug("Widget data update triggered from notification center")
+        self?.reloadData()
+      }
 
     reloadData()
   }
@@ -52,32 +55,6 @@ final class WatchDataProvider {
       let sortDescriptor = NSSortDescriptor(keyPath: \Fast.endDate, ascending: false)
       completedFastsRequest.sortDescriptors = [sortDescriptor]
 
-      func sendIfNeeded(_ payloadData: SharedWidgetDataType) throws {
-        
-        if !force {
-          
-          // Check that our data needs to be sent
-          guard payloadData != self?.existingData else {
-            Self.logger.debug("The existing widget data was the same as our new data, not updating")
-            return
-          }
-          
-        }
-        
-        self?.existingData = payloadData
-
-        Self.logger.debug("Writing data to file and updating widgets")
-
-        let encoder = JSONEncoder()
-        let data = try encoder.encode(payloadData)
-        
-
-        self?.session.sendMessageData(data, replyHandler: nil) { error in
-          Self.logger.error("Error sending data to watch: \(error.localizedDescription)")
-        }
-        
-      }
-
       do {
 
         let activeResults: [Fast] = try context.fetch(activeFastRequest)
@@ -86,7 +63,7 @@ final class WatchDataProvider {
 
           let fastInfo = SharedFastInfo(currentFast.startDate!, interval: currentFast.targetInterval)
           let data: SharedWidgetDataType = .active(fastInfo: fastInfo)
-          try sendIfNeeded(data)
+          try self?.sendIfNeeded(data, force: force)
 
           return
         }
@@ -95,12 +72,37 @@ final class WatchDataProvider {
 
         let completedDate: Date? = completedResults.first?.endDate
         let data = SharedWidgetDataType.idle(lastFastDate: completedDate)
-        try sendIfNeeded(data)
+        try self?.sendIfNeeded(data, force: force)
 
       } catch {
         Self.logger.error("Error writing shared data to disk: \(error.localizedDescription)")
       }
 
+    }
+
+  }
+
+  private func sendIfNeeded(_ payloadData: SharedWidgetDataType, force: Bool) throws {
+
+    if !force {
+
+      // Check that our data needs to be sent
+      guard payloadData != existingData else {
+        Self.logger.debug("The existing watch data was the same as our new data, not updating")
+        return
+      }
+
+    }
+
+    existingData = payloadData
+
+    Self.logger.debug("Sending new data to watch")
+
+    let encoder = JSONEncoder()
+    let data = try encoder.encode(payloadData)
+
+    session.sendMessageData(data, replyHandler: nil) { error in
+      Self.logger.error("Error sending data to watch: \(error.localizedDescription)")
     }
 
   }
