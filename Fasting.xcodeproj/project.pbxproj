@@ -555,14 +555,14 @@
 		922C1D00263A573500F34AE9 /* WatchFasting Extension */ = {
 			isa = PBXGroup;
 			children = (
-				92ADC0A1263B6F76009B348F /* Complications */,
 				92ADC0A0263B6D9E009B348F /* Application */,
-				92ADC09D263B6696009B348F /* Formatting */,
-				92ADC095263B5E64009B348F /* Data */,
-				92F4F85C263AE97C00205600 /* Views */,
 				922C1D0B263A573500F34AE9 /* Assets.xcassets */,
+				92ADC0A1263B6F76009B348F /* Complications */,
+				92ADC095263B5E64009B348F /* Data */,
+				92ADC09D263B6696009B348F /* Formatting */,
 				922C1D10263A573500F34AE9 /* Info.plist */,
 				922C1D0D263A573500F34AE9 /* Preview Content */,
+				92F4F85C263AE97C00205600 /* Views */,
 			);
 			path = "WatchFasting Extension";
 			sourceTree = "<group>";
@@ -854,7 +854,6 @@
 			isa = PBXGroup;
 			children = (
 				922C1D09263A573500F34AE9 /* ComplicationController.swift */,
-				92D6397F263CF35B00081D3B /* ComplicationFactory */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -913,6 +912,7 @@
 		92ADC0A1263B6F76009B348F /* Complications */ = {
 			isa = PBXGroup;
 			children = (
+				92D6397F263CF35B00081D3B /* ComplicationFactory */,
 				92962023263CB78D002F6AB0 /* Controller */,
 			);
 			path = Complications;

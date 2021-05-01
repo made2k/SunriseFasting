@@ -25,7 +25,7 @@ enum ComplicationTemplateFactory {
     case .active(let info):
       let progressValue: Double = date.timeIntervalSince(info.startDate) / info.targetInterval
       percent = Float(min(progressValue, 1.0))
-      dateRange = info.startDate...info.targetEndDate.addingTimeInterval(info.targetInterval)
+      dateRange = info.startDate...info.targetEndDate
     }
     
     switch complication.family {
