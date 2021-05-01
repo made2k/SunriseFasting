@@ -43,7 +43,7 @@ final class DataManager {
   
   func createNewFast(_ startDate: Date, endDate: Date?, interval: TimeInterval) -> Fast {
     let fast = Fast(context: context)
-    fast.startDate = Date()
+    fast.startDate = startDate
     fast.endDate = endDate
     fast.targetInterval = interval
     

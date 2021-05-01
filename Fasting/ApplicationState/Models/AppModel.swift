@@ -6,7 +6,6 @@
 //
 
 import Combine
-import Foundation
 import OSLog
 import SwiftUI
 
@@ -28,6 +27,7 @@ final class AppModel: ObservableObject {
   
   /// The currently active FastModel if it exists.
   @Published var currentFast: FastModel?
+
   /// Array of all completed Fasts (ie not active)
   @Published var completedFasts: [Fast] = []
   
@@ -48,6 +48,7 @@ final class AppModel: ObservableObject {
     } else {
       self.manager = DataManager.shared
       self.widgetProvider = WidgetDataProvider(manager.persistenceController.container)
+
       setupSubscriptions()
     }
 
@@ -70,5 +71,5 @@ final class AppModel: ObservableObject {
       }
 
   }
-  
+
 }
