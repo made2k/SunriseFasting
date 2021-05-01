@@ -18,6 +18,9 @@
 		9219DD51263B041A00FBE9C5 /* WatchManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9219DD50263B041A00FBE9C5 /* WatchManager.swift */; };
 		9219DD53263B392A00FBE9C5 /* WatchAPIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9219DD52263B392A00FBE9C5 /* WatchAPIError.swift */; };
 		9219DD55263B3C9F00FBE9C5 /* SaveFastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9219DD54263B3C9F00FBE9C5 /* SaveFastView.swift */; };
+		9224C777263CFD8900877562 /* ModularSmallBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9224C776263CFD8900877562 /* ModularSmallBuilder.swift */; };
+		9224C779263D007300877562 /* GraphicCircularBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9224C778263D007300877562 /* GraphicCircularBuilder.swift */; };
+		9224C77B263D01C000877562 /* CircularSmallBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9224C77A263D01C000877562 /* CircularSmallBuilder.swift */; };
 		92250A4E26371A6100DF1A87 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92250A4D26371A6100DF1A87 /* WidgetKit.framework */; };
 		92250A5026371A6100DF1A87 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92250A4F26371A6100DF1A87 /* SwiftUI.framework */; };
 		92250A5326371A6100DF1A87 /* FastingWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92250A5226371A6100DF1A87 /* FastingWidget.swift */; };
@@ -96,17 +99,14 @@
 		928ED21A2631C72900F496F7 /* NumberTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 928ED2192631C72900F496F7 /* NumberTextField.swift */; };
 		9295C31A263282C00084C3AA /* StringFormatter+TimeIntervals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9295C318263282C00084C3AA /* StringFormatter+TimeIntervals.swift */; };
 		9295C31B263282C00084C3AA /* StringFormatter+DateTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9295C319263282C00084C3AA /* StringFormatter+DateTime.swift */; };
-		92962022263CB39A002F6AB0 /* LargeComplicationIdle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92962021263CB39A002F6AB0 /* LargeComplicationIdle.swift */; };
 		92962025263CB7A3002F6AB0 /* ComplicationTemplateFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92962024263CB7A3002F6AB0 /* ComplicationTemplateFactory.swift */; };
 		92978B2526331D1400944D12 /* FastProgressUpdatingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92978B2426331D1400944D12 /* FastProgressUpdatingViewModel.swift */; };
-		92A2B819263C58CF001E4FD8 /* ComplicationViewCorner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A2B818263C58CF001E4FD8 /* ComplicationViewCorner.swift */; };
 		92A8ED1F2630D2B700BE00F0 /* StartTimeInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A8ED1E2630D2B700BE00F0 /* StartTimeInfoView.swift */; };
 		92A8ED232630DA4C00BE00F0 /* EndTimeInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A8ED222630DA4C00BE00F0 /* EndTimeInfoView.swift */; };
 		92ADC097263B5E8F009B348F /* InterfaceState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92ADC096263B5E8F009B348F /* InterfaceState.swift */; };
 		92ADC09A263B5FF3009B348F /* WatchDataModel+API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92ADC099263B5FF3009B348F /* WatchDataModel+API.swift */; };
 		92ADC09C263B6486009B348F /* WatchDataModel+WCSessionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92ADC09B263B6486009B348F /* WatchDataModel+WCSessionDelegate.swift */; };
 		92ADC09F263B66AF009B348F /* StringFormater.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92ADC09E263B66AF009B348F /* StringFormater.swift */; };
-		92ADC0A3263B700F009B348F /* CircularComplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92ADC0A2263B700F009B348F /* CircularComplication.swift */; };
 		92B7398626323607002D5261 /* FastingGoal+Descriptors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B7398526323607002D5261 /* FastingGoal+Descriptors.swift */; };
 		92B73988263238BD002D5261 /* FastingGoal+Equality.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B73987263238BD002D5261 /* FastingGoal+Equality.swift */; };
 		92B7398A26323913002D5261 /* FastingGoal+Codable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B7398926323913002D5261 /* FastingGoal+Codable.swift */; };
@@ -114,6 +114,9 @@
 		92B7398E26323D88002D5261 /* FastModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B7398D26323D88002D5261 /* FastModel.swift */; };
 		92B7399126323EB4002D5261 /* FastModel+Previewing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B7399026323EB4002D5261 /* FastModel+Previewing.swift */; };
 		92B7399426323F73002D5261 /* Fast+Initialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B7399326323F73002D5261 /* Fast+Initialization.swift */; };
+		92D63981263CF37500081D3B /* GraphicCornerBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D63980263CF37500081D3B /* GraphicCornerBuilder.swift */; };
+		92D63983263CFAB800081D3B /* GraphicExtraLargeBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D63982263CFAB800081D3B /* GraphicExtraLargeBuilder.swift */; };
+		92D63985263CFB6B00081D3B /* UtilitarianSmallBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D63984263CFB6B00081D3B /* UtilitarianSmallBuilder.swift */; };
 		92D739D226325500008DD386 /* StringFormatter+Percentage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D739D126325500008DD386 /* StringFormatter+Percentage.swift */; };
 		92D739D426325F44008DD386 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D739D326325F44008DD386 /* DataManager.swift */; };
 		92D739D626326187008DD386 /* UserDefaults+Publishing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D739D526326187008DD386 /* UserDefaults+Publishing.swift */; };
@@ -276,6 +279,9 @@
 		9219DD50263B041A00FBE9C5 /* WatchManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchManager.swift; sourceTree = "<group>"; };
 		9219DD52263B392A00FBE9C5 /* WatchAPIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchAPIError.swift; sourceTree = "<group>"; };
 		9219DD54263B3C9F00FBE9C5 /* SaveFastView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveFastView.swift; sourceTree = "<group>"; };
+		9224C776263CFD8900877562 /* ModularSmallBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModularSmallBuilder.swift; sourceTree = "<group>"; };
+		9224C778263D007300877562 /* GraphicCircularBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphicCircularBuilder.swift; sourceTree = "<group>"; };
+		9224C77A263D01C000877562 /* CircularSmallBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularSmallBuilder.swift; sourceTree = "<group>"; };
 		92250A4B26371A6100DF1A87 /* FastingWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = FastingWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		92250A4D26371A6100DF1A87 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
 		92250A4F26371A6100DF1A87 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
@@ -302,7 +308,6 @@
 		922C1D0B263A573500F34AE9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		922C1D0E263A573500F34AE9 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		922C1D10263A573500F34AE9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		922C1D11263A573500F34AE9 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
 		922C1D1D263A5E0400F34AE9 /* WatchDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchDataModel.swift; sourceTree = "<group>"; };
 		922C1D2F263A5EF900F34AE9 /* SharedDataWatch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SharedDataWatch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		922C1D31263A5EFA00F34AE9 /* SharedDataWatch.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SharedDataWatch.h; sourceTree = "<group>"; };
@@ -352,18 +357,15 @@
 		928ED2192631C72900F496F7 /* NumberTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberTextField.swift; sourceTree = "<group>"; };
 		9295C318263282C00084C3AA /* StringFormatter+TimeIntervals.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "StringFormatter+TimeIntervals.swift"; sourceTree = "<group>"; };
 		9295C319263282C00084C3AA /* StringFormatter+DateTime.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "StringFormatter+DateTime.swift"; sourceTree = "<group>"; };
-		92962021263CB39A002F6AB0 /* LargeComplicationIdle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LargeComplicationIdle.swift; sourceTree = "<group>"; };
 		92962024263CB7A3002F6AB0 /* ComplicationTemplateFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicationTemplateFactory.swift; sourceTree = "<group>"; };
 		92978B2426331D1400944D12 /* FastProgressUpdatingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FastProgressUpdatingViewModel.swift; sourceTree = "<group>"; };
 		92978B2826331FD800944D12 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
-		92A2B818263C58CF001E4FD8 /* ComplicationViewCorner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicationViewCorner.swift; sourceTree = "<group>"; };
 		92A8ED1E2630D2B700BE00F0 /* StartTimeInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartTimeInfoView.swift; sourceTree = "<group>"; };
 		92A8ED222630DA4C00BE00F0 /* EndTimeInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndTimeInfoView.swift; sourceTree = "<group>"; };
 		92ADC096263B5E8F009B348F /* InterfaceState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceState.swift; sourceTree = "<group>"; };
 		92ADC099263B5FF3009B348F /* WatchDataModel+API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WatchDataModel+API.swift"; sourceTree = "<group>"; };
 		92ADC09B263B6486009B348F /* WatchDataModel+WCSessionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WatchDataModel+WCSessionDelegate.swift"; sourceTree = "<group>"; };
 		92ADC09E263B66AF009B348F /* StringFormater.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringFormater.swift; sourceTree = "<group>"; };
-		92ADC0A2263B700F009B348F /* CircularComplication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularComplication.swift; sourceTree = "<group>"; };
 		92B7398526323607002D5261 /* FastingGoal+Descriptors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FastingGoal+Descriptors.swift"; sourceTree = "<group>"; };
 		92B73987263238BD002D5261 /* FastingGoal+Equality.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FastingGoal+Equality.swift"; sourceTree = "<group>"; };
 		92B7398926323913002D5261 /* FastingGoal+Codable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FastingGoal+Codable.swift"; sourceTree = "<group>"; };
@@ -373,6 +375,9 @@
 		92B7399326323F73002D5261 /* Fast+Initialization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Fast+Initialization.swift"; sourceTree = "<group>"; };
 		92CC52FA26337BEC00D82E6C /* Color+Custom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Custom.swift"; sourceTree = "<group>"; };
 		92CC52FC26337C1400D82E6C /* UIColor+Custom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Custom.swift"; sourceTree = "<group>"; };
+		92D63980263CF37500081D3B /* GraphicCornerBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphicCornerBuilder.swift; sourceTree = "<group>"; };
+		92D63982263CFAB800081D3B /* GraphicExtraLargeBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphicExtraLargeBuilder.swift; sourceTree = "<group>"; };
+		92D63984263CFB6B00081D3B /* UtilitarianSmallBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UtilitarianSmallBuilder.swift; sourceTree = "<group>"; };
 		92D739D126325500008DD386 /* StringFormatter+Percentage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StringFormatter+Percentage.swift"; sourceTree = "<group>"; };
 		92D739D326325F44008DD386 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		92D739D526326187008DD386 /* UserDefaults+Publishing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+Publishing.swift"; sourceTree = "<group>"; };
@@ -557,7 +562,6 @@
 				92F4F85C263AE97C00205600 /* Views */,
 				922C1D0B263A573500F34AE9 /* Assets.xcassets */,
 				922C1D10263A573500F34AE9 /* Info.plist */,
-				922C1D11263A573500F34AE9 /* PushNotificationPayload.apns */,
 				922C1D0D263A573500F34AE9 /* Preview Content */,
 			);
 			path = "WatchFasting Extension";
@@ -850,7 +854,7 @@
 			isa = PBXGroup;
 			children = (
 				922C1D09263A573500F34AE9 /* ComplicationController.swift */,
-				92962024263CB7A3002F6AB0 /* ComplicationTemplateFactory.swift */,
+				92D6397F263CF35B00081D3B /* ComplicationFactory */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -910,9 +914,6 @@
 			isa = PBXGroup;
 			children = (
 				92962023263CB78D002F6AB0 /* Controller */,
-				92ADC0A2263B700F009B348F /* CircularComplication.swift */,
-				92A2B818263C58CF001E4FD8 /* ComplicationViewCorner.swift */,
-				92962021263CB39A002F6AB0 /* LargeComplicationIdle.swift */,
 			);
 			path = Complications;
 			sourceTree = "<group>";
@@ -971,6 +972,20 @@
 				92CC52FC26337C1400D82E6C /* UIColor+Custom.swift */,
 			);
 			path = Colors;
+			sourceTree = "<group>";
+		};
+		92D6397F263CF35B00081D3B /* ComplicationFactory */ = {
+			isa = PBXGroup;
+			children = (
+				9224C77A263D01C000877562 /* CircularSmallBuilder.swift */,
+				92962024263CB7A3002F6AB0 /* ComplicationTemplateFactory.swift */,
+				9224C778263D007300877562 /* GraphicCircularBuilder.swift */,
+				92D63980263CF37500081D3B /* GraphicCornerBuilder.swift */,
+				92D63982263CFAB800081D3B /* GraphicExtraLargeBuilder.swift */,
+				9224C776263CFD8900877562 /* ModularSmallBuilder.swift */,
+				92D63984263CFB6B00081D3B /* UtilitarianSmallBuilder.swift */,
+			);
+			path = ComplicationFactory;
 			sourceTree = "<group>";
 		};
 		92D739D926326946008DD386 /* ApplicationState */ = {
@@ -1409,20 +1424,23 @@
 			buildActionMask = 2147483647;
 			files = (
 				9219DD55263B3C9F00FBE9C5 /* SaveFastView.swift in Sources */,
-				92962022263CB39A002F6AB0 /* LargeComplicationIdle.swift in Sources */,
+				9224C779263D007300877562 /* GraphicCircularBuilder.swift in Sources */,
 				92ADC09A263B5FF3009B348F /* WatchDataModel+API.swift in Sources */,
 				922C1D04263A573500F34AE9 /* ContentView.swift in Sources */,
 				92ADC097263B5E8F009B348F /* InterfaceState.swift in Sources */,
 				922C1D0A263A573500F34AE9 /* ComplicationController.swift in Sources */,
 				92962025263CB7A3002F6AB0 /* ComplicationTemplateFactory.swift in Sources */,
-				92ADC0A3263B700F009B348F /* CircularComplication.swift in Sources */,
+				9224C77B263D01C000877562 /* CircularSmallBuilder.swift in Sources */,
 				92ADC09F263B66AF009B348F /* StringFormater.swift in Sources */,
 				92F4F856263A603B00205600 /* WatchDataModel.swift in Sources */,
 				92F4F860263AECB800205600 /* ActiveFastView.swift in Sources */,
+				92D63983263CFAB800081D3B /* GraphicExtraLargeBuilder.swift in Sources */,
 				922C1D02263A573500F34AE9 /* FastingApp.swift in Sources */,
+				9224C777263CFD8900877562 /* ModularSmallBuilder.swift in Sources */,
 				92ADC09C263B6486009B348F /* WatchDataModel+WCSessionDelegate.swift in Sources */,
-				92A2B819263C58CF001E4FD8 /* ComplicationViewCorner.swift in Sources */,
+				92D63981263CF37500081D3B /* GraphicCornerBuilder.swift in Sources */,
 				92F4F85E263AE9A400205600 /* IdleFastView.swift in Sources */,
+				92D63985263CFB6B00081D3B /* UtilitarianSmallBuilder.swift in Sources */,
 				92F4F862263AEF1300205600 /* LoadingView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

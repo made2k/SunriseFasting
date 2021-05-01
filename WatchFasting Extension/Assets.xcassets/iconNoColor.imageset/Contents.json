@@ -1,7 +1,7 @@
 {
   "images" : [
     {
-      "filename" : "Fasting Prototype-1.png",
+      "filename" : "ComplicationColorless.png",
       "idiom" : "universal"
     }
   ],
@@ -10,6 +10,6 @@
     "version" : 1
   },
   "properties" : {
-    "auto-scaling" : "auto"
+    "template-rendering-intent" : "template"
   }
 }

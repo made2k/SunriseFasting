@@ -33,7 +33,7 @@ extension WatchDataModel: WCSessionDelegate {
       let decoder = JSONDecoder()
       let data = try decoder.decode(SharedWidgetDataType.self, from: data)
       self.interfaceState = .init(from: data)
-      if dataReceiveHooks.isEmpty {
+      if complicationHooks.isEmpty {
         // need to schedule update
         for complication in CLKComplicationServer.sharedInstance().activeComplications ?? [] {
           CLKComplicationServer.sharedInstance().reloadTimeline(for: complication)
@@ -48,11 +48,11 @@ extension WatchDataModel: WCSessionDelegate {
   }
   
   private func flushHandlers(with data: SharedWidgetDataType) {
-    dataReceiveHooks.forEach {
+    complicationHooks.forEach {
       $0(data)
     }
     
-    dataReceiveHooks.removeAll()
+    complicationHooks.removeAll()
   }
 
 }

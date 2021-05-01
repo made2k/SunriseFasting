@@ -36,7 +36,7 @@ final class WatchDataModel: NSObject, ObservableObject {
   let session: WCSession = WCSession.default
   let logger: Logger = Logger(subsystem: Bundle.main.bundleIdentifier!, category: "WatchApp")
   
-  var dataReceiveHooks: [(SharedWidgetDataType) -> Void] = []
+  var complicationHooks: [(SharedWidgetDataType) -> Void] = []
   var hasOutstandingRefresh: Bool = false
 
   private init(activateSession: Bool) {

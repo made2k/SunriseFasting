@@ -11,32 +11,38 @@ import SwiftUI
 
 class ComplicationController: NSObject, CLKComplicationDataSource {
   
-  let dataController = WatchDataModel.shared
-  var dataType: SharedWidgetDataType?
+  private let dataModel = WatchDataModel.shared
+  private var cachedType: SharedWidgetDataType?
 
+  // MARK: - Data Loading
+
+  /// Attempt to load data from our companion app and use that data for our complications.
+  /// - Parameter handler: Handler that activates when data is fetched.
   private func loadIfNeeded(_ handler: @escaping (SharedWidgetDataType) -> Void) {
-    
-    switch dataController.interfaceState {
+
+    // First attempt to load cached values
+    switch dataModel.interfaceState {
     case .active(let info):
-      self.dataType = .active(fastInfo: info)
+      self.cachedType = .active(fastInfo: info)
       
     case .idle:
-      self.dataType = .idle(lastFastDate: nil)
+      self.cachedType = .idle(lastFastDate: nil)
       
     default:
       break
     }
     
-    if let value = dataType {
+    if let value = cachedType {
       handler(value)
       
     } else {
-      dataController.dataReceiveHooks.append { [weak self] data in
-        self?.dataType = data
+      // If we don't have data already, hook in to our data model for a refresh.
+      dataModel.complicationHooks.append { [weak self] data in
+        self?.cachedType = data
         handler(data)
       }
-      dataController.refreshDataFromApp()
-
+      // Make the call to refresh our data
+      dataModel.refreshDataFromApp()
     }
     
   }
@@ -44,9 +50,22 @@ class ComplicationController: NSObject, CLKComplicationDataSource {
   // MARK: - Complication Configuration
 
   func getComplicationDescriptors(handler: @escaping ([CLKComplicationDescriptor]) -> Void) {
+
+    let supportedFamilies: [CLKComplicationFamily] = [
+      .circularSmall,
+      .modularSmall,
+      .utilitarianSmall,
+      .graphicCorner,
+      .graphicCircular,
+      .graphicExtraLarge
+    ]
+
     let descriptors = [
-      CLKComplicationDescriptor(identifier: "complication", displayName: "Fasting", supportedFamilies: [.circularSmall, .modularSmall, .utilitarianSmall, .graphicCorner, .graphicCircular, .graphicExtraLarge])
-      // Multiple complication support can be added here with more descriptors
+      CLKComplicationDescriptor(
+        identifier: "complication",
+        displayName: "Fasting",
+        supportedFamilies: supportedFamilies
+      )
     ]
 
     // Call the handler with the currently supported complication descriptors
@@ -59,58 +78,59 @@ class ComplicationController: NSObject, CLKComplicationDataSource {
 
   // MARK: - Timeline Configuration
 
-  func getTimelineEndDate(for complication: CLKComplication, withHandler handler: @escaping (Date?) -> Void) {
-    // Call the handler with the last entry date you can currently provide or nil if you can't support future timelines
+  // Call the handler with the last entry date you can currently provide or nil if you can't support future timelines
+  func getTimelineEndDate(
+    for complication: CLKComplication,
+    withHandler handler: @escaping (Date?) -> Void
+  ) {
 
     loadIfNeeded { data in
       
       switch data {
       case .idle:
+        // If we're inactive, we don't have any data to really display
+        // and thus no end timeline
         handler(nil)
         
       case .active(let info):
-        let completionDate = info.startDate.addingTimeInterval(info.targetInterval)
-        handler(completionDate)
+        // Provide the final date that we hit 100% of our fast, no more updates after that.
+        handler(info.targetEndDate)
       }
       
     }
     
   }
 
-  func getPrivacyBehavior(for complication: CLKComplication, withHandler handler: @escaping (CLKComplicationPrivacyBehavior) -> Void) {
-    // Call the handler with your desired behavior when the device is locked
+  // Call the handler with your desired behavior when the device is locked
+  func getPrivacyBehavior(
+    for complication: CLKComplication,
+    withHandler handler: @escaping (CLKComplicationPrivacyBehavior) -> Void
+  ) {
+
+    // Fasting data can be considered personal, don't display on lock screen.
     handler(.hideOnLockScreen)
+
   }
 
   // MARK: - Timeline Population
 
-  func getCurrentTimelineEntry(for complication: CLKComplication, withHandler handler: @escaping (CLKComplicationTimelineEntry?) -> Void) {
-    // Call the handler with the current timeline entry
+  // Call the handler with the current timeline entry
+  func getCurrentTimelineEntry(
+    for complication: CLKComplication,
+    withHandler handler: @escaping (CLKComplicationTimelineEntry?) -> Void
+  ) {
 
     loadIfNeeded { data in
-      
-      // calculate date so we're at proper offset
-      let now = Date()
-      let date: Date
-      
-      switch data {
-      case .idle:
-        date = Date()
-        
-      case .active(let info):
-        let intervalChunks = info.targetInterval / 100.0
-        let currentProgress = min(now.timeIntervalSince(info.startDate) / info.targetInterval, 1.0)
-        let currentTick = Int(100 * currentProgress)
-        let tickDate = info.startDate.addingTimeInterval(Double(currentTick) * intervalChunks)
-        date = tickDate
-      }
-      
-      guard let template = ComplicationTemplateFactory.makeTemplate(for: date, with: data, complication: complication) else {
+
+      let entryDate: Date = self.getCurrentTimelineDate(data: data)
+      let optionalTemplate = ComplicationTemplateFactory.makeTemplate(for: entryDate, with: data, complication: complication)
+
+      // If we don't have a template, fail early
+      guard let template = optionalTemplate else {
         return handler(nil)
       }
-      
-      // TODO: What's the date here?
-      let entry = CLKComplicationTimelineEntry(date: date, complicationTemplate: template)
+
+      let entry = CLKComplicationTimelineEntry(date: entryDate, complicationTemplate: template)
       handler(entry)
       
     }
@@ -124,29 +144,55 @@ class ComplicationController: NSObject, CLKComplicationDataSource {
 
       switch data {
       case .idle:
-        if let template = ComplicationTemplateFactory.makeTemplate(for: date, with: data, complication: complication) {
-          let entry = CLKComplicationTimelineEntry(date: date, complicationTemplate: template)
-          return handler([entry])
+        // Idle state only needs one entry since we never update while idle.
+        guard let template = ComplicationTemplateFactory
+                .makeTemplate(
+                  for: date,
+                  with: data,
+                  complication: complication
+                ) else {
+
+          return handler(nil)
         }
-        
+
+        let entry = CLKComplicationTimelineEntry(date: date, complicationTemplate: template)
+        return handler([entry])
+
       case .active(let info):
-        
-        let onlyOneFamilies: [CLKComplicationFamily] = [.graphicCorner, .graphicExtraLarge, .graphicCircular]
-        
-        if onlyOneFamilies.contains(complication.family), let template = ComplicationTemplateFactory.makeTemplate(for: date, with: data, complication: complication) {
+
+        // If our complication doesn't support multiple timelines, just
+        // make and return one entity.
+        if self.supportsIncrementingTimelines(family: complication.family) == false {
+          guard let template = ComplicationTemplateFactory
+                  .makeTemplate(
+                    for: date,
+                    with: data,
+                    complication: complication
+                  ) else {
+
+            return handler(nil)
+          }
           let entry = CLKComplicationTimelineEntry(date: date, complicationTemplate: template)
           return handler([entry])
         }
         
-        var current: Date = date
+        // Generate our list of entities.
+
+        // Add 1 offset since we're getting the next entry after the date.
+        var current: Date = self.getCurrentTimelineDate(from: date, data: data, offset: 1)
         var entries: [CLKComplicationTimelineEntry] = []
-        while current < info.startDate.addingTimeInterval(info.targetInterval) && entries.count < limit {
+
+        while current < info.targetEndDate && entries.count < limit {
           
-          if let template = ComplicationTemplateFactory.makeTemplate(for: current, with: data, complication: complication) {
+          if let template = ComplicationTemplateFactory
+              .makeTemplate(for: current, with: data, complication: complication) {
+
             let entry = CLKComplicationTimelineEntry(date: current, complicationTemplate: template)
             entries.append(entry)
           }
-          
+
+          // The next interval is 1% away, use the time for percent to advance
+          // to the next entry
           let updateInterval = info.targetInterval / 100.0
           current = current.addingTimeInterval(updateInterval)
         }
@@ -164,4 +210,58 @@ class ComplicationController: NSObject, CLKComplicationDataSource {
     // This method will be called once per supported complication, and the results will be cached
     handler(nil)
   }
+
+  // MARK: - Helpers
+
+  /// We calculate timelines by dates from percentages of the completed fast.
+  /// Due to this, we cannot use our current date as the current entry since we
+  /// may now be off by a period of time when updating to the next percent. This
+  /// function calculated the current timeline entry date.
+  /// - Parameters:
+  ///   - data: Data used to provide date info.
+  ///   - offset: A percent offset to be applied to the calculation. Useful for finding next or previous dates.
+  /// - Returns: A date of the current entry based on the current system time.
+  private func getCurrentTimelineDate(from date: Date = Date(), data: SharedWidgetDataType, offset: Int = 0) -> Date {
+
+    switch data {
+    case .idle:
+      // If not current fast, we can just return the current time.
+      return date
+
+    case .active(let info):
+      let now: Date = date
+
+      // Get the total time that 1% takes
+      let percentInterval: TimeInterval = info.targetInterval / 100.0
+      // Get the current percent so we can calculate what time to set
+      let currentProgress: Double = min(now.timeIntervalSince(info.startDate) / info.targetInterval, 1.0)
+      // This is our current percent from 0-100
+      let currentTick: Int = max(min(Int(100 * currentProgress) + offset, 100), 0)
+
+      // By adding the time interval of currentTick * percentInterval to the start date,
+      // it gives us the date that our current entry would start at.
+      let targetInterval: TimeInterval = TimeInterval(currentTick) * percentInterval
+      let tickDate: Date = info.startDate.addingTimeInterval(targetInterval)
+      return tickDate
+    }
+
+  }
+
+  /// Helper function to tell if a complication family supports incrementing timeline entities.
+  /// - Parameter family: The family to check.
+  /// - Returns: Returns true if the family supports multiple timeline entries, false otherwise.
+  private func supportsIncrementingTimelines(family: CLKComplicationFamily) -> Bool {
+
+    // These families use time based gauges and have no need
+    // to update multiple times.
+    let unsupportedFamilies: [CLKComplicationFamily] = [
+      .graphicCorner,
+      .graphicExtraLarge,
+      .graphicCircular
+    ]
+
+    return unsupportedFamilies.contains(family) == false
+
+  }
+
 }
