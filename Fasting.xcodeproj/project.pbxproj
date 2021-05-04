@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9200EF3E264101DA00111355 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9200EF3D264101DA00111355 /* Colors.xcassets */; };
 		92021AD026326D06006C00C1 /* AppModel+DataLoading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92021ACF26326D06006C00C1 /* AppModel+DataLoading.swift */; };
 		92021AD226326F2A006C00C1 /* FastModel+FastActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92021AD126326F2A006C00C1 /* FastModel+FastActions.swift */; };
 		92021AD426327238006C00C1 /* FastModel+Equatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92021AD326327238006C00C1 /* FastModel+Equatable.swift */; };
@@ -268,6 +269,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		9200EF3D264101DA00111355 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		92021ACF26326D06006C00C1 /* AppModel+DataLoading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppModel+DataLoading.swift"; sourceTree = "<group>"; };
 		92021AD126326F2A006C00C1 /* FastModel+FastActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FastModel+FastActions.swift"; sourceTree = "<group>"; };
 		92021AD326327238006C00C1 /* FastModel+Equatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FastModel+Equatable.swift"; sourceTree = "<group>"; };
@@ -557,6 +559,7 @@
 			children = (
 				92ADC0A0263B6D9E009B348F /* Application */,
 				922C1D0B263A573500F34AE9 /* Assets.xcassets */,
+				9200EF3D264101DA00111355 /* Colors.xcassets */,
 				92ADC0A1263B6F76009B348F /* Complications */,
 				92ADC095263B5E64009B348F /* Data */,
 				92ADC09D263B6696009B348F /* Formatting */,
@@ -1365,6 +1368,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9200EF3E264101DA00111355 /* Colors.xcassets in Resources */,
 				922C1D0F263A573500F34AE9 /* Preview Assets.xcassets in Resources */,
 				922C1D0C263A573500F34AE9 /* Assets.xcassets in Resources */,
 			);

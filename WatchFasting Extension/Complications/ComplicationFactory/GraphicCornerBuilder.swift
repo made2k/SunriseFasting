@@ -11,15 +11,23 @@ import SwiftUI
 
 enum GraphicCornerBuilder {
 
-  static func build(dateRange: ClosedRange<Date>?) -> CLKComplicationTemplate {
+  static func build(for date: Date, dateRange: ClosedRange<Date>?) -> CLKComplicationTemplate {
 
     guard let range = dateRange else {
       return idleTemplate()
     }
 
+    let gaugeColor: UIColor
+
+    if range.upperBound <= date {
+      gaugeColor = UIColor(named: "Complete").unsafelyUnwrapped
+    } else {
+      gaugeColor = UIColor(named: "Incomplete").unsafelyUnwrapped
+    }
+
     let gaugeProvider: CLKGaugeProvider = CLKTimeIntervalGaugeProvider(
       style: .fill,
-      gaugeColors: [.orange],
+      gaugeColors: [gaugeColor],
       gaugeColorLocations: nil,
       start: range.lowerBound,
       end: range.upperBound
@@ -37,7 +45,11 @@ enum GraphicCornerBuilder {
   }
 
   private static func idleTemplate() -> CLKComplicationTemplate {
-    let gaugeProvider = CLKSimpleGaugeProvider(style: .fill, gaugeColor: .orange, fillFraction: 0)
+    let gaugeProvider = CLKSimpleGaugeProvider(
+      style: .fill,
+      gaugeColor: UIColor(named: "Idle").unsafelyUnwrapped,
+      fillFraction: 0
+    )
     let imageProvider = CLKFullColorImageProvider(fullColorImage: UIImage(named: "Complication/Graphic Corner")!)
 
     return CLKComplicationTemplateGraphicCornerGaugeImage(gaugeProvider: gaugeProvider, imageProvider: imageProvider)
@@ -52,10 +64,10 @@ struct GraphicCornerBuilder_Previews: PreviewProvider {
 
   static var previews: some View {
     Group {
-      GraphicCornerBuilder.build(dateRange: nil)
+      GraphicCornerBuilder.build(for: Date(), dateRange: nil)
         .previewContext()
 
-      GraphicCornerBuilder.build(dateRange: previewRange)
+      GraphicCornerBuilder.build(for: Date(), dateRange: previewRange)
         .previewContext()
     }
   }

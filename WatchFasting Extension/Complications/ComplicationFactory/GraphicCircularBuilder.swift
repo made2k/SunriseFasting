@@ -11,7 +11,7 @@ import SwiftUI
 
 enum GraphicCircularBuilder {
 
-  static func build(dateRange: ClosedRange<Date>?) -> CLKComplicationTemplate {
+  static func build(for date: Date, dateRange: ClosedRange<Date>?) -> CLKComplicationTemplate {
 
     // We will have a gauge provider no matter if we have dates or not,but the
     // type will vary
@@ -19,16 +19,28 @@ enum GraphicCircularBuilder {
 
     if let range = dateRange {
 
+      let gaugeColor: UIColor
+
+      if range.upperBound <= date {
+        gaugeColor = UIColor(named: "Complete").unsafelyUnwrapped
+      } else {
+        gaugeColor = UIColor(named: "Incomplete").unsafelyUnwrapped
+      }
+
       provider = CLKTimeIntervalGaugeProvider(
         style: .fill,
-        gaugeColors: [.orange],
+        gaugeColors: [gaugeColor],
         gaugeColorLocations: nil,
         start: range.lowerBound,
         end: range.upperBound
       )
 
     } else {
-      provider = CLKSimpleGaugeProvider(style: .fill, gaugeColor: .orange, fillFraction: 0)
+      provider = CLKSimpleGaugeProvider(
+        style: .fill,
+        gaugeColor: UIColor(named: "Idle").unsafelyUnwrapped,
+        fillFraction: 0
+      )
     }
 
     let imageProvider = CLKFullColorImageProvider(fullColorImage: UIImage(named: "Complication/Graphic Circular")!)
