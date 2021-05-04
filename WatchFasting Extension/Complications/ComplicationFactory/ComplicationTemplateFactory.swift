@@ -34,7 +34,7 @@ enum ComplicationTemplateFactory {
       return CircularSmallBuilder.build(percent: percent)
       
     case .graphicCircular:
-      return GraphicCircularBuilder.build(dateRange: dateRange)
+      return GraphicCircularBuilder.build(for: date, dateRange: dateRange)
       
     case .modularSmall:
       return ModularSmallBuilder.build(percent: percent)
@@ -46,7 +46,7 @@ enum ComplicationTemplateFactory {
       return GraphicExtraLargeBuilder.build(dateRange: dateRange, percent: Double(percent))
           
     case .graphicCorner:
-      return GraphicCornerBuilder.build(dateRange: dateRange)
+      return GraphicCornerBuilder.build(for: date, dateRange: dateRange)
       
     default:
       return nil

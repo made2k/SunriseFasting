@@ -163,17 +163,8 @@ class ComplicationController: NSObject, CLKComplicationDataSource {
         // If our complication doesn't support multiple timelines, just
         // make and return one entity.
         if self.supportsIncrementingTimelines(family: complication.family) == false {
-          guard let template = ComplicationTemplateFactory
-                  .makeTemplate(
-                    for: date,
-                    with: data,
-                    complication: complication
-                  ) else {
-
-            return handler(nil)
-          }
-          let entry = CLKComplicationTimelineEntry(date: date, complicationTemplate: template)
-          return handler([entry])
+          let entries = self.getNonUpdatingTimelines(for: date, data: data, complication: complication)
+          return handler(entries)
         }
         
         // Generate our list of entities.
@@ -261,6 +252,59 @@ class ComplicationController: NSObject, CLKComplicationDataSource {
     ]
 
     return unsupportedFamilies.contains(family) == false
+
+  }
+
+  /// This function will attempt to fetch the Timeline Entries for the provided date, and one more for the end.
+  /// Since this is not granting a continuously updating set of entries, only current and final are provided.
+  /// - Parameters:
+  ///   - date: Date the entries should be provided after
+  ///   - data: The data to build the templates
+  ///   - complication: The complication to build the templates.
+  /// - Returns: Returns an optional array of entries.
+  private func getNonUpdatingTimelines(
+    for date: Date,
+    data: SharedWidgetDataType,
+    complication: CLKComplication
+  ) -> [CLKComplicationTimelineEntry]? {
+
+    // We need to generate at least one to be able to continue, if we can't create
+    // this, we cannot continue.
+    guard let currentTemplate = ComplicationTemplateFactory
+            .makeTemplate(
+              for: date,
+              with: data,
+              complication: complication
+            ) else {
+      return nil
+    }
+
+    let currentEntry = CLKComplicationTimelineEntry(date: date, complicationTemplate: currentTemplate)
+
+    switch data {
+    case .idle:
+      // Idle needs no other updates. Just a single entry
+      return [currentEntry]
+
+    case .active(let info):
+      // If the date is already after the target end date, just provide one single entry
+      if date > info.targetEndDate {
+        return [currentEntry]
+      }
+
+      // We need to generate the ending entry
+      guard let endTemplate = ComplicationTemplateFactory
+              .makeTemplate(
+                for: info.targetEndDate,
+                with: data,
+                complication: complication
+              ) else {
+        return [currentEntry]
+      }
+      let endEntry = CLKComplicationTimelineEntry(date: info.targetEndDate, complicationTemplate: endTemplate)
+      return [currentEntry, endEntry]
+
+    }
 
   }
 

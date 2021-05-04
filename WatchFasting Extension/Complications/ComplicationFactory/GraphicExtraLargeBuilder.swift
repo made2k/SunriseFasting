@@ -17,9 +17,17 @@ enum GraphicExtraLargeBuilder {
       return idleTemplate()
     }
 
+    let gaugeColor: UIColor
+
+    if percent >= 1 {
+      gaugeColor = UIColor(named: "Complete").unsafelyUnwrapped
+    } else {
+      gaugeColor = UIColor(named: "Incomplete").unsafelyUnwrapped
+    }
+
     let provider: CLKGaugeProvider = CLKTimeIntervalGaugeProvider(
       style: .fill,
-      gaugeColors: [.orange],
+      gaugeColors: [gaugeColor],
       gaugeColorLocations: nil,
       start: range.lowerBound,
       end: range.upperBound
