@@ -265,8 +265,8 @@ class ComplicationController: NSObject, CLKComplicationDataSource {
   private func getNonUpdatingTimelines(
     for date: Date,
     data: SharedWidgetDataType,
-    complication: CLKComplication) -> [CLKComplicationTimelineEntry]?
-  {
+    complication: CLKComplication
+  ) -> [CLKComplicationTimelineEntry]? {
 
     // We need to generate at least one to be able to continue, if we can't create
     // this, we cannot continue.
