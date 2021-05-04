@@ -1,25 +1,25 @@
 {
   "images" : [
     {
-      "filename" : "Fasting Prototype.png",
+      "filename" : "52.png",
       "idiom" : "watch",
       "scale" : "2x",
       "screen-width" : "<=145"
     },
     {
-      "filename" : "Fasting Prototype-1.png",
+      "filename" : "58.png",
       "idiom" : "watch",
       "scale" : "2x",
       "screen-width" : ">161"
     },
     {
-      "filename" : "Fasting Prototype-2.png",
+      "filename" : "58-1.png",
       "idiom" : "watch",
       "scale" : "2x",
       "screen-width" : ">145"
     },
     {
-      "filename" : "Fasting Prototype-3.png",
+      "filename" : "64.png",
       "idiom" : "watch",
       "scale" : "2x",
       "screen-width" : ">183"
