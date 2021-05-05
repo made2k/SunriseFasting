@@ -23,6 +23,8 @@ struct EndTimeInfoView: View {
       Text(dateText)
         .foregroundColor(Color(UIColor.secondaryLabel))
         .font(.callout)
+        .lineLimit(1)
+        .minimumScaleFactor(0.8)
     }
   }
 
