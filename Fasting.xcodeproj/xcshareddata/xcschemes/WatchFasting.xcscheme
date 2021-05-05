@@ -54,8 +54,10 @@
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <RemoteRunnable
+         runnableDebuggingMode = "2"
+         BundleIdentifier = "com.apple.Carousel"
+         RemotePath = "/Fasting">
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "922C1CF2263A573400F34AE9"
@@ -63,7 +65,7 @@
             BlueprintName = "WatchFasting"
             ReferencedContainer = "container:Fasting.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </RemoteRunnable>
    </LaunchAction>
    <ProfileAction
       buildConfiguration = "Release"
@@ -71,8 +73,10 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <RemoteRunnable
+         runnableDebuggingMode = "2"
+         BundleIdentifier = "com.apple.Carousel"
+         RemotePath = "/Fasting">
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "922C1CF2263A573400F34AE9"
@@ -80,7 +84,16 @@
             BlueprintName = "WatchFasting"
             ReferencedContainer = "container:Fasting.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </RemoteRunnable>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "922C1CF2263A573400F34AE9"
+            BuildableName = "WatchFasting.app"
+            BlueprintName = "WatchFasting"
+            ReferencedContainer = "container:Fasting.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">
