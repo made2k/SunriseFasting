@@ -58,7 +58,7 @@
       <RemoteRunnable
          runnableDebuggingMode = "2"
          BundleIdentifier = "com.apple.Carousel"
-         RemotePath = "/Fasting">
+         RemotePath = "/Sunrise">
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "922C1CF2263A573400F34AE9"
@@ -78,7 +78,7 @@
       <RemoteRunnable
          runnableDebuggingMode = "2"
          BundleIdentifier = "com.apple.Carousel"
-         RemotePath = "/Fasting">
+         RemotePath = "/Sunrise">
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "922C1CF2263A573400F34AE9"
