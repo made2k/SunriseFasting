@@ -68,9 +68,9 @@ struct SaveFastView: View {
         .foregroundColor(.red)
         
       }
+      .padding()
     }
-    .padding()
-    
+
   }
   
 }
