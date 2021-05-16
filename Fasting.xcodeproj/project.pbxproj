@@ -520,6 +520,7 @@
 				92250A5426371A6200DF1A87 /* Assets.xcassets */,
 				925F95F526375592006BA9F2 /* Data */,
 				92250A5226371A6100DF1A87 /* FastingWidget.swift */,
+				92250A5F26371A7300DF1A87 /* FastingWidgetExtension.entitlements */,
 				92250A5626371A6200DF1A87 /* Info.plist */,
 				928E4F4B263750EC00037894 /* Views */,
 			);
@@ -626,7 +627,6 @@
 		9254F993262FBAB300589377 = {
 			isa = PBXGroup;
 			children = (
-				92250A5F26371A7300DF1A87 /* FastingWidgetExtension.entitlements */,
 				9254F99E262FBAB300589377 /* Fasting */,
 				92250A5126371A6100DF1A87 /* FastingWidget */,
 				92250A6B26371D1900DF1A87 /* SharedData */,
@@ -1592,7 +1592,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
-				CODE_SIGN_ENTITLEMENTS = FastingWidgetExtension.entitlements;
+				CODE_SIGN_ENTITLEMENTS = FastingWidget/FastingWidgetExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8QEC3K9K4B;
 				INFOPLIST_FILE = FastingWidget/Info.plist;
@@ -1614,7 +1614,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
-				CODE_SIGN_ENTITLEMENTS = FastingWidgetExtension.entitlements;
+				CODE_SIGN_ENTITLEMENTS = FastingWidget/FastingWidgetExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8QEC3K9K4B;
 				INFOPLIST_FILE = FastingWidget/Info.plist;
