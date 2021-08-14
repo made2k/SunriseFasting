@@ -11,6 +11,7 @@ import SwiftUI
 struct TimelineView: View {
 
   @EnvironmentObject private var model: AppModel
+  @State private var exportData: ExportData? = nil
   
   var body: some View {
     List {
@@ -30,7 +31,35 @@ struct TimelineView: View {
     }
     .listStyle(InsetGroupedListStyle())
     .navigationTitle("Timeline")
+    .toolbar {
+      ToolbarItem(placement: .navigationBarTrailing) {
+        Menu("Options") {
+          Button(action: importContent, label: {
+            Label("Import", systemImage: "square.and.arrow.down")
+          })
+          Button(action: exportContent, label: {
+            Label("Export", systemImage: "square.and.arrow.up")
+          })
+
+        }
+      }
+    }
+    .sheet(item: $exportData) { data in
+      ActivityView(activityItems: [data.fileUrl], applicationActivities: nil)
+    }
   }
+  
+  private func exportContent() {
+    let exporter = ExportManager(model: model)
+    guard let fileUrl = exporter.exportDataToUrl() else { return }
+    
+    exportData = ExportData(fileUrl)
+  }
+  
+  private func importContent() {
+    print("import selected")
+  }
+  
 }
 
 struct TimelineView_Previews: PreviewProvider {

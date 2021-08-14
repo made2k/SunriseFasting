@@ -31,6 +31,9 @@ struct FastingApp: App {
     UserDefaults.standard.register(defaults: [UserDefaultKey.fastingGoal.rawValue: FastingGoal.default.rawValue])
     
     logger.trace("Application starting")
+    
+    // Clear any cached export values
+    ExportManager.clearCache()
   }
   
   var body: some Scene {

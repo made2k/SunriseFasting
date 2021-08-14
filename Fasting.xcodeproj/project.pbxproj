@@ -37,6 +37,10 @@
 		92250A8D2637286300DF1A87 /* SharedData.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 92250A6A26371D1900DF1A87 /* SharedData.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		92250A9626372E3900DF1A87 /* ActiveWidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92250A9226372E3500DF1A87 /* ActiveWidgetView.swift */; };
 		9225DD4426C8583E00BCF2C2 /* Color+Custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9225DD4326C8583E00BCF2C2 /* Color+Custom.swift */; };
+		9225DD4726C8740900BCF2C2 /* ActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9225DD4626C8740900BCF2C2 /* ActivityView.swift */; };
+		9225DD4A26C8788400BCF2C2 /* ExportManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9225DD4926C8788400BCF2C2 /* ExportManager.swift */; };
+		9225DD4C26C87BEC00BCF2C2 /* ExportableFast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9225DD4B26C87BEC00BCF2C2 /* ExportableFast.swift */; };
+		9225DD4E26C87FAB00BCF2C2 /* ExportData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9225DD4D26C87FAB00BCF2C2 /* ExportData.swift */; };
 		922A9A942631167700CBC0EF /* DatePickerSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922A9A932631167700CBC0EF /* DatePickerSelectionView.swift */; };
 		922C1CF6263A573500F34AE9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 922C1CF5263A573500F34AE9 /* Assets.xcassets */; };
 		922C1CFD263A573500F34AE9 /* WatchFasting Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 922C1CFC263A573500F34AE9 /* WatchFasting Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -301,6 +305,10 @@
 		92250A7C26371D4200DF1A87 /* SharedWidgetDataType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedWidgetDataType.swift; sourceTree = "<group>"; };
 		92250A9226372E3500DF1A87 /* ActiveWidgetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveWidgetView.swift; sourceTree = "<group>"; };
 		9225DD4326C8583E00BCF2C2 /* Color+Custom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Custom.swift"; sourceTree = "<group>"; };
+		9225DD4626C8740900BCF2C2 /* ActivityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityView.swift; sourceTree = "<group>"; };
+		9225DD4926C8788400BCF2C2 /* ExportManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExportManager.swift; sourceTree = "<group>"; };
+		9225DD4B26C87BEC00BCF2C2 /* ExportableFast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExportableFast.swift; sourceTree = "<group>"; };
+		9225DD4D26C87FAB00BCF2C2 /* ExportData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExportData.swift; sourceTree = "<group>"; };
 		922A9A932631167700CBC0EF /* DatePickerSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerSelectionView.swift; sourceTree = "<group>"; };
 		922C1CF3263A573400F34AE9 /* WatchFasting.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WatchFasting.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		922C1CF5263A573500F34AE9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -474,6 +482,7 @@
 			isa = PBXGroup;
 			children = (
 				92339E8626327B8C007BEBB9 /* DataModels */,
+				9225DD4826C8786400BCF2C2 /* ExportManager */,
 				92B7399226323F63002D5261 /* Extensions */,
 				92124A092632305300A33968 /* Models */,
 			);
@@ -483,8 +492,10 @@
 		92124A092632305300A33968 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				9254F9A8262FBAB300589377 /* PersistenceController.swift */,
 				92D739D326325F44008DD386 /* DataManager.swift */,
+				9225DD4B26C87BEC00BCF2C2 /* ExportableFast.swift */,
+				9225DD4D26C87FAB00BCF2C2 /* ExportData.swift */,
+				9254F9A8262FBAB300589377 /* PersistenceController.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -554,6 +565,22 @@
 				9225DD4326C8583E00BCF2C2 /* Color+Custom.swift */,
 			);
 			path = Colors;
+			sourceTree = "<group>";
+		};
+		9225DD4526C873FA00BCF2C2 /* Activity */ = {
+			isa = PBXGroup;
+			children = (
+				9225DD4626C8740900BCF2C2 /* ActivityView.swift */,
+			);
+			path = Activity;
+			sourceTree = "<group>";
+		};
+		9225DD4826C8786400BCF2C2 /* ExportManager */ = {
+			isa = PBXGroup;
+			children = (
+				9225DD4926C8788400BCF2C2 /* ExportManager.swift */,
+			);
+			path = ExportManager;
 			sourceTree = "<group>";
 		};
 		922C1CF4263A573400F34AE9 /* WatchFasting */ = {
@@ -957,14 +984,15 @@
 		92B96C452633185400ED1758 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				9261A13826339CEC005E8AAD /* Timeline */,
+				9225DD4526C873FA00BCF2C2 /* Activity */,
 				92808AD5263366A500420603 /* Common */,
 				92EB3FB926334243006D6C44 /* DatePicker */,
 				9282A8A1263334AD00CA24A6 /* FastGoalSelection */,
-				92E8B8A526339951007DD3B8 /* Tracker */,
 				92B96C47263318AB00ED1758 /* HomeTab */,
 				92808AD62633673500420603 /* Intervals */,
 				92978B2326331CFE00944D12 /* ProgressRing */,
+				9261A13826339CEC005E8AAD /* Timeline */,
+				92E8B8A526339951007DD3B8 /* Tracker */,
 				92F2EBA42633476C001EBCFD /* ViewStyles */,
 				92F2EB9E26334647001EBCFD /* VisualEffect */,
 			);
@@ -1473,6 +1501,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9225DD4A26C8788400BCF2C2 /* ExportManager.swift in Sources */,
 				9225DD4426C8583E00BCF2C2 /* Color+Custom.swift in Sources */,
 				92D739D226325500008DD386 /* StringFormatter+Percentage.swift in Sources */,
 				9278B7F6262FC01A00893C7D /* ActiveFastHomeView.swift in Sources */,
@@ -1511,6 +1540,7 @@
 				92B7399426323F73002D5261 /* Fast+Initialization.swift in Sources */,
 				92879421263339BF00F949EF /* FastingGoal+Identifiable.swift in Sources */,
 				92792B442633984B00ECF89F /* HomeTabView.swift in Sources */,
+				9225DD4C26C87BEC00BCF2C2 /* ExportableFast.swift in Sources */,
 				92124A0E263234E100A33968 /* FastingGoal+AllCases.swift in Sources */,
 				92D81A80263106CD007E884A /* FastingGoalPickerItemView.swift in Sources */,
 				92021AD426327238006C00C1 /* FastModel+Equatable.swift in Sources */,
@@ -1518,6 +1548,7 @@
 				920E50EB2633C7BC0014E7B5 /* FastGroup+Identifiable.swift in Sources */,
 				9254F9A9262FBAB300589377 /* PersistenceController.swift in Sources */,
 				92534CDF2634752300D95681 /* Fast+Properties.swift in Sources */,
+				9225DD4E26C87FAB00BCF2C2 /* ExportData.swift in Sources */,
 				92978B2526331D1400944D12 /* FastProgressUpdatingViewModel.swift in Sources */,
 				927DD7C42630AC6F00E6C33A /* TextButtonGroup.swift in Sources */,
 				926B23A526331BB2000E3373 /* Fast+Preview.swift in Sources */,
@@ -1526,6 +1557,7 @@
 				9254F9A0262FBAB300589377 /* FastingApp.swift in Sources */,
 				920E50ED2633C7FF0014E7B5 /* FastGroup+Parsing.swift in Sources */,
 				92F1D21E2630814400ED6F81 /* FastingGoal.swift in Sources */,
+				9225DD4726C8740900BCF2C2 /* ActivityView.swift in Sources */,
 				928ED21A2631C72900F496F7 /* NumberTextField.swift in Sources */,
 				92021AD226326F2A006C00C1 /* FastModel+FastActions.swift in Sources */,
 				92656CCA2631B00C00C9C232 /* CustomFastingGoalEntryScreen.swift in Sources */,
