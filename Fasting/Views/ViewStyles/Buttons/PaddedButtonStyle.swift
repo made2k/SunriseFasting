@@ -13,7 +13,7 @@ struct PaddedButtonStyle: ButtonStyle {
   let foregroundColor: Color
   
   init(
-    backgroundColor: Color = Color(UIColor(named: "ButtonBackground")!),
+    backgroundColor: Color = Color.buttonBackground,
     foregroundColor: Color = Color(UIColor.secondaryLabel)
   ) {
     self.backgroundColor = backgroundColor

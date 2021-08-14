@@ -16,5 +16,9 @@ extension Color {
   static var buttonForegroundComplete: Color {
     Color(UIColor(named: "ButtonForegroundComplete").unsafelyUnwrapped)
   }
+
+  static var buttonBackground: Color {
+    Color(UIColor(named: "ButtonBackground").unsafelyUnwrapped)
+  }
   
 }
