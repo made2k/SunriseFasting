@@ -25,7 +25,9 @@ struct IdleFastHomeView: View {
       VStack {
         TextButtonGroup("Current Fasting Goal", buttonTitle: fastingGoal.caseTitle) {
           showingGoalSelection = true
-        }.sheet(isPresented: $showingGoalSelection) { FastingGoalPickerView(isPresented: $showingGoalSelection) }
+        }
+        .buttonStyle(PaddedButtonStyle())
+        .sheet(isPresented: $showingGoalSelection) { FastingGoalPickerView(isPresented: $showingGoalSelection) }
         
         Spacer()
         
@@ -56,11 +58,11 @@ struct IdleFastHomeView: View {
           }
         }
         .matchedGeometryEffect(id: "action", in: namespace)
+        .buttonStyle(PaddedButtonStyle(foregroundColor: Color(UIColor(named: "RingIncompleteStart")!)))
         
         Spacer()
       }
       .padding()
-      .buttonStyle(PaddedButtonStyle())
     }
     
   }
