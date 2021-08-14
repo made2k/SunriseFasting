@@ -58,7 +58,7 @@ struct IdleFastHomeView: View {
           }
         }
         .matchedGeometryEffect(id: "action", in: namespace)
-        .buttonStyle(PaddedButtonStyle(foregroundColor: Color(UIColor(named: "RingIncompleteStart")!)))
+        .buttonStyle(PaddedButtonStyle(foregroundColor: .buttonForegroundIncomplete))
         
         Spacer()
       }
