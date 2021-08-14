@@ -41,6 +41,7 @@
 		9225DD4A26C8788400BCF2C2 /* ExportManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9225DD4926C8788400BCF2C2 /* ExportManager.swift */; };
 		9225DD4C26C87BEC00BCF2C2 /* ExportableFast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9225DD4B26C87BEC00BCF2C2 /* ExportableFast.swift */; };
 		9225DD4E26C87FAB00BCF2C2 /* ExportData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9225DD4D26C87FAB00BCF2C2 /* ExportData.swift */; };
+		9225DD5126C883EC00BCF2C2 /* DocumentPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9225DD5026C883EC00BCF2C2 /* DocumentPicker.swift */; };
 		922A9A942631167700CBC0EF /* DatePickerSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922A9A932631167700CBC0EF /* DatePickerSelectionView.swift */; };
 		922C1CF6263A573500F34AE9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 922C1CF5263A573500F34AE9 /* Assets.xcassets */; };
 		922C1CFD263A573500F34AE9 /* WatchFasting Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 922C1CFC263A573500F34AE9 /* WatchFasting Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -309,6 +310,7 @@
 		9225DD4926C8788400BCF2C2 /* ExportManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExportManager.swift; sourceTree = "<group>"; };
 		9225DD4B26C87BEC00BCF2C2 /* ExportableFast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExportableFast.swift; sourceTree = "<group>"; };
 		9225DD4D26C87FAB00BCF2C2 /* ExportData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExportData.swift; sourceTree = "<group>"; };
+		9225DD5026C883EC00BCF2C2 /* DocumentPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentPicker.swift; sourceTree = "<group>"; };
 		922A9A932631167700CBC0EF /* DatePickerSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerSelectionView.swift; sourceTree = "<group>"; };
 		922C1CF3263A573400F34AE9 /* WatchFasting.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WatchFasting.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		922C1CF5263A573500F34AE9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -581,6 +583,14 @@
 				9225DD4926C8788400BCF2C2 /* ExportManager.swift */,
 			);
 			path = ExportManager;
+			sourceTree = "<group>";
+		};
+		9225DD4F26C883DE00BCF2C2 /* Document */ = {
+			isa = PBXGroup;
+			children = (
+				9225DD5026C883EC00BCF2C2 /* DocumentPicker.swift */,
+			);
+			path = Document;
 			sourceTree = "<group>";
 		};
 		922C1CF4263A573400F34AE9 /* WatchFasting */ = {
@@ -984,6 +994,7 @@
 		92B96C452633185400ED1758 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				9225DD4F26C883DE00BCF2C2 /* Document */,
 				9225DD4526C873FA00BCF2C2 /* Activity */,
 				92808AD5263366A500420603 /* Common */,
 				92EB3FB926334243006D6C44 /* DatePicker */,
@@ -1513,6 +1524,7 @@
 				92B7398A26323913002D5261 /* FastingGoal+Codable.swift in Sources */,
 				92B73988263238BD002D5261 /* FastingGoal+Equality.swift in Sources */,
 				92B7398626323607002D5261 /* FastingGoal+Descriptors.swift in Sources */,
+				9225DD5126C883EC00BCF2C2 /* DocumentPicker.swift in Sources */,
 				9295C31B263282C00084C3AA /* StringFormatter+DateTime.swift in Sources */,
 				922A9A942631167700CBC0EF /* DatePickerSelectionView.swift in Sources */,
 				927DD7E62630BFC000E6C33A /* TrackerHomeView.swift in Sources */,

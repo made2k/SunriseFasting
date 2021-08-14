@@ -12,6 +12,7 @@ struct TimelineView: View {
 
   @EnvironmentObject private var model: AppModel
   @State private var exportData: ExportData? = nil
+  @State private var showDocumentPicker: Bool = false
   
   var body: some View {
     List {
@@ -47,6 +48,9 @@ struct TimelineView: View {
     .sheet(item: $exportData) { data in
       ActivityView(activityItems: [data.fileUrl], applicationActivities: nil)
     }
+    .sheet(isPresented: $showDocumentPicker, content: {
+      DocumentPicker(fileContent: .constant(""))
+    })
   }
   
   private func exportContent() {
@@ -57,7 +61,7 @@ struct TimelineView: View {
   }
   
   private func importContent() {
-    print("import selected")
+    showDocumentPicker = true
   }
   
 }
