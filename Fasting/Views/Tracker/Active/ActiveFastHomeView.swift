@@ -88,7 +88,7 @@ struct ActiveFastHomeView: View {
               .cancel(Text("Cancel"), action: cancel)
             ])
           }
-          .buttonStyle(PaddedButtonStyle())
+          .buttonStyle(PaddedButtonStyle(foregroundColor: progressViewModel.progress < 1 ? Color.buttonForegroundIncomplete : Color.buttonForegroundComplete))
           .matchedGeometryEffect(id: "action", in: namespace)
         
         Spacer()

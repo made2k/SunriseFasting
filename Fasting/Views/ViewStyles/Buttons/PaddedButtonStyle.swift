@@ -10,9 +10,14 @@ import SwiftUI
 struct PaddedButtonStyle: ButtonStyle {
   
   let backgroundColor: Color
+  let foregroundColor: Color
   
-  init(_ backgroundColor: Color = Color(UIColor.systemGray5)) {
+  init(
+    backgroundColor: Color = Color.buttonBackground,
+    foregroundColor: Color = Color(UIColor.secondaryLabel)
+  ) {
     self.backgroundColor = backgroundColor
+    self.foregroundColor = foregroundColor
   }
   
   func makeBody(configuration: Configuration) -> some View {
@@ -20,8 +25,8 @@ struct PaddedButtonStyle: ButtonStyle {
     withAnimation {
       
       configuration.label
-        .foregroundColor(Color(UIColor.secondaryLabel))
-        .font(Font.subheadline.weight(.semibold))
+        .foregroundColor(foregroundColor)
+        .font(Font.subheadline.weight(.medium))
         .padding([.leading, .trailing], 16)
         .padding([.top, .bottom], 8)
         .background(
@@ -33,7 +38,29 @@ struct PaddedButtonStyle: ButtonStyle {
           y: configuration.isPressed ? 0.95 : 1,
           anchor: .center
         )
+        .shadow(
+          color: Color(UIColor.label).opacity(0.16),
+          radius: configuration.isPressed ? 1 : 4,
+          x: 0,
+          y: 1
+        )
       
+    }
+    
+  }
+  
+}
+
+struct PaddedButtonStyle_Previews: PreviewProvider {
+  
+  @State private static var value: Int?
+  
+  static var previews: some View {
+    VStack {
+      Button("Test Button") { }
+        .buttonStyle(PaddedButtonStyle())
+      Button("Test Button") { }
+        .buttonStyle(PaddedButtonStyle(foregroundColor: .orange))
     }
     
   }

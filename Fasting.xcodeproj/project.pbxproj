@@ -36,6 +36,7 @@
 		92250A8C2637286300DF1A87 /* SharedData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92250A6A26371D1900DF1A87 /* SharedData.framework */; };
 		92250A8D2637286300DF1A87 /* SharedData.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 92250A6A26371D1900DF1A87 /* SharedData.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		92250A9626372E3900DF1A87 /* ActiveWidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92250A9226372E3500DF1A87 /* ActiveWidgetView.swift */; };
+		9225DD4426C8583E00BCF2C2 /* Color+Custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9225DD4326C8583E00BCF2C2 /* Color+Custom.swift */; };
 		922A9A942631167700CBC0EF /* DatePickerSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922A9A932631167700CBC0EF /* DatePickerSelectionView.swift */; };
 		922C1CF6263A573500F34AE9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 922C1CF5263A573500F34AE9 /* Assets.xcassets */; };
 		922C1CFD263A573500F34AE9 /* WatchFasting Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 922C1CFC263A573500F34AE9 /* WatchFasting Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -299,6 +300,7 @@
 		92250A7826371D2B00DF1A87 /* SharedFastInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedFastInfo.swift; sourceTree = "<group>"; };
 		92250A7C26371D4200DF1A87 /* SharedWidgetDataType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedWidgetDataType.swift; sourceTree = "<group>"; };
 		92250A9226372E3500DF1A87 /* ActiveWidgetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveWidgetView.swift; sourceTree = "<group>"; };
+		9225DD4326C8583E00BCF2C2 /* Color+Custom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Custom.swift"; sourceTree = "<group>"; };
 		922A9A932631167700CBC0EF /* DatePickerSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerSelectionView.swift; sourceTree = "<group>"; };
 		922C1CF3263A573400F34AE9 /* WatchFasting.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WatchFasting.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		922C1CF5263A573500F34AE9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -546,6 +548,14 @@
 			path = SharedData;
 			sourceTree = "<group>";
 		};
+		9225DD4226C8581200BCF2C2 /* Colors */ = {
+			isa = PBXGroup;
+			children = (
+				9225DD4326C8583E00BCF2C2 /* Color+Custom.swift */,
+			);
+			path = Colors;
+			sourceTree = "<group>";
+		};
 		922C1CF4263A573400F34AE9 /* WatchFasting */ = {
 			isa = PBXGroup;
 			children = (
@@ -658,6 +668,7 @@
 			children = (
 				9246FCF8262FBE4200B6375D /* Application */,
 				92D739D926326946008DD386 /* ApplicationState */,
+				9225DD4226C8581200BCF2C2 /* Colors */,
 				9282A89826332EF400CA24A6 /* Connections */,
 				92124A0B2632343700A33968 /* FastingData */,
 				92656CCB26324C8700C9C232 /* Formatting */,
@@ -1462,6 +1473,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9225DD4426C8583E00BCF2C2 /* Color+Custom.swift in Sources */,
 				92D739D226325500008DD386 /* StringFormatter+Percentage.swift in Sources */,
 				9278B7F6262FC01A00893C7D /* ActiveFastHomeView.swift in Sources */,
 				92A8ED1F2630D2B700BE00F0 /* StartTimeInfoView.swift in Sources */,
