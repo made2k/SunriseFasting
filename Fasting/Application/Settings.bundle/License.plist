@@ -18,12 +18,6 @@
 			<key>FooterText</key>
 			<string>SwiftDate</string>
 		</dict>
-		<dict>
-			<key>Type</key>
-			<string>PSGroupSpecifier</string>
-			<key>FooterText</key>
-			<string>SwiftNumerics</string>
-		</dict>
 	</array>
 </dict>
 </plist>
