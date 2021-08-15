@@ -12,7 +12,9 @@ struct TimelineView: View {
 
   @EnvironmentObject private var model: AppModel
   @State private var exportData: ExportData? = nil
+  
   @State private var showDocumentPicker: Bool = false
+  @State private var documentPicker: DocumentPicker?
   
   var body: some View {
     List {
@@ -45,12 +47,24 @@ struct TimelineView: View {
         }
       }
     }
-    .sheet(item: $exportData) { data in
+    .sheet(item: $exportData, onDismiss: {
+      ExportManager.clearCache()
+      
+    }, content: { data in
       ActivityView(activityItems: [data.fileUrl], applicationActivities: nil)
-    }
-    .sheet(isPresented: $showDocumentPicker, content: {
-      DocumentPicker(fileContent: .constant(""))
+
     })
+    .sheet(isPresented: $showDocumentPicker, onDismiss: {
+      self.documentPicker = nil
+      
+    }, content: {
+      DocumentPicker()
+        .onOpenDocument { data in
+          let manager = ExportManager(model: model)
+          manager.importData(data)
+        }
+    })
+    
   }
   
   private func exportContent() {

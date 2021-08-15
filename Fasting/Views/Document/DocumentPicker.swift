@@ -10,39 +10,49 @@ import SwiftUI
 
 struct DocumentPicker: UIViewControllerRepresentable {
   
-  @Binding var fileContent: String
-  
+  private var onDocumentOpened: ((Data) -> Void)?
+    
   func makeCoordinator() -> DocumentPickerCoordinator {
-    DocumentPickerCoordinator(fileContent: $fileContent)
+    let callback: (Data) -> Void = onDocumentOpened ?? { _ in }
+    return DocumentPickerCoordinator(callback: callback)
   }
   
   func makeUIViewController(context: Context) -> some UIViewController {
-    UIDocumentPickerViewController(forOpeningContentTypes: [.json], asCopy: true)
+    let controller = UIDocumentPickerViewController(forOpeningContentTypes: [.json], asCopy: true)
+    controller.delegate = context.coordinator
+    return controller
   }
   
   func updateUIViewController(_ uiViewController: UIViewControllerType, context: Context) {
     /* Do nothing */
   }
   
+  public func onOpenDocument(perform action: @escaping (Data) -> ()) -> some View {
+    var copy = self
+    copy.onDocumentOpened = action
+    return copy
+  }
+  
 }
 
 final class DocumentPickerCoordinator: NSObject, UIDocumentPickerDelegate {
   
-  @Binding private var fileContent: String
+  private var callback: (Data) -> Void
   private let logger = Logger.create()
   
-  init(fileContent: Binding<String>) {
-    _fileContent = fileContent
+  init(callback: @escaping (Data) -> Void) {
+    self.callback = callback
   }
   
   func documentPicker(_ controller: UIDocumentPickerViewController, didPickDocumentsAt urls: [URL]) {
     guard let fileUrl: URL = urls.first else { return }
     
     do {
-      fileContent = try String(contentsOf: fileUrl, encoding: .utf8)
+      let data: Data = try Data(contentsOf: fileUrl)
+      callback(data)
     
     } catch {
-      logger.error("Failed to parse file content \(error.localizedDescription, privacy: .public)")
+      logger.error("Failed to fetch file content \(error.localizedDescription, privacy: .public)")
     }
     
   }

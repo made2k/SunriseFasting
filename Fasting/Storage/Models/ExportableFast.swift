@@ -5,6 +5,7 @@
 //  Created by Zach McGaughey on 8/14/21.
 //
 
+import CoreData
 import Foundation
 
 struct ExportableFast: Codable {
@@ -21,6 +22,15 @@ struct ExportableFast: Codable {
     self.endDate = endDate
     
     self.targetInterval = fast.targetInterval
+  }
+  
+  func asFast(with context: NSManagedObjectContext) -> Fast {
+    Fast(
+      startDate,
+      endDate: endDate,
+      interval: targetInterval,
+      context: context
+    )
   }
   
 }

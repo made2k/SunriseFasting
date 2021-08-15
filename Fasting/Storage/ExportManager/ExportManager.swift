@@ -23,6 +23,7 @@ final class ExportManager {
   
   private let model: AppModel
   private let encoder: JSONEncoder = .init()
+  private let decoder: JSONDecoder = .init()
   
   init(model: AppModel) {
     self.model = model
@@ -90,6 +91,27 @@ final class ExportManager {
       Self.logger.error("Failed to write exported data. \(error.localizedDescription, privacy: .public)")
       return nil
     }
+  }
+  
+  func importData(_ data: Data) {
+    
+    let imported: [ExportableFast]
+    
+    do {
+      imported = try decoder.decode([ExportableFast].self, from: data)
+      
+    } catch {
+      Self.logger.error("Failed to parse fasting data \(error.localizedDescription, privacy: .public)")
+      return
+    }
+    
+    _ = imported.map { exported -> Fast in
+      exported.asFast(with: model.manager.context)
+    }
+    
+    model.manager.saveChanges()
+    model.loadCompletedFasts()
+    
   }
 
 }
