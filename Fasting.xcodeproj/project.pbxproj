@@ -35,7 +35,6 @@
 		92250A7926371D2B00DF1A87 /* SharedFastInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92250A7826371D2B00DF1A87 /* SharedFastInfo.swift */; };
 		92250A7D26371D4200DF1A87 /* SharedWidgetDataType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92250A7C26371D4200DF1A87 /* SharedWidgetDataType.swift */; };
 		92250A8C2637286300DF1A87 /* SharedData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92250A6A26371D1900DF1A87 /* SharedData.framework */; };
-		92250A8D2637286300DF1A87 /* SharedData.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 92250A6A26371D1900DF1A87 /* SharedData.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		92250A9626372E3900DF1A87 /* ActiveWidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92250A9226372E3500DF1A87 /* ActiveWidgetView.swift */; };
 		9225DD4426C8583E00BCF2C2 /* Color+Custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9225DD4326C8583E00BCF2C2 /* Color+Custom.swift */; };
 		9225DD4726C8740900BCF2C2 /* ActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9225DD4626C8740900BCF2C2 /* ActivityView.swift */; };
@@ -83,7 +82,6 @@
 		92656F3A26373DFB00AD5F67 /* UIColor+Custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92CC52FC26337C1400D82E6C /* UIColor+Custom.swift */; };
 		92656F4626373E9A00AD5F67 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 92978B2826331FD800944D12 /* Colors.xcassets */; };
 		92656F4B26373FB900AD5F67 /* RingView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92656EF82637380000AD5F67 /* RingView.framework */; };
-		92656F4C26373FB900AD5F67 /* RingView.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 92656EF82637380000AD5F67 /* RingView.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		926B23A526331BB2000E3373 /* Fast+Preview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 926B23A426331BB2000E3373 /* Fast+Preview.swift */; };
 		9278B7F2262FBECF00893C7D /* IdleFastHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9278B7F1262FBECF00893C7D /* IdleFastHomeView.swift */; };
 		9278B7F6262FC01A00893C7D /* ActiveFastHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9278B7F5262FC01A00893C7D /* ActiveFastHomeView.swift */; };
@@ -213,18 +211,6 @@
 				92250A5926371A6200DF1A87 /* FastingWidgetExtension.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		92250A902637286300DF1A87 /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				92250A8D2637286300DF1A87 /* SharedData.framework in Embed Frameworks */,
-				92656F4C26373FB900AD5F67 /* RingView.framework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		922C1D15263A573500F34AE9 /* Embed Watch Content */ = {
@@ -1199,7 +1185,6 @@
 				92250A4726371A6100DF1A87 /* Sources */,
 				92250A4826371A6100DF1A87 /* Frameworks */,
 				92250A4926371A6100DF1A87 /* Resources */,
-				92250A902637286300DF1A87 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -1654,6 +1639,7 @@
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
 				CODE_SIGN_ENTITLEMENTS = FastingWidget/FastingWidgetExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 8;
 				DEVELOPMENT_TEAM = 8QEC3K9K4B;
 				INFOPLIST_FILE = FastingWidget/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1676,6 +1662,7 @@
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
 				CODE_SIGN_ENTITLEMENTS = FastingWidget/FastingWidgetExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 8;
 				DEVELOPMENT_TEAM = 8QEC3K9K4B;
 				INFOPLIST_FILE = FastingWidget/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1759,6 +1746,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 8;
 				DEVELOPMENT_TEAM = 8QEC3K9K4B;
 				IBSC_MODULE = WatchFasting_Extension;
 				INFOPLIST_FILE = WatchFasting/Info.plist;
@@ -1783,6 +1771,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 8;
 				DEVELOPMENT_TEAM = 8QEC3K9K4B;
 				IBSC_MODULE = WatchFasting_Extension;
 				INFOPLIST_FILE = WatchFasting/Info.plist;
@@ -1805,6 +1794,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 8;
 				DEVELOPMENT_ASSET_PATHS = "\"WatchFasting Extension/Preview Content\"";
 				DEVELOPMENT_TEAM = 8QEC3K9K4B;
 				ENABLE_PREVIEWS = YES;
@@ -1829,6 +1819,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 8;
 				DEVELOPMENT_ASSET_PATHS = "\"WatchFasting Extension/Preview Content\"";
 				DEVELOPMENT_TEAM = 8QEC3K9K4B;
 				ENABLE_PREVIEWS = YES;
@@ -2032,6 +2023,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Fasting/Application/Fasting.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 8;
 				DEVELOPMENT_ASSET_PATHS = "\"Fasting/Preview Content\"";
 				DEVELOPMENT_TEAM = 8QEC3K9K4B;
 				ENABLE_PREVIEWS = YES;
@@ -2055,6 +2047,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Fasting/Application/Fasting.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 8;
 				DEVELOPMENT_ASSET_PATHS = "\"Fasting/Preview Content\"";
 				DEVELOPMENT_TEAM = 8QEC3K9K4B;
 				ENABLE_PREVIEWS = YES;
