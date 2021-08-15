@@ -12,6 +12,9 @@ struct TimelineView: View {
 
   @EnvironmentObject private var model: AppModel
   
+  @State private var exportData: ExportData? = nil
+  @State private var showDocumentPicker: Bool = false
+  
   var body: some View {
     List {
       ForEach(FastGroup.group(model.completedFasts)) { (group: FastGroup) in
@@ -30,7 +33,49 @@ struct TimelineView: View {
     }
     .listStyle(InsetGroupedListStyle())
     .navigationTitle("Timeline")
+    .toolbar {
+      ToolbarItem(placement: .navigationBarTrailing) {
+        Menu("Options") {
+          Button(action: exportContent, label: {
+            Label("Export", systemImage: "square.and.arrow.up")
+          })
+          Button(action: importContent, label: {
+            Label("Import", systemImage: "square.and.arrow.down")
+          })
+        }
+      }
+    }
+    .sheet(item: $exportData, onDismiss: {
+      ExportManager.clearCache()
+      exportData = nil
+      
+    }, content: { data in
+      ActivityView(activityItems: [data.fileUrl], applicationActivities: nil)
+    })
+    .sheet(isPresented: $showDocumentPicker, onDismiss: {
+      self.showDocumentPicker = false
+      
+    }, content: {
+      DocumentPicker()
+        .onOpenDocument { data in
+          let manager = ExportManager(model: model)
+          manager.importData(data)
+        }
+    })
+    
   }
+  
+  private func exportContent() {
+    let exporter = ExportManager(model: model)
+    guard let fileUrl = exporter.exportDataToUrl() else { return }
+    
+    exportData = ExportData(fileUrl)
+  }
+  
+  private func importContent() {
+    showDocumentPicker = true
+  }
+  
 }
 
 struct TimelineView_Previews: PreviewProvider {
