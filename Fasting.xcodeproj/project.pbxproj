@@ -19,6 +19,7 @@
 		9219DD51263B041A00FBE9C5 /* WatchManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9219DD50263B041A00FBE9C5 /* WatchManager.swift */; };
 		9219DD53263B392A00FBE9C5 /* WatchAPIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9219DD52263B392A00FBE9C5 /* WatchAPIError.swift */; };
 		9219DD55263B3C9F00FBE9C5 /* SaveFastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9219DD54263B3C9F00FBE9C5 /* SaveFastView.swift */; };
+		921FA0E526C8A38B00E87751 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 921FA0E426C8A38B00E87751 /* Settings.bundle */; };
 		9224C777263CFD8900877562 /* ModularSmallBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9224C776263CFD8900877562 /* ModularSmallBuilder.swift */; };
 		9224C779263D007300877562 /* GraphicCircularBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9224C778263D007300877562 /* GraphicCircularBuilder.swift */; };
 		9224C77B263D01C000877562 /* CircularSmallBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9224C77A263D01C000877562 /* CircularSmallBuilder.swift */; };
@@ -287,6 +288,7 @@
 		9219DD50263B041A00FBE9C5 /* WatchManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchManager.swift; sourceTree = "<group>"; };
 		9219DD52263B392A00FBE9C5 /* WatchAPIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchAPIError.swift; sourceTree = "<group>"; };
 		9219DD54263B3C9F00FBE9C5 /* SaveFastView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveFastView.swift; sourceTree = "<group>"; };
+		921FA0E426C8A38B00E87751 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		9224C776263CFD8900877562 /* ModularSmallBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModularSmallBuilder.swift; sourceTree = "<group>"; };
 		9224C778263D007300877562 /* GraphicCircularBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphicCircularBuilder.swift; sourceTree = "<group>"; };
 		9224C77A263D01C000877562 /* CircularSmallBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularSmallBuilder.swift; sourceTree = "<group>"; };
@@ -667,6 +669,7 @@
 				92250A6026371A9000DF1A87 /* Fasting.entitlements */,
 				9254F99F262FBAB300589377 /* FastingApp.swift */,
 				9254F9AD262FBAB300589377 /* Info.plist */,
+				921FA0E426C8A38B00E87751 /* Settings.bundle */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -1437,6 +1440,7 @@
 			files = (
 				9254F9A7262FBAB300589377 /* Preview Assets.xcassets in Resources */,
 				92656F4626373E9A00AD5F67 /* Colors.xcassets in Resources */,
+				921FA0E526C8A38B00E87751 /* Settings.bundle in Resources */,
 				9254F9A4262FBAB300589377 /* Assets.xcassets in Resources */,
 				92D81A8526310913007E884A /* FastingGoal.strings in Resources */,
 			);
