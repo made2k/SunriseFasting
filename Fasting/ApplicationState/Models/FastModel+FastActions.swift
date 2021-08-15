@@ -36,6 +36,9 @@ extension AppModel {
       logger.debug("New fast has no endDate, assigning as currentFast")
       currentFast = model
       
+      let targetCompletionDate: Date = startDate.addingTimeInterval(interval)
+      NotificationManager.shared.requestNotification(forDeliveryAt: targetCompletionDate)
+      
     } else {
       logger.debug("New fast has an endDate, reloading completed fasts")
       // Since this fast has been saved, our list is now outdated.
@@ -57,6 +60,8 @@ extension AppModel {
   func endFast(_ model: FastModel, endDate: Date) {
 
     logger.info("Ending fast with date: \(endDate)")
+    
+    NotificationManager.shared.cancelNotification()
 
     guard model.endDate == nil else {
       logger.warning("attempting to end a fast with existing end date")
@@ -90,6 +95,7 @@ extension AppModel {
     logger.info("Deleting Fast Entity: \(fast.description, privacy: .private)")
     manager.delete(fast)
     loadCompletedFasts()
+    NotificationManager.shared.cancelNotification()
   }
   
 }

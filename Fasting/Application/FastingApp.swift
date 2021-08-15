@@ -20,10 +20,10 @@ struct FastingApp: App {
     
     // Set up our default date region
     SwiftDate.defaultRegion = .local
-    
+
     // Load initial data
     model.loadDataFromStore()
-    
+
     // Start watch connectivity
     self.watchManager = WatchManager(model)
     
@@ -32,14 +32,17 @@ struct FastingApp: App {
     
     logger.trace("Application starting")
   }
-  
+
   var body: some Scene {
 
     WindowGroup {
-      
+
       HomeTabView()
         .environmentObject(model)
-
+        .onReceive(NotificationCenter.default.publisher(for: UIApplication.willEnterForegroundNotification)) { _ in
+          NotificationManager.shared.clearDelivered()
+        }
+      
     }
   }
 }
