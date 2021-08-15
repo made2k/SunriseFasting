@@ -34,12 +34,15 @@ struct FastingApp: App {
   }
   
   var body: some Scene {
-
+    
     WindowGroup {
       
       HomeTabView()
         .environmentObject(model)
-
+        .onReceive(NotificationCenter.default.publisher(for: UIApplication.willEnterForegroundNotification)) { _ in
+          NotificationManager.shared.clearDelivered()
+        }
+      
     }
   }
 }

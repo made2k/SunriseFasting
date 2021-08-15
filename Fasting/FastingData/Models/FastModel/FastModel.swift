@@ -54,6 +54,17 @@ final class FastModel: ObservableObject {
       .sink { [weak self] (startDate: Date, endDate: Date?, duration: TimeInterval) in
         self?.logger.debug("FastModel publishers caused persist to disk.")
         self?.persistToDisk(startDate, endDate: endDate, duration: duration)
+        
+        // Update notifications on change
+        if endDate == nil {
+          let targetCompletionDate: Date = startDate.addingTimeInterval(duration)
+          NotificationManager.shared.requestNotification(forDeliveryAt: targetCompletionDate)
+          
+        } else {
+          // End date was not nil, cancel notifications
+          NotificationManager.shared.cancelNotification()
+        }
+        
       }
   }
   
