@@ -8,12 +8,16 @@
 import CoreData
 import Foundation
 
+/// Wraps a Fast into codable allowing for easy encode/decode as well as use without
+/// a managed context.
 struct ExportableFast: Codable {
   
   let startDate: Date
   let endDate: Date
   let targetInterval: TimeInterval
   
+  /// Initialize an ExportableFast. ExportableFasts require a Fast with a start and end date.
+  /// - Parameter fast: Fast to wrap.
   init?(_ fast: Fast) {
     guard let startDate = fast.startDate else { return nil }
     self.startDate = startDate

@@ -8,8 +8,10 @@
 import Foundation
 import OSLog
 
+/// This class is responsible for importing and exporting data.
 final class ExportManager {
   
+  /// The date formatter is used to create the file name exported data is saved as.
   static private let dateFormatter: ISO8601DateFormatter = {
     let formatter: ISO8601DateFormatter = .init()
     formatter.formatOptions = [
@@ -29,6 +31,11 @@ final class ExportManager {
     self.model = model
   }
   
+  ///
+  /// Clear the cached files created for export. Exporting will leave a json file
+  /// in the cache directory. This will be cleaned by the system automatically, but
+  /// this function is more proactive.
+  ///
   static func clearCache() {
     
     logger.trace("Clearing export caches")
@@ -54,7 +61,10 @@ final class ExportManager {
     }
     
   }
-  
+
+  /// Export the app data to a file for use with backups.
+  /// - Note: This will only export completed Fasts (ie Fasts that have a start and end date).
+  /// - Returns: A URL pointing to the file that was created.
   func exportDataToUrl() -> URL? {
     
     Self.logger.trace("Exporing data")
@@ -93,7 +103,12 @@ final class ExportManager {
     }
   }
   
+  
+  /// Import data and add it to the context of the app model provided during initialization.
+  /// - Parameter data: Data previously exported fro the app.
   func importData(_ data: Data) {
+    
+    Self.logger.trace("Importing data")
     
     let imported: [ExportableFast]
     
@@ -105,12 +120,16 @@ final class ExportManager {
       return
     }
     
+    Self.logger.debug("Import found \(imported.count, privacy: .public) items to import")
+    
     _ = imported.map { exported -> Fast in
       exported.asFast(with: model.manager.context)
     }
     
     model.manager.saveChanges()
     model.loadCompletedFasts()
+    
+    Self.logger.trace("Import complete")
     
   }
 

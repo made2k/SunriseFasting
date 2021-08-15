@@ -37,13 +37,12 @@ struct TimelineView: View {
     .toolbar {
       ToolbarItem(placement: .navigationBarTrailing) {
         Menu("Options") {
-          Button(action: importContent, label: {
-            Label("Import", systemImage: "square.and.arrow.down")
-          })
           Button(action: exportContent, label: {
             Label("Export", systemImage: "square.and.arrow.up")
           })
-
+          Button(action: importContent, label: {
+            Label("Import", systemImage: "square.and.arrow.down")
+          })
         }
       }
     }
@@ -52,7 +51,6 @@ struct TimelineView: View {
       
     }, content: { data in
       ActivityView(activityItems: [data.fileUrl], applicationActivities: nil)
-
     })
     .sheet(isPresented: $showDocumentPicker, onDismiss: {
       self.documentPicker = nil

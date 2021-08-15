@@ -7,7 +7,8 @@
 
 import Foundation
 
-struct ExportData: Identifiable{
+/// Wrapper around a URL to handle exportable data. This conforms the URL to Identifiable
+struct ExportData: Identifiable {
   let id: String
   let fileUrl: URL
   
