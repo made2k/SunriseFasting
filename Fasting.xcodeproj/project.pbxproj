@@ -747,13 +747,6 @@
 			path = DataModels;
 			sourceTree = "<group>";
 		};
-		9236BA3D263508920056EFDD /* Logging */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Logging;
-			sourceTree = "<group>";
-		};
 		9236BA3E2635089B0056EFDD /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -829,7 +822,6 @@
 				9282A89826332EF400CA24A6 /* Connections */,
 				92124A0B2632343700A33968 /* FastingData */,
 				92656CCB26324C8700C9C232 /* Formatting */,
-				9236BA3D263508920056EFDD /* Logging */,
 				9252544B26C95BAE002FCE2D /* Notifications */,
 				9254F9A5262FBAB300589377 /* Preview Content */,
 				92B96C452633185400ED1758 /* Views */,
