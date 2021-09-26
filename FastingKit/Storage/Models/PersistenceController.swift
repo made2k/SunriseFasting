@@ -57,11 +57,11 @@ public struct PersistenceController {
   private init(inMemory: Bool = false) {
     
     guard let objectModelUrl = Bundle(identifier: "com.zachmcgaughey.FastingKit")?.url(forResource: "Fasting", withExtension: "momd") else {
-      fatalError()
+      preconditionFailure("Unable to find managed object model URL")
     }
 
     guard let objectModel = NSManagedObjectModel(contentsOf: objectModelUrl) else {
-      fatalError()
+      preconditionFailure("Unable to get managed object model from URL")
     }
 
     self.container = NSPersistentContainer(name: "Fasting", managedObjectModel: objectModel)
