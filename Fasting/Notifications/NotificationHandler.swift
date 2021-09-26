@@ -10,7 +10,7 @@ import OSLog
 import UserNotifications
 import SwiftUI
 
-class NotificationHandler: NSObject, UNUserNotificationCenterDelegate {
+final class NotificationHandler: NSObject, UNUserNotificationCenterDelegate {
   
   static let shared: NotificationHandler = .init()
   
