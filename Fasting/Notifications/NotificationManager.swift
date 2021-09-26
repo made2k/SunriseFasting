@@ -89,6 +89,7 @@ final class NotificationManager {
     content.title = "Congratulations!"
     content.body = "You've met your fasting goal!"
     content.sound = .default
+    content.categoryIdentifier = FastNotificationIdentifiers.actionCategory
     if #available(iOS 15.0, *) {
       content.interruptionLevel = .timeSensitive
     }
@@ -121,6 +122,31 @@ final class NotificationManager {
       
     }
     
+    let saveAction = UNNotificationAction.create(
+      identifier: FastNotificationIdentifiers.saveAction,
+      title: "Save and End",
+      iconName: "sdcard"
+    )
+    let editAction = UNNotificationAction.create(
+      identifier: FastNotificationIdentifiers.editAction,
+      title: "Edit Fast",
+      options: [.foreground],
+      iconName: "pencil"
+    )
+    let deleteAction = UNNotificationAction.create(
+      identifier: FastNotificationIdentifiers.deleteAction,
+      title: "Delete Fast",
+      options: [.destructive, .authenticationRequired],
+      iconName: "trash"
+    )
+    
+    let category = UNNotificationCategory(
+      identifier: FastNotificationIdentifiers.actionCategory,
+      actions: [saveAction, editAction, deleteAction],
+      intentIdentifiers: [],
+      options: []
+    )
+    notificationCenter.setNotificationCategories([category])
   }
   
 }

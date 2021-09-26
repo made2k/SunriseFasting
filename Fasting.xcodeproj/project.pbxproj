@@ -110,6 +110,9 @@
 		92978B2526331D1400944D12 /* FastProgressUpdatingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92978B2426331D1400944D12 /* FastProgressUpdatingViewModel.swift */; };
 		92A8ED1F2630D2B700BE00F0 /* StartTimeInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A8ED1E2630D2B700BE00F0 /* StartTimeInfoView.swift */; };
 		92A8ED232630DA4C00BE00F0 /* EndTimeInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A8ED222630DA4C00BE00F0 /* EndTimeInfoView.swift */; };
+		92A974F62700DA2C00AA05A2 /* FastNotificationIdentifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A974F52700DA2C00AA05A2 /* FastNotificationIdentifiers.swift */; };
+		92A974F82700DB4200AA05A2 /* NotificationHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A974F72700DB4200AA05A2 /* NotificationHandler.swift */; };
+		92A974FC2700E40100AA05A2 /* UNNotificationAction+Compatibility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A974FB2700E40100AA05A2 /* UNNotificationAction+Compatibility.swift */; };
 		92ADC097263B5E8F009B348F /* InterfaceState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92ADC096263B5E8F009B348F /* InterfaceState.swift */; };
 		92ADC09A263B5FF3009B348F /* WatchDataModel+API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92ADC099263B5FF3009B348F /* WatchDataModel+API.swift */; };
 		92ADC09C263B6486009B348F /* WatchDataModel+WCSessionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92ADC09B263B6486009B348F /* WatchDataModel+WCSessionDelegate.swift */; };
@@ -366,6 +369,9 @@
 		92978B2826331FD800944D12 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		92A8ED1E2630D2B700BE00F0 /* StartTimeInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartTimeInfoView.swift; sourceTree = "<group>"; };
 		92A8ED222630DA4C00BE00F0 /* EndTimeInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndTimeInfoView.swift; sourceTree = "<group>"; };
+		92A974F52700DA2C00AA05A2 /* FastNotificationIdentifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FastNotificationIdentifiers.swift; sourceTree = "<group>"; };
+		92A974F72700DB4200AA05A2 /* NotificationHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationHandler.swift; sourceTree = "<group>"; };
+		92A974FB2700E40100AA05A2 /* UNNotificationAction+Compatibility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UNNotificationAction+Compatibility.swift"; sourceTree = "<group>"; };
 		92ADC096263B5E8F009B348F /* InterfaceState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceState.swift; sourceTree = "<group>"; };
 		92ADC099263B5FF3009B348F /* WatchDataModel+API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WatchDataModel+API.swift"; sourceTree = "<group>"; };
 		92ADC09B263B6486009B348F /* WatchDataModel+WCSessionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WatchDataModel+WCSessionDelegate.swift"; sourceTree = "<group>"; };
@@ -665,6 +671,9 @@
 		9252544B26C95BAE002FCE2D /* Notifications */ = {
 			isa = PBXGroup;
 			children = (
+				92A974FA2700E3F300AA05A2 /* Extensions */,
+				92A974F92700DB4900AA05A2 /* Identifiers */,
+				92A974F72700DB4200AA05A2 /* NotificationHandler.swift */,
 				9252544C26C95BDA002FCE2D /* NotificationManager.swift */,
 			);
 			path = Notifications;
@@ -923,6 +932,22 @@
 				92978B2426331D1400944D12 /* FastProgressUpdatingViewModel.swift */,
 			);
 			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		92A974F92700DB4900AA05A2 /* Identifiers */ = {
+			isa = PBXGroup;
+			children = (
+				92A974F52700DA2C00AA05A2 /* FastNotificationIdentifiers.swift */,
+			);
+			path = Identifiers;
+			sourceTree = "<group>";
+		};
+		92A974FA2700E3F300AA05A2 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				92A974FB2700E40100AA05A2 /* UNNotificationAction+Compatibility.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		92ADC095263B5E64009B348F /* Data */ = {
@@ -1514,6 +1539,7 @@
 			files = (
 				9225DD4A26C8788400BCF2C2 /* ExportManager.swift in Sources */,
 				9225DD4426C8583E00BCF2C2 /* Color+Custom.swift in Sources */,
+				92A974F82700DB4200AA05A2 /* NotificationHandler.swift in Sources */,
 				92D739D226325500008DD386 /* StringFormatter+Percentage.swift in Sources */,
 				9278B7F6262FC01A00893C7D /* ActiveFastHomeView.swift in Sources */,
 				92A8ED1F2630D2B700BE00F0 /* StartTimeInfoView.swift in Sources */,
@@ -1521,6 +1547,7 @@
 				92D81A82263106FD007E884A /* FastingGoalPickerView.swift in Sources */,
 				92F2EBA02633465C001EBCFD /* BlurView.swift in Sources */,
 				92021AD026326D06006C00C1 /* AppModel+DataLoading.swift in Sources */,
+				92A974F62700DA2C00AA05A2 /* FastNotificationIdentifiers.swift in Sources */,
 				92B7398A26323913002D5261 /* FastingGoal+Codable.swift in Sources */,
 				92B73988263238BD002D5261 /* FastingGoal+Equality.swift in Sources */,
 				92B7398626323607002D5261 /* FastingGoal+Descriptors.swift in Sources */,
@@ -1562,6 +1589,7 @@
 				9254F9A9262FBAB300589377 /* PersistenceController.swift in Sources */,
 				92534CDF2634752300D95681 /* Fast+Properties.swift in Sources */,
 				9225DD4E26C87FAB00BCF2C2 /* ExportData.swift in Sources */,
+				92A974FC2700E40100AA05A2 /* UNNotificationAction+Compatibility.swift in Sources */,
 				92978B2526331D1400944D12 /* FastProgressUpdatingViewModel.swift in Sources */,
 				927DD7C42630AC6F00E6C33A /* TextButtonGroup.swift in Sources */,
 				926B23A526331BB2000E3373 /* Fast+Preview.swift in Sources */,

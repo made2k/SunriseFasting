@@ -27,6 +27,9 @@ struct FastingApp: App {
     // Start watch connectivity
     self.watchManager = WatchManager(model)
     
+    // Register our notification handler with our app model
+    NotificationHandler.shared.register(with: model)
+    
     // Setup default user values
     UserDefaults.standard.register(defaults: [UserDefaultKey.fastingGoal.rawValue: FastingGoal.default.rawValue])
     
