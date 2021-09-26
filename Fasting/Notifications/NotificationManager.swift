@@ -89,6 +89,9 @@ final class NotificationManager {
     content.title = "Congratulations!"
     content.body = "You've met your fasting goal!"
     content.sound = .default
+    if #available(iOS 15.0, *) {
+      content.interruptionLevel = .timeSensitive
+    }
     
     var components = DateComponents()
     components.calendar = Calendar.current
