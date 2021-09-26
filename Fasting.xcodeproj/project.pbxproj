@@ -15,6 +15,21 @@
 		9209A426270120D70091E778 /* Logging.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9209A420270120D70091E778 /* Logging.framework */; };
 		9209A427270120D70091E778 /* Logging.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9209A420270120D70091E778 /* Logging.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		9209A42B270120FD0091E778 /* Logger+Initialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9236BA3F263508AF0056EFDD /* Logger+Initialization.swift */; };
+		9209A4342701219A0091E778 /* FastingKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 9209A4332701219A0091E778 /* FastingKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9209A4372701219A0091E778 /* FastingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9209A4312701219A0091E778 /* FastingKit.framework */; };
+		9209A4382701219A0091E778 /* FastingKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9209A4312701219A0091E778 /* FastingKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		9209A43C270121D70091E778 /* Fasting.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9254F9AA262FBAB300589377 /* Fasting.xcdatamodeld */; };
+		9209A43F2701220C0091E778 /* Fast+Initialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B7399326323F73002D5261 /* Fast+Initialization.swift */; };
+		9209A4402701220C0091E778 /* PersistenceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9254F9A8262FBAB300589377 /* PersistenceController.swift */; };
+		9209A4422701220C0091E778 /* Fast+Properties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92534CDE2634752300D95681 /* Fast+Properties.swift */; };
+		9209A4432701220C0091E778 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D739D326325F44008DD386 /* DataManager.swift */; };
+		9209A4452701220C0091E778 /* Fast+Preview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 926B23A426331BB2000E3373 /* Fast+Preview.swift */; };
+		9209A4472701221E0091E778 /* Logging.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9209A420270120D70091E778 /* Logging.framework */; platformFilter = ios; };
+		9209A44D2701223B0091E778 /* SwiftDateDynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 9209A44C2701223B0091E778 /* SwiftDateDynamic */; };
+		9209A44E2701223B0091E778 /* SwiftDateDynamic in Embed Frameworks */ = {isa = PBXBuildFile; productRef = 9209A44C2701223B0091E778 /* SwiftDateDynamic */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		9209A452270127600091E778 /* ExportManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9225DD4926C8788400BCF2C2 /* ExportManager.swift */; };
+		9209A4532701278C0091E778 /* ExportData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9225DD4D26C87FAB00BCF2C2 /* ExportData.swift */; };
+		9209A4542701278F0091E778 /* ExportableFast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9225DD4B26C87BEC00BCF2C2 /* ExportableFast.swift */; };
 		920E50E62633C21A0014E7B5 /* Algorithms in Frameworks */ = {isa = PBXBuildFile; productRef = 920E50E52633C21A0014E7B5 /* Algorithms */; };
 		920E50E92633C79D0014E7B5 /* FastGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920E50E82633C79D0014E7B5 /* FastGroup.swift */; };
 		920E50EB2633C7BC0014E7B5 /* FastGroup+Identifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920E50EA2633C7BC0014E7B5 /* FastGroup+Identifiable.swift */; };
@@ -42,9 +57,6 @@
 		92250A9626372E3900DF1A87 /* ActiveWidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92250A9226372E3500DF1A87 /* ActiveWidgetView.swift */; };
 		9225DD4426C8583E00BCF2C2 /* Color+Custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9225DD4326C8583E00BCF2C2 /* Color+Custom.swift */; };
 		9225DD4726C8740900BCF2C2 /* ActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9225DD4626C8740900BCF2C2 /* ActivityView.swift */; };
-		9225DD4A26C8788400BCF2C2 /* ExportManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9225DD4926C8788400BCF2C2 /* ExportManager.swift */; };
-		9225DD4C26C87BEC00BCF2C2 /* ExportableFast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9225DD4B26C87BEC00BCF2C2 /* ExportableFast.swift */; };
-		9225DD4E26C87FAB00BCF2C2 /* ExportData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9225DD4D26C87FAB00BCF2C2 /* ExportData.swift */; };
 		9225DD5126C883EC00BCF2C2 /* DocumentPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9225DD5026C883EC00BCF2C2 /* DocumentPicker.swift */; };
 		922A9A942631167700CBC0EF /* DatePickerSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922A9A932631167700CBC0EF /* DatePickerSelectionView.swift */; };
 		922C1CF6263A573500F34AE9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 922C1CF5263A573500F34AE9 /* Assets.xcassets */; };
@@ -59,12 +71,9 @@
 		922C1D44263A5EFA00F34AE9 /* SharedDataWatch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 922C1D2F263A5EF900F34AE9 /* SharedDataWatch.framework */; };
 		922C1D45263A5EFA00F34AE9 /* SharedDataWatch.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 922C1D2F263A5EF900F34AE9 /* SharedDataWatch.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		9252544D26C95BDA002FCE2D /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9252544C26C95BDA002FCE2D /* NotificationManager.swift */; };
-		92534CDF2634752300D95681 /* Fast+Properties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92534CDE2634752300D95681 /* Fast+Properties.swift */; };
 		9254F9A0262FBAB300589377 /* FastingApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9254F99F262FBAB300589377 /* FastingApp.swift */; };
 		9254F9A4262FBAB300589377 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9254F9A3262FBAB300589377 /* Assets.xcassets */; };
 		9254F9A7262FBAB300589377 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9254F9A6262FBAB300589377 /* Preview Assets.xcassets */; };
-		9254F9A9262FBAB300589377 /* PersistenceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9254F9A8262FBAB300589377 /* PersistenceController.swift */; };
-		9254F9AC262FBAB300589377 /* Fasting.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9254F9AA262FBAB300589377 /* Fasting.xcdatamodeld */; };
 		925F95F7263755A0006BA9F2 /* WidgetDataLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925F95F6263755A0006BA9F2 /* WidgetDataLoader.swift */; };
 		925F95FD263756EB006BA9F2 /* WidgetEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925F95FC263756EB006BA9F2 /* WidgetEntry.swift */; };
 		9261A13A26339CF7005E8AAD /* TimelineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9261A13926339CF7005E8AAD /* TimelineView.swift */; };
@@ -86,7 +95,6 @@
 		92656F3A26373DFB00AD5F67 /* UIColor+Custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92CC52FC26337C1400D82E6C /* UIColor+Custom.swift */; };
 		92656F4626373E9A00AD5F67 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 92978B2826331FD800944D12 /* Colors.xcassets */; };
 		92656F4B26373FB900AD5F67 /* RingView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92656EF82637380000AD5F67 /* RingView.framework */; };
-		926B23A526331BB2000E3373 /* Fast+Preview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 926B23A426331BB2000E3373 /* Fast+Preview.swift */; };
 		9278B7F2262FBECF00893C7D /* IdleFastHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9278B7F1262FBECF00893C7D /* IdleFastHomeView.swift */; };
 		9278B7F6262FC01A00893C7D /* ActiveFastHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9278B7F5262FC01A00893C7D /* ActiveFastHomeView.swift */; };
 		9278B802262FD20A00893C7D /* AppModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9278B801262FD20A00893C7D /* AppModel.swift */; };
@@ -126,12 +134,10 @@
 		92B7398C26323A47002D5261 /* FastingGoal+RawRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B7398B26323A47002D5261 /* FastingGoal+RawRepresentable.swift */; };
 		92B7398E26323D88002D5261 /* FastModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B7398D26323D88002D5261 /* FastModel.swift */; };
 		92B7399126323EB4002D5261 /* FastModel+Previewing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B7399026323EB4002D5261 /* FastModel+Previewing.swift */; };
-		92B7399426323F73002D5261 /* Fast+Initialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B7399326323F73002D5261 /* Fast+Initialization.swift */; };
 		92D63981263CF37500081D3B /* GraphicCornerBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D63980263CF37500081D3B /* GraphicCornerBuilder.swift */; };
 		92D63983263CFAB800081D3B /* GraphicExtraLargeBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D63982263CFAB800081D3B /* GraphicExtraLargeBuilder.swift */; };
 		92D63985263CFB6B00081D3B /* UtilitarianSmallBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D63984263CFB6B00081D3B /* UtilitarianSmallBuilder.swift */; };
 		92D739D226325500008DD386 /* StringFormatter+Percentage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D739D126325500008DD386 /* StringFormatter+Percentage.swift */; };
-		92D739D426325F44008DD386 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D739D326325F44008DD386 /* DataManager.swift */; };
 		92D739D626326187008DD386 /* UserDefaults+Publishing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D739D526326187008DD386 /* UserDefaults+Publishing.swift */; };
 		92D739D826326667008DD386 /* UserDefaultKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D739D726326667008DD386 /* UserDefaultKeys.swift */; };
 		92D81A80263106CD007E884A /* FastingGoalPickerItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D81A7F263106CD007E884A /* FastingGoalPickerItemView.swift */; };
@@ -151,6 +157,20 @@
 
 /* Begin PBXContainerItemProxy section */
 		9209A424270120D70091E778 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9254F994262FBAB300589377 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9209A41F270120D70091E778;
+			remoteInfo = Logging;
+		};
+		9209A4352701219A0091E778 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9254F994262FBAB300589377 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9209A4302701219A0091E778;
+			remoteInfo = FastingKit;
+		};
+		9209A4492701221E0091E778 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 9254F994262FBAB300589377 /* Project object */;
 			proxyType = 1;
@@ -216,6 +236,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		9209A44F2701223B0091E778 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				9209A44E2701223B0091E778 /* SwiftDateDynamic in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		92250A5A26371A6200DF1A87 /* Embed App Extensions */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -268,6 +299,7 @@
 			files = (
 				9209A427270120D70091E778 /* Logging.framework in Embed Frameworks */,
 				927DD7E32630B3C100E6C33A /* SwiftDateDynamic in Embed Frameworks */,
+				9209A4382701219A0091E778 /* FastingKit.framework in Embed Frameworks */,
 				92250A7226371D1900DF1A87 /* SharedData.framework in Embed Frameworks */,
 				92656F002637380000AD5F67 /* RingView.framework in Embed Frameworks */,
 			);
@@ -283,6 +315,8 @@
 		92021AD326327238006C00C1 /* FastModel+Equatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FastModel+Equatable.swift"; sourceTree = "<group>"; };
 		9209A420270120D70091E778 /* Logging.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Logging.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9209A422270120D70091E778 /* Logging.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Logging.h; sourceTree = "<group>"; };
+		9209A4312701219A0091E778 /* FastingKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FastingKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9209A4332701219A0091E778 /* FastingKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FastingKit.h; sourceTree = "<group>"; };
 		920E50E82633C79D0014E7B5 /* FastGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FastGroup.swift; sourceTree = "<group>"; };
 		920E50EA2633C7BC0014E7B5 /* FastGroup+Identifiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FastGroup+Identifiable.swift"; sourceTree = "<group>"; };
 		920E50EC2633C7FF0014E7B5 /* FastGroup+Parsing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FastGroup+Parsing.swift"; sourceTree = "<group>"; };
@@ -425,6 +459,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		9209A42E2701219A0091E778 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9209A44D2701223B0091E778 /* SwiftDateDynamic in Frameworks */,
+				9209A4472701221E0091E778 /* Logging.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		92250A4826371A6100DF1A87 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -473,6 +516,7 @@
 				92656EFF2637380000AD5F67 /* RingView.framework in Frameworks */,
 				92250A7126371D1900DF1A87 /* SharedData.framework in Frameworks */,
 				9209A426270120D70091E778 /* Logging.framework in Frameworks */,
+				9209A4372701219A0091E778 /* FastingKit.framework in Frameworks */,
 				927DD7E22630B3C100E6C33A /* SwiftDateDynamic in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -496,6 +540,43 @@
 			path = Logging;
 			sourceTree = "<group>";
 		};
+		9209A4322701219A0091E778 /* FastingKit */ = {
+			isa = PBXGroup;
+			children = (
+				92124A082632304100A33968 /* Storage */,
+				9209A4332701219A0091E778 /* FastingKit.h */,
+			);
+			path = FastingKit;
+			sourceTree = "<group>";
+		};
+		9209A43D270121EC0091E778 /* Storage */ = {
+			isa = PBXGroup;
+			children = (
+				9225DD4826C8786400BCF2C2 /* ExportManager */,
+				9209A43E270121F80091E778 /* Extensions */,
+				9209A455270127960091E778 /* Models */,
+			);
+			path = Storage;
+			sourceTree = "<group>";
+		};
+		9209A43E270121F80091E778 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				92D739D726326667008DD386 /* UserDefaultKeys.swift */,
+				92D739D526326187008DD386 /* UserDefaults+Publishing.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		9209A455270127960091E778 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				9225DD4D26C87FAB00BCF2C2 /* ExportData.swift */,
+				9225DD4B26C87BEC00BCF2C2 /* ExportableFast.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		920E50E72633C7910014E7B5 /* FastGroup */ = {
 			isa = PBXGroup;
 			children = (
@@ -510,7 +591,6 @@
 			isa = PBXGroup;
 			children = (
 				92339E8626327B8C007BEBB9 /* DataModels */,
-				9225DD4826C8786400BCF2C2 /* ExportManager */,
 				92B7399226323F63002D5261 /* Extensions */,
 				92124A092632305300A33968 /* Models */,
 			);
@@ -521,8 +601,6 @@
 			isa = PBXGroup;
 			children = (
 				92D739D326325F44008DD386 /* DataManager.swift */,
-				9225DD4B26C87BEC00BCF2C2 /* ExportableFast.swift */,
-				9225DD4D26C87FAB00BCF2C2 /* ExportData.swift */,
 				9254F9A8262FBAB300589377 /* PersistenceController.swift */,
 			);
 			path = Models;
@@ -719,6 +797,7 @@
 				922C1CF4263A573400F34AE9 /* WatchFasting */,
 				922C1D00263A573500F34AE9 /* WatchFasting Extension */,
 				9209A421270120D70091E778 /* Logging */,
+				9209A4322701219A0091E778 /* FastingKit */,
 				92250A4C26371A6100DF1A87 /* Frameworks */,
 				9254F99D262FBAB300589377 /* Products */,
 			);
@@ -735,6 +814,7 @@
 				922C1CFC263A573500F34AE9 /* WatchFasting Extension.appex */,
 				922C1D2F263A5EF900F34AE9 /* SharedDataWatch.framework */,
 				9209A420270120D70091E778 /* Logging.framework */,
+				9209A4312701219A0091E778 /* FastingKit.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -742,6 +822,7 @@
 		9254F99E262FBAB300589377 /* Fasting */ = {
 			isa = PBXGroup;
 			children = (
+				9209A43D270121EC0091E778 /* Storage */,
 				9246FCF8262FBE4200B6375D /* Application */,
 				92D739D926326946008DD386 /* ApplicationState */,
 				9225DD4226C8581200BCF2C2 /* Colors */,
@@ -751,7 +832,6 @@
 				9236BA3D263508920056EFDD /* Logging */,
 				9252544B26C95BAE002FCE2D /* Notifications */,
 				9254F9A5262FBAB300589377 /* Preview Content */,
-				92124A082632304100A33968 /* Storage */,
 				92B96C452633185400ED1758 /* Views */,
 				92F4F859263A6CB400205600 /* Watch */,
 				92250A6126371AF400DF1A87 /* Widget */,
@@ -1041,8 +1121,6 @@
 				92B7399326323F73002D5261 /* Fast+Initialization.swift */,
 				926B23A426331BB2000E3373 /* Fast+Preview.swift */,
 				92534CDE2634752300D95681 /* Fast+Properties.swift */,
-				92D739D726326667008DD386 /* UserDefaultKeys.swift */,
-				92D739D526326187008DD386 /* UserDefaults+Publishing.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -1226,6 +1304,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		9209A42C2701219A0091E778 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9209A4342701219A0091E778 /* FastingKit.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		92250A6526371D1900DF1A87 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -1269,6 +1355,29 @@
 			name = Logging;
 			productName = Logging;
 			productReference = 9209A420270120D70091E778 /* Logging.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		9209A4302701219A0091E778 /* FastingKit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9209A4392701219A0091E778 /* Build configuration list for PBXNativeTarget "FastingKit" */;
+			buildPhases = (
+				9209A42C2701219A0091E778 /* Headers */,
+				9209A42D2701219A0091E778 /* Sources */,
+				9209A42E2701219A0091E778 /* Frameworks */,
+				9209A42F2701219A0091E778 /* Resources */,
+				9209A44F2701223B0091E778 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9209A44A2701221E0091E778 /* PBXTargetDependency */,
+			);
+			name = FastingKit;
+			packageProductDependencies = (
+				9209A44C2701223B0091E778 /* SwiftDateDynamic */,
+			);
+			productName = FastingKit;
+			productReference = 9209A4312701219A0091E778 /* FastingKit.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		92250A4A26371A6100DF1A87 /* FastingWidgetExtension */ = {
@@ -1382,6 +1491,7 @@
 				92656EFE2637380000AD5F67 /* PBXTargetDependency */,
 				922C1D13263A573500F34AE9 /* PBXTargetDependency */,
 				9209A425270120D70091E778 /* PBXTargetDependency */,
+				9209A4362701219A0091E778 /* PBXTargetDependency */,
 			);
 			name = Fasting;
 			packageProductDependencies = (
@@ -1420,6 +1530,9 @@
 				LastUpgradeCheck = 1240;
 				TargetAttributes = {
 					9209A41F270120D70091E778 = {
+						CreatedOnToolsVersion = 13.0;
+					};
+					9209A4302701219A0091E778 = {
 						CreatedOnToolsVersion = 13.0;
 					};
 					92250A4A26371A6100DF1A87 = {
@@ -1465,6 +1578,7 @@
 			targets = (
 				9254F99B262FBAB300589377 /* Fasting */,
 				92250A4A26371A6100DF1A87 /* FastingWidgetExtension */,
+				9209A4302701219A0091E778 /* FastingKit */,
 				9209A41F270120D70091E778 /* Logging */,
 				92656EF72637380000AD5F67 /* RingView */,
 				92250A6926371D1900DF1A87 /* SharedData */,
@@ -1477,6 +1591,13 @@
 
 /* Begin PBXResourcesBuildPhase section */
 		9209A41E270120D70091E778 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9209A42F2701219A0091E778 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -1554,6 +1675,19 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		9209A42D2701219A0091E778 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9209A4452701220C0091E778 /* Fast+Preview.swift in Sources */,
+				9209A4402701220C0091E778 /* PersistenceController.swift in Sources */,
+				9209A4432701220C0091E778 /* DataManager.swift in Sources */,
+				9209A43C270121D70091E778 /* Fasting.xcdatamodeld in Sources */,
+				9209A43F2701220C0091E778 /* Fast+Initialization.swift in Sources */,
+				9209A4422701220C0091E778 /* Fast+Properties.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		92250A4726371A6100DF1A87 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1614,7 +1748,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9225DD4A26C8788400BCF2C2 /* ExportManager.swift in Sources */,
 				9225DD4426C8583E00BCF2C2 /* Color+Custom.swift in Sources */,
 				92A974F82700DB4200AA05A2 /* NotificationHandler.swift in Sources */,
 				92D739D226325500008DD386 /* StringFormatter+Percentage.swift in Sources */,
@@ -1626,6 +1759,7 @@
 				92021AD026326D06006C00C1 /* AppModel+DataLoading.swift in Sources */,
 				92A974F62700DA2C00AA05A2 /* FastNotificationIdentifiers.swift in Sources */,
 				92B7398A26323913002D5261 /* FastingGoal+Codable.swift in Sources */,
+				9209A4532701278C0091E778 /* ExportData.swift in Sources */,
 				92B73988263238BD002D5261 /* FastingGoal+Equality.swift in Sources */,
 				92B7398626323607002D5261 /* FastingGoal+Descriptors.swift in Sources */,
 				9225DD5126C883EC00BCF2C2 /* DocumentPicker.swift in Sources */,
@@ -1638,7 +1772,6 @@
 				920E50E92633C79D0014E7B5 /* FastGroup.swift in Sources */,
 				927DD7D12630B12F00E6C33A /* Fonts.swift in Sources */,
 				927DD7CB2630ADAE00E6C33A /* StringFormatter.swift in Sources */,
-				9254F9AC262FBAB300589377 /* Fasting.xcdatamodeld in Sources */,
 				92D739D826326667008DD386 /* UserDefaultKeys.swift in Sources */,
 				9278B7F2262FBECF00893C7D /* IdleFastHomeView.swift in Sources */,
 				927DD7C72630AD0300E6C33A /* IntervalCountingView.swift in Sources */,
@@ -1646,6 +1779,7 @@
 				9282A89C26332F1A00CA24A6 /* Connectable.swift in Sources */,
 				9261A13A26339CF7005E8AAD /* TimelineView.swift in Sources */,
 				9219DD51263B041A00FBE9C5 /* WatchManager.swift in Sources */,
+				9209A4542701278F0091E778 /* ExportableFast.swift in Sources */,
 				9282A89A26332F0E00CA24A6 /* View+Connections.swift in Sources */,
 				9278B802262FD20A00893C7D /* AppModel.swift in Sources */,
 				9252544D26C95BDA002FCE2D /* NotificationManager.swift in Sources */,
@@ -1654,22 +1788,16 @@
 				92B7399126323EB4002D5261 /* FastModel+Previewing.swift in Sources */,
 				92F2EBA22633472C001EBCFD /* DatePickerRangeFactory.swift in Sources */,
 				92B7398E26323D88002D5261 /* FastModel.swift in Sources */,
-				92B7399426323F73002D5261 /* Fast+Initialization.swift in Sources */,
 				92879421263339BF00F949EF /* FastingGoal+Identifiable.swift in Sources */,
 				92792B442633984B00ECF89F /* HomeTabView.swift in Sources */,
-				9225DD4C26C87BEC00BCF2C2 /* ExportableFast.swift in Sources */,
 				92124A0E263234E100A33968 /* FastingGoal+AllCases.swift in Sources */,
 				92D81A80263106CD007E884A /* FastingGoalPickerItemView.swift in Sources */,
 				92021AD426327238006C00C1 /* FastModel+Equatable.swift in Sources */,
-				92D739D426325F44008DD386 /* DataManager.swift in Sources */,
 				920E50EB2633C7BC0014E7B5 /* FastGroup+Identifiable.swift in Sources */,
-				9254F9A9262FBAB300589377 /* PersistenceController.swift in Sources */,
-				92534CDF2634752300D95681 /* Fast+Properties.swift in Sources */,
-				9225DD4E26C87FAB00BCF2C2 /* ExportData.swift in Sources */,
 				92A974FC2700E40100AA05A2 /* UNNotificationAction+Compatibility.swift in Sources */,
+				9209A452270127600091E778 /* ExportManager.swift in Sources */,
 				92978B2526331D1400944D12 /* FastProgressUpdatingViewModel.swift in Sources */,
 				927DD7C42630AC6F00E6C33A /* TextButtonGroup.swift in Sources */,
-				926B23A526331BB2000E3373 /* Fast+Preview.swift in Sources */,
 				92B7398C26323A47002D5261 /* FastingGoal+RawRepresentable.swift in Sources */,
 				92250A6326371B0A00DF1A87 /* WidgetDataProvider.swift in Sources */,
 				9254F9A0262FBAB300589377 /* FastingApp.swift in Sources */,
@@ -1709,6 +1837,17 @@
 			isa = PBXTargetDependency;
 			target = 9209A41F270120D70091E778 /* Logging */;
 			targetProxy = 9209A424270120D70091E778 /* PBXContainerItemProxy */;
+		};
+		9209A4362701219A0091E778 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9209A4302701219A0091E778 /* FastingKit */;
+			targetProxy = 9209A4352701219A0091E778 /* PBXContainerItemProxy */;
+		};
+		9209A44A2701221E0091E778 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			platformFilter = ios;
+			target = 9209A41F270120D70091E778 /* Logging */;
+			targetProxy = 9209A4492701221E0091E778 /* PBXContainerItemProxy */;
 		};
 		92250A5826371A6200DF1A87 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -1808,6 +1947,72 @@
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.zachmcgaughey.Logging;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		9209A43A2701219A0091E778 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 8QEC3K9K4B;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.zachmcgaughey.FastingKit;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		9209A43B2701219A0091E778 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 8QEC3K9K4B;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.zachmcgaughey.FastingKit;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SUPPORTS_MACCATALYST = NO;
@@ -2318,6 +2523,15 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		9209A4392701219A0091E778 /* Build configuration list for PBXNativeTarget "FastingKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9209A43A2701219A0091E778 /* Debug */,
+				9209A43B2701219A0091E778 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		92250A5D26371A6200DF1A87 /* Build configuration list for PBXNativeTarget "FastingWidgetExtension" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -2412,6 +2626,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		9209A44C2701223B0091E778 /* SwiftDateDynamic */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 927DD7E02630B3C100E6C33A /* XCRemoteSwiftPackageReference "SwiftDate" */;
+			productName = SwiftDateDynamic;
+		};
 		920E50E52633C21A0014E7B5 /* Algorithms */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 920E50E42633C21A0014E7B5 /* XCRemoteSwiftPackageReference "swift-algorithms" */;

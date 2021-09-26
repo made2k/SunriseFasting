@@ -7,7 +7,7 @@
 
 import Foundation
 
-extension Fast {
+public extension Fast {
   
   static let preview: Fast = {
     

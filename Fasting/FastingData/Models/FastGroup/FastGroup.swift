@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import FastingKit
 
 /// Groups a list of fasts into a structured object. Used
 /// for displaying a list of items.

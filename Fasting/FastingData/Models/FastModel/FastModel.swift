@@ -7,6 +7,7 @@
 
 import Combine
 import CoreData
+import FastingKit
 import Foundation
 import OSLog
 

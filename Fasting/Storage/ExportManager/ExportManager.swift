@@ -5,6 +5,7 @@
 //  Created by Zach McGaughey on 8/14/21.
 //
 
+import FastingKit
 import Foundation
 import OSLog
 

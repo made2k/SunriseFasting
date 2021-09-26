@@ -5,6 +5,7 @@
 //  Created by Zach McGaughey on 4/23/21.
 //
 
+import FastingKit
 import OSLog
 import SwiftUI
 

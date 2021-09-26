@@ -6,19 +6,21 @@
 //
 
 import CoreData
+import Logging
+import SwiftDate
 import OSLog
 
-struct PersistenceController {
+public struct PersistenceController {
 
-  static let logger = Logger.create(.coreData)
+  private static let logger = Logger.create(.coreData)
 
   // MARK: - Static Accessors
   
   /// The shared controller that will persist data to disk.
-  static let shared = PersistenceController()
+  public static let shared = PersistenceController()
   
   /// In memory store that does not write any data to disk
-  static var preview: PersistenceController = {
+  public static var preview: PersistenceController = {
     let result = PersistenceController(inMemory: true)
 
     // Backfill history data
@@ -48,12 +50,21 @@ struct PersistenceController {
   
   // MARK: - Properties
   
-  let container: NSPersistentContainer
+  public let container: NSPersistentContainer
   
   // MARK: - Lifecycle
 
   private init(inMemory: Bool = false) {
-    self.container = NSPersistentContainer(name: "Fasting")
+    
+    guard let objectModelUrl = Bundle(identifier: "com.zachmcgaughey.FastingKit")?.url(forResource: "Fasting", withExtension: "momd") else {
+      fatalError()
+    }
+
+    guard let objectModel = NSManagedObjectModel(contentsOf: objectModelUrl) else {
+      fatalError()
+    }
+
+    self.container = NSPersistentContainer(name: "Fasting", managedObjectModel: objectModel)
     
     if inMemory {
       Self.logger.trace("Created memory persistent container")

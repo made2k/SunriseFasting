@@ -10,19 +10,19 @@ import Foundation
 import OSLog
 
 /// Class to help manage data persistence.
-final class DataManager {
+public final class DataManager {
 
-  let logger = Logger.create(.coreData)
+  private let logger = Logger.create(.coreData)
 
   /// Shared persisted DataManager
-  static let shared = DataManager()
+  public static let shared = DataManager()
   /// A preview DataManager that does not persist data to disk
-  static let preview = DataManager(preview: true)
+  public static let preview = DataManager(preview: true)
   
   // MARK: - Properties
   
-  let persistenceController: PersistenceController
-  var context: NSManagedObjectContext {
+  public let persistenceController: PersistenceController
+  public var context: NSManagedObjectContext {
     persistenceController.container.viewContext
   }
   
@@ -41,7 +41,7 @@ final class DataManager {
   
   // MARK: - Object Management
   
-  func createNewFast(_ startDate: Date, endDate: Date?, interval: TimeInterval) -> Fast {
+  public func createNewFast(_ startDate: Date, endDate: Date?, interval: TimeInterval) -> Fast {
     let fast = Fast(context: context)
     fast.startDate = startDate
     fast.endDate = endDate
@@ -52,14 +52,14 @@ final class DataManager {
     return fast
   }
   
-  func delete(_ fast: Fast) {
+  public func delete(_ fast: Fast) {
     context.delete(fast)
     saveChanges()
   }
   
   // MARK: - Change Commits
   
-  func saveChanges() {
+  public func saveChanges() {
     
     guard context.hasChanges else { return }
     
@@ -74,7 +74,7 @@ final class DataManager {
   
   // MARK: - Data Retrieval
   
-  func fetch<T>(_ request: NSFetchRequest<T>) throws -> [T] where T: NSFetchRequestResult {
+  public func fetch<T>(_ request: NSFetchRequest<T>) throws -> [T] where T: NSFetchRequestResult {
     try context.fetch(request)
   }
   

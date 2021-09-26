@@ -9,7 +9,7 @@ import CoreData
 import Foundation
 import OSLog
 
-extension Fast {
+public extension Fast {
   
   convenience init(_ startDate: Date, endDate: Date? = nil, interval: TimeInterval, context: NSManagedObjectContext) {
     self.init(context: context)

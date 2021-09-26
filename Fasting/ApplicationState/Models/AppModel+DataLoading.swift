@@ -6,6 +6,7 @@
 //
 
 import CoreData
+import FastingKit
 import Foundation
 
 extension AppModel {

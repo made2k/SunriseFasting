@@ -6,6 +6,7 @@
 //
 
 import Algorithms
+import FastingKit
 import Foundation
 
 extension FastGroup {

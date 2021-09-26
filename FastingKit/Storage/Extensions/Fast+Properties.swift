@@ -8,7 +8,7 @@
 import Foundation
 
 // Add additional helper properties on the Fast entity
-extension Fast {
+public extension Fast {
 
   /// The progress of a fast as a percent value from 0..(1+)
   var progress: Double {

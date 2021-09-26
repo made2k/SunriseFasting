@@ -6,6 +6,7 @@
 //
 
 import CoreData
+import FastingKit
 import Foundation
 
 /// Wraps a Fast into codable allowing for easy encode/decode as well as use without

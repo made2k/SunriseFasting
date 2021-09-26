@@ -6,6 +6,7 @@
 //
 
 import Combine
+import FastingKit
 import OSLog
 import SwiftUI
 
