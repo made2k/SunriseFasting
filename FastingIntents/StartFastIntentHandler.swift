@@ -6,6 +6,7 @@
 //
 
 import FastStorage
+import Formatting
 import Foundation
 import Logging
 import OSLog
@@ -28,9 +29,12 @@ class StartFastIntentHandler: NSObject, StartFastIntentHandling {
         return
       }
 
-      try SiriDataManager.shared.createNewFast()
-      // TODO: Add localized time
-      completion(.success(endTimeDescription: "Describing end time"))
+      let fast = try SiriDataManager.shared.createNewFast()
+      
+      let endTime: Date = fast.startDate.unsafelyUnwrapped.addingTimeInterval(fast.targetInterval)
+      let endTimeDescription: String = StringFormatter.colloquialDateTime(from: endTime, separator: "at", capitalized: false)
+      
+      completion(.success(endTimeDescription: endTimeDescription))
 
     } catch IntentError.fastAlreadyActive {
       completion(.failure(failureReason: IntentError.fastAlreadyActive.localizedDescription))

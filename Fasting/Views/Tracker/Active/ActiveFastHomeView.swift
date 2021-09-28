@@ -7,6 +7,7 @@
 
 import Combine
 import FastStorage
+import Formatting
 import RingView
 import SwiftUI
 

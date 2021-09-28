@@ -61,13 +61,13 @@ public final class PersistentHistoryObserver {
       do {
         let merger = PersistentHistoryMerger(backgroundContext: context, viewContext: persistentContainer.viewContext, currentTarget: target, userDefaults: userDefaults)
         let hasChanges = try merger.merge()
+                
+        let cleaner = PersistentHistoryCleaner(context: context, targets: AppTarget.allCases, userDefaults: userDefaults)
+        try cleaner.clean()
         
         if hasChanges {
           remoteChangeSubject.send(())
         }
-        
-        let cleaner = PersistentHistoryCleaner(context: context, targets: AppTarget.allCases, userDefaults: userDefaults)
-        try cleaner.clean()
 
       } catch {
         print("Persistent History Tracking failed with error \(error)")

@@ -6,6 +6,7 @@
 //
 
 import FastStorage
+import Formatting
 import SwiftUI
 
 struct FastForecastedEndView: View {

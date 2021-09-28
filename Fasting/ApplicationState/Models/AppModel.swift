@@ -60,6 +60,8 @@ final class AppModel: ObservableObject {
 
     logger.trace("AppModel initialized")
     
+    historyObserver.startObserving()
+
   }
   
   /// Subscribe  to any publishers
@@ -77,8 +79,12 @@ final class AppModel: ObservableObject {
       }
       .store(in: &cancellables)
     
-    historyObserver.startObserving()
+    // TODO: Remove delay once updated
+    // Ideally we'd update our models and our view to automatically track managed context changes
+    // via things like @FetchRequest and FetchedResults and this would not be neccessary. But I've noticed
+    // refreshing our data without delay can result in data that is not updated.
     historyObserver.remoteChangePublisher
+      .delay(for: .seconds(1), scheduler: RunLoop.main, options: .none)
       .sink { [weak self] in
         self?.loadCurrentFast()
         self?.loadCompletedFasts()

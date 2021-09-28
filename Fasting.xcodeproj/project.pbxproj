@@ -86,7 +86,6 @@
 		927DD7BE2630AA0E00E6C33A /* PaddedButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 927DD7BD2630AA0E00E6C33A /* PaddedButtonStyle.swift */; };
 		927DD7C42630AC6F00E6C33A /* TextButtonGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 927DD7C32630AC6F00E6C33A /* TextButtonGroup.swift */; };
 		927DD7C72630AD0300E6C33A /* IntervalCountingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 927DD7C62630AD0300E6C33A /* IntervalCountingView.swift */; };
-		927DD7CB2630ADAE00E6C33A /* StringFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 927DD7CA2630ADAE00E6C33A /* StringFormatter.swift */; };
 		927DD7D12630B12F00E6C33A /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 927DD7D02630B12F00E6C33A /* Fonts.swift */; };
 		927DD7DE2630B39300E6C33A /* FastForecastedEndView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 927DD7DD2630B39300E6C33A /* FastForecastedEndView.swift */; };
 		927DD7E22630B3C100E6C33A /* SwiftDateDynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 927DD7E12630B3C100E6C33A /* SwiftDateDynamic */; };
@@ -112,8 +111,6 @@
 		928E4F44263740C100037894 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 92978B2826331FD800944D12 /* Colors.xcassets */; };
 		928E4F4826374C4200037894 /* IdleWidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 928E4F4726374C4200037894 /* IdleWidgetView.swift */; };
 		928ED21A2631C72900F496F7 /* NumberTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 928ED2192631C72900F496F7 /* NumberTextField.swift */; };
-		9295C31A263282C00084C3AA /* StringFormatter+TimeIntervals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9295C318263282C00084C3AA /* StringFormatter+TimeIntervals.swift */; };
-		9295C31B263282C00084C3AA /* StringFormatter+DateTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9295C319263282C00084C3AA /* StringFormatter+DateTime.swift */; };
 		92962025263CB7A3002F6AB0 /* ComplicationTemplateFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92962024263CB7A3002F6AB0 /* ComplicationTemplateFactory.swift */; };
 		92978B2526331D1400944D12 /* FastProgressUpdatingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92978B2426331D1400944D12 /* FastProgressUpdatingViewModel.swift */; };
 		929A6F38270292C7003927BD /* FastingIntents.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 929A6F36270292B9003927BD /* FastingIntents.intentdefinition */; settings = {ATTRIBUTES = (no_codegen, ); }; };
@@ -141,7 +138,6 @@
 		92D63981263CF37500081D3B /* GraphicCornerBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D63980263CF37500081D3B /* GraphicCornerBuilder.swift */; };
 		92D63983263CFAB800081D3B /* GraphicExtraLargeBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D63982263CFAB800081D3B /* GraphicExtraLargeBuilder.swift */; };
 		92D63985263CFB6B00081D3B /* UtilitarianSmallBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D63984263CFB6B00081D3B /* UtilitarianSmallBuilder.swift */; };
-		92D739D226325500008DD386 /* StringFormatter+Percentage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D739D126325500008DD386 /* StringFormatter+Percentage.swift */; };
 		92D739D426325F44008DD386 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D739D326325F44008DD386 /* DataManager.swift */; };
 		92D739D626326187008DD386 /* UserDefaults+Publishing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D739D526326187008DD386 /* UserDefaults+Publishing.swift */; };
 		92D81A80263106CD007E884A /* FastingGoalPickerItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D81A7F263106CD007E884A /* FastingGoalPickerItemView.swift */; };
@@ -149,6 +145,15 @@
 		92D81A8526310913007E884A /* FastingGoal.strings in Resources */ = {isa = PBXBuildFile; fileRef = 92D81A8426310913007E884A /* FastingGoal.strings */; };
 		92DAB3002703CDB200629B0C /* IntentError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92DAB2FF2703CDB200629B0C /* IntentError.swift */; };
 		92DAB3022703D33200629B0C /* EndFastIntentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92DAB3012703D33200629B0C /* EndFastIntentHandler.swift */; };
+		92DAB30B2703D4BE00629B0C /* Formatting.h in Headers */ = {isa = PBXBuildFile; fileRef = 92DAB30A2703D4BE00629B0C /* Formatting.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		92DAB30E2703D4BE00629B0C /* Formatting.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92DAB3082703D4BE00629B0C /* Formatting.framework */; };
+		92DAB30F2703D4BE00629B0C /* Formatting.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 92DAB3082703D4BE00629B0C /* Formatting.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		92DAB3132703D4CF00629B0C /* StringFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 927DD7CA2630ADAE00E6C33A /* StringFormatter.swift */; };
+		92DAB3142703D4CF00629B0C /* StringFormatter+DateTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9295C319263282C00084C3AA /* StringFormatter+DateTime.swift */; };
+		92DAB3152703D4CF00629B0C /* StringFormatter+TimeIntervals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9295C318263282C00084C3AA /* StringFormatter+TimeIntervals.swift */; };
+		92DAB3162703D4CF00629B0C /* StringFormatter+Percentage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D739D126325500008DD386 /* StringFormatter+Percentage.swift */; };
+		92DAB3182703D4E100629B0C /* SwiftDateDynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 92DAB3172703D4E100629B0C /* SwiftDateDynamic */; };
+		92DAB3192703D4E100629B0C /* SwiftDateDynamic in Embed Frameworks */ = {isa = PBXBuildFile; productRef = 92DAB3172703D4E100629B0C /* SwiftDateDynamic */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		92DBCE282702A20300C0B9B1 /* FastStorage.h in Headers */ = {isa = PBXBuildFile; fileRef = 92DBCE272702A20300C0B9B1 /* FastStorage.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		92DBCE2B2702A20300C0B9B1 /* FastStorage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92DBCE252702A20300C0B9B1 /* FastStorage.framework */; };
 		92DBCE2C2702A20300C0B9B1 /* FastStorage.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 92DBCE252702A20300C0B9B1 /* FastStorage.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -246,6 +251,13 @@
 			remoteGlobalIDString = 92DBCE242702A20300C0B9B1;
 			remoteInfo = FastStorage;
 		};
+		92DAB30C2703D4BE00629B0C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9254F994262FBAB300589377 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 92DAB3072703D4BE00629B0C;
+			remoteInfo = Formatting;
+		};
 		92DBCE292702A20300C0B9B1 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 9254F994262FBAB300589377 /* Project object */;
@@ -331,6 +343,7 @@
 				92DBCE2C2702A20300C0B9B1 /* FastStorage.framework in Embed Frameworks */,
 				927DD7E32630B3C100E6C33A /* SwiftDateDynamic in Embed Frameworks */,
 				92250A7226371D1900DF1A87 /* SharedData.framework in Embed Frameworks */,
+				92DAB30F2703D4BE00629B0C /* Formatting.framework in Embed Frameworks */,
 				92EF04ED2703770C00D939C3 /* Logging.framework in Embed Frameworks */,
 				92656F002637380000AD5F67 /* RingView.framework in Embed Frameworks */,
 			);
@@ -345,6 +358,17 @@
 			files = (
 				92EF04F32703773D00D939C3 /* Logging.framework in Embed Frameworks */,
 				92CEBADE2702A5EE005DEB4B /* FastStorage.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		92DAB31A2703D4E100629B0C /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				92DAB3192703D4E100629B0C /* SwiftDateDynamic in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -509,6 +533,8 @@
 		92DAB2FD2703CCA700629B0C /* FastingIntents.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FastingIntents.entitlements; sourceTree = "<group>"; };
 		92DAB2FF2703CDB200629B0C /* IntentError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntentError.swift; sourceTree = "<group>"; };
 		92DAB3012703D33200629B0C /* EndFastIntentHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndFastIntentHandler.swift; sourceTree = "<group>"; };
+		92DAB3082703D4BE00629B0C /* Formatting.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Formatting.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		92DAB30A2703D4BE00629B0C /* Formatting.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Formatting.h; sourceTree = "<group>"; };
 		92DBCE252702A20300C0B9B1 /* FastStorage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FastStorage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		92DBCE272702A20300C0B9B1 /* FastStorage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FastStorage.h; sourceTree = "<group>"; };
 		92EF04E62703770C00D939C3 /* Logging.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Logging.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -572,6 +598,7 @@
 				92EF04EC2703770C00D939C3 /* Logging.framework in Frameworks */,
 				92656EFF2637380000AD5F67 /* RingView.framework in Frameworks */,
 				92250A7126371D1900DF1A87 /* SharedData.framework in Frameworks */,
+				92DAB30E2703D4BE00629B0C /* Formatting.framework in Frameworks */,
 				927DD7E22630B3C100E6C33A /* SwiftDateDynamic in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -590,6 +617,14 @@
 				92CEBADD2702A5EE005DEB4B /* FastStorage.framework in Frameworks */,
 				92CEBAD22702A5E4005DEB4B /* Intents.framework in Frameworks */,
 				92EF04F22703773D00D939C3 /* Logging.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		92DAB3052703D4BE00629B0C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				92DAB3182703D4E100629B0C /* SwiftDateDynamic in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -814,6 +849,7 @@
 				92CEBAD32702A5E4005DEB4B /* FastingIntents */,
 				92250A5126371A6100DF1A87 /* FastingWidget */,
 				92DBCE262702A20300C0B9B1 /* FastStorage */,
+				92DAB3092703D4BE00629B0C /* Formatting */,
 				92250A4C26371A6100DF1A87 /* Frameworks */,
 				92EF04E72703770C00D939C3 /* Logging */,
 				9254F99D262FBAB300589377 /* Products */,
@@ -838,6 +874,7 @@
 				92DBCE252702A20300C0B9B1 /* FastStorage.framework */,
 				92CEBAD12702A5E4005DEB4B /* FastingIntents.appex */,
 				92EF04E62703770C00D939C3 /* Logging.framework */,
+				92DAB3082703D4BE00629B0C /* Formatting.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -890,7 +927,6 @@
 		92656CCB26324C8700C9C232 /* Formatting */ = {
 			isa = PBXGroup;
 			children = (
-				92656CCC26324C9B00C9C232 /* Strings */,
 			);
 			path = Formatting;
 			sourceTree = "<group>";
@@ -1272,6 +1308,15 @@
 			path = FastingGoal;
 			sourceTree = "<group>";
 		};
+		92DAB3092703D4BE00629B0C /* Formatting */ = {
+			isa = PBXGroup;
+			children = (
+				92656CCC26324C9B00C9C232 /* Strings */,
+				92DAB30A2703D4BE00629B0C /* Formatting.h */,
+			);
+			path = Formatting;
+			sourceTree = "<group>";
+		};
 		92DBCE262702A20300C0B9B1 /* FastStorage */ = {
 			isa = PBXGroup;
 			children = (
@@ -1409,6 +1454,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		92DAB3032703D4BE00629B0C /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				92DAB30B2703D4BE00629B0C /* Formatting.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		92DBCE202702A20300C0B9B1 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -1541,6 +1594,7 @@
 				92DBCE2A2702A20300C0B9B1 /* PBXTargetDependency */,
 				92CEBAD82702A5E4005DEB4B /* PBXTargetDependency */,
 				92EF04EB2703770C00D939C3 /* PBXTargetDependency */,
+				92DAB30D2703D4BE00629B0C /* PBXTargetDependency */,
 			);
 			name = Fasting;
 			packageProductDependencies = (
@@ -1588,6 +1642,28 @@
 			productName = FastingIntents;
 			productReference = 92CEBAD12702A5E4005DEB4B /* FastingIntents.appex */;
 			productType = "com.apple.product-type.app-extension";
+		};
+		92DAB3072703D4BE00629B0C /* Formatting */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 92DAB3102703D4BE00629B0C /* Build configuration list for PBXNativeTarget "Formatting" */;
+			buildPhases = (
+				92DAB3032703D4BE00629B0C /* Headers */,
+				92DAB3042703D4BE00629B0C /* Sources */,
+				92DAB3052703D4BE00629B0C /* Frameworks */,
+				92DAB3062703D4BE00629B0C /* Resources */,
+				92DAB31A2703D4E100629B0C /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Formatting;
+			packageProductDependencies = (
+				92DAB3172703D4E100629B0C /* SwiftDateDynamic */,
+			);
+			productName = Formatting;
+			productReference = 92DAB3082703D4BE00629B0C /* Formatting.framework */;
+			productType = "com.apple.product-type.framework";
 		};
 		92DBCE242702A20300C0B9B1 /* FastStorage */ = {
 			isa = PBXNativeTarget;
@@ -1661,6 +1737,9 @@
 					92CEBAD02702A5E4005DEB4B = {
 						CreatedOnToolsVersion = 13.0;
 					};
+					92DAB3072703D4BE00629B0C = {
+						CreatedOnToolsVersion = 13.0;
+					};
 					92DBCE242702A20300C0B9B1 = {
 						CreatedOnToolsVersion = 13.0;
 						LastSwiftMigration = 1300;
@@ -1697,6 +1776,7 @@
 				922C1CFB263A573500F34AE9 /* WatchFasting Extension */,
 				92CEBAD02702A5E4005DEB4B /* FastingIntents */,
 				92EF04E52703770C00D939C3 /* Logging */,
+				92DAB3072703D4BE00629B0C /* Formatting */,
 			);
 		};
 /* End PBXProject section */
@@ -1763,6 +1843,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		92CEBACF2702A5E4005DEB4B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		92DAB3062703D4BE00629B0C /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -1849,7 +1936,6 @@
 				9225DD4A26C8788400BCF2C2 /* ExportManager.swift in Sources */,
 				9225DD4426C8583E00BCF2C2 /* Color+Custom.swift in Sources */,
 				92A974F82700DB4200AA05A2 /* NotificationHandler.swift in Sources */,
-				92D739D226325500008DD386 /* StringFormatter+Percentage.swift in Sources */,
 				9278B7F6262FC01A00893C7D /* ActiveFastHomeView.swift in Sources */,
 				92A8ED1F2630D2B700BE00F0 /* StartTimeInfoView.swift in Sources */,
 				92A8ED232630DA4C00BE00F0 /* EndTimeInfoView.swift in Sources */,
@@ -1860,15 +1946,12 @@
 				92B7398626323607002D5261 /* FastingGoal+Descriptors.swift in Sources */,
 				929A6F38270292C7003927BD /* FastingIntents.intentdefinition in Sources */,
 				9225DD5126C883EC00BCF2C2 /* DocumentPicker.swift in Sources */,
-				9295C31B263282C00084C3AA /* StringFormatter+DateTime.swift in Sources */,
 				922A9A942631167700CBC0EF /* DatePickerSelectionView.swift in Sources */,
 				927DD7E62630BFC000E6C33A /* TrackerHomeView.swift in Sources */,
-				9295C31A263282C00084C3AA /* StringFormatter+TimeIntervals.swift in Sources */,
 				92F4F85B263A6CD200205600 /* WatchDataProvider.swift in Sources */,
 				9261A13C26339EF7005E8AAD /* TimelineItemView.swift in Sources */,
 				920E50E92633C79D0014E7B5 /* FastGroup.swift in Sources */,
 				927DD7D12630B12F00E6C33A /* Fonts.swift in Sources */,
-				927DD7CB2630ADAE00E6C33A /* StringFormatter.swift in Sources */,
 				9278B7F2262FBECF00893C7D /* IdleFastHomeView.swift in Sources */,
 				927DD7C72630AD0300E6C33A /* IntervalCountingView.swift in Sources */,
 				92D739D626326187008DD386 /* UserDefaults+Publishing.swift in Sources */,
@@ -1935,6 +2018,17 @@
 				92CEBAE22702A5FF005DEB4B /* FastingIntents.intentdefinition in Sources */,
 				92CEBAE62702A635005DEB4B /* StartFastIntentHandler.swift in Sources */,
 				92DAB3002703CDB200629B0C /* IntentError.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		92DAB3042703D4BE00629B0C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				92DAB3142703D4CF00629B0C /* StringFormatter+DateTime.swift in Sources */,
+				92DAB3132703D4CF00629B0C /* StringFormatter.swift in Sources */,
+				92DAB3162703D4CF00629B0C /* StringFormatter+Percentage.swift in Sources */,
+				92DAB3152703D4CF00629B0C /* StringFormatter+TimeIntervals.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2024,6 +2118,11 @@
 			platformFilter = ios;
 			target = 92DBCE242702A20300C0B9B1 /* FastStorage */;
 			targetProxy = 92CEBADF2702A5EE005DEB4B /* PBXContainerItemProxy */;
+		};
+		92DAB30D2703D4BE00629B0C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 92DAB3072703D4BE00629B0C /* Formatting */;
+			targetProxy = 92DAB30C2703D4BE00629B0C /* PBXContainerItemProxy */;
 		};
 		92DBCE2A2702A20300C0B9B1 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -2591,6 +2690,72 @@
 			};
 			name = Release;
 		};
+		92DAB3112703D4BE00629B0C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 8QEC3K9K4B;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.zachmcgaughey.Formatting;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		92DAB3122703D4BE00629B0C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 8QEC3K9K4B;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.zachmcgaughey.Formatting;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		92DBCE2E2702A20300C0B9B1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -2810,6 +2975,15 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		92DAB3102703D4BE00629B0C /* Build configuration list for PBXNativeTarget "Formatting" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				92DAB3112703D4BE00629B0C /* Debug */,
+				92DAB3122703D4BE00629B0C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		92DBCE2D2702A20300C0B9B1 /* Build configuration list for PBXNativeTarget "FastStorage" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -2856,6 +3030,11 @@
 			productName = Algorithms;
 		};
 		927DD7E12630B3C100E6C33A /* SwiftDateDynamic */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 927DD7E02630B3C100E6C33A /* XCRemoteSwiftPackageReference "SwiftDate" */;
+			productName = SwiftDateDynamic;
+		};
+		92DAB3172703D4E100629B0C /* SwiftDateDynamic */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 927DD7E02630B3C100E6C33A /* XCRemoteSwiftPackageReference "SwiftDate" */;
 			productName = SwiftDateDynamic;

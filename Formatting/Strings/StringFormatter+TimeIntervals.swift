@@ -7,7 +7,7 @@
 
 import Foundation
 
-extension StringFormatter {
+public extension StringFormatter {
   
   /// Format a TimeInterval as a countdown string in the form `00:00:00`
   /// - Parameters:

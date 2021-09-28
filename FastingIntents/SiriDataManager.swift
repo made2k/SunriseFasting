@@ -37,7 +37,7 @@ internal class SiriDataManager {
     return results.first
   }
   
-  func createNewFast() throws {
+  func createNewFast() throws -> Fast {
     
     let context = persistenceController.container.viewContext
     
@@ -56,6 +56,8 @@ internal class SiriDataManager {
     fast.targetInterval = fastGoal.duration
         
     try context.save()
+    
+    return fast
     
   }
   
