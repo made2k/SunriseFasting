@@ -81,6 +81,10 @@ extension AppModel {
     
     // Clear out our current fast since it's no longer ongoing
     currentFast = nil
+    
+    let intent = EndFastIntent()
+    let interaction = INInteraction(intent: intent, response: nil)
+    interaction.donate()
   }
   
   /// Delete a fast from storage.

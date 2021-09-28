@@ -22,7 +22,7 @@
 			<key>INIntentConfigurable</key>
 			<true/>
 			<key>INIntentDescription</key>
-			<string>Start a new fast</string>
+			<string>Start a new fast if one isn't already active.</string>
 			<key>INIntentDescriptionID</key>
 			<string>ZWOLJQ</string>
 			<key>INIntentManagedParameterCombinations</key>
@@ -47,10 +47,6 @@
 				<dict>
 					<key>INIntentParameterCombinationIsPrimary</key>
 					<true/>
-					<key>INIntentParameterCombinationSubtitle</key>
-					<string>This will begin a new fast if you don't already have an active fast.</string>
-					<key>INIntentParameterCombinationSubtitleID</key>
-					<string>HaWNZZ</string>
 					<key>INIntentParameterCombinationSupportsBackgroundExecution</key>
 					<true/>
 					<key>INIntentParameterCombinationTitle</key>
@@ -132,6 +128,101 @@
 			<string>Custom</string>
 			<key>INIntentVerb</key>
 			<string>Start</string>
+		</dict>
+		<dict>
+			<key>INIntentCategory</key>
+			<string>generic</string>
+			<key>INIntentConfigurable</key>
+			<true/>
+			<key>INIntentDescription</key>
+			<string>Stop an ongoing fast.</string>
+			<key>INIntentDescriptionID</key>
+			<string>3RXrwM</string>
+			<key>INIntentManagedParameterCombinations</key>
+			<dict>
+				<key></key>
+				<dict>
+					<key>INIntentParameterCombinationSupportsBackgroundExecution</key>
+					<true/>
+					<key>INIntentParameterCombinationUpdatesLinked</key>
+					<true/>
+				</dict>
+			</dict>
+			<key>INIntentName</key>
+			<string>EndFast</string>
+			<key>INIntentParameterCombinations</key>
+			<dict>
+				<key></key>
+				<dict>
+					<key>INIntentParameterCombinationIsPrimary</key>
+					<true/>
+					<key>INIntentParameterCombinationSupportsBackgroundExecution</key>
+					<true/>
+					<key>INIntentParameterCombinationTitle</key>
+					<string>Stop fasting</string>
+					<key>INIntentParameterCombinationTitleID</key>
+					<string>is6sVu</string>
+				</dict>
+			</dict>
+			<key>INIntentResponse</key>
+			<dict>
+				<key>INIntentResponseCodes</key>
+				<array>
+					<dict>
+						<key>INIntentResponseCodeConciseFormatString</key>
+						<string>Your fast has been saved!</string>
+						<key>INIntentResponseCodeConciseFormatStringID</key>
+						<string>99fjPG</string>
+						<key>INIntentResponseCodeFormatString</key>
+						<string>Your fast has been saved!</string>
+						<key>INIntentResponseCodeFormatStringID</key>
+						<string>XpySiw</string>
+						<key>INIntentResponseCodeName</key>
+						<string>success</string>
+						<key>INIntentResponseCodeSuccess</key>
+						<true/>
+					</dict>
+					<dict>
+						<key>INIntentResponseCodeConciseFormatString</key>
+						<string>Sorry, I could not stop your fast. ${failureReason}</string>
+						<key>INIntentResponseCodeConciseFormatStringID</key>
+						<string>yC0RTi</string>
+						<key>INIntentResponseCodeFormatString</key>
+						<string>Sorry, I could not stop your fast. ${failureReason}</string>
+						<key>INIntentResponseCodeFormatStringID</key>
+						<string>d6urhi</string>
+						<key>INIntentResponseCodeName</key>
+						<string>failure</string>
+					</dict>
+				</array>
+				<key>INIntentResponseLastParameterTag</key>
+				<integer>1</integer>
+				<key>INIntentResponseParameters</key>
+				<array>
+					<dict>
+						<key>INIntentResponseParameterDisplayName</key>
+						<string>Failure Reason</string>
+						<key>INIntentResponseParameterDisplayNameID</key>
+						<string>7BXpZ8</string>
+						<key>INIntentResponseParameterDisplayPriority</key>
+						<integer>1</integer>
+						<key>INIntentResponseParameterName</key>
+						<string>failureReason</string>
+						<key>INIntentResponseParameterTag</key>
+						<integer>1</integer>
+						<key>INIntentResponseParameterType</key>
+						<string>String</string>
+					</dict>
+				</array>
+			</dict>
+			<key>INIntentTitle</key>
+			<string>End Fast</string>
+			<key>INIntentTitleID</key>
+			<string>2ta114</string>
+			<key>INIntentType</key>
+			<string>Custom</string>
+			<key>INIntentVerb</key>
+			<string>Do</string>
 		</dict>
 	</array>
 	<key>INTypes</key>

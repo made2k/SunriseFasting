@@ -16,13 +16,13 @@ public struct PersistenceController {
   // MARK: - Static Accessors
   
   /// The shared controller that will persist data to disk.
-  public static func create() -> PersistenceController {
-    return PersistenceController()
+  public static func create(target: AppTarget) -> PersistenceController {
+    return PersistenceController(transactionAuthor: target.tranactionAuthor, contextName: target.contextName)
   }
   
   /// In memory store that does not write any data to disk
   public static var preview: PersistenceController = {
-    let result = PersistenceController(inMemory: true)
+    let result = PersistenceController(transactionAuthor: nil, contextName: nil, inMemory: true)
     
     // Backfill history data
     for value in 2..<34 {
@@ -70,23 +70,27 @@ public struct PersistenceController {
   
   // MARK: - Lifecycle
   
-  private init(inMemory: Bool = false) {
+  private init(transactionAuthor: String?, contextName: String?, inMemory: Bool = false) {
     
     guard let objectModelUrl = Bundle(identifier: "com.zachmcgaughey.FastStorage")?.url(forResource: "Fasting", withExtension: "momd") else {
       preconditionFailure("Unable to find managed object model URL")
     }
-
+    
     guard let objectModel = NSManagedObjectModel(contentsOf: objectModelUrl) else {
       preconditionFailure("Unable to get managed object model from URL")
     }
-
+    
     self.container = NSPersistentContainer(name: "Fasting", managedObjectModel: objectModel)
+    container.viewContext.name = contextName
+    container.viewContext.transactionAuthor = transactionAuthor
     
     if inMemory {
       Self.logger.trace("Created memory persistent container")
       container.persistentStoreDescriptions.first!.url = URL(fileURLWithPath: "/dev/null")
       
     } else {
+      try? container.viewContext.setQueryGenerationFrom(.current)
+      
       let appGroupUrl = Self.appGroupFileURL()
       let appGroupPath = appGroupUrl.absoluteString.replacingOccurrences(of: "file://", with: "").removingPercentEncoding.unsafelyUnwrapped
       let newFileExists: Bool = FileManager.default.fileExists(atPath: appGroupPath)
@@ -101,6 +105,8 @@ public struct PersistenceController {
       }
       
       let description = NSPersistentStoreDescription(url: appGroupUrl)
+      description.setOption(true as NSNumber, forKey: NSPersistentHistoryTrackingKey)
+      description.setOption(true as NSNumber, forKey: NSPersistentStoreRemoteChangeNotificationPostOptionKey)
       container.persistentStoreDescriptions = [description]
     }
     
@@ -135,6 +141,8 @@ public struct PersistenceController {
     let coordinator = container.persistentStoreCoordinator
     
     let oldStoreDescription = NSPersistentStoreDescription(url: supportURL)
+    oldStoreDescription.setOption(true as NSNumber, forKey: NSPersistentHistoryTrackingKey)
+    oldStoreDescription.setOption(true as NSNumber, forKey: NSPersistentStoreRemoteChangeNotificationPostOptionKey)
     container.persistentStoreDescriptions = [oldStoreDescription]
     
     let semephore = DispatchSemaphore(value: 1)

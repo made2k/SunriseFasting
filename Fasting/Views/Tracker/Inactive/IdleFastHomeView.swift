@@ -5,11 +5,13 @@
 //  Created by Zach McGaughey on 4/20/21.
 //
 
+import FastStorage
 import SwiftUI
 
 struct IdleFastHomeView: View {
   
-  @AppStorage(UserDefaultKey.fastingGoal.rawValue) var fastingGoal: FastingGoal = .default
+  @AppStorage(UserDefaultKey.fastingGoal.rawValue, store: StorageDefaults.sharedDefaults)
+  var fastingGoal: FastingGoal = .default
   @EnvironmentObject var model: AppModel
   
   var namespace: Namespace.ID

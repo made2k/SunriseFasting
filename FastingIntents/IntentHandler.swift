@@ -11,11 +11,17 @@ import Intents
 class IntentHandler: INExtension {
   
   override func handler(for intent: INIntent) -> Any {
+    
     if intent is StartFastIntent {
       return StartFastIntentHandler()
     }
     
+    if intent is EndFastIntent {
+      return EndFastIntentHandler()
+    }
+    
     return self
+    
   }
   
 }

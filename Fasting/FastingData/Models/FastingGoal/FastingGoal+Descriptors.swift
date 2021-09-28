@@ -5,6 +5,7 @@
 //  Created by Zach McGaughey on 4/22/21.
 //
 
+import FastStorage
 import Foundation
 
 extension FastingGoal {

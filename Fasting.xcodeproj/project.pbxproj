@@ -15,7 +15,6 @@
 		920E50E92633C79D0014E7B5 /* FastGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920E50E82633C79D0014E7B5 /* FastGroup.swift */; };
 		920E50EB2633C7BC0014E7B5 /* FastGroup+Identifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920E50EA2633C7BC0014E7B5 /* FastGroup+Identifiable.swift */; };
 		920E50ED2633C7FF0014E7B5 /* FastGroup+Parsing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920E50EC2633C7FF0014E7B5 /* FastGroup+Parsing.swift */; };
-		92124A0E263234E100A33968 /* FastingGoal+AllCases.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92124A0D263234E100A33968 /* FastingGoal+AllCases.swift */; };
 		9219DD51263B041A00FBE9C5 /* WatchManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9219DD50263B041A00FBE9C5 /* WatchManager.swift */; };
 		9219DD53263B392A00FBE9C5 /* WatchAPIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9219DD52263B392A00FBE9C5 /* WatchAPIError.swift */; };
 		9219DD55263B3C9F00FBE9C5 /* SaveFastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9219DD54263B3C9F00FBE9C5 /* SaveFastView.swift */; };
@@ -96,7 +95,20 @@
 		9282A89A26332F0E00CA24A6 /* View+Connections.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9282A89926332F0E00CA24A6 /* View+Connections.swift */; };
 		9282A89C26332F1A00CA24A6 /* Connectable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9282A89B26332F1A00CA24A6 /* Connectable.swift */; };
 		9284048D263367CC0085DAEE /* TimerObservable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9284048C263367CC0085DAEE /* TimerObservable.swift */; };
-		92879421263339BF00F949EF /* FastingGoal+Identifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92879420263339BF00F949EF /* FastingGoal+Identifiable.swift */; };
+		9284D7ED270393A90055E106 /* AppTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9284D7EC270393A90055E106 /* AppTarget.swift */; };
+		9284D7EF270393B80055E106 /* ContextNaming.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9284D7EE270393B80055E106 /* ContextNaming.swift */; };
+		9284D7F2270393E10055E106 /* PersistentHistoryObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9284D7F1270393E10055E106 /* PersistentHistoryObserver.swift */; };
+		9284D7F427039E5A0055E106 /* PersistentHistoryMerger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9284D7F327039E5A0055E106 /* PersistentHistoryMerger.swift */; };
+		9284D7F627039E8C0055E106 /* PersistentHistoryFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9284D7F527039E8C0055E106 /* PersistentHistoryFetcher.swift */; };
+		9284D7F827039F180055E106 /* PersistentHistoryCleaner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9284D7F727039F180055E106 /* PersistentHistoryCleaner.swift */; };
+		9284D7FA27039F990055E106 /* StorageDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9284D7F927039F990055E106 /* StorageDefaults.swift */; };
+		9284D7FC2703A2C30055E106 /* UserDefaultKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D739D726326667008DD386 /* UserDefaultKeys.swift */; };
+		9284D7FE2703A3DA0055E106 /* FastingGoal+AllCases.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92124A0D263234E100A33968 /* FastingGoal+AllCases.swift */; };
+		9284D7FF2703A3DA0055E106 /* FastingGoal+RawRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B7398B26323A47002D5261 /* FastingGoal+RawRepresentable.swift */; };
+		9284D8002703A3DA0055E106 /* FastingGoal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92F1D21D2630814400ED6F81 /* FastingGoal.swift */; };
+		9284D8012703A3DA0055E106 /* FastingGoal+Equality.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B73987263238BD002D5261 /* FastingGoal+Equality.swift */; };
+		9284D8022703A3DA0055E106 /* FastingGoal+Identifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92879420263339BF00F949EF /* FastingGoal+Identifiable.swift */; };
+		9284D8032703A3DA0055E106 /* FastingGoal+Codable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B7398926323913002D5261 /* FastingGoal+Codable.swift */; };
 		928E4F44263740C100037894 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 92978B2826331FD800944D12 /* Colors.xcassets */; };
 		928E4F4826374C4200037894 /* IdleWidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 928E4F4726374C4200037894 /* IdleWidgetView.swift */; };
 		928ED21A2631C72900F496F7 /* NumberTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 928ED2192631C72900F496F7 /* NumberTextField.swift */; };
@@ -115,9 +127,6 @@
 		92ADC09C263B6486009B348F /* WatchDataModel+WCSessionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92ADC09B263B6486009B348F /* WatchDataModel+WCSessionDelegate.swift */; };
 		92ADC09F263B66AF009B348F /* StringFormater.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92ADC09E263B66AF009B348F /* StringFormater.swift */; };
 		92B7398626323607002D5261 /* FastingGoal+Descriptors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B7398526323607002D5261 /* FastingGoal+Descriptors.swift */; };
-		92B73988263238BD002D5261 /* FastingGoal+Equality.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B73987263238BD002D5261 /* FastingGoal+Equality.swift */; };
-		92B7398A26323913002D5261 /* FastingGoal+Codable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B7398926323913002D5261 /* FastingGoal+Codable.swift */; };
-		92B7398C26323A47002D5261 /* FastingGoal+RawRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B7398B26323A47002D5261 /* FastingGoal+RawRepresentable.swift */; };
 		92B7398E26323D88002D5261 /* FastModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B7398D26323D88002D5261 /* FastModel.swift */; };
 		92B7399126323EB4002D5261 /* FastModel+Previewing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B7399026323EB4002D5261 /* FastModel+Previewing.swift */; };
 		92B7399426323F73002D5261 /* Fast+Initialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B7399326323F73002D5261 /* Fast+Initialization.swift */; };
@@ -127,7 +136,7 @@
 		92CEBADD2702A5EE005DEB4B /* FastStorage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92DBCE252702A20300C0B9B1 /* FastStorage.framework */; platformFilter = ios; };
 		92CEBADE2702A5EE005DEB4B /* FastStorage.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 92DBCE252702A20300C0B9B1 /* FastStorage.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		92CEBAE22702A5FF005DEB4B /* FastingIntents.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 929A6F36270292B9003927BD /* FastingIntents.intentdefinition */; settings = {ATTRIBUTES = (no_codegen, ); }; };
-		92CEBAE42702A623005DEB4B /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92CEBAE32702A623005DEB4B /* DataManager.swift */; };
+		92CEBAE42702A623005DEB4B /* SiriDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92CEBAE32702A623005DEB4B /* SiriDataManager.swift */; };
 		92CEBAE62702A635005DEB4B /* StartFastIntentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92CEBAE52702A635005DEB4B /* StartFastIntentHandler.swift */; };
 		92D63981263CF37500081D3B /* GraphicCornerBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D63980263CF37500081D3B /* GraphicCornerBuilder.swift */; };
 		92D63983263CFAB800081D3B /* GraphicExtraLargeBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D63982263CFAB800081D3B /* GraphicExtraLargeBuilder.swift */; };
@@ -135,14 +144,14 @@
 		92D739D226325500008DD386 /* StringFormatter+Percentage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D739D126325500008DD386 /* StringFormatter+Percentage.swift */; };
 		92D739D426325F44008DD386 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D739D326325F44008DD386 /* DataManager.swift */; };
 		92D739D626326187008DD386 /* UserDefaults+Publishing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D739D526326187008DD386 /* UserDefaults+Publishing.swift */; };
-		92D739D826326667008DD386 /* UserDefaultKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D739D726326667008DD386 /* UserDefaultKeys.swift */; };
 		92D81A80263106CD007E884A /* FastingGoalPickerItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D81A7F263106CD007E884A /* FastingGoalPickerItemView.swift */; };
 		92D81A82263106FD007E884A /* FastingGoalPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D81A81263106FD007E884A /* FastingGoalPickerView.swift */; };
 		92D81A8526310913007E884A /* FastingGoal.strings in Resources */ = {isa = PBXBuildFile; fileRef = 92D81A8426310913007E884A /* FastingGoal.strings */; };
+		92DAB3002703CDB200629B0C /* IntentError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92DAB2FF2703CDB200629B0C /* IntentError.swift */; };
+		92DAB3022703D33200629B0C /* EndFastIntentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92DAB3012703D33200629B0C /* EndFastIntentHandler.swift */; };
 		92DBCE282702A20300C0B9B1 /* FastStorage.h in Headers */ = {isa = PBXBuildFile; fileRef = 92DBCE272702A20300C0B9B1 /* FastStorage.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		92DBCE2B2702A20300C0B9B1 /* FastStorage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92DBCE252702A20300C0B9B1 /* FastStorage.framework */; };
 		92DBCE2C2702A20300C0B9B1 /* FastStorage.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 92DBCE252702A20300C0B9B1 /* FastStorage.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		92DBCE312702A21700C0B9B1 /* StorageObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92DBCE302702A21700C0B9B1 /* StorageObject.swift */; };
 		92DBCE332702A24E00C0B9B1 /* FastingIntents.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 929A6F36270292B9003927BD /* FastingIntents.intentdefinition */; };
 		92EF04CE27036F5000D939C3 /* PersistenceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9254F9A8262FBAB300589377 /* PersistenceController.swift */; };
 		92EF04CF270373B000D939C3 /* Fasting.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9254F9AA262FBAB300589377 /* Fasting.xcdatamodeld */; };
@@ -155,7 +164,6 @@
 		92EF04F32703773D00D939C3 /* Logging.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 92EF04E62703770C00D939C3 /* Logging.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		92EF04F62703774300D939C3 /* Logging.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92EF04E62703770C00D939C3 /* Logging.framework */; };
 		92EF04F72703774300D939C3 /* Logging.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 92EF04E62703770C00D939C3 /* Logging.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		92F1D21E2630814400ED6F81 /* FastingGoal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92F1D21D2630814400ED6F81 /* FastingGoal.swift */; };
 		92F2EBA02633465C001EBCFD /* BlurView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92F2EB9F2633465C001EBCFD /* BlurView.swift */; };
 		92F2EBA22633472C001EBCFD /* DatePickerRangeFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92F2EBA12633472C001EBCFD /* DatePickerRangeFactory.swift */; };
 		92F4F856263A603B00205600 /* WatchDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922C1D1D263A5E0400F34AE9 /* WatchDataModel.swift */; };
@@ -448,6 +456,13 @@
 		9282A89B26332F1A00CA24A6 /* Connectable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Connectable.swift; sourceTree = "<group>"; };
 		9282A89D26332FB800CA24A6 /* PreviewUpdater.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewUpdater.swift; sourceTree = "<group>"; };
 		9284048C263367CC0085DAEE /* TimerObservable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerObservable.swift; sourceTree = "<group>"; };
+		9284D7EC270393A90055E106 /* AppTarget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTarget.swift; sourceTree = "<group>"; };
+		9284D7EE270393B80055E106 /* ContextNaming.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContextNaming.swift; sourceTree = "<group>"; };
+		9284D7F1270393E10055E106 /* PersistentHistoryObserver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistentHistoryObserver.swift; sourceTree = "<group>"; };
+		9284D7F327039E5A0055E106 /* PersistentHistoryMerger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistentHistoryMerger.swift; sourceTree = "<group>"; };
+		9284D7F527039E8C0055E106 /* PersistentHistoryFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistentHistoryFetcher.swift; sourceTree = "<group>"; };
+		9284D7F727039F180055E106 /* PersistentHistoryCleaner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistentHistoryCleaner.swift; sourceTree = "<group>"; };
+		9284D7F927039F990055E106 /* StorageDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageDefaults.swift; sourceTree = "<group>"; };
 		92879420263339BF00F949EF /* FastingGoal+Identifiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FastingGoal+Identifiable.swift"; sourceTree = "<group>"; };
 		928E4F4726374C4200037894 /* IdleWidgetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdleWidgetView.swift; sourceTree = "<group>"; };
 		928ED2192631C72900F496F7 /* NumberTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberTextField.swift; sourceTree = "<group>"; };
@@ -479,7 +494,7 @@
 		92CEBAD12702A5E4005DEB4B /* FastingIntents.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = FastingIntents.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		92CEBAD42702A5E4005DEB4B /* IntentHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntentHandler.swift; sourceTree = "<group>"; };
 		92CEBAD62702A5E4005DEB4B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		92CEBAE32702A623005DEB4B /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		92CEBAE32702A623005DEB4B /* SiriDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SiriDataManager.swift; sourceTree = "<group>"; };
 		92CEBAE52702A635005DEB4B /* StartFastIntentHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartFastIntentHandler.swift; sourceTree = "<group>"; };
 		92D63980263CF37500081D3B /* GraphicCornerBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphicCornerBuilder.swift; sourceTree = "<group>"; };
 		92D63982263CFAB800081D3B /* GraphicExtraLargeBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphicExtraLargeBuilder.swift; sourceTree = "<group>"; };
@@ -491,9 +506,11 @@
 		92D81A7F263106CD007E884A /* FastingGoalPickerItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FastingGoalPickerItemView.swift; sourceTree = "<group>"; };
 		92D81A81263106FD007E884A /* FastingGoalPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FastingGoalPickerView.swift; sourceTree = "<group>"; };
 		92D81A8426310913007E884A /* FastingGoal.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = FastingGoal.strings; sourceTree = "<group>"; };
+		92DAB2FD2703CCA700629B0C /* FastingIntents.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FastingIntents.entitlements; sourceTree = "<group>"; };
+		92DAB2FF2703CDB200629B0C /* IntentError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntentError.swift; sourceTree = "<group>"; };
+		92DAB3012703D33200629B0C /* EndFastIntentHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndFastIntentHandler.swift; sourceTree = "<group>"; };
 		92DBCE252702A20300C0B9B1 /* FastStorage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FastStorage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		92DBCE272702A20300C0B9B1 /* FastStorage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FastStorage.h; sourceTree = "<group>"; };
-		92DBCE302702A21700C0B9B1 /* StorageObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageObject.swift; sourceTree = "<group>"; };
 		92EF04E62703770C00D939C3 /* Logging.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Logging.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		92EF04E82703770C00D939C3 /* Logging.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Logging.h; sourceTree = "<group>"; };
 		92F1D21D2630814400ED6F81 /* FastingGoal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FastingGoal.swift; sourceTree = "<group>"; };
@@ -794,17 +811,17 @@
 			isa = PBXGroup;
 			children = (
 				9254F99E262FBAB300589377 /* Fasting */,
+				92CEBAD32702A5E4005DEB4B /* FastingIntents */,
 				92250A5126371A6100DF1A87 /* FastingWidget */,
+				92DBCE262702A20300C0B9B1 /* FastStorage */,
+				92250A4C26371A6100DF1A87 /* Frameworks */,
+				92EF04E72703770C00D939C3 /* Logging */,
+				9254F99D262FBAB300589377 /* Products */,
+				92656EF92637380000AD5F67 /* RingView */,
 				92250A6B26371D1900DF1A87 /* SharedData */,
 				922C1D30263A5EFA00F34AE9 /* SharedDataWatch */,
-				92656EF92637380000AD5F67 /* RingView */,
 				922C1CF4263A573400F34AE9 /* WatchFasting */,
 				922C1D00263A573500F34AE9 /* WatchFasting Extension */,
-				92DBCE262702A20300C0B9B1 /* FastStorage */,
-				92CEBAD32702A5E4005DEB4B /* FastingIntents */,
-				92EF04E72703770C00D939C3 /* Logging */,
-				92250A4C26371A6100DF1A87 /* Frameworks */,
-				9254F99D262FBAB300589377 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
@@ -1017,6 +1034,40 @@
 			path = ViewModels;
 			sourceTree = "<group>";
 		};
+		9284D7EB2703938F0055E106 /* TransactionObserving */ = {
+			isa = PBXGroup;
+			children = (
+				9284D7F0270393BF0055E106 /* Protocols */,
+				9284D7EC270393A90055E106 /* AppTarget.swift */,
+				9284D7F1270393E10055E106 /* PersistentHistoryObserver.swift */,
+				9284D7F327039E5A0055E106 /* PersistentHistoryMerger.swift */,
+				9284D7F527039E8C0055E106 /* PersistentHistoryFetcher.swift */,
+				9284D7F727039F180055E106 /* PersistentHistoryCleaner.swift */,
+			);
+			path = TransactionObserving;
+			sourceTree = "<group>";
+		};
+		9284D7F0270393BF0055E106 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				9284D7EE270393B80055E106 /* ContextNaming.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		9284D7FD2703A3A80055E106 /* FastingGoal */ = {
+			isa = PBXGroup;
+			children = (
+				92F1D21D2630814400ED6F81 /* FastingGoal.swift */,
+				92124A0D263234E100A33968 /* FastingGoal+AllCases.swift */,
+				92B7398926323913002D5261 /* FastingGoal+Codable.swift */,
+				92B73987263238BD002D5261 /* FastingGoal+Equality.swift */,
+				92B7398B26323A47002D5261 /* FastingGoal+RawRepresentable.swift */,
+				92879420263339BF00F949EF /* FastingGoal+Identifiable.swift */,
+			);
+			path = FastingGoal;
+			sourceTree = "<group>";
+		};
 		928E4F4B263750EC00037894 /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -1125,7 +1176,6 @@
 			children = (
 				92B7399326323F73002D5261 /* Fast+Initialization.swift */,
 				926B23A426331BB2000E3373 /* Fast+Preview.swift */,
-				92D739D726326667008DD386 /* UserDefaultKeys.swift */,
 				92D739D526326187008DD386 /* UserDefaults+Publishing.swift */,
 			);
 			path = Extensions;
@@ -1170,10 +1220,13 @@
 		92CEBAD32702A5E4005DEB4B /* FastingIntents */ = {
 			isa = PBXGroup;
 			children = (
-				92CEBAD42702A5E4005DEB4B /* IntentHandler.swift */,
+				92DAB2FD2703CCA700629B0C /* FastingIntents.entitlements */,
 				92CEBAD62702A5E4005DEB4B /* Info.plist */,
-				92CEBAE32702A623005DEB4B /* DataManager.swift */,
+				92DAB2FF2703CDB200629B0C /* IntentError.swift */,
+				92CEBAD42702A5E4005DEB4B /* IntentHandler.swift */,
+				92CEBAE32702A623005DEB4B /* SiriDataManager.swift */,
 				92CEBAE52702A635005DEB4B /* StartFastIntentHandler.swift */,
+				92DAB3012703D33200629B0C /* EndFastIntentHandler.swift */,
 			);
 			path = FastingIntents;
 			sourceTree = "<group>";
@@ -1214,13 +1267,7 @@
 			isa = PBXGroup;
 			children = (
 				92D81A8426310913007E884A /* FastingGoal.strings */,
-				92F1D21D2630814400ED6F81 /* FastingGoal.swift */,
-				92124A0D263234E100A33968 /* FastingGoal+AllCases.swift */,
-				92B7398926323913002D5261 /* FastingGoal+Codable.swift */,
 				92B7398526323607002D5261 /* FastingGoal+Descriptors.swift */,
-				92B73987263238BD002D5261 /* FastingGoal+Equality.swift */,
-				92B7398B26323A47002D5261 /* FastingGoal+RawRepresentable.swift */,
-				92879420263339BF00F949EF /* FastingGoal+Identifiable.swift */,
 			);
 			path = FastingGoal;
 			sourceTree = "<group>";
@@ -1228,12 +1275,15 @@
 		92DBCE262702A20300C0B9B1 /* FastStorage */ = {
 			isa = PBXGroup;
 			children = (
+				9284D7FD2703A3A80055E106 /* FastingGoal */,
+				9284D7EB2703938F0055E106 /* TransactionObserving */,
 				9254F9AA262FBAB300589377 /* Fasting.xcdatamodeld */,
 				92534CDE2634752300D95681 /* Fast+Properties.swift */,
 				9254F9A8262FBAB300589377 /* PersistenceController.swift */,
+				92D739D726326667008DD386 /* UserDefaultKeys.swift */,
 				929A6F36270292B9003927BD /* FastingIntents.intentdefinition */,
 				92DBCE272702A20300C0B9B1 /* FastStorage.h */,
-				92DBCE302702A21700C0B9B1 /* StorageObject.swift */,
+				9284D7F927039F990055E106 /* StorageDefaults.swift */,
 			);
 			path = FastStorage;
 			sourceTree = "<group>";
@@ -1807,8 +1857,6 @@
 				92F2EBA02633465C001EBCFD /* BlurView.swift in Sources */,
 				92021AD026326D06006C00C1 /* AppModel+DataLoading.swift in Sources */,
 				92A974F62700DA2C00AA05A2 /* FastNotificationIdentifiers.swift in Sources */,
-				92B7398A26323913002D5261 /* FastingGoal+Codable.swift in Sources */,
-				92B73988263238BD002D5261 /* FastingGoal+Equality.swift in Sources */,
 				92B7398626323607002D5261 /* FastingGoal+Descriptors.swift in Sources */,
 				929A6F38270292C7003927BD /* FastingIntents.intentdefinition in Sources */,
 				9225DD5126C883EC00BCF2C2 /* DocumentPicker.swift in Sources */,
@@ -1821,7 +1869,6 @@
 				920E50E92633C79D0014E7B5 /* FastGroup.swift in Sources */,
 				927DD7D12630B12F00E6C33A /* Fonts.swift in Sources */,
 				927DD7CB2630ADAE00E6C33A /* StringFormatter.swift in Sources */,
-				92D739D826326667008DD386 /* UserDefaultKeys.swift in Sources */,
 				9278B7F2262FBECF00893C7D /* IdleFastHomeView.swift in Sources */,
 				927DD7C72630AD0300E6C33A /* IntervalCountingView.swift in Sources */,
 				92D739D626326187008DD386 /* UserDefaults+Publishing.swift in Sources */,
@@ -1837,10 +1884,8 @@
 				92F2EBA22633472C001EBCFD /* DatePickerRangeFactory.swift in Sources */,
 				92B7398E26323D88002D5261 /* FastModel.swift in Sources */,
 				92B7399426323F73002D5261 /* Fast+Initialization.swift in Sources */,
-				92879421263339BF00F949EF /* FastingGoal+Identifiable.swift in Sources */,
 				92792B442633984B00ECF89F /* HomeTabView.swift in Sources */,
 				9225DD4C26C87BEC00BCF2C2 /* ExportableFast.swift in Sources */,
-				92124A0E263234E100A33968 /* FastingGoal+AllCases.swift in Sources */,
 				92D81A80263106CD007E884A /* FastingGoalPickerItemView.swift in Sources */,
 				92021AD426327238006C00C1 /* FastModel+Equatable.swift in Sources */,
 				92D739D426325F44008DD386 /* DataManager.swift in Sources */,
@@ -1850,11 +1895,9 @@
 				92978B2526331D1400944D12 /* FastProgressUpdatingViewModel.swift in Sources */,
 				927DD7C42630AC6F00E6C33A /* TextButtonGroup.swift in Sources */,
 				926B23A526331BB2000E3373 /* Fast+Preview.swift in Sources */,
-				92B7398C26323A47002D5261 /* FastingGoal+RawRepresentable.swift in Sources */,
 				92250A6326371B0A00DF1A87 /* WidgetDataProvider.swift in Sources */,
 				9254F9A0262FBAB300589377 /* FastingApp.swift in Sources */,
 				920E50ED2633C7FF0014E7B5 /* FastGroup+Parsing.swift in Sources */,
-				92F1D21E2630814400ED6F81 /* FastingGoal.swift in Sources */,
 				9225DD4726C8740900BCF2C2 /* ActivityView.swift in Sources */,
 				928ED21A2631C72900F496F7 /* NumberTextField.swift in Sources */,
 				92021AD226326F2A006C00C1 /* FastModel+FastActions.swift in Sources */,
@@ -1887,9 +1930,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				92CEBAD52702A5E4005DEB4B /* IntentHandler.swift in Sources */,
-				92CEBAE42702A623005DEB4B /* DataManager.swift in Sources */,
+				92CEBAE42702A623005DEB4B /* SiriDataManager.swift in Sources */,
+				92DAB3022703D33200629B0C /* EndFastIntentHandler.swift in Sources */,
 				92CEBAE22702A5FF005DEB4B /* FastingIntents.intentdefinition in Sources */,
 				92CEBAE62702A635005DEB4B /* StartFastIntentHandler.swift in Sources */,
+				92DAB3002703CDB200629B0C /* IntentError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1897,11 +1942,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9284D7F827039F180055E106 /* PersistentHistoryCleaner.swift in Sources */,
+				9284D7FF2703A3DA0055E106 /* FastingGoal+RawRepresentable.swift in Sources */,
+				9284D8022703A3DA0055E106 /* FastingGoal+Identifiable.swift in Sources */,
+				9284D7FE2703A3DA0055E106 /* FastingGoal+AllCases.swift in Sources */,
+				9284D7ED270393A90055E106 /* AppTarget.swift in Sources */,
+				9284D7FA27039F990055E106 /* StorageDefaults.swift in Sources */,
+				9284D7EF270393B80055E106 /* ContextNaming.swift in Sources */,
 				92EF04CF270373B000D939C3 /* Fasting.xcdatamodeld in Sources */,
 				92EF04CE27036F5000D939C3 /* PersistenceController.swift in Sources */,
-				92DBCE312702A21700C0B9B1 /* StorageObject.swift in Sources */,
+				9284D7F2270393E10055E106 /* PersistentHistoryObserver.swift in Sources */,
 				92DBCE332702A24E00C0B9B1 /* FastingIntents.intentdefinition in Sources */,
+				9284D7FC2703A2C30055E106 /* UserDefaultKeys.swift in Sources */,
+				9284D8032703A3DA0055E106 /* FastingGoal+Codable.swift in Sources */,
 				92EF04D0270375F400D939C3 /* Fast+Properties.swift in Sources */,
+				9284D7F427039E5A0055E106 /* PersistentHistoryMerger.swift in Sources */,
+				9284D8012703A3DA0055E106 /* FastingGoal+Equality.swift in Sources */,
+				9284D8002703A3DA0055E106 /* FastingGoal.swift in Sources */,
+				9284D7F627039E8C0055E106 /* PersistentHistoryFetcher.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2481,6 +2539,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CODE_SIGN_ENTITLEMENTS = FastingIntents/FastingIntents.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 8QEC3K9K4B;
@@ -2508,6 +2567,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CODE_SIGN_ENTITLEMENTS = FastingIntents/FastingIntents.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 8QEC3K9K4B;

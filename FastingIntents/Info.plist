@@ -12,6 +12,7 @@
 			<array/>
 			<key>IntentsSupported</key>
 			<array>
+				<string>EndFastIntent</string>
 				<string>StartFastIntent</string>
 			</array>
 		</dict>

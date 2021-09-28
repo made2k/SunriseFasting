@@ -5,6 +5,7 @@
 //  Created by Zach McGaughey on 4/21/21.
 //
 
+import FastStorage
 import Logging
 import OSLog
 import SwiftUI
@@ -12,7 +13,8 @@ import SwiftUI
 struct FastingGoalPickerView: View {
     
   @EnvironmentObject var appModel: AppModel
-  @AppStorage(UserDefaultKey.fastingGoal.rawValue) var fastingGoal: FastingGoal = .default
+  @AppStorage(UserDefaultKey.fastingGoal.rawValue, store: StorageDefaults.sharedDefaults)
+  var fastingGoal: FastingGoal = .default
 
   // This view is presented, bind to dismiss
   @Binding var isPresented: Bool

@@ -7,8 +7,12 @@
 
 import FastStorage
 import Foundation
+import Logging
+import OSLog
 
 class StartFastIntentHandler: NSObject, StartFastIntentHandling {
+  
+  private let logger = Logger.create(.siriIntent)
   
   func confirm(intent: StartFastIntent, completion: @escaping (StartFastIntentResponse) -> Void) {
     completion(StartFastIntentResponse(code: .ready, userActivity: nil))
@@ -17,18 +21,24 @@ class StartFastIntentHandler: NSObject, StartFastIntentHandling {
   func handle(intent: StartFastIntent, completion: @escaping (StartFastIntentResponse) -> Void) {
     
     do {
-      let currentFast = try DataManager.shared.getCurrentFast()
+      let currentFast = try SiriDataManager.shared.getCurrentFast()
 
       guard currentFast == nil else {
-        completion(.failure(failureReason: "You already have an active fast."))
+        completion(.failure(failureReason: IntentError.fastAlreadyActive.localizedDescription))
         return
       }
 
-      try DataManager.shared.createNewFast()
+      try SiriDataManager.shared.createNewFast()
+      // TODO: Add localized time
       completion(.success(endTimeDescription: "Describing end time"))
 
+    } catch IntentError.fastAlreadyActive {
+      completion(.failure(failureReason: IntentError.fastAlreadyActive.localizedDescription))
+      
+    } catch IntentError.dataCorruption {
+      completion(.failure(failureReason: IntentError.dataCorruption.localizedDescription))
+      
     } catch {
-      print(error)
       completion(.failure(failureReason: "An unknown error occurred"))
       return
     }

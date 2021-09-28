@@ -37,7 +37,9 @@ final class AppModel: ObservableObject {
   /// For instance a date picker that presents over the current screen.
   @Published var appPresentation: AnyView?
   
-  private var fastingGoalCancellable: AnyCancellable?
+  private var cancellables: Set<AnyCancellable> = .init()
+  
+  private let historyObserver: PersistentHistoryObserver
   
   // MARK: - Lifecycle
   
@@ -45,10 +47,12 @@ final class AppModel: ObservableObject {
     
     if preview {
       self.manager = DataManager.preview
+      self.historyObserver = PersistentHistoryObserver(target: .app, persistentContainer: manager.persistenceController.container, userDefaults: UserDefaults.standard)
       self.widgetProvider = WidgetDataProvider(manager.persistenceController.container)
       
     } else {
       self.manager = DataManager.shared
+      self.historyObserver = PersistentHistoryObserver(target: .app, persistentContainer: manager.persistenceController.container, userDefaults: UserDefaults.standard)
       self.widgetProvider = WidgetDataProvider(manager.persistenceController.container)
 
       setupSubscriptions()
@@ -62,7 +66,7 @@ final class AppModel: ObservableObject {
   private func setupSubscriptions() {
     
     // When our FastingGoal changes, update any current Fast we may have
-    fastingGoalCancellable = UserDefaults.standard.publisher(for: .fastingGoal)
+    UserDefaults.standard.publisher(for: .fastingGoal)
       .compactMap { $0 }
       .compactMap(FastingGoal.init)
       .removeDuplicates()
@@ -71,6 +75,15 @@ final class AppModel: ObservableObject {
         self?.logger.debug("New FastingGoal set from Defaults: \(newGoal.rawValue, privacy: .private)")
         self?.currentFast?.duration = newGoal.duration
       }
+      .store(in: &cancellables)
+    
+    historyObserver.startObserving()
+    historyObserver.remoteChangePublisher
+      .sink { [weak self] in
+        self?.loadCurrentFast()
+        self?.loadCompletedFasts()
+      }
+      .store(in: &cancellables)
 
   }
 

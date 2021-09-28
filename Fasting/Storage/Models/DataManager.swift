@@ -36,7 +36,7 @@ final class DataManager {
       persistenceController = PersistenceController.preview
       
     } else {
-      persistenceController = PersistenceController.create()
+      persistenceController = PersistenceController.create(target: .app)
     }
     
   }

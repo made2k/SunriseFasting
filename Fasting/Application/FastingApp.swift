@@ -5,6 +5,7 @@
 //  Created by Zach McGaughey on 4/20/21.
 //
 
+import FastStorage
 import Logging
 import OSLog
 import SwiftDate
@@ -31,8 +32,10 @@ struct FastingApp: App {
     // Register our notification handler with our app model
     NotificationHandler.shared.register(with: model)
     
+    migrateDefaultsIfNeeded()
+    
     // Setup default user values
-    UserDefaults.standard.register(defaults: [UserDefaultKey.fastingGoal.rawValue: FastingGoal.default.rawValue])
+    StorageDefaults.sharedDefaults.register(defaults: [UserDefaultKey.fastingGoal.rawValue: FastingGoal.default.rawValue])
     
     logger.trace("Application starting")
   }
@@ -49,4 +52,17 @@ struct FastingApp: App {
 
     }
   }
+  
+  private func migrateDefaultsIfNeeded() {
+    
+    let standard: UserDefaults = UserDefaults.standard
+    let shared: UserDefaults = StorageDefaults.sharedDefaults
+    
+    if let appDefault = standard.string(forKey: UserDefaultKey.fastingGoal.rawValue) {
+      shared.set(appDefault, forKey: UserDefaultKey.fastingGoal.rawValue)
+      standard.removeObject(forKey: UserDefaultKey.fastingGoal.rawValue)
+    }
+    
+  }
+
 }

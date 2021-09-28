@@ -5,6 +5,7 @@
 //  Created by Zach McGaughey on 4/29/21.
 //
 
+import FastStorage
 import Foundation
 import Logging
 import OSLog
@@ -88,7 +89,7 @@ extension WatchManager {
     var goal: FastingGoal = .default
     
     if
-      let stringValue = UserDefaults.standard.string(forKey: UserDefaultKey.fastingGoal.rawValue),
+      let stringValue = StorageDefaults.sharedDefaults.string(forKey: UserDefaultKey.fastingGoal.rawValue),
       let savedGoal = FastingGoal(rawValue: stringValue) {
       goal = savedGoal
     }

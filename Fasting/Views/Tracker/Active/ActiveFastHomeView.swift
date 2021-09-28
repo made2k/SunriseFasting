@@ -6,6 +6,7 @@
 //
 
 import Combine
+import FastStorage
 import RingView
 import SwiftUI
 
@@ -15,7 +16,8 @@ struct ActiveFastHomeView: View {
   @ObservedObject var fast: FastModel
   
   @StateObject var progressViewModel: FastProgressUpdatingViewModel
-  @AppStorage(UserDefaultKey.fastingGoal.rawValue) var fastingGoal: FastingGoal = .default
+  @AppStorage(UserDefaultKey.fastingGoal.rawValue, store: StorageDefaults.sharedDefaults)
+  var fastingGoal: FastingGoal = .default
   
   private var namespace: Namespace.ID
   @State private var showingGoalSelection: Bool = false

@@ -9,6 +9,6 @@ import Foundation
 
 extension FastingGoal: Identifiable {
   
-  var id: TimeInterval { duration }
+  public var id: TimeInterval { duration }
   
 }

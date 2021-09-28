@@ -14,6 +14,7 @@ public enum LogCategory: String {
   case dataModel = "DataModel"
   case exporter = "Exporter"
   case interface = "Interface"
+  case siriIntent = "SiriIntent"
   case watch = "Watch"
   case widget = "Widget"
 }
