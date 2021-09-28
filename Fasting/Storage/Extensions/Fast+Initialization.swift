@@ -6,7 +6,9 @@
 //
 
 import CoreData
+import FastStorage
 import Foundation
+import Logging
 import OSLog
 
 extension Fast {

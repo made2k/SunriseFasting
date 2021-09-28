@@ -6,27 +6,30 @@
 //
 
 import CoreData
+import Logging
 import OSLog
 
-struct PersistenceController {
+public struct PersistenceController {
   
   static let logger = Logger.create(.coreData)
   
   // MARK: - Static Accessors
   
   /// The shared controller that will persist data to disk.
-  static let shared = PersistenceController()
+  public static func create() -> PersistenceController {
+    return PersistenceController()
+  }
   
   /// In memory store that does not write any data to disk
-  static var preview: PersistenceController = {
+  public static var preview: PersistenceController = {
     let result = PersistenceController(inMemory: true)
     
     // Backfill history data
     for value in 2..<34 {
       let entity = Fast(context: result.container.viewContext)
-      entity.startDate = Date().dateByAdding(-1 * value, .day).date
-      entity.endDate = entity.startDate?.dateByAdding(Int.random(in: 3...18), .hour).date
-      entity.targetInterval = 16.hours.timeInterval
+      entity.startDate = Date().addingTimeInterval(-1 * 60 * 60 * 24)
+      entity.endDate = entity.startDate?.addingTimeInterval(Double.random(in: 3...18) * 60 * 60)
+      entity.targetInterval = 16 * 60 * 60
     }
     
     do {
@@ -63,12 +66,21 @@ struct PersistenceController {
   
   // MARK: - Properties
   
-  let container: NSPersistentContainer
+  public let container: NSPersistentContainer
   
   // MARK: - Lifecycle
   
   private init(inMemory: Bool = false) {
-    self.container = NSPersistentContainer(name: "Fasting")
+    
+    guard let objectModelUrl = Bundle(identifier: "com.zachmcgaughey.FastStorage")?.url(forResource: "Fasting", withExtension: "momd") else {
+      preconditionFailure("Unable to find managed object model URL")
+    }
+
+    guard let objectModel = NSManagedObjectModel(contentsOf: objectModelUrl) else {
+      preconditionFailure("Unable to get managed object model from URL")
+    }
+
+    self.container = NSPersistentContainer(name: "Fasting", managedObjectModel: objectModel)
     
     if inMemory {
       Self.logger.trace("Created memory persistent container")

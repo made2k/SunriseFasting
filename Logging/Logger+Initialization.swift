@@ -8,7 +8,7 @@
 import Foundation
 import OSLog
 
-enum LogCategory: String {
+public enum LogCategory: String {
   case application = "Application"
   case coreData = "CoreData"
   case dataModel = "DataModel"
@@ -18,7 +18,7 @@ enum LogCategory: String {
   case widget = "Widget"
 }
 
-extension Logger {
+public extension Logger {
 
   /// Create a common logger using the bundle identifier as the subsystem.
   /// - Parameter category: Category to use for the logger.

@@ -7,7 +7,9 @@
 
 import Combine
 import CoreData
+import FastStorage
 import Foundation
+import Logging
 import OSLog
 
 /// Wrapper data model around our CoreData entity

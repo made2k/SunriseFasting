@@ -6,6 +6,7 @@
 //
 
 import Algorithms
+import FastStorage
 import Foundation
 
 extension FastGroup {

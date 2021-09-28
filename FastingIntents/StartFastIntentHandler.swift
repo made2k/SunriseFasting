@@ -28,6 +28,7 @@ class StartFastIntentHandler: NSObject, StartFastIntentHandling {
       completion(.success(endTimeDescription: "Describing end time"))
 
     } catch {
+      print(error)
       completion(.failure(failureReason: "An unknown error occurred"))
       return
     }

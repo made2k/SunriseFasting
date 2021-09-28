@@ -5,6 +5,7 @@
 //  Created by Zach McGaughey on 4/21/21.
 //
 
+import Logging
 import OSLog
 import SwiftUI
 

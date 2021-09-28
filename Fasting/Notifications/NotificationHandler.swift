@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import Logging
 import OSLog
 import UserNotifications
 import SwiftUI
