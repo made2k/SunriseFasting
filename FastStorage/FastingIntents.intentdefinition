@@ -135,7 +135,7 @@
 			<key>INIntentConfigurable</key>
 			<true/>
 			<key>INIntentDescription</key>
-			<string>Stop an ongoing fast.</string>
+			<string>Stop and save an ongoing fast.</string>
 			<key>INIntentDescriptionID</key>
 			<string>3RXrwM</string>
 			<key>INIntentManagedParameterCombinations</key>
@@ -156,6 +156,10 @@
 				<dict>
 					<key>INIntentParameterCombinationIsPrimary</key>
 					<true/>
+					<key>INIntentParameterCombinationSubtitle</key>
+					<string>Stops and saves your fast.</string>
+					<key>INIntentParameterCombinationSubtitleID</key>
+					<string>BJutnb</string>
 					<key>INIntentParameterCombinationSupportsBackgroundExecution</key>
 					<true/>
 					<key>INIntentParameterCombinationTitle</key>
