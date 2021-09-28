@@ -5,7 +5,9 @@
 //  Created by Zach McGaughey on 4/22/21.
 //
 
+import FastStorage
 import Foundation
+import Intents
 
 extension AppModel {
   
@@ -38,6 +40,10 @@ extension AppModel {
       
       let targetCompletionDate: Date = startDate.addingTimeInterval(interval)
       NotificationManager.shared.requestNotification(forDeliveryAt: targetCompletionDate)
+      
+      let intent = StartFastIntent()
+      let interaction = INInteraction(intent: intent, response: nil)
+      interaction.donate()
       
     } else {
       logger.debug("New fast has an endDate, reloading completed fasts")
