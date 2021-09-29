@@ -68,7 +68,7 @@ final class AppModel: ObservableObject {
   private func setupSubscriptions() {
     
     // When our FastingGoal changes, update any current Fast we may have
-    UserDefaults.standard.publisher(for: .fastingGoal)
+    StorageDefaults.sharedDefaults.publisher(for: .fastingGoal)
       .compactMap { $0 }
       .compactMap(FastingGoal.init)
       .removeDuplicates()

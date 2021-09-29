@@ -11,6 +11,7 @@
 		92021AD026326D06006C00C1 /* AppModel+DataLoading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92021ACF26326D06006C00C1 /* AppModel+DataLoading.swift */; };
 		92021AD226326F2A006C00C1 /* FastModel+FastActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92021AD126326F2A006C00C1 /* FastModel+FastActions.swift */; };
 		92021AD426327238006C00C1 /* FastModel+Equatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92021AD326327238006C00C1 /* FastModel+Equatable.swift */; };
+		9209B2042703FB1D0069715D /* UserDefaults+TransactionTracking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9209B2032703FB1D0069715D /* UserDefaults+TransactionTracking.swift */; };
 		920E50E62633C21A0014E7B5 /* Algorithms in Frameworks */ = {isa = PBXBuildFile; productRef = 920E50E52633C21A0014E7B5 /* Algorithms */; };
 		920E50E92633C79D0014E7B5 /* FastGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920E50E82633C79D0014E7B5 /* FastGroup.swift */; };
 		920E50EB2633C7BC0014E7B5 /* FastGroup+Identifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920E50EA2633C7BC0014E7B5 /* FastGroup+Identifiable.swift */; };
@@ -391,6 +392,7 @@
 		92021ACF26326D06006C00C1 /* AppModel+DataLoading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppModel+DataLoading.swift"; sourceTree = "<group>"; };
 		92021AD126326F2A006C00C1 /* FastModel+FastActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FastModel+FastActions.swift"; sourceTree = "<group>"; };
 		92021AD326327238006C00C1 /* FastModel+Equatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FastModel+Equatable.swift"; sourceTree = "<group>"; };
+		9209B2032703FB1D0069715D /* UserDefaults+TransactionTracking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+TransactionTracking.swift"; sourceTree = "<group>"; };
 		920E50E82633C79D0014E7B5 /* FastGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FastGroup.swift; sourceTree = "<group>"; };
 		920E50EA2633C7BC0014E7B5 /* FastGroup+Identifiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FastGroup+Identifiable.swift"; sourceTree = "<group>"; };
 		920E50EC2633C7FF0014E7B5 /* FastGroup+Parsing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FastGroup+Parsing.swift"; sourceTree = "<group>"; };
@@ -1114,6 +1116,7 @@
 				9284D7F327039E5A0055E106 /* PersistentHistoryMerger.swift */,
 				9284D7F527039E8C0055E106 /* PersistentHistoryFetcher.swift */,
 				9284D7F727039F180055E106 /* PersistentHistoryCleaner.swift */,
+				9209B2032703FB1D0069715D /* UserDefaults+TransactionTracking.swift */,
 			);
 			path = TransactionObserving;
 			sourceTree = "<group>";
@@ -2080,6 +2083,7 @@
 				9284D7F2270393E10055E106 /* PersistentHistoryObserver.swift in Sources */,
 				92DBCE332702A24E00C0B9B1 /* FastingIntents.intentdefinition in Sources */,
 				9284D7FC2703A2C30055E106 /* UserDefaultKeys.swift in Sources */,
+				9209B2042703FB1D0069715D /* UserDefaults+TransactionTracking.swift in Sources */,
 				9284D8032703A3DA0055E106 /* FastingGoal+Codable.swift in Sources */,
 				92EF04D0270375F400D939C3 /* Fast+Properties.swift in Sources */,
 				9284D7F427039E5A0055E106 /* PersistentHistoryMerger.swift in Sources */,

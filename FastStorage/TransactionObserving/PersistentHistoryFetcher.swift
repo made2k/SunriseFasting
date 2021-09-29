@@ -4,6 +4,8 @@
 //
 //  Created by Zach McGaughey on 9/28/21.
 //
+// Thanks to https://www.avanderlee.com/swift/persistent-history-tracking-core-data/
+// for the following code
 
 import CoreData
 import Foundation

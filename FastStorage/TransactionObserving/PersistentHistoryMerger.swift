@@ -4,11 +4,17 @@
 //
 //  Created by Zach McGaughey on 9/28/21.
 //
+// Thanks to https://www.avanderlee.com/swift/persistent-history-tracking-core-data/
+// for the following code
 
 import CoreData
 import Foundation
+import Logging
+import OSLog
 
 struct PersistentHistoryMerger {
+
+  let logger = Logger.create(.coreData)
   
   let backgroundContext: NSManagedObjectContext
   let viewContext: NSManagedObjectContext
@@ -21,11 +27,11 @@ struct PersistentHistoryMerger {
     let history = try fetcher.fetch()
     
     guard !history.isEmpty else {
-      print("No history transactions found to merge for target \(currentTarget)")
+      logger.debug("No history transactions found to merge for target \(currentTarget.rawValue)")
       return false
     }
-    
-    print("Merging \(history.count) persistent history transactions for target \(currentTarget)")
+
+    logger.debug("Merging \(history.count) persistent history transactions for target \(currentTarget.rawValue)")
     
     history.merge(into: backgroundContext)
     
@@ -40,7 +46,7 @@ struct PersistentHistoryMerger {
   }
 }
 
-extension Collection where Element == NSPersistentHistoryTransaction {
+internal extension Collection where Element == NSPersistentHistoryTransaction {
   
   /// Merges the current collection of history transactions into the given managed object context.
   /// - Parameter context: The managed object context in which the history transactions should be merged.
