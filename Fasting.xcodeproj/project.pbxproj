@@ -646,6 +646,49 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9209B1FE2703F97F0069715D /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				92534CDE2634752300D95681 /* Fast+Properties.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		9209B1FF2703F9920069715D /* DataStores */ = {
+			isa = PBXGroup;
+			children = (
+				9209B2022703F9EE0069715D /* CoreData */,
+				9209B2012703F9E50069715D /* UserDefaults */,
+			);
+			path = DataStores;
+			sourceTree = "<group>";
+		};
+		9209B2002703F9BA0069715D /* Intents */ = {
+			isa = PBXGroup;
+			children = (
+				929A6F36270292B9003927BD /* FastingIntents.intentdefinition */,
+			);
+			path = Intents;
+			sourceTree = "<group>";
+		};
+		9209B2012703F9E50069715D /* UserDefaults */ = {
+			isa = PBXGroup;
+			children = (
+				92D739D726326667008DD386 /* UserDefaultKeys.swift */,
+				9284D7F927039F990055E106 /* StorageDefaults.swift */,
+			);
+			path = UserDefaults;
+			sourceTree = "<group>";
+		};
+		9209B2022703F9EE0069715D /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				9254F9AA262FBAB300589377 /* Fasting.xcdatamodeld */,
+				9254F9A8262FBAB300589377 /* PersistenceController.swift */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
 		920E50E72633C7910014E7B5 /* FastGroup */ = {
 			isa = PBXGroup;
 			children = (
@@ -887,7 +930,6 @@
 				9225DD4226C8581200BCF2C2 /* Colors */,
 				9282A89826332EF400CA24A6 /* Connections */,
 				92124A0B2632343700A33968 /* FastingData */,
-				92656CCB26324C8700C9C232 /* Formatting */,
 				9252544B26C95BAE002FCE2D /* Notifications */,
 				9254F9A5262FBAB300589377 /* Preview Content */,
 				92124A082632304100A33968 /* Storage */,
@@ -922,13 +964,6 @@
 				9261A13B26339EF7005E8AAD /* TimelineItemView.swift */,
 			);
 			path = Timeline;
-			sourceTree = "<group>";
-		};
-		92656CCB26324C8700C9C232 /* Formatting */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Formatting;
 			sourceTree = "<group>";
 		};
 		92656CCC26324C9B00C9C232 /* Strings */ = {
@@ -1320,15 +1355,12 @@
 		92DBCE262702A20300C0B9B1 /* FastStorage */ = {
 			isa = PBXGroup;
 			children = (
-				9284D7FD2703A3A80055E106 /* FastingGoal */,
-				9284D7EB2703938F0055E106 /* TransactionObserving */,
-				9254F9AA262FBAB300589377 /* Fasting.xcdatamodeld */,
-				92534CDE2634752300D95681 /* Fast+Properties.swift */,
-				9254F9A8262FBAB300589377 /* PersistenceController.swift */,
-				92D739D726326667008DD386 /* UserDefaultKeys.swift */,
-				929A6F36270292B9003927BD /* FastingIntents.intentdefinition */,
 				92DBCE272702A20300C0B9B1 /* FastStorage.h */,
-				9284D7F927039F990055E106 /* StorageDefaults.swift */,
+				9209B1FF2703F9920069715D /* DataStores */,
+				9209B1FE2703F97F0069715D /* Extensions */,
+				9284D7FD2703A3A80055E106 /* FastingGoal */,
+				9209B2002703F9BA0069715D /* Intents */,
+				9284D7EB2703938F0055E106 /* TransactionObserving */,
 			);
 			path = FastStorage;
 			sourceTree = "<group>";
