@@ -44,7 +44,6 @@ class StartFastIntentHandler: NSObject, StartFastIntentHandling {
       
     } catch {
       completion(.failure(failureReason: "An unknown error occurred"))
-      return
     }
     
   }
