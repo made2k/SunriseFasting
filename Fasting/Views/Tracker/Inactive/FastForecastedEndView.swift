@@ -5,6 +5,8 @@
 //  Created by Zach McGaughey on 4/21/21.
 //
 
+import FastStorage
+import Formatting
 import SwiftUI
 
 struct FastForecastedEndView: View {

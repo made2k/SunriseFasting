@@ -6,13 +6,14 @@
 //
 
 import Foundation
+import Logging
 import OSLog
 
-enum FastingGoal {
+public enum FastingGoal {
 
   static var logger: Logger { Logger.create() }
   
-  static var `default`: FastingGoal = .sixteen
+  public static var `default`: FastingGoal = .sixteen
 
   case fourteen
   case sixteen
@@ -33,7 +34,7 @@ enum FastingGoal {
   /// created if the TimeInterval does not match a defined type.
   ///
   /// - Parameter interval: The TimeInterval to create the FastingGoal with.
-  init(from interval: TimeInterval) {
+  public init(from interval: TimeInterval) {
     
     for type in Self.selectableCases {
       if type.duration == interval {
@@ -48,21 +49,21 @@ enum FastingGoal {
   
   // MARK: - Properties
   
-  var duration: TimeInterval {
+  public var duration: TimeInterval {
     
     switch self {
     
     case .fourteen:
-      return 14.hours.timeInterval
+      return 14 * 60 * 60
       
     case .sixteen:
-      return 16.hours.timeInterval
+      return 16 * 60 * 60
       
     case .nineteen:
-      return 19.hours.timeInterval
+      return 19 * 60 * 60
       
     case .twentyThree:
-      return 23.hours.timeInterval
+      return 23 * 60 * 60
       
     case .custom(let value):
       return value

@@ -6,6 +6,7 @@
 //
 
 import CoreData
+import FastStorage
 import Foundation
 
 extension AppModel {

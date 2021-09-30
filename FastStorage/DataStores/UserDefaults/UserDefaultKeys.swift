@@ -8,6 +8,6 @@
 import Foundation
 import SwiftUI
 
-enum UserDefaultKey: String {
+public enum UserDefaultKey: String {
   case fastingGoal = "userDefaults.keys.fastingGoal"
 }

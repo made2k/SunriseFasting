@@ -7,7 +7,7 @@
 
 import Foundation
 
-extension StringFormatter {
+public extension StringFormatter {
   
   /// Format a date in to a human readable format.
   /// - Parameters:

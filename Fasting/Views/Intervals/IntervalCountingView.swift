@@ -5,6 +5,7 @@
 //  Created by Zach McGaughey on 4/21/21.
 //
 
+import Formatting
 import SwiftUI
 
 struct IntervalCountingView: View {

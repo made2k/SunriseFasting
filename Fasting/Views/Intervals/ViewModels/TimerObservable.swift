@@ -7,6 +7,7 @@
 
 import Combine
 import Foundation
+import Logging
 import OSLog
 
 /// A class that mirrors a timer that can be observed

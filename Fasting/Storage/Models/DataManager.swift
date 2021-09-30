@@ -6,7 +6,9 @@
 //
 
 import CoreData
+import FastStorage
 import Foundation
+import Logging
 import OSLog
 
 /// Class to help manage data persistence.
@@ -34,7 +36,7 @@ final class DataManager {
       persistenceController = PersistenceController.preview
       
     } else {
-      persistenceController = PersistenceController.shared
+      persistenceController = PersistenceController.create(target: .app)
     }
     
   }

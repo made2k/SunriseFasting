@@ -6,6 +6,8 @@
 //
 
 import Combine
+import FastStorage
+import Logging
 import OSLog
 import SwiftUI
 
@@ -35,7 +37,9 @@ final class AppModel: ObservableObject {
   /// For instance a date picker that presents over the current screen.
   @Published var appPresentation: AnyView?
   
-  private var fastingGoalCancellable: AnyCancellable?
+  private var cancellables: Set<AnyCancellable> = .init()
+  
+  private let historyObserver: PersistentHistoryObserver
   
   // MARK: - Lifecycle
   
@@ -43,10 +47,22 @@ final class AppModel: ObservableObject {
     
     if preview {
       self.manager = DataManager.preview
+      self.historyObserver = PersistentHistoryObserver(
+        target: .app,
+        persistentContainer: manager.persistenceController.container,
+        cleaningTargetCompare: [.app],
+        userDefaults: StorageDefaults.sharedDefaults
+      )
       self.widgetProvider = WidgetDataProvider(manager.persistenceController.container)
       
     } else {
       self.manager = DataManager.shared
+      self.historyObserver = PersistentHistoryObserver(
+        target: .app,
+        persistentContainer: manager.persistenceController.container,
+        cleaningTargetCompare: [.app],
+        userDefaults: StorageDefaults.sharedDefaults
+      )
       self.widgetProvider = WidgetDataProvider(manager.persistenceController.container)
 
       setupSubscriptions()
@@ -54,13 +70,15 @@ final class AppModel: ObservableObject {
 
     logger.trace("AppModel initialized")
     
+    historyObserver.startObserving()
+
   }
   
   /// Subscribe  to any publishers
   private func setupSubscriptions() {
     
     // When our FastingGoal changes, update any current Fast we may have
-    fastingGoalCancellable = UserDefaults.standard.publisher(for: .fastingGoal)
+    StorageDefaults.sharedDefaults.publisher(for: .fastingGoal)
       .compactMap { $0 }
       .compactMap(FastingGoal.init)
       .removeDuplicates()
@@ -69,6 +87,19 @@ final class AppModel: ObservableObject {
         self?.logger.debug("New FastingGoal set from Defaults: \(newGoal.rawValue, privacy: .private)")
         self?.currentFast?.duration = newGoal.duration
       }
+      .store(in: &cancellables)
+    
+    // TODO: Remove delay once updated
+    // Ideally we'd update our models and our view to automatically track managed context changes
+    // via things like @FetchRequest and FetchedResults and this would not be neccessary. But I've noticed
+    // refreshing our data without delay can result in data that is not updated.
+    historyObserver.remoteChangePublisher
+      .delay(for: .seconds(1), scheduler: RunLoop.main, options: .none)
+      .sink { [weak self] in
+        self?.loadCurrentFast()
+        self?.loadCompletedFasts()
+      }
+      .store(in: &cancellables)
 
   }
 

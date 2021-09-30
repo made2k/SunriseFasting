@@ -7,7 +7,7 @@
 
 import Foundation
 
-extension StringFormatter {
+public extension StringFormatter {
   
   /// Formats a double value into a percent.
   ///

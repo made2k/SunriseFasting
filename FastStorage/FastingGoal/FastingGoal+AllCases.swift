@@ -7,7 +7,7 @@
 
 import Foundation
 
-extension FastingGoal {
+public extension FastingGoal {
   
   /// Get all types of cases for this enum.
   ///

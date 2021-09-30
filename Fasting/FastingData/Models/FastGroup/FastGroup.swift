@@ -5,6 +5,7 @@
 //  Created by Zach McGaughey on 4/23/21.
 //
 
+import FastStorage
 import Foundation
 
 /// Groups a list of fasts into a structured object. Used

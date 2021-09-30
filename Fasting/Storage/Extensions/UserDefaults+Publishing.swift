@@ -6,6 +6,7 @@
 //
 
 import Combine
+import FastStorage
 import Foundation
 
 extension UserDefaults {
