@@ -47,12 +47,22 @@ final class AppModel: ObservableObject {
     
     if preview {
       self.manager = DataManager.preview
-      self.historyObserver = PersistentHistoryObserver(target: .app, persistentContainer: manager.persistenceController.container, userDefaults: UserDefaults.standard)
+      self.historyObserver = PersistentHistoryObserver(
+        target: .app,
+        persistentContainer: manager.persistenceController.container,
+        cleaningTargetCompare: [.app],
+        userDefaults: StorageDefaults.sharedDefaults
+      )
       self.widgetProvider = WidgetDataProvider(manager.persistenceController.container)
       
     } else {
       self.manager = DataManager.shared
-      self.historyObserver = PersistentHistoryObserver(target: .app, persistentContainer: manager.persistenceController.container, userDefaults: UserDefaults.standard)
+      self.historyObserver = PersistentHistoryObserver(
+        target: .app,
+        persistentContainer: manager.persistenceController.container,
+        cleaningTargetCompare: [.app],
+        userDefaults: StorageDefaults.sharedDefaults
+      )
       self.widgetProvider = WidgetDataProvider(manager.persistenceController.container)
 
       setupSubscriptions()

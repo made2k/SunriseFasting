@@ -26,7 +26,7 @@ struct PersistentHistoryCleaner {
       logger.info("Cancelling deletions as there is no common transaction timestamp")
       return
     }
-    
+
     let deleteHistoryRequest = NSPersistentHistoryChangeRequest.deleteHistory(before: timestamp)
     logger.debug("Deleting persistent history using common timestamp \(timestamp)")
     try context.execute(deleteHistoryRequest)

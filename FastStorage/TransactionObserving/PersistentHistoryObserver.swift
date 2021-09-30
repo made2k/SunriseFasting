@@ -18,6 +18,8 @@ public final class PersistentHistoryObserver {
   private let target: AppTarget
   private let userDefaults: UserDefaults
   private let persistentContainer: NSPersistentContainer
+  // List of targets to check when determining the history to clean
+  private let cleaningTargetCompare: [AppTarget]
   
   private let remoteChangeSubject = PassthroughSubject<Void, Never>()
   public var remoteChangePublisher: AnyPublisher<Void, Never> {
@@ -35,10 +37,16 @@ public final class PersistentHistoryObserver {
     return queue
   }()
   
-  public init(target: AppTarget, persistentContainer: NSPersistentContainer, userDefaults: UserDefaults) {
+  public init(
+    target: AppTarget,
+    persistentContainer: NSPersistentContainer,
+    cleaningTargetCompare: [AppTarget],
+    userDefaults: UserDefaults
+  ) {
     self.target = target
     self.userDefaults = userDefaults
     self.persistentContainer = persistentContainer
+    self.cleaningTargetCompare = cleaningTargetCompare
   }
   
   public func startObserving() {
@@ -79,7 +87,7 @@ public final class PersistentHistoryObserver {
                 
         let cleaner = PersistentHistoryCleaner(
           context: context,
-          targets: AppTarget.allCases,
+          targets: cleaningTargetCompare,
           userDefaults: userDefaults
         )
         try cleaner.clean()
@@ -89,7 +97,7 @@ public final class PersistentHistoryObserver {
         }
 
       } catch {
-        logger.error("Persistent History Tracking failed with error \(error)")
+        logger.error("Persistent History Tracking failed with error \(error.localizedDescription)")
       }
     }
   }
