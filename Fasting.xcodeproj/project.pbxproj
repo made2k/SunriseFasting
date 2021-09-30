@@ -704,7 +704,6 @@
 		92124A082632304100A33968 /* Storage */ = {
 			isa = PBXGroup;
 			children = (
-				92339E8626327B8C007BEBB9 /* DataModels */,
 				9225DD4826C8786400BCF2C2 /* ExportManager */,
 				92B7399226323F63002D5261 /* Extensions */,
 				92124A092632305300A33968 /* Models */,
@@ -854,13 +853,6 @@
 				922C1D32263A5EFA00F34AE9 /* Info.plist */,
 			);
 			path = SharedDataWatch;
-			sourceTree = "<group>";
-		};
-		92339E8626327B8C007BEBB9 /* DataModels */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = DataModels;
 			sourceTree = "<group>";
 		};
 		9246FCF8262FBE4200B6375D /* Application */ = {

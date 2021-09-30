@@ -94,7 +94,7 @@ final class AppModel: ObservableObject {
     // via things like @FetchRequest and FetchedResults and this would not be neccessary. But I've noticed
     // refreshing our data without delay can result in data that is not updated.
     historyObserver.remoteChangePublisher
-      .delay(for: .seconds(1), scheduler: RunLoop.main, options: .none)
+      .delay(for: .milliseconds(500), scheduler: RunLoop.main, options: .none)
       .sink { [weak self] in
         self?.loadCurrentFast()
         self?.loadCompletedFasts()
