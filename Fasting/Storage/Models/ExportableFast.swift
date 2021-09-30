@@ -29,13 +29,4 @@ struct ExportableFast: Codable {
     self.targetInterval = fast.targetInterval
   }
   
-  func asFast(with context: NSManagedObjectContext) -> Fast {
-    Fast(
-      startDate,
-      endDate: endDate,
-      interval: targetInterval,
-      context: context
-    )
-  }
-  
 }

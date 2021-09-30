@@ -5,6 +5,7 @@
 //  Created by Zach McGaughey on 8/14/21.
 //
 
+import CoreData
 import FastStorage
 import Foundation
 import Logging
@@ -28,7 +29,7 @@ final class ExportManager {
   private let model: AppModel
   private let encoder: JSONEncoder = .init()
   private let decoder: JSONDecoder = .init()
-  
+
   init(model: AppModel) {
     self.model = model
   }
@@ -123,16 +124,58 @@ final class ExportManager {
     }
     
     Self.logger.debug("Import found \(imported.count, privacy: .public) items to import")
-    
-    _ = imported.map { exported -> Fast in
-      exported.asFast(with: model.manager.context)
+
+    batchInsertData(imported, using: model.manager.persistenceController.container)
+  }
+
+  private func createBatchInsert(with fasts: [ExportableFast]) -> NSBatchInsertRequest {
+
+    var index = 0
+    let total = fasts.count
+
+    let batchInsert = NSBatchInsertRequest(entity: Fast.entity()) { (managedObject: NSManagedObject) -> Bool in
+
+      guard index < total else { return true }
+
+      if let fast = managedObject as? Fast {
+
+        let data = fasts[index]
+        fast.startDate = data.startDate
+        fast.endDate = data.endDate
+        fast.targetInterval = data.targetInterval
+
+      }
+
+      index += 1
+      return false
     }
-    
-    model.manager.saveChanges()
-    model.loadCompletedFasts()
-    
-    Self.logger.trace("Import complete")
-    
+
+    return batchInsert
+
+  }
+
+  private func batchInsertData(
+    _ fastingData: [ExportableFast],
+    using container: NSPersistentContainer
+  ) {
+
+    guard fastingData.isEmpty == false else { return }
+
+    container.performBackgroundTask { context in
+      context.transactionAuthor = "export_manager"
+      context.name = "import"
+
+      let request = self.createBatchInsert(with: fastingData)
+
+      do {
+        try context.execute(request)
+        Self.logger.trace("Batch import complete")
+
+      } catch {
+        Self.logger.error("Error batch importing data: \(error.localizedDescription)")
+      }
+
+    }
   }
 
 }
