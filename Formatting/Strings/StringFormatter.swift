@@ -6,7 +6,6 @@
 //
 
 import Foundation
-import SwiftDate
 
 public enum StringFormatter {
   

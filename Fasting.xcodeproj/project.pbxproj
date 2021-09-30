@@ -124,6 +124,8 @@
 		92ADC09A263B5FF3009B348F /* WatchDataModel+API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92ADC099263B5FF3009B348F /* WatchDataModel+API.swift */; };
 		92ADC09C263B6486009B348F /* WatchDataModel+WCSessionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92ADC09B263B6486009B348F /* WatchDataModel+WCSessionDelegate.swift */; };
 		92ADC09F263B66AF009B348F /* StringFormater.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92ADC09E263B66AF009B348F /* StringFormater.swift */; };
+		92AE6F4927056298007FE051 /* Formatting.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92DAB3082703D4BE00629B0C /* Formatting.framework */; platformFilter = ios; };
+		92AE6F4A27056298007FE051 /* Formatting.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 92DAB3082703D4BE00629B0C /* Formatting.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		92B7398626323607002D5261 /* FastingGoal+Descriptors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B7398526323607002D5261 /* FastingGoal+Descriptors.swift */; };
 		92B7398E26323D88002D5261 /* FastModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B7398D26323D88002D5261 /* FastModel.swift */; };
 		92B7399126323EB4002D5261 /* FastModel+Previewing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B7399026323EB4002D5261 /* FastModel+Previewing.swift */; };
@@ -237,6 +239,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = 92656EF72637380000AD5F67;
 			remoteInfo = RingView;
+		};
+		92AE6F4B27056298007FE051 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9254F994262FBAB300589377 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 92DAB3072703D4BE00629B0C;
+			remoteInfo = Formatting;
 		};
 		92CEBAD72702A5E4005DEB4B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -357,6 +366,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				92AE6F4A27056298007FE051 /* Formatting.framework in Embed Frameworks */,
 				92EF04F32703773D00D939C3 /* Logging.framework in Embed Frameworks */,
 				92CEBADE2702A5EE005DEB4B /* FastStorage.framework in Embed Frameworks */,
 			);
@@ -619,6 +629,7 @@
 				92CEBADD2702A5EE005DEB4B /* FastStorage.framework in Frameworks */,
 				92CEBAD22702A5E4005DEB4B /* Intents.framework in Frameworks */,
 				92EF04F22703773D00D939C3 /* Logging.framework in Frameworks */,
+				92AE6F4927056298007FE051 /* Formatting.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1665,6 +1676,7 @@
 			dependencies = (
 				92CEBAE02702A5EE005DEB4B /* PBXTargetDependency */,
 				92EF04F52703773D00D939C3 /* PBXTargetDependency */,
+				92AE6F4C27056298007FE051 /* PBXTargetDependency */,
 			);
 			name = FastingIntents;
 			productName = FastingIntents;
@@ -2157,6 +2169,12 @@
 			target = 92656EF72637380000AD5F67 /* RingView */;
 			targetProxy = 92656F4D26373FB900AD5F67 /* PBXContainerItemProxy */;
 		};
+		92AE6F4C27056298007FE051 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			platformFilter = ios;
+			target = 92DAB3072703D4BE00629B0C /* Formatting */;
+			targetProxy = 92AE6F4B27056298007FE051 /* PBXContainerItemProxy */;
+		};
 		92CEBAD82702A5E4005DEB4B /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 92CEBAD02702A5E4005DEB4B /* FastingIntents */;
@@ -2648,6 +2666,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.zachmcgaughey.RingView;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
@@ -2676,6 +2695,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.zachmcgaughey.RingView;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
@@ -2701,7 +2721,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.zachmcgaughey.Fasting.FastingIntents;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -2729,7 +2749,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.zachmcgaughey.Fasting.FastingIntents;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -2742,6 +2762,7 @@
 		92DAB3112703D4BE00629B0C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 8;
@@ -2759,7 +2780,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.zachmcgaughey.Formatting;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
@@ -2775,6 +2796,7 @@
 		92DAB3122703D4BE00629B0C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 8;
@@ -2792,7 +2814,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.zachmcgaughey.Formatting;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
@@ -2808,6 +2830,7 @@
 		92DBCE2E2702A20300C0B9B1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -2826,7 +2849,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.zachmcgaughey.FastStorage;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
@@ -2843,6 +2866,7 @@
 		92DBCE2F2702A20300C0B9B1 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -2861,7 +2885,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.zachmcgaughey.FastStorage;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
@@ -2877,6 +2901,7 @@
 		92EF04EF2703770C00D939C3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 8;
@@ -2894,7 +2919,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.zachmcgaughey.Logging;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
@@ -2910,6 +2935,7 @@
 		92EF04F02703770C00D939C3 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 8;
@@ -2927,7 +2953,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.zachmcgaughey.Logging;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
