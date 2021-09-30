@@ -28,15 +28,5 @@ struct ExportableFast: Codable {
     
     self.targetInterval = fast.targetInterval
   }
-
-  // TODO: Delete
-  func asFast(with context: NSManagedObjectContext) -> Fast {
-    Fast(
-      startDate,
-      endDate: endDate,
-      interval: targetInterval,
-      context: context
-    )
-  }
   
 }
