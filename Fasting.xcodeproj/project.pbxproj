@@ -125,7 +125,6 @@
 		92ADC09C263B6486009B348F /* WatchDataModel+WCSessionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92ADC09B263B6486009B348F /* WatchDataModel+WCSessionDelegate.swift */; };
 		92ADC09F263B66AF009B348F /* StringFormater.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92ADC09E263B66AF009B348F /* StringFormater.swift */; };
 		92AE6F4927056298007FE051 /* Formatting.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92DAB3082703D4BE00629B0C /* Formatting.framework */; platformFilter = ios; };
-		92AE6F4A27056298007FE051 /* Formatting.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 92DAB3082703D4BE00629B0C /* Formatting.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		92B7398626323607002D5261 /* FastingGoal+Descriptors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B7398526323607002D5261 /* FastingGoal+Descriptors.swift */; };
 		92B7398E26323D88002D5261 /* FastModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B7398D26323D88002D5261 /* FastModel.swift */; };
 		92B7399126323EB4002D5261 /* FastModel+Previewing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B7399026323EB4002D5261 /* FastModel+Previewing.swift */; };
@@ -134,7 +133,6 @@
 		92CEBAD52702A5E4005DEB4B /* IntentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92CEBAD42702A5E4005DEB4B /* IntentHandler.swift */; };
 		92CEBAD92702A5E4005DEB4B /* FastingIntents.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 92CEBAD12702A5E4005DEB4B /* FastingIntents.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		92CEBADD2702A5EE005DEB4B /* FastStorage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92DBCE252702A20300C0B9B1 /* FastStorage.framework */; platformFilter = ios; };
-		92CEBADE2702A5EE005DEB4B /* FastStorage.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 92DBCE252702A20300C0B9B1 /* FastStorage.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		92CEBAE22702A5FF005DEB4B /* FastingIntents.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 929A6F36270292B9003927BD /* FastingIntents.intentdefinition */; settings = {ATTRIBUTES = (no_codegen, ); }; };
 		92CEBAE42702A623005DEB4B /* SiriDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92CEBAE32702A623005DEB4B /* SiriDataManager.swift */; };
 		92CEBAE62702A635005DEB4B /* StartFastIntentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92CEBAE52702A635005DEB4B /* StartFastIntentHandler.swift */; };
@@ -156,7 +154,6 @@
 		92DAB3152703D4CF00629B0C /* StringFormatter+TimeIntervals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9295C318263282C00084C3AA /* StringFormatter+TimeIntervals.swift */; };
 		92DAB3162703D4CF00629B0C /* StringFormatter+Percentage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D739D126325500008DD386 /* StringFormatter+Percentage.swift */; };
 		92DAB3182703D4E100629B0C /* SwiftDateDynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 92DAB3172703D4E100629B0C /* SwiftDateDynamic */; };
-		92DAB3192703D4E100629B0C /* SwiftDateDynamic in Embed Frameworks */ = {isa = PBXBuildFile; productRef = 92DAB3172703D4E100629B0C /* SwiftDateDynamic */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		92DBCE282702A20300C0B9B1 /* FastStorage.h in Headers */ = {isa = PBXBuildFile; fileRef = 92DBCE272702A20300C0B9B1 /* FastStorage.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		92DBCE2B2702A20300C0B9B1 /* FastStorage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92DBCE252702A20300C0B9B1 /* FastStorage.framework */; };
 		92DBCE2C2702A20300C0B9B1 /* FastStorage.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 92DBCE252702A20300C0B9B1 /* FastStorage.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -169,9 +166,7 @@
 		92EF04ED2703770C00D939C3 /* Logging.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 92EF04E62703770C00D939C3 /* Logging.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		92EF04F12703771900D939C3 /* Logger+Initialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9236BA3F263508AF0056EFDD /* Logger+Initialization.swift */; };
 		92EF04F22703773D00D939C3 /* Logging.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92EF04E62703770C00D939C3 /* Logging.framework */; };
-		92EF04F32703773D00D939C3 /* Logging.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 92EF04E62703770C00D939C3 /* Logging.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		92EF04F62703774300D939C3 /* Logging.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92EF04E62703770C00D939C3 /* Logging.framework */; };
-		92EF04F72703774300D939C3 /* Logging.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 92EF04E62703770C00D939C3 /* Logging.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		92F2EBA02633465C001EBCFD /* BlurView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92F2EB9F2633465C001EBCFD /* BlurView.swift */; };
 		92F2EBA22633472C001EBCFD /* DatePickerRangeFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92F2EBA12633472C001EBCFD /* DatePickerRangeFactory.swift */; };
 		92F4F856263A603B00205600 /* WatchDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922C1D1D263A5E0400F34AE9 /* WatchDataModel.swift */; };
@@ -360,37 +355,12 @@
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		92CEBAE12702A5EE005DEB4B /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				92AE6F4A27056298007FE051 /* Formatting.framework in Embed Frameworks */,
-				92EF04F32703773D00D939C3 /* Logging.framework in Embed Frameworks */,
-				92CEBADE2702A5EE005DEB4B /* FastStorage.framework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		92DAB31A2703D4E100629B0C /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				92DAB3192703D4E100629B0C /* SwiftDateDynamic in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		92EF04FA2703774300D939C3 /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				92EF04F72703774300D939C3 /* Logging.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1668,7 +1638,6 @@
 				92CEBACD2702A5E4005DEB4B /* Sources */,
 				92CEBACE2702A5E4005DEB4B /* Frameworks */,
 				92CEBACF2702A5E4005DEB4B /* Resources */,
-				92CEBAE12702A5EE005DEB4B /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -1712,7 +1681,6 @@
 				92DBCE212702A20300C0B9B1 /* Sources */,
 				92DBCE222702A20300C0B9B1 /* Frameworks */,
 				92DBCE232702A20300C0B9B1 /* Resources */,
-				92EF04FA2703774300D939C3 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
