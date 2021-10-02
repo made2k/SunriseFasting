@@ -10,13 +10,13 @@ import SwiftUI
 
 struct IdleFastHomeView: View {
   
+  @Environment(\.accessibilityReduceMotion) var reduceMotion
+  @EnvironmentObject var model: AppModel
+
   @AppStorage(UserDefaultKey.fastingGoal.rawValue, store: StorageDefaults.sharedDefaults)
   var fastingGoal: FastingGoal = .default
-  @EnvironmentObject var model: AppModel
-  
-  var namespace: Namespace.ID
-  
   @State private var showingGoalSelection: Bool = false
+  var namespace: Namespace.ID
   
   var body: some View {
     
@@ -54,13 +54,18 @@ struct IdleFastHomeView: View {
         Spacer()
         
         Button("Start Fast") {
-          withAnimation {
+          withAnimation(reduceMotion ? .none : .default) {
             // _ = is needed or compiler crashes
             _ = model.startFast(interval: fastingGoal.duration)
           }
         }
+        .buttonStyle(
+          PaddedButtonStyle(
+            foregroundColor: .buttonForegroundIncomplete,
+            minWidth: 80
+          )
+        )
         .matchedGeometryEffect(id: "action", in: namespace)
-        .buttonStyle(PaddedButtonStyle(foregroundColor: .buttonForegroundIncomplete))
         
         Spacer()
       }
