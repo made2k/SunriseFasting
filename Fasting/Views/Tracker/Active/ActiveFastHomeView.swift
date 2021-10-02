@@ -15,6 +15,7 @@ struct ActiveFastHomeView: View {
   
   @EnvironmentObject var appModel: AppModel
   @ObservedObject var fast: FastModel
+  @Environment(\.accessibilityReduceMotion) var reduceMotion
   
   @StateObject var progressViewModel: FastProgressUpdatingViewModel
   @AppStorage(UserDefaultKey.fastingGoal.rawValue, store: StorageDefaults.sharedDefaults)
@@ -91,7 +92,12 @@ struct ActiveFastHomeView: View {
               .cancel(Text("Cancel"), action: cancel)
             ])
           }
-          .buttonStyle(PaddedButtonStyle(foregroundColor: progressViewModel.progress < 1 ? Color.buttonForegroundIncomplete : Color.buttonForegroundComplete))
+          .buttonStyle(
+            PaddedButtonStyle(
+              foregroundColor: progressViewModel.progress < 1 ? Color.buttonForegroundIncomplete : Color.buttonForegroundComplete,
+              minWidth: 80
+            )
+          )
           .matchedGeometryEffect(id: "action", in: namespace)
         
         Spacer()
@@ -135,13 +141,13 @@ struct ActiveFastHomeView: View {
   }
   
   private func performSave(_ endDate: Date) {
-    withAnimation {
+    withAnimation(reduceMotion ? .none : .default) {
       appModel.endFast(fast, endDate: endDate)
     }
   }
   
   private func deleteFast() {
-    withAnimation {
+    withAnimation(reduceMotion ? .none : .default) {
       appModel.deleteFast(fast)
     }
   }

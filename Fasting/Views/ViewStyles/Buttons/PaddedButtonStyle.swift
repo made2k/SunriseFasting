@@ -8,23 +8,27 @@
 import SwiftUI
 
 struct PaddedButtonStyle: ButtonStyle {
-  
+
   let backgroundColor: Color
   let foregroundColor: Color
+  let minWidth: CGFloat?
   
   init(
     backgroundColor: Color = Color.buttonBackground,
-    foregroundColor: Color = Color(UIColor.secondaryLabel)
+    foregroundColor: Color = Color(UIColor.secondaryLabel),
+    minWidth: CGFloat? = nil
   ) {
     self.backgroundColor = backgroundColor
     self.foregroundColor = foregroundColor
+    self.minWidth = minWidth
   }
   
   func makeBody(configuration: Configuration) -> some View {
-    
+
     withAnimation {
-      
+
       configuration.label
+        .frame(minWidth: minWidth)
         .foregroundColor(foregroundColor)
         .font(Font.subheadline.weight(.medium))
         .padding([.leading, .trailing], 16)
@@ -44,9 +48,9 @@ struct PaddedButtonStyle: ButtonStyle {
           x: 0,
           y: 1
         )
-      
+
     }
-    
+
   }
   
 }
