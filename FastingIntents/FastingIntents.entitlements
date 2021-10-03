@@ -5,6 +5,7 @@
 	<key>com.apple.security.application-groups</key>
 	<array>
 		<string>group.com.zachmcgaughey.Fasting.data</string>
+		<string>group.com.zachmcgaughey.Fasting</string>
 	</array>
 </dict>
 </plist>

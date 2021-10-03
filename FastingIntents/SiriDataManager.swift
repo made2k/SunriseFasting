@@ -56,6 +56,8 @@ internal class SiriDataManager {
     fast.targetInterval = fastGoal.duration
         
     try context.save()
+
+    reloadWidget(with: context)
     
     return fast
     
@@ -68,7 +70,13 @@ internal class SiriDataManager {
     fast.endDate = Date()
         
     try context.save()
+
+    reloadWidget(with: context)
     
+  }
+
+  private func reloadWidget(with context: NSManagedObjectContext) {
+    SharedDataWriter.writeData(with: context)
   }
   
 }
