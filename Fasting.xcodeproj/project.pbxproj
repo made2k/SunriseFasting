@@ -115,6 +115,8 @@
 		92962025263CB7A3002F6AB0 /* ComplicationTemplateFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92962024263CB7A3002F6AB0 /* ComplicationTemplateFactory.swift */; };
 		92978B2526331D1400944D12 /* FastProgressUpdatingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92978B2426331D1400944D12 /* FastProgressUpdatingViewModel.swift */; };
 		929A6F38270292C7003927BD /* FastingIntents.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 929A6F36270292B9003927BD /* FastingIntents.intentdefinition */; settings = {ATTRIBUTES = (no_codegen, ); }; };
+		929C0420270A43F400D536E4 /* SharedDataWriter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929C041F270A43F400D536E4 /* SharedDataWriter.swift */; };
+		929C0421270A441E00D536E4 /* SharedData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92250A6A26371D1900DF1A87 /* SharedData.framework */; platformFilter = ios; };
 		92A8ED1F2630D2B700BE00F0 /* StartTimeInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A8ED1E2630D2B700BE00F0 /* StartTimeInfoView.swift */; };
 		92A8ED232630DA4C00BE00F0 /* EndTimeInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A8ED222630DA4C00BE00F0 /* EndTimeInfoView.swift */; };
 		92A974F62700DA2C00AA05A2 /* FastNotificationIdentifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A974F52700DA2C00AA05A2 /* FastNotificationIdentifiers.swift */; };
@@ -234,6 +236,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = 92656EF72637380000AD5F67;
 			remoteInfo = RingView;
+		};
+		929C0423270A441E00D536E4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9254F994262FBAB300589377 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 92250A6926371D1900DF1A87;
+			remoteInfo = SharedData;
 		};
 		92AE6F4B27056298007FE051 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -479,6 +488,7 @@
 		92978B2826331FD800944D12 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		929A6F36270292B9003927BD /* FastingIntents.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; path = FastingIntents.intentdefinition; sourceTree = "<group>"; };
 		929A6F3E27029470003927BD /* Intents.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Intents.framework; path = System/Library/Frameworks/Intents.framework; sourceTree = SDKROOT; };
+		929C041F270A43F400D536E4 /* SharedDataWriter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedDataWriter.swift; sourceTree = "<group>"; };
 		92A8ED1E2630D2B700BE00F0 /* StartTimeInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartTimeInfoView.swift; sourceTree = "<group>"; };
 		92A8ED222630DA4C00BE00F0 /* EndTimeInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndTimeInfoView.swift; sourceTree = "<group>"; };
 		92A974F52700DA2C00AA05A2 /* FastNotificationIdentifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FastNotificationIdentifiers.swift; sourceTree = "<group>"; };
@@ -616,6 +626,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				92EF04F62703774300D939C3 /* Logging.framework in Frameworks */,
+				929C0421270A441E00D536E4 /* SharedData.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1148,6 +1159,14 @@
 			path = ViewModels;
 			sourceTree = "<group>";
 		};
+		929C0426270A722700D536E4 /* SharedData */ = {
+			isa = PBXGroup;
+			children = (
+				929C041F270A43F400D536E4 /* SharedDataWriter.swift */,
+			);
+			path = SharedData;
+			sourceTree = "<group>";
+		};
 		92A974F92700DB4900AA05A2 /* Identifiers */ = {
 			isa = PBXGroup;
 			children = (
@@ -1336,6 +1355,7 @@
 				9209B1FE2703F97F0069715D /* Extensions */,
 				9284D7FD2703A3A80055E106 /* FastingGoal */,
 				9209B2002703F9BA0069715D /* Intents */,
+				929C0426270A722700D536E4 /* SharedData */,
 				9284D7EB2703938F0055E106 /* TransactionObserving */,
 			);
 			path = FastStorage;
@@ -1686,6 +1706,7 @@
 			);
 			dependencies = (
 				92EF04F92703774300D939C3 /* PBXTargetDependency */,
+				929C0424270A441E00D536E4 /* PBXTargetDependency */,
 			);
 			name = FastStorage;
 			productName = FastStorage;
@@ -2057,6 +2078,7 @@
 				9284D7FC2703A2C30055E106 /* UserDefaultKeys.swift in Sources */,
 				9209B2042703FB1D0069715D /* UserDefaults+TransactionTracking.swift in Sources */,
 				9284D8032703A3DA0055E106 /* FastingGoal+Codable.swift in Sources */,
+				929C0420270A43F400D536E4 /* SharedDataWriter.swift in Sources */,
 				92EF04D0270375F400D939C3 /* Fast+Properties.swift in Sources */,
 				9284D7F427039E5A0055E106 /* PersistentHistoryMerger.swift in Sources */,
 				9284D8012703A3DA0055E106 /* FastingGoal+Equality.swift in Sources */,
@@ -2115,6 +2137,12 @@
 			isa = PBXTargetDependency;
 			target = 92656EF72637380000AD5F67 /* RingView */;
 			targetProxy = 92656F4D26373FB900AD5F67 /* PBXContainerItemProxy */;
+		};
+		929C0424270A441E00D536E4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			platformFilter = ios;
+			target = 92250A6926371D1900DF1A87 /* SharedData */;
+			targetProxy = 929C0423270A441E00D536E4 /* PBXContainerItemProxy */;
 		};
 		92AE6F4C27056298007FE051 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;

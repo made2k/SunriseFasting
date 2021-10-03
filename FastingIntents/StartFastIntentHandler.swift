@@ -10,6 +10,7 @@ import Formatting
 import Foundation
 import Logging
 import OSLog
+import WidgetKit
 
 class StartFastIntentHandler: NSObject, StartFastIntentHandling {
   
