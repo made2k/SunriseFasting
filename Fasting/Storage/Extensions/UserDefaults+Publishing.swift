@@ -17,8 +17,12 @@ extension UserDefaults {
   func publisher<T>(for key: UserDefaultKey) -> AnyPublisher<T?, Never> {
     
     return NotificationCenter.default.publisher(for: UserDefaults.didChangeNotification)
-      .compactMap { (notification: Notification) -> UserDefaults? in
-        return notification.object as? UserDefaults
+      .compactMap { [weak self] (notification: Notification) -> UserDefaults? in
+        
+        guard let object: UserDefaults = notification.object as? UserDefaults, object == self else {
+          return nil
+        }
+        return object
       }
       .prepend(self)
       .map { (defaults: UserDefaults) -> T? in
