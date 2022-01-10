@@ -102,9 +102,44 @@ final class WatchDataProvider {
 
     let encoder = JSONEncoder()
     let data = try encoder.encode(payloadData)
+    
+    if session.isReachable {
+      
+      Self.logger.debug("Companion is open, sending direct message")
+      
+      session.sendMessageData(data, replyHandler: nil) { error in
+        Self.logger.error("Error sending data to watch: \(error.localizedDescription)")
+      }
+      
+    } else {
+      
+      let dictValue: [String: Any]
+      
+      do {
+        guard let serialization = try JSONSerialization.jsonObject(with: data, options: []) as? [String: Any] else {
+          return
+        }
+        dictValue = serialization
+        
+      } catch {
+        Self.logger.error("Unable to serialize JSON: \(error.localizedDescription)")
+        return
+      }
+      
+      if session.isComplicationEnabled && session.remainingComplicationUserInfoTransfers > 0 {
+        Self.logger.debug("Sending complication update")
+        session.transferCurrentComplicationUserInfo(dictValue)
+        
+      } else {
+        
+        Self.logger.debug("Queuing update")
+        
+        // Cancel our outstanding user info transfers. Updated data takes precedence
+        session.outstandingUserInfoTransfers.forEach { $0.cancel() }
+        session.transferUserInfo(dictValue)
 
-    session.sendMessageData(data, replyHandler: nil) { error in
-      Self.logger.error("Error sending data to watch: \(error.localizedDescription)")
+      }
+
     }
 
   }

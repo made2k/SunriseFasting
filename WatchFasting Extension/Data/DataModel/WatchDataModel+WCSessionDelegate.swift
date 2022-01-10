@@ -32,6 +32,17 @@ extension WatchDataModel: WCSessionDelegate {
       self.decodeAppDataUpdate(messageData)
     }
   }
+  
+  // We received new user info
+  func session(_ session: WCSession, didReceiveUserInfo userInfo: [String : Any] = [:]) {
+    do {
+      let data = try JSONSerialization.data(withJSONObject: userInfo, options: [])
+      decodeAppDataUpdate(data)
+      
+    } catch {
+      logger.error("Unable to parse json: \(error.localizedDescription)")
+    }
+  }
 
   private func decodeAppDataUpdate(_ data: Data) {
 
