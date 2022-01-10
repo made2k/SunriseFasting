@@ -817,13 +817,13 @@
 		922C1D00263A573500F34AE9 /* WatchFasting Extension */ = {
 			isa = PBXGroup;
 			children = (
-				92ADC0A0263B6D9E009B348F /* Application */,
+				922C1D10263A573500F34AE9 /* Info.plist */,
 				922C1D0B263A573500F34AE9 /* Assets.xcassets */,
 				9200EF3D264101DA00111355 /* Colors.xcassets */,
+				92ADC0A0263B6D9E009B348F /* Application */,
 				92ADC0A1263B6F76009B348F /* Complications */,
 				92ADC095263B5E64009B348F /* Data */,
 				92ADC09D263B6696009B348F /* Formatting */,
-				922C1D10263A573500F34AE9 /* Info.plist */,
 				922C1D0D263A573500F34AE9 /* Preview Content */,
 				92F4F85C263AE97C00205600 /* Views */,
 			);
