@@ -20,6 +20,7 @@
 		9219DD51263B041A00FBE9C5 /* WatchManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9219DD50263B041A00FBE9C5 /* WatchManager.swift */; };
 		9219DD53263B392A00FBE9C5 /* WatchAPIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9219DD52263B392A00FBE9C5 /* WatchAPIError.swift */; };
 		9219DD55263B3C9F00FBE9C5 /* SaveFastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9219DD54263B3C9F00FBE9C5 /* SaveFastView.swift */; };
+		921A632527CD7C110040395A /* Int16+Mood.swift in Sources */ = {isa = PBXBuildFile; fileRef = 921A632427CD7C110040395A /* Int16+Mood.swift */; };
 		921FA0E526C8A38B00E87751 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 921FA0E426C8A38B00E87751 /* Settings.bundle */; };
 		9224C777263CFD8900877562 /* ModularSmallBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9224C776263CFD8900877562 /* ModularSmallBuilder.swift */; };
 		9224C779263D007300877562 /* GraphicCircularBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9224C778263D007300877562 /* GraphicCircularBuilder.swift */; };
@@ -393,6 +394,7 @@
 		9219DD50263B041A00FBE9C5 /* WatchManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchManager.swift; sourceTree = "<group>"; };
 		9219DD52263B392A00FBE9C5 /* WatchAPIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchAPIError.swift; sourceTree = "<group>"; };
 		9219DD54263B3C9F00FBE9C5 /* SaveFastView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveFastView.swift; sourceTree = "<group>"; };
+		921A632427CD7C110040395A /* Int16+Mood.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int16+Mood.swift"; sourceTree = "<group>"; };
 		921FA0E426C8A38B00E87751 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		9224C776263CFD8900877562 /* ModularSmallBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModularSmallBuilder.swift; sourceTree = "<group>"; };
 		9224C778263D007300877562 /* GraphicCircularBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphicCircularBuilder.swift; sourceTree = "<group>"; };
@@ -734,6 +736,15 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		921A632327CD7C010040395A /* Mood */ = {
+			isa = PBXGroup;
+			children = (
+				921A632427CD7C110040395A /* Int16+Mood.swift */,
+				9200955F27CD501000134D8C /* MoodButton.swift */,
+			);
+			path = Mood;
+			sourceTree = "<group>";
+		};
 		92250A4C26371A6100DF1A87 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -1052,7 +1063,7 @@
 		92808AD5263366A500420603 /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				9200955F27CD501000134D8C /* MoodButton.swift */,
+				921A632327CD7C010040395A /* Mood */,
 				928ED2192631C72900F496F7 /* NumberTextField.swift */,
 				927DD7C32630AC6F00E6C33A /* TextButtonGroup.swift */,
 			);
@@ -2004,6 +2015,7 @@
 				9225DD4C26C87BEC00BCF2C2 /* ExportableFast.swift in Sources */,
 				92D81A80263106CD007E884A /* FastingGoalPickerItemView.swift in Sources */,
 				92021AD426327238006C00C1 /* FastModel+Equatable.swift in Sources */,
+				921A632527CD7C110040395A /* Int16+Mood.swift in Sources */,
 				92D739D426325F44008DD386 /* DataManager.swift in Sources */,
 				920E50EB2633C7BC0014E7B5 /* FastGroup+Identifiable.swift in Sources */,
 				9225DD4E26C87FAB00BCF2C2 /* ExportData.swift in Sources */,

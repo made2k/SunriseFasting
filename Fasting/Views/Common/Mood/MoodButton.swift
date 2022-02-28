@@ -31,24 +31,8 @@ struct MoodButton: View {
         Circle().foregroundColor(tintColor.opacity(0.1))
           .frame(width: 48, height: 48)
 
-        if let mood = mood, mood > 0 {
-          switch mood {
-          case 1:
-            Text("😫").font(.system(size: 28))
-
-          case 2:
-            Text("🙁").font(.system(size: 28))
-
-          case 3:
-            Text("😐").font(.system(size: 28))
-
-          case 4:
-            Text("🙂").font(.system(size: 28))
-
-          default:
-            Text("😀").font(.system(size: 28))
-
-          }
+        if let mood = mood?.moodEmoji {
+          Text(mood).font(.system(size: 28))
 
         } else {
           Image(systemName: "face.smiling")

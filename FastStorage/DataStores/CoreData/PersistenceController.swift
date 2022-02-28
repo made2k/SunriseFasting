@@ -30,6 +30,10 @@ public struct PersistenceController {
       entity.startDate = Date().addingTimeInterval(-1 * 60 * 60 * 24)
       entity.endDate = entity.startDate?.addingTimeInterval(Double.random(in: 3...18) * 60 * 60)
       entity.targetInterval = 16 * 60 * 60
+      entity.mood = Int16(Int.random(in: 0..<5))
+      if Bool.random() {
+        entity.note = "Preview Note"
+      }
     }
     
     do {
