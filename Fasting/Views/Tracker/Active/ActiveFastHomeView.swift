@@ -37,7 +37,7 @@ struct ActiveFastHomeView: View {
     self.fast = fast
     self.namespace = namespace
     self._progressViewModel = StateObject(wrappedValue: FastProgressUpdatingViewModel(fast))
-    
+
     // Workaround for geometry readers positioning issues
     // Thickness needs to be shrunk on small devices like SE
     thickness = UIScreen.main.bounds.height > 568 ? 32 : 24
@@ -80,7 +80,13 @@ struct ActiveFastHomeView: View {
           .matchedGeometryEffect(id: "interval", in: namespace)
         }
         .autoConnect(progressViewModel)
-        
+
+        HStack {
+          Spacer()
+          MoodButton(mood: $fast.mood, tintColor: progressViewModel.progress < 1 ? Color.buttonForegroundIncomplete : Color.buttonForegroundComplete)
+            .padding(.trailing, 24)
+        }
+
         Spacer()
         
         Button("End Fast", action: endFastAction)

@@ -60,7 +60,7 @@ final class AppModel: ObservableObject {
       self.historyObserver = PersistentHistoryObserver(
         target: .app,
         persistentContainer: manager.persistenceController.container,
-        cleaningTargetCompare: [.app],
+        cleaningTargetCompare: [.app, .siriExtension],
         userDefaults: StorageDefaults.sharedDefaults
       )
       self.widgetProvider = WidgetDataProvider(manager.persistenceController.container)

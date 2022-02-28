@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9200956027CD501000134D8C /* MoodButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9200955F27CD501000134D8C /* MoodButton.swift */; };
 		9200EF3E264101DA00111355 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9200EF3D264101DA00111355 /* Colors.xcassets */; };
 		92021AD026326D06006C00C1 /* AppModel+DataLoading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92021ACF26326D06006C00C1 /* AppModel+DataLoading.swift */; };
 		92021AD226326F2A006C00C1 /* FastModel+FastActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92021AD126326F2A006C00C1 /* FastModel+FastActions.swift */; };
@@ -377,6 +378,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		9200955C27CD48FB00134D8C /* Fasting v2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "Fasting v2.xcdatamodel"; sourceTree = "<group>"; };
+		9200955F27CD501000134D8C /* MoodButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodButton.swift; sourceTree = "<group>"; };
 		9200EF3D264101DA00111355 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		92021ACF26326D06006C00C1 /* AppModel+DataLoading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppModel+DataLoading.swift"; sourceTree = "<group>"; };
 		92021AD126326F2A006C00C1 /* FastModel+FastActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FastModel+FastActions.swift"; sourceTree = "<group>"; };
@@ -1049,6 +1052,7 @@
 		92808AD5263366A500420603 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				9200955F27CD501000134D8C /* MoodButton.swift */,
 				928ED2192631C72900F496F7 /* NumberTextField.swift */,
 				927DD7C32630AC6F00E6C33A /* TextButtonGroup.swift */,
 			);
@@ -1981,6 +1985,7 @@
 				920E50E92633C79D0014E7B5 /* FastGroup.swift in Sources */,
 				927DD7D12630B12F00E6C33A /* Fonts.swift in Sources */,
 				9278B7F2262FBECF00893C7D /* IdleFastHomeView.swift in Sources */,
+				9200956027CD501000134D8C /* MoodButton.swift in Sources */,
 				927DD7C72630AD0300E6C33A /* IntervalCountingView.swift in Sources */,
 				92D739D626326187008DD386 /* UserDefaults+Publishing.swift in Sources */,
 				9282A89C26332F1A00CA24A6 /* Connectable.swift in Sources */,
@@ -3095,9 +3100,10 @@
 		9254F9AA262FBAB300589377 /* Fasting.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
+				9200955C27CD48FB00134D8C /* Fasting v2.xcdatamodel */,
 				9254F9AB262FBAB300589377 /* Fasting.xcdatamodel */,
 			);
-			currentVersion = 9254F9AB262FBAB300589377 /* Fasting.xcdatamodel */;
+			currentVersion = 9200955C27CD48FB00134D8C /* Fasting v2.xcdatamodel */;
 			path = Fasting.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
