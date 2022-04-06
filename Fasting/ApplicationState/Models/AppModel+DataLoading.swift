@@ -40,6 +40,11 @@ extension AppModel {
       }
       
       if let fast = results.first {
+        if self.currentFast?.entity == fast {
+          logger.debug("Current fast entity was updated, not setting new model")
+          return
+        }
+        
         logger.debug("Current fast loaded. Setting value")
         self.currentFast = FastModel(fast)
         
