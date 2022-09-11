@@ -12,29 +12,31 @@ import SwiftUI
 
 struct EntryEditView: View {
 
-  @Environment(\.dismiss) var dismiss
-  
   @ObservedObject var model: FastModel
-  
   @State var presented: AnyView?
   
   var buttonColor: Color {
-    model.entity.progress < 1 ? Color.buttonForegroundIncomplete : Color.buttonForegroundComplete
+    model.entity.progress < 1 ?
+    Color.buttonForegroundIncomplete :
+    Color.buttonForegroundComplete
   }
   
   init(_ model: FastModel) {
     self.model = model
     
+    // TODO: With iOS 16 we can set TextEditor background color
     UITextView.appearance().backgroundColor = .secondarySystemBackground
   }
   
   var body: some View {
     
     ZStack {
+      
       ScrollView {
+        
         VStack {
+          
           ZStack {
-            
           RingView(ConstantUpdater(model.entity.progress))
             .applyProgressiveStyle(model.entity.progress)
             .thickness(32)
@@ -47,8 +49,6 @@ struct EntryEditView: View {
               Text(model.entity.currentInterval.formatted(.shortDuration))
                 .monospaced(font: .largeTitle)
             }
-
-            
           }
           
           HStack {
@@ -69,6 +69,7 @@ struct EntryEditView: View {
           }
           
           ZStack {
+            // TODO: When TextEditor has placeholder, remove this
             if model.note == nil || model.note!.isEmpty {
               TextEditor(text: .constant("Notes on this fast"))
                 .foregroundColor(Color.secondaryLabel)
