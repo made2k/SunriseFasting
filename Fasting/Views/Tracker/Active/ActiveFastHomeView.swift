@@ -31,6 +31,9 @@ struct ActiveFastHomeView: View {
   @State private var cachedEndDate: Date?
   
   private var thickness: CGFloat
+  private var buttonColor: Color {
+    progressViewModel.progress < 1 ? Color.buttonForegroundIncomplete : Color.buttonForegroundComplete
+  }
   
   init(fast: FastModel, namespace: Namespace.ID) {
     
@@ -83,7 +86,7 @@ struct ActiveFastHomeView: View {
 
         HStack {
           Spacer()
-          MoodButton(mood: $fast.mood, tintColor: progressViewModel.progress < 1 ? Color.buttonForegroundIncomplete : Color.buttonForegroundComplete)
+          MoodButton(mood: $fast.mood, tintColor: buttonColor)
             .padding(.trailing, 24)
         }
 
@@ -99,10 +102,7 @@ struct ActiveFastHomeView: View {
             ])
           }
           .buttonStyle(
-            PaddedButtonStyle(
-              foregroundColor: progressViewModel.progress < 1 ? Color.buttonForegroundIncomplete : Color.buttonForegroundComplete,
-              minWidth: 80
-            )
+            PaddedButtonStyle(foregroundColor: buttonColor, minWidth: 80)
           )
           .matchedGeometryEffect(id: "action", in: namespace)
         
