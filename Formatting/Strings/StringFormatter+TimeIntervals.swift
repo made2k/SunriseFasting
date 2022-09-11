@@ -76,11 +76,13 @@ public extension StringFormatter {
       elements.append("\(hours) \(hourValue)" + (hours != 1 ? "s" : ""))
     }
     
-    if minutes > 0 {
+    if minutes > 0 && days == 0 {
       elements.append("\(minutes) \(minuteValue)" + (minutes != 1 ? "s" : ""))
     }
     
-    elements.append("\(seconds) \(secondValue)" + (seconds != 1 ? "s" : ""))
+    if hours == 0 {
+      elements.append("\(seconds) \(secondValue)" + (seconds != 1 ? "s" : ""))
+    }
     
     return elements.joined(separator: " ")
 
