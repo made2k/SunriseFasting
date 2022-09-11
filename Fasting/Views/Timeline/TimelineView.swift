@@ -25,6 +25,7 @@ struct TimelineView: View {
         Section(header: Text(group.title).font(.title3).fontWeight(.bold)) {
           ForEach(group.fasts) { (model: FastModel) in
             TimelineItemView(model)
+              .contentShape(Rectangle())
               .onTapGesture {
                 self.selection = model
               }
