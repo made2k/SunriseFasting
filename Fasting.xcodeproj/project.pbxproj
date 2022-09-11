@@ -183,6 +183,8 @@
 		92F4F860263AECB800205600 /* ActiveFastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92F4F85F263AECB800205600 /* ActiveFastView.swift */; };
 		92F4F862263AEF1300205600 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92F4F861263AEF1300205600 /* LoadingView.swift */; };
 		92FEC21528CD85EC00904C59 /* DurationFormatStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92FEC21428CD85EC00904C59 /* DurationFormatStyle.swift */; };
+		92FEC21928CD912E00904C59 /* Optional+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92FEC21828CD912E00904C59 /* Optional+String.swift */; };
+		92FEC21B28CD914900904C59 /* Binding+Optional.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92FEC21A28CD914900904C59 /* Binding+Optional.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -549,6 +551,8 @@
 		92F4F85F263AECB800205600 /* ActiveFastView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveFastView.swift; sourceTree = "<group>"; };
 		92F4F861263AEF1300205600 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		92FEC21428CD85EC00904C59 /* DurationFormatStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DurationFormatStyle.swift; sourceTree = "<group>"; };
+		92FEC21828CD912E00904C59 /* Optional+String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Optional+String.swift"; sourceTree = "<group>"; };
+		92FEC21A28CD914900904C59 /* Binding+Optional.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Binding+Optional.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -948,6 +952,7 @@
 				9252544B26C95BAE002FCE2D /* Notifications */,
 				9254F9A5262FBAB300589377 /* Preview Content */,
 				92124A082632304100A33968 /* Storage */,
+				92FEC21628CD911B00904C59 /* Utility */,
 				92B96C452633185400ED1758 /* Views */,
 				92F4F859263A6CB400205600 /* Watch */,
 				92250A6126371AF400DF1A87 /* Widget */,
@@ -1495,6 +1500,23 @@
 			path = FormatStyle;
 			sourceTree = "<group>";
 		};
+		92FEC21628CD911B00904C59 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				92FEC21728CD912100904C59 /* Extensions */,
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
+		92FEC21728CD912100904C59 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				92FEC21A28CD914900904C59 /* Binding+Optional.swift */,
+				92FEC21828CD912E00904C59 /* Optional+String.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -2013,6 +2035,7 @@
 				92A974F62700DA2C00AA05A2 /* FastNotificationIdentifiers.swift in Sources */,
 				92B7398626323607002D5261 /* FastingGoal+Descriptors.swift in Sources */,
 				929A6F38270292C7003927BD /* FastingIntents.intentdefinition in Sources */,
+				92FEC21928CD912E00904C59 /* Optional+String.swift in Sources */,
 				9225DD5126C883EC00BCF2C2 /* DocumentPicker.swift in Sources */,
 				922A9A942631167700CBC0EF /* DatePickerSelectionView.swift in Sources */,
 				927DD7E62630BFC000E6C33A /* TrackerHomeView.swift in Sources */,
@@ -2029,6 +2052,7 @@
 				9261A13A26339CF7005E8AAD /* TimelineView.swift in Sources */,
 				9219DD51263B041A00FBE9C5 /* WatchManager.swift in Sources */,
 				9282A89A26332F0E00CA24A6 /* View+Connections.swift in Sources */,
+				92FEC21B28CD914900904C59 /* Binding+Optional.swift in Sources */,
 				9278B802262FD20A00893C7D /* AppModel.swift in Sources */,
 				9252544D26C95BDA002FCE2D /* NotificationManager.swift in Sources */,
 				9219DD53263B392A00FBE9C5 /* WatchAPIError.swift in Sources */,

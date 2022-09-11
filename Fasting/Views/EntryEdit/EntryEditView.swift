@@ -11,13 +11,7 @@ import RingView
 import SwiftUI
 
 struct EntryEditView: View {
-  
-  private static let dateFormatter: DateFormatter = {
-    let formatter = DateFormatter()
-    formatter.timeStyle = .short
-    return formatter
-  }()
-  
+
   @Environment(\.dismiss) var dismiss
   
   @ObservedObject var model: FastModel
@@ -58,11 +52,11 @@ struct EntryEditView: View {
           }
           
           HStack {
-            Button(Self.dateFormatter.string(from: model.startDate)) {
+            Button(model.startDate.formatted(date: .omitted, time: .shortened)) {
               editStartTime()
             }
             Text(" - ")
-            Button(Self.dateFormatter.string(from: model.endDate!)) {
+            Button(model.endDate?.formatted(date: .omitted, time: .shortened) ?? "?") {
               editEndTime()
             }
           }
@@ -149,21 +143,4 @@ struct EntryEditView_Previews: PreviewProvider {
   static var previews: some View {
     EntryEditView(FastModel.completedPreview)
   }
-}
-
-
-func ??<T>(lhs: Binding<Optional<T>>, rhs: T) -> Binding<T> {
-  Binding(
-    get: { lhs.wrappedValue ?? rhs },
-    set: { lhs.wrappedValue = $0 }
-  )
-}
-
-extension Optional where Wrapped == String {
-  
-  var isNilOrEmpty: Bool {
-    guard let self = self else { return true }
-    return self.isEmpty
-  }
-  
 }
