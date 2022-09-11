@@ -36,7 +36,7 @@ struct IdleFastHomeView: View {
         if let lastFastDate = model.completedFasts.first?.endDate {
           VStack {
             Text("Time since last fast")
-            IntervalCountingView(referenceDate: lastFastDate)
+            IntervalCountingView(referenceDate: lastFastDate, formatStyle: .mediumDuration)
               .monospaced(font: .largeTitle)
           }
           .matchedGeometryEffect(id: "interval", in: namespace)

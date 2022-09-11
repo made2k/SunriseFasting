@@ -31,13 +31,16 @@ struct ActiveFastHomeView: View {
   @State private var cachedEndDate: Date?
   
   private var thickness: CGFloat
+  private var buttonColor: Color {
+    progressViewModel.progress < 1 ? Color.buttonForegroundIncomplete : Color.buttonForegroundComplete
+  }
   
   init(fast: FastModel, namespace: Namespace.ID) {
     
     self.fast = fast
     self.namespace = namespace
     self._progressViewModel = StateObject(wrappedValue: FastProgressUpdatingViewModel(fast))
-    
+
     // Workaround for geometry readers positioning issues
     // Thickness needs to be shrunk on small devices like SE
     thickness = UIScreen.main.bounds.height > 568 ? 32 : 24
@@ -71,16 +74,22 @@ struct ActiveFastHomeView: View {
               .thickness(thickness)
               .aspectRatio(contentMode: .fit)
           VStack {
-            Text("Elapsed time (\(StringFormatter.percent(from: progressViewModel.progress)))")
+            Text("Elapsed time (\(progressViewModel.progress.formatted(.percent.rounded(rule: .toNearestOrAwayFromZero, increment: 1))))")
               .monospaced(font: .footnote)
               .foregroundColor(Color(UIColor.secondaryLabel))
-            IntervalCountingView(referenceDate: fast.startDate)
+            IntervalCountingView(referenceDate: fast.startDate, formatStyle: .shortDuration)
               .monospaced(font: .largeTitle)
           }
           .matchedGeometryEffect(id: "interval", in: namespace)
         }
         .autoConnect(progressViewModel)
-        
+
+        HStack {
+          Spacer()
+          MoodButton(mood: $fast.mood, tintColor: buttonColor)
+            .padding(.trailing, 24)
+        }
+
         Spacer()
         
         Button("End Fast", action: endFastAction)
@@ -93,10 +102,7 @@ struct ActiveFastHomeView: View {
             ])
           }
           .buttonStyle(
-            PaddedButtonStyle(
-              foregroundColor: progressViewModel.progress < 1 ? Color.buttonForegroundIncomplete : Color.buttonForegroundComplete,
-              minWidth: 80
-            )
+            PaddedButtonStyle(foregroundColor: buttonColor, minWidth: 80)
           )
           .matchedGeometryEffect(id: "action", in: namespace)
         

@@ -17,5 +17,12 @@ extension FastModel {
     let entity = Fast(Date().dateByAdding(-24, .minute).date, endDate: nil, interval: 1.hours.timeInterval, context: context)
     return FastModel(entity)
   }
+  
+  static var completedPreview: FastModel {
+    let context = PersistenceController.preview.container.viewContext
+    let entity = Fast(Date().dateByAdding(-24, .minute).date, endDate: nil, interval: 1.hours.timeInterval, context: context)
+    entity.endDate = entity.startDate!.addingTimeInterval(6.hours.timeInterval)
+    return FastModel(entity)
+  }
  
 }

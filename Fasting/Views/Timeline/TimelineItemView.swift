@@ -12,29 +12,48 @@ import SwiftUI
 
 struct TimelineItemView: View {
   
-  private let fast: Fast
-  @StateObject private var progressUpdater: ConstantUpdater
+  @ObservedObject var model: FastModel
   
-  init(_ fast: Fast) {
-    self.fast = fast
-    self._progressUpdater = StateObject(wrappedValue: ConstantUpdater(fast.progress))
+  init(_ model: FastModel) {
+    self.model = model
   }
   
   var body: some View {
-    
-    HStack(spacing: 24) {
-      RingView(progressUpdater)
-        .thickness(8)
-        .applyProgressiveStyle(fast.progress)
-        .frame(width: 64, height: 64, alignment: .center)
-      VStack(alignment: .leading) {
-        Text(StringFormatter.shortDateFormatter.string(from: fast.startDate!))
-          .foregroundColor(Color(.secondaryLabel))
-        Text(StringFormatter.percent(from: fast.progress))
-        Text("\(Self.roundedHours(from: fast.currentInterval))/\(Self.roundedHours(from: fast.targetInterval))h")
+
+    VStack {
+      HStack(spacing: 24) {
+        RingView(ConstantUpdater(model.entity.progress))
+          .thickness(8)
+          .applyProgressiveStyle(model.entity.progress)
+          .frame(width: 64, height: 64, alignment: .center)
+        VStack(alignment: .leading) {
+          Text(model.startDate.formatted(date: .abbreviated, time: .omitted))
+            .foregroundColor(Color(.secondaryLabel))
+          Text(model.progress.formatted(.percent.rounded(rule: .toNearestOrAwayFromZero, increment: 1)))
+          Text("\(Self.roundedHours(from: model.entity.currentInterval))/\(Self.roundedHours(from: model.entity.targetInterval))h")
+        }
+
+        Spacer()
+
       }
-      
-      Spacer()
+
+      HStack {
+
+        Text("\(Self.string(from: model.startDate)) - \(Self.string(from: model.endDate))").lineLimit(1)
+
+        Spacer()
+
+        if let mood = model.mood, mood > 0 {
+          Text("Mood: \(mood.moodEmoji ?? "?")")
+        }
+
+        if model.note.isNilOrEmpty == false {
+          Image(systemName: "note.text")
+        }
+
+      }
+      .font(.caption)
+      .foregroundColor(.secondary)
     }
     .cornerRadius(8)
     
@@ -53,11 +72,24 @@ struct TimelineItemView: View {
     return formatter.string(from: NSNumber(value: hours)) ?? "0"
   }
 
+  private static func string(from date: Date?) -> String {
+    guard let date = date else { return "??" }
+    return date.formatted(date: .omitted, time: .shortened)
+  }
+
 }
 
 struct TimelineItemView_Previews: PreviewProvider {
   static var previews: some View {
-    TimelineItemView(Fast.preview)
+
+    VStack {
+      TimelineItemView(FastModel.preview)
+        .frame(maxHeight: 120)
+
+      TimelineItemView(FastModel.preview)
+        .frame(maxHeight: 72)
+    }
+
   }
 }
 

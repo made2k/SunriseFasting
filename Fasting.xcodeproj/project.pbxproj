@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9200956027CD501000134D8C /* MoodButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9200955F27CD501000134D8C /* MoodButton.swift */; };
 		9200EF3E264101DA00111355 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9200EF3D264101DA00111355 /* Colors.xcassets */; };
 		92021AD026326D06006C00C1 /* AppModel+DataLoading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92021ACF26326D06006C00C1 /* AppModel+DataLoading.swift */; };
 		92021AD226326F2A006C00C1 /* FastModel+FastActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92021AD126326F2A006C00C1 /* FastModel+FastActions.swift */; };
@@ -16,9 +17,12 @@
 		920E50E92633C79D0014E7B5 /* FastGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920E50E82633C79D0014E7B5 /* FastGroup.swift */; };
 		920E50EB2633C7BC0014E7B5 /* FastGroup+Identifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920E50EA2633C7BC0014E7B5 /* FastGroup+Identifiable.swift */; };
 		920E50ED2633C7FF0014E7B5 /* FastGroup+Parsing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920E50EC2633C7FF0014E7B5 /* FastGroup+Parsing.swift */; };
+		9212D07528CD60FB009EA509 /* EntryEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9212D07428CD60FB009EA509 /* EntryEditView.swift */; };
+		9212D07828CD6783009EA509 /* Color+UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9212D07628CD66F3009EA509 /* Color+UIColor.swift */; };
 		9219DD51263B041A00FBE9C5 /* WatchManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9219DD50263B041A00FBE9C5 /* WatchManager.swift */; };
 		9219DD53263B392A00FBE9C5 /* WatchAPIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9219DD52263B392A00FBE9C5 /* WatchAPIError.swift */; };
 		9219DD55263B3C9F00FBE9C5 /* SaveFastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9219DD54263B3C9F00FBE9C5 /* SaveFastView.swift */; };
+		921A632527CD7C110040395A /* Int16+Mood.swift in Sources */ = {isa = PBXBuildFile; fileRef = 921A632427CD7C110040395A /* Int16+Mood.swift */; };
 		921FA0E526C8A38B00E87751 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 921FA0E426C8A38B00E87751 /* Settings.bundle */; };
 		9224C777263CFD8900877562 /* ModularSmallBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9224C776263CFD8900877562 /* ModularSmallBuilder.swift */; };
 		9224C779263D007300877562 /* GraphicCircularBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9224C778263D007300877562 /* GraphicCircularBuilder.swift */; };
@@ -154,7 +158,6 @@
 		92DAB3132703D4CF00629B0C /* StringFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 927DD7CA2630ADAE00E6C33A /* StringFormatter.swift */; };
 		92DAB3142703D4CF00629B0C /* StringFormatter+DateTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9295C319263282C00084C3AA /* StringFormatter+DateTime.swift */; };
 		92DAB3152703D4CF00629B0C /* StringFormatter+TimeIntervals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9295C318263282C00084C3AA /* StringFormatter+TimeIntervals.swift */; };
-		92DAB3162703D4CF00629B0C /* StringFormatter+Percentage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D739D126325500008DD386 /* StringFormatter+Percentage.swift */; };
 		92DAB3182703D4E100629B0C /* SwiftDateDynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 92DAB3172703D4E100629B0C /* SwiftDateDynamic */; };
 		92DBCE282702A20300C0B9B1 /* FastStorage.h in Headers */ = {isa = PBXBuildFile; fileRef = 92DBCE272702A20300C0B9B1 /* FastStorage.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		92DBCE2B2702A20300C0B9B1 /* FastStorage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92DBCE252702A20300C0B9B1 /* FastStorage.framework */; };
@@ -178,6 +181,9 @@
 		92F4F85E263AE9A400205600 /* IdleFastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92F4F85D263AE9A400205600 /* IdleFastView.swift */; };
 		92F4F860263AECB800205600 /* ActiveFastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92F4F85F263AECB800205600 /* ActiveFastView.swift */; };
 		92F4F862263AEF1300205600 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92F4F861263AEF1300205600 /* LoadingView.swift */; };
+		92FEC21528CD85EC00904C59 /* DurationFormatStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92FEC21428CD85EC00904C59 /* DurationFormatStyle.swift */; };
+		92FEC21928CD912E00904C59 /* Optional+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92FEC21828CD912E00904C59 /* Optional+String.swift */; };
+		92FEC21B28CD914900904C59 /* Binding+Optional.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92FEC21A28CD914900904C59 /* Binding+Optional.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -377,6 +383,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		9200955C27CD48FB00134D8C /* Fasting v2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "Fasting v2.xcdatamodel"; sourceTree = "<group>"; };
+		9200955F27CD501000134D8C /* MoodButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodButton.swift; sourceTree = "<group>"; };
 		9200EF3D264101DA00111355 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		92021ACF26326D06006C00C1 /* AppModel+DataLoading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppModel+DataLoading.swift"; sourceTree = "<group>"; };
 		92021AD126326F2A006C00C1 /* FastModel+FastActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FastModel+FastActions.swift"; sourceTree = "<group>"; };
@@ -387,9 +395,12 @@
 		920E50EC2633C7FF0014E7B5 /* FastGroup+Parsing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FastGroup+Parsing.swift"; sourceTree = "<group>"; };
 		920E50EE2633DAA00014E7B5 /* RingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RingView.swift; sourceTree = "<group>"; };
 		92124A0D263234E100A33968 /* FastingGoal+AllCases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FastingGoal+AllCases.swift"; sourceTree = "<group>"; };
+		9212D07428CD60FB009EA509 /* EntryEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryEditView.swift; sourceTree = "<group>"; };
+		9212D07628CD66F3009EA509 /* Color+UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+UIColor.swift"; sourceTree = "<group>"; };
 		9219DD50263B041A00FBE9C5 /* WatchManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchManager.swift; sourceTree = "<group>"; };
 		9219DD52263B392A00FBE9C5 /* WatchAPIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchAPIError.swift; sourceTree = "<group>"; };
 		9219DD54263B3C9F00FBE9C5 /* SaveFastView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveFastView.swift; sourceTree = "<group>"; };
+		921A632427CD7C110040395A /* Int16+Mood.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int16+Mood.swift"; sourceTree = "<group>"; };
 		921FA0E426C8A38B00E87751 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		9224C776263CFD8900877562 /* ModularSmallBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModularSmallBuilder.swift; sourceTree = "<group>"; };
 		9224C778263D007300877562 /* GraphicCircularBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphicCircularBuilder.swift; sourceTree = "<group>"; };
@@ -515,7 +526,6 @@
 		92D63980263CF37500081D3B /* GraphicCornerBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphicCornerBuilder.swift; sourceTree = "<group>"; };
 		92D63982263CFAB800081D3B /* GraphicExtraLargeBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphicExtraLargeBuilder.swift; sourceTree = "<group>"; };
 		92D63984263CFB6B00081D3B /* UtilitarianSmallBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UtilitarianSmallBuilder.swift; sourceTree = "<group>"; };
-		92D739D126325500008DD386 /* StringFormatter+Percentage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StringFormatter+Percentage.swift"; sourceTree = "<group>"; };
 		92D739D326325F44008DD386 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		92D739D526326187008DD386 /* UserDefaults+Publishing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+Publishing.swift"; sourceTree = "<group>"; };
 		92D739D726326667008DD386 /* UserDefaultKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultKeys.swift; sourceTree = "<group>"; };
@@ -538,6 +548,9 @@
 		92F4F85D263AE9A400205600 /* IdleFastView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdleFastView.swift; sourceTree = "<group>"; };
 		92F4F85F263AECB800205600 /* ActiveFastView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveFastView.swift; sourceTree = "<group>"; };
 		92F4F861263AEF1300205600 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		92FEC21428CD85EC00904C59 /* DurationFormatStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DurationFormatStyle.swift; sourceTree = "<group>"; };
+		92FEC21828CD912E00904C59 /* Optional+String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Optional+String.swift"; sourceTree = "<group>"; };
+		92FEC21A28CD914900904C59 /* Binding+Optional.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Binding+Optional.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -731,6 +744,23 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		9212D07328CD5E0F009EA509 /* EntryEdit */ = {
+			isa = PBXGroup;
+			children = (
+				9212D07428CD60FB009EA509 /* EntryEditView.swift */,
+			);
+			path = EntryEdit;
+			sourceTree = "<group>";
+		};
+		921A632327CD7C010040395A /* Mood */ = {
+			isa = PBXGroup;
+			children = (
+				921A632427CD7C110040395A /* Int16+Mood.swift */,
+				9200955F27CD501000134D8C /* MoodButton.swift */,
+			);
+			path = Mood;
+			sourceTree = "<group>";
+		};
 		92250A4C26371A6100DF1A87 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -777,6 +807,7 @@
 			isa = PBXGroup;
 			children = (
 				9225DD4326C8583E00BCF2C2 /* Color+Custom.swift */,
+				9212D07628CD66F3009EA509 /* Color+UIColor.swift */,
 			);
 			path = Colors;
 			sourceTree = "<group>";
@@ -919,6 +950,7 @@
 				9252544B26C95BAE002FCE2D /* Notifications */,
 				9254F9A5262FBAB300589377 /* Preview Content */,
 				92124A082632304100A33968 /* Storage */,
+				92FEC21628CD911B00904C59 /* Utility */,
 				92B96C452633185400ED1758 /* Views */,
 				92F4F859263A6CB400205600 /* Watch */,
 				92250A6126371AF400DF1A87 /* Widget */,
@@ -957,7 +989,6 @@
 			children = (
 				927DD7CA2630ADAE00E6C33A /* StringFormatter.swift */,
 				9295C319263282C00084C3AA /* StringFormatter+DateTime.swift */,
-				92D739D126325500008DD386 /* StringFormatter+Percentage.swift */,
 				9295C318263282C00084C3AA /* StringFormatter+TimeIntervals.swift */,
 			);
 			path = Strings;
@@ -1049,6 +1080,7 @@
 		92808AD5263366A500420603 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				921A632327CD7C010040395A /* Mood */,
 				928ED2192631C72900F496F7 /* NumberTextField.swift */,
 				927DD7C32630AC6F00E6C33A /* TextButtonGroup.swift */,
 			);
@@ -1254,6 +1286,7 @@
 				92808AD5263366A500420603 /* Common */,
 				92EB3FB926334243006D6C44 /* DatePicker */,
 				9225DD4F26C883DE00BCF2C2 /* Document */,
+				9212D07328CD5E0F009EA509 /* EntryEdit */,
 				9282A8A1263334AD00CA24A6 /* FastGoalSelection */,
 				92B96C47263318AB00ED1758 /* HomeTab */,
 				92808AD62633673500420603 /* Intervals */,
@@ -1341,6 +1374,7 @@
 		92DAB3092703D4BE00629B0C /* Formatting */ = {
 			isa = PBXGroup;
 			children = (
+				92FEC21128CD84BE00904C59 /* FormatStyle */,
 				92656CCC26324C9B00C9C232 /* Strings */,
 				92DAB30A2703D4BE00629B0C /* Formatting.h */,
 			);
@@ -1453,6 +1487,31 @@
 				9219DD54263B3C9F00FBE9C5 /* SaveFastView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		92FEC21128CD84BE00904C59 /* FormatStyle */ = {
+			isa = PBXGroup;
+			children = (
+				92FEC21428CD85EC00904C59 /* DurationFormatStyle.swift */,
+			);
+			path = FormatStyle;
+			sourceTree = "<group>";
+		};
+		92FEC21628CD911B00904C59 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				92FEC21728CD912100904C59 /* Extensions */,
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
+		92FEC21728CD912100904C59 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				92FEC21A28CD914900904C59 /* Binding+Optional.swift */,
+				92FEC21828CD912E00904C59 /* Optional+String.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1973,6 +2032,7 @@
 				92A974F62700DA2C00AA05A2 /* FastNotificationIdentifiers.swift in Sources */,
 				92B7398626323607002D5261 /* FastingGoal+Descriptors.swift in Sources */,
 				929A6F38270292C7003927BD /* FastingIntents.intentdefinition in Sources */,
+				92FEC21928CD912E00904C59 /* Optional+String.swift in Sources */,
 				9225DD5126C883EC00BCF2C2 /* DocumentPicker.swift in Sources */,
 				922A9A942631167700CBC0EF /* DatePickerSelectionView.swift in Sources */,
 				927DD7E62630BFC000E6C33A /* TrackerHomeView.swift in Sources */,
@@ -1981,12 +2041,15 @@
 				920E50E92633C79D0014E7B5 /* FastGroup.swift in Sources */,
 				927DD7D12630B12F00E6C33A /* Fonts.swift in Sources */,
 				9278B7F2262FBECF00893C7D /* IdleFastHomeView.swift in Sources */,
+				9200956027CD501000134D8C /* MoodButton.swift in Sources */,
 				927DD7C72630AD0300E6C33A /* IntervalCountingView.swift in Sources */,
 				92D739D626326187008DD386 /* UserDefaults+Publishing.swift in Sources */,
+				9212D07828CD6783009EA509 /* Color+UIColor.swift in Sources */,
 				9282A89C26332F1A00CA24A6 /* Connectable.swift in Sources */,
 				9261A13A26339CF7005E8AAD /* TimelineView.swift in Sources */,
 				9219DD51263B041A00FBE9C5 /* WatchManager.swift in Sources */,
 				9282A89A26332F0E00CA24A6 /* View+Connections.swift in Sources */,
+				92FEC21B28CD914900904C59 /* Binding+Optional.swift in Sources */,
 				9278B802262FD20A00893C7D /* AppModel.swift in Sources */,
 				9252544D26C95BDA002FCE2D /* NotificationManager.swift in Sources */,
 				9219DD53263B392A00FBE9C5 /* WatchAPIError.swift in Sources */,
@@ -1999,11 +2062,13 @@
 				9225DD4C26C87BEC00BCF2C2 /* ExportableFast.swift in Sources */,
 				92D81A80263106CD007E884A /* FastingGoalPickerItemView.swift in Sources */,
 				92021AD426327238006C00C1 /* FastModel+Equatable.swift in Sources */,
+				921A632527CD7C110040395A /* Int16+Mood.swift in Sources */,
 				92D739D426325F44008DD386 /* DataManager.swift in Sources */,
 				920E50EB2633C7BC0014E7B5 /* FastGroup+Identifiable.swift in Sources */,
 				9225DD4E26C87FAB00BCF2C2 /* ExportData.swift in Sources */,
 				92A974FC2700E40100AA05A2 /* UNNotificationAction+Compatibility.swift in Sources */,
 				92978B2526331D1400944D12 /* FastProgressUpdatingViewModel.swift in Sources */,
+				9212D07528CD60FB009EA509 /* EntryEditView.swift in Sources */,
 				927DD7C42630AC6F00E6C33A /* TextButtonGroup.swift in Sources */,
 				926B23A526331BB2000E3373 /* Fast+Preview.swift in Sources */,
 				92250A6326371B0A00DF1A87 /* WidgetDataProvider.swift in Sources */,
@@ -2055,7 +2120,7 @@
 			files = (
 				92DAB3142703D4CF00629B0C /* StringFormatter+DateTime.swift in Sources */,
 				92DAB3132703D4CF00629B0C /* StringFormatter.swift in Sources */,
-				92DAB3162703D4CF00629B0C /* StringFormatter+Percentage.swift in Sources */,
+				92FEC21528CD85EC00904C59 /* DurationFormatStyle.swift in Sources */,
 				92DAB3152703D4CF00629B0C /* StringFormatter+TimeIntervals.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -2249,6 +2314,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = SharedData/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -2280,6 +2346,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = SharedData/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -2585,6 +2652,7 @@
 				DEVELOPMENT_TEAM = 8QEC3K9K4B;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = Fasting/Application/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -2610,6 +2678,7 @@
 				DEVELOPMENT_TEAM = 8QEC3K9K4B;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = Fasting/Application/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -2635,6 +2704,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = RingView/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -2664,6 +2734,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = RingView/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -2751,7 +2822,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -2785,7 +2856,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -2820,7 +2891,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -2856,7 +2927,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -2890,7 +2961,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -2924,7 +2995,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -3097,9 +3168,10 @@
 		9254F9AA262FBAB300589377 /* Fasting.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
+				9200955C27CD48FB00134D8C /* Fasting v2.xcdatamodel */,
 				9254F9AB262FBAB300589377 /* Fasting.xcdatamodel */,
 			);
-			currentVersion = 9254F9AB262FBAB300589377 /* Fasting.xcdatamodel */;
+			currentVersion = 9200955C27CD48FB00134D8C /* Fasting v2.xcdatamodel */;
 			path = Fasting.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;

@@ -71,8 +71,9 @@ extension AppModel {
     
     do {
       let results: [Fast] = try manager.fetch(request)
+      let models: [FastModel] = results.map(FastModel.init)
       logger.debug("Loaded \(results.count) completed fasts")
-      self.completedFasts = results
+      self.completedFasts = models
       
     } catch {
       logger.error("failed to fetch completed fasts: \(error.localizedDescription)")

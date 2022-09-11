@@ -16,6 +16,8 @@ struct ExportableFast: Codable {
   let startDate: Date
   let endDate: Date
   let targetInterval: TimeInterval
+  let mood: Int16
+  let note: String?
   
   /// Initialize an ExportableFast. ExportableFasts require a Fast with a start and end date.
   /// - Parameter fast: Fast to wrap.
@@ -27,6 +29,8 @@ struct ExportableFast: Codable {
     self.endDate = endDate
     
     self.targetInterval = fast.targetInterval
+    self.mood = fast.mood
+    self.note = fast.note
   }
   
 }

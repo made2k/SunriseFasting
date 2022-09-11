@@ -13,6 +13,6 @@ import Foundation
 struct FastGroup {
   
   let title: String
-  let fasts: [Fast]
+  let fasts: [FastModel]
   
 }

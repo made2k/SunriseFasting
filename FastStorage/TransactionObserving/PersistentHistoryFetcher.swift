@@ -26,7 +26,7 @@ struct PersistentHistoryFetcher {
     guard let historyResult = try context.execute(fetchRequest) as? NSPersistentHistoryResult, let history = historyResult.result as? [NSPersistentHistoryTransaction] else {
       throw Error.historyTransactionConvertionFailed
     }
-    
+
     return history
   }
   
@@ -45,6 +45,9 @@ struct PersistentHistoryFetcher {
         // Only look at transactions not from our current context.
         predicates.append(NSPredicate(format: "%K != %@", #keyPath(NSPersistentHistoryTransaction.contextName), contextName))
       }
+
+      // Only find results authored by us (ie ignore migrations). We set the context and migration does not
+      predicates.append(NSPredicate(format: "%K != nil", #keyPath(NSPersistentHistoryTransaction.contextName)))
       
       fetchRequest.predicate = NSCompoundPredicate(type: .and, subpredicates: predicates)
       historyFetchRequest.fetchRequest = fetchRequest
