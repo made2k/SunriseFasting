@@ -69,14 +69,9 @@ struct TimelineView: View {
           manager.importData(data)
         }
     })
-    
-    .sheet(item: $selection, onDismiss: {
-      // Reload the completed fasts to keep up to date on any changes
-      model.loadCompletedFasts()
-      
-    }, content: {
+    .sheet(item: $selection) {
       EntryEditView($0)
-    })
+    }
     
   }
   

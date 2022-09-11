@@ -12,7 +12,7 @@ struct IdleFastHomeView: View {
   
   @Environment(\.accessibilityReduceMotion) var reduceMotion
   @EnvironmentObject var model: AppModel
-
+  
   @AppStorage(UserDefaultKey.fastingGoal.rawValue, store: StorageDefaults.sharedDefaults)
   var fastingGoal: FastingGoal = .default
   @State private var showingGoalSelection: Bool = false
@@ -33,13 +33,8 @@ struct IdleFastHomeView: View {
         
         Spacer()
         
-        if let lastFastDate = model.completedFasts.first?.endDate {
-          VStack {
-            Text("Time since last fast")
-            IntervalCountingView(referenceDate: lastFastDate, formatStyle: .mediumDuration)
-              .monospaced(font: .largeTitle)
-          }
-          .matchedGeometryEffect(id: "interval", in: namespace)
+        if let lastFast = model.completedFasts.first {
+          LastFastContent(model: lastFast)
           
         } else {
           Text("Get started with your first fast.")
@@ -83,5 +78,21 @@ struct IdleTimerScreen_Previews: PreviewProvider {
   static var previews: some View {
     IdleFastHomeView(namespace: namespace)
       .environmentObject(AppModel.preview)
+  }
+}
+
+fileprivate struct LastFastContent: View {
+  @ObservedObject var model: FastModel
+  
+  var body: some View {
+    
+    VStack {
+      
+      Text("Time since last fast")
+      IntervalCountingView(referenceDate: model.endDate!, formatStyle: .mediumDuration)
+        .monospaced(font: .largeTitle)
+      
+    }
+    
   }
 }

@@ -73,7 +73,7 @@ final class FastModel: ObservableObject, Identifiable {
     let startDate = $startDate.map(UpdateType.startDate).dropFirst().eraseToAnyPublisher()
     let endDate = $endDate.map(UpdateType.endDate).dropFirst().eraseToAnyPublisher()
     let duration = $duration.map(UpdateType.duration).dropFirst().eraseToAnyPublisher()
-    let note = $note.map(UpdateType.note).dropFirst().debounce(for: .seconds(2), scheduler: RunLoop.main).eraseToAnyPublisher()
+    let note = $note.map(UpdateType.note).dropFirst().debounce(for: .milliseconds(200), scheduler: RunLoop.main).eraseToAnyPublisher()
     let mood = $mood.map(UpdateType.mood).dropFirst().eraseToAnyPublisher()
 
     let subscribedUpdates: [AnyPublisher<UpdateType, Never>] = [
