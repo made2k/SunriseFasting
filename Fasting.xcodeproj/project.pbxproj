@@ -3135,7 +3135,7 @@
 			repositoryURL = "https://github.com/apple/swift-algorithms/";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 0.1.1;
+				minimumVersion = 1.0.0;
 			};
 		};
 		927DD7E02630B3C100E6C33A /* XCRemoteSwiftPackageReference "SwiftDate" */ = {
