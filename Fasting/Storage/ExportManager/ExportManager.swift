@@ -143,7 +143,7 @@ final class ExportManager {
         fast.startDate = data.startDate
         fast.endDate = data.endDate
         fast.targetInterval = data.targetInterval
-        fast.mood = data.mood
+        fast.mood = data.mood ?? 0
         fast.note = data.note
 
       }

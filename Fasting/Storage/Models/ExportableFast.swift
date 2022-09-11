@@ -16,7 +16,7 @@ struct ExportableFast: Codable {
   let startDate: Date
   let endDate: Date
   let targetInterval: TimeInterval
-  let mood: Int16
+  let mood: Int16?
   let note: String?
   
   /// Initialize an ExportableFast. ExportableFasts require a Fast with a start and end date.
