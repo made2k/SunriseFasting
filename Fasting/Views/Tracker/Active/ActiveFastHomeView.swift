@@ -74,7 +74,7 @@ struct ActiveFastHomeView: View {
             Text("Elapsed time (\(StringFormatter.percent(from: progressViewModel.progress)))")
               .monospaced(font: .footnote)
               .foregroundColor(Color(UIColor.secondaryLabel))
-            IntervalCountingView(referenceDate: fast.startDate)
+            IntervalCountingView(referenceDate: fast.startDate, formatStyle: .shortDuration)
               .monospaced(font: .largeTitle)
           }
           .matchedGeometryEffect(id: "interval", in: namespace)

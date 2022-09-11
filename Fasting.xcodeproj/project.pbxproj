@@ -17,6 +17,8 @@
 		920E50E92633C79D0014E7B5 /* FastGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920E50E82633C79D0014E7B5 /* FastGroup.swift */; };
 		920E50EB2633C7BC0014E7B5 /* FastGroup+Identifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920E50EA2633C7BC0014E7B5 /* FastGroup+Identifiable.swift */; };
 		920E50ED2633C7FF0014E7B5 /* FastGroup+Parsing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920E50EC2633C7FF0014E7B5 /* FastGroup+Parsing.swift */; };
+		9212D07528CD60FB009EA509 /* EntryEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9212D07428CD60FB009EA509 /* EntryEditView.swift */; };
+		9212D07828CD6783009EA509 /* Color+UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9212D07628CD66F3009EA509 /* Color+UIColor.swift */; };
 		9219DD51263B041A00FBE9C5 /* WatchManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9219DD50263B041A00FBE9C5 /* WatchManager.swift */; };
 		9219DD53263B392A00FBE9C5 /* WatchAPIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9219DD52263B392A00FBE9C5 /* WatchAPIError.swift */; };
 		9219DD55263B3C9F00FBE9C5 /* SaveFastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9219DD54263B3C9F00FBE9C5 /* SaveFastView.swift */; };
@@ -180,6 +182,7 @@
 		92F4F85E263AE9A400205600 /* IdleFastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92F4F85D263AE9A400205600 /* IdleFastView.swift */; };
 		92F4F860263AECB800205600 /* ActiveFastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92F4F85F263AECB800205600 /* ActiveFastView.swift */; };
 		92F4F862263AEF1300205600 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92F4F861263AEF1300205600 /* LoadingView.swift */; };
+		92FEC21528CD85EC00904C59 /* DurationFormatStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92FEC21428CD85EC00904C59 /* DurationFormatStyle.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -391,6 +394,8 @@
 		920E50EC2633C7FF0014E7B5 /* FastGroup+Parsing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FastGroup+Parsing.swift"; sourceTree = "<group>"; };
 		920E50EE2633DAA00014E7B5 /* RingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RingView.swift; sourceTree = "<group>"; };
 		92124A0D263234E100A33968 /* FastingGoal+AllCases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FastingGoal+AllCases.swift"; sourceTree = "<group>"; };
+		9212D07428CD60FB009EA509 /* EntryEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryEditView.swift; sourceTree = "<group>"; };
+		9212D07628CD66F3009EA509 /* Color+UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+UIColor.swift"; sourceTree = "<group>"; };
 		9219DD50263B041A00FBE9C5 /* WatchManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchManager.swift; sourceTree = "<group>"; };
 		9219DD52263B392A00FBE9C5 /* WatchAPIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchAPIError.swift; sourceTree = "<group>"; };
 		9219DD54263B3C9F00FBE9C5 /* SaveFastView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveFastView.swift; sourceTree = "<group>"; };
@@ -543,6 +548,7 @@
 		92F4F85D263AE9A400205600 /* IdleFastView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdleFastView.swift; sourceTree = "<group>"; };
 		92F4F85F263AECB800205600 /* ActiveFastView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveFastView.swift; sourceTree = "<group>"; };
 		92F4F861263AEF1300205600 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		92FEC21428CD85EC00904C59 /* DurationFormatStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DurationFormatStyle.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -736,6 +742,14 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		9212D07328CD5E0F009EA509 /* EntryEdit */ = {
+			isa = PBXGroup;
+			children = (
+				9212D07428CD60FB009EA509 /* EntryEditView.swift */,
+			);
+			path = EntryEdit;
+			sourceTree = "<group>";
+		};
 		921A632327CD7C010040395A /* Mood */ = {
 			isa = PBXGroup;
 			children = (
@@ -791,6 +805,7 @@
 			isa = PBXGroup;
 			children = (
 				9225DD4326C8583E00BCF2C2 /* Color+Custom.swift */,
+				9212D07628CD66F3009EA509 /* Color+UIColor.swift */,
 			);
 			path = Colors;
 			sourceTree = "<group>";
@@ -1269,6 +1284,7 @@
 				92808AD5263366A500420603 /* Common */,
 				92EB3FB926334243006D6C44 /* DatePicker */,
 				9225DD4F26C883DE00BCF2C2 /* Document */,
+				9212D07328CD5E0F009EA509 /* EntryEdit */,
 				9282A8A1263334AD00CA24A6 /* FastGoalSelection */,
 				92B96C47263318AB00ED1758 /* HomeTab */,
 				92808AD62633673500420603 /* Intervals */,
@@ -1356,6 +1372,7 @@
 		92DAB3092703D4BE00629B0C /* Formatting */ = {
 			isa = PBXGroup;
 			children = (
+				92FEC21128CD84BE00904C59 /* FormatStyle */,
 				92656CCC26324C9B00C9C232 /* Strings */,
 				92DAB30A2703D4BE00629B0C /* Formatting.h */,
 			);
@@ -1468,6 +1485,14 @@
 				9219DD54263B3C9F00FBE9C5 /* SaveFastView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		92FEC21128CD84BE00904C59 /* FormatStyle */ = {
+			isa = PBXGroup;
+			children = (
+				92FEC21428CD85EC00904C59 /* DurationFormatStyle.swift */,
+			);
+			path = FormatStyle;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1999,6 +2024,7 @@
 				9200956027CD501000134D8C /* MoodButton.swift in Sources */,
 				927DD7C72630AD0300E6C33A /* IntervalCountingView.swift in Sources */,
 				92D739D626326187008DD386 /* UserDefaults+Publishing.swift in Sources */,
+				9212D07828CD6783009EA509 /* Color+UIColor.swift in Sources */,
 				9282A89C26332F1A00CA24A6 /* Connectable.swift in Sources */,
 				9261A13A26339CF7005E8AAD /* TimelineView.swift in Sources */,
 				9219DD51263B041A00FBE9C5 /* WatchManager.swift in Sources */,
@@ -2021,6 +2047,7 @@
 				9225DD4E26C87FAB00BCF2C2 /* ExportData.swift in Sources */,
 				92A974FC2700E40100AA05A2 /* UNNotificationAction+Compatibility.swift in Sources */,
 				92978B2526331D1400944D12 /* FastProgressUpdatingViewModel.swift in Sources */,
+				9212D07528CD60FB009EA509 /* EntryEditView.swift in Sources */,
 				927DD7C42630AC6F00E6C33A /* TextButtonGroup.swift in Sources */,
 				926B23A526331BB2000E3373 /* Fast+Preview.swift in Sources */,
 				92250A6326371B0A00DF1A87 /* WidgetDataProvider.swift in Sources */,
@@ -2072,6 +2099,7 @@
 			files = (
 				92DAB3142703D4CF00629B0C /* StringFormatter+DateTime.swift in Sources */,
 				92DAB3132703D4CF00629B0C /* StringFormatter.swift in Sources */,
+				92FEC21528CD85EC00904C59 /* DurationFormatStyle.swift in Sources */,
 				92DAB3162703D4CF00629B0C /* StringFormatter+Percentage.swift in Sources */,
 				92DAB3152703D4CF00629B0C /* StringFormatter+TimeIntervals.swift in Sources */,
 			);
@@ -2266,6 +2294,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = SharedData/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -2297,6 +2326,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = SharedData/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -2602,6 +2632,7 @@
 				DEVELOPMENT_TEAM = 8QEC3K9K4B;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = Fasting/Application/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -2626,6 +2657,7 @@
 				DEVELOPMENT_TEAM = 8QEC3K9K4B;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = Fasting/Application/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -2650,6 +2682,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = RingView/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -2679,6 +2712,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = RingView/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -2766,7 +2800,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -2800,7 +2834,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -2835,7 +2869,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -2871,7 +2905,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -2905,7 +2939,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -2939,7 +2973,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

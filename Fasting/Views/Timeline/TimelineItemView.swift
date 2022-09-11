@@ -18,27 +18,25 @@ struct TimelineItemView: View {
     return formatter
   }()
   
-  private let fast: Fast
-  @StateObject private var progressUpdater: ConstantUpdater
+  @ObservedObject var model: FastModel
   
-  init(_ fast: Fast) {
-    self.fast = fast
-    self._progressUpdater = StateObject(wrappedValue: ConstantUpdater(fast.progress))
+  init(_ model: FastModel) {
+    self.model = model
   }
   
   var body: some View {
 
     VStack {
       HStack(spacing: 24) {
-        RingView(progressUpdater)
+        RingView(ConstantUpdater(model.entity.progress))
           .thickness(8)
-          .applyProgressiveStyle(fast.progress)
+          .applyProgressiveStyle(model.entity.progress)
           .frame(width: 64, height: 64, alignment: .center)
         VStack(alignment: .leading) {
-          Text(StringFormatter.shortDateFormatter.string(from: fast.startDate!))
+          Text(StringFormatter.shortDateFormatter.string(from: model.startDate))
             .foregroundColor(Color(.secondaryLabel))
-          Text(StringFormatter.percent(from: fast.progress))
-          Text("\(Self.roundedHours(from: fast.currentInterval))/\(Self.roundedHours(from: fast.targetInterval))h")
+          Text(StringFormatter.percent(from: model.entity.progress))
+          Text("\(Self.roundedHours(from: model.entity.currentInterval))/\(Self.roundedHours(from: model.entity.targetInterval))h")
         }
 
         Spacer()
@@ -47,15 +45,15 @@ struct TimelineItemView: View {
 
       HStack {
 
-        Text("\(Self.string(from: fast.startDate)) - \(Self.string(from: fast.endDate))").lineLimit(1)
+        Text("\(Self.string(from: model.startDate)) - \(Self.string(from: model.endDate))").lineLimit(1)
 
         Spacer()
 
-        if fast.mood > 0 {
-          Text("Mood: \(fast.mood)")
+        if let mood = model.mood, mood > 0 {
+          Text("Mood: \(mood.moodEmoji ?? "?")")
         }
 
-        if fast.note != nil {
+        if model.note.isNilOrEmpty == false {
           Image(systemName: "note.text")
         }
 
@@ -91,10 +89,10 @@ struct TimelineItemView_Previews: PreviewProvider {
   static var previews: some View {
 
     VStack {
-      TimelineItemView(Fast.preview(mood: 5, note: "t"))
+      TimelineItemView(FastModel.preview)
         .frame(maxHeight: 120)
 
-      TimelineItemView(Fast.preview)
+      TimelineItemView(FastModel.preview)
         .frame(maxHeight: 72)
     }
 

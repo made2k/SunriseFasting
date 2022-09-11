@@ -12,17 +12,17 @@ struct IntervalCountingView: View {
   
   @StateObject private var timer = TimerObservable(interval: 1)
   private let referenceDate: Date
-  private let absoluteValue: Bool
+  private let formatStyle: TimeInterval.FormatStyle
   
-  init(referenceDate: Date, absoluteValue: Bool = true) {
+  init(referenceDate: Date, formatStyle: TimeInterval.FormatStyle) {
     self.referenceDate = referenceDate
-    self.absoluteValue = absoluteValue
+    self.formatStyle = formatStyle
   }
   
   var body: some View {
     
     Text(
-      StringFormatter.countdown(from: timer.value.timeIntervalSince(referenceDate), absoluteValue: absoluteValue)
+      timer.value.timeIntervalSince(referenceDate).formatted(formatStyle)
     )
     .autoConnect(timer)
     
@@ -34,6 +34,6 @@ struct IntervalCountingView_Previews: PreviewProvider {
   private static let referenceDate: Date = Date().dateByAdding(-12, .hour).date
   
   static var previews: some View {
-    IntervalCountingView(referenceDate: referenceDate)
+    IntervalCountingView(referenceDate: referenceDate, formatStyle: .shortDuration)
   }
 }

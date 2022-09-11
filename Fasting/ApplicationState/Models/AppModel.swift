@@ -31,7 +31,7 @@ final class AppModel: ObservableObject {
   @Published var currentFast: FastModel?
 
   /// Array of all completed Fasts (ie not active)
-  @Published var completedFasts: [Fast] = []
+  @Published var completedFasts: [FastModel] = []
   
   /// A View reference that will can be used to track a full screen context takeover
   /// For instance a date picker that presents over the current screen.

@@ -16,13 +16,18 @@ struct TimelineView: View {
   
   @State private var exportData: ExportData? = nil
   @State private var showDocumentPicker: Bool = false
+    
+  @State private var selection: FastModel?
   
   var body: some View {
     List {
       ForEach(FastGroup.group(model.completedFasts)) { (group: FastGroup) in
         Section(header: Text(group.title).font(.title3).fontWeight(.bold)) {
-          ForEach(group.fasts) { (fast: Fast) in
-            TimelineItemView(fast)
+          ForEach(group.fasts) { (model: FastModel) in
+            TimelineItemView(model)
+              .onTapGesture {
+                self.selection = model
+              }
           }
         }
       }
@@ -64,6 +69,9 @@ struct TimelineView: View {
           manager.importData(data)
         }
     })
+    .sheet(item: $selection) {
+      EntryEditView($0)
+    }
     
   }
   

@@ -13,7 +13,7 @@ import Logging
 import OSLog
 
 /// Wrapper data model around our CoreData entity
-final class FastModel: ObservableObject {
+final class FastModel: ObservableObject, Identifiable {
 
   private enum UpdateType {
     case startDate(Date)
@@ -33,6 +33,10 @@ final class FastModel: ObservableObject {
   @Published var duration: TimeInterval
   @Published var note: String?
   @Published var mood: Int16?
+  
+  var progress: Double {
+    entity.currentInterval / entity.targetInterval
+  }
 
   private var cancellables: Set<AnyCancellable> = .init()
 
@@ -65,7 +69,7 @@ final class FastModel: ObservableObject {
     let startDate = $startDate.map(UpdateType.startDate).dropFirst().eraseToAnyPublisher()
     let endDate = $endDate.map(UpdateType.endDate).dropFirst().eraseToAnyPublisher()
     let duration = $duration.map(UpdateType.duration).dropFirst().eraseToAnyPublisher()
-    let note = $note.map(UpdateType.note).dropFirst().eraseToAnyPublisher()
+    let note = $note.map(UpdateType.note).dropFirst().debounce(for: .seconds(2), scheduler: RunLoop.main).eraseToAnyPublisher()
     let mood = $mood.map(UpdateType.mood).dropFirst().eraseToAnyPublisher()
 
     let subscribedUpdates: [AnyPublisher<UpdateType, Never>] = [

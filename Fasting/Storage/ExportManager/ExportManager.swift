@@ -72,7 +72,7 @@ final class ExportManager {
     
     Self.logger.trace("Exporing data")
     
-    let exportedData: [ExportableFast] = model.completedFasts.compactMap(ExportableFast.init)
+    let exportedData: [ExportableFast] = model.completedFasts.map(\.entity).compactMap(ExportableFast.init)
     
     let data: Data
 
