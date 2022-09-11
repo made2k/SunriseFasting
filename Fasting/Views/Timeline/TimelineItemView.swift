@@ -11,12 +11,6 @@ import RingView
 import SwiftUI
 
 struct TimelineItemView: View {
-
-  private static let dateFormatter: DateFormatter = {
-    let formatter = DateFormatter()
-    formatter.timeStyle = .short
-    return formatter
-  }()
   
   @ObservedObject var model: FastModel
   
@@ -33,9 +27,9 @@ struct TimelineItemView: View {
           .applyProgressiveStyle(model.entity.progress)
           .frame(width: 64, height: 64, alignment: .center)
         VStack(alignment: .leading) {
-          Text(StringFormatter.shortDateFormatter.string(from: model.startDate))
+          Text(model.startDate.formatted(date: .abbreviated, time: .omitted))
             .foregroundColor(Color(.secondaryLabel))
-          Text(StringFormatter.percent(from: model.entity.progress))
+          Text(model.progress.formatted(.percent.rounded(rule: .toNearestOrAwayFromZero, increment: 1)))
           Text("\(Self.roundedHours(from: model.entity.currentInterval))/\(Self.roundedHours(from: model.entity.targetInterval))h")
         }
 
@@ -80,7 +74,7 @@ struct TimelineItemView: View {
 
   private static func string(from date: Date?) -> String {
     guard let date = date else { return "??" }
-    return dateFormatter.string(from: date)
+    return date.formatted(date: .omitted, time: .shortened)
   }
 
 }

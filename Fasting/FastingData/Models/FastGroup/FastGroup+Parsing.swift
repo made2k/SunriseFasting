@@ -29,7 +29,7 @@ extension FastGroup {
 private extension Fast {
   
   var chunkedIdentifier: String {
-    StringFormatter.monthGroupTitleFormatter.string(from: startDate!)
+    startDate!.formatted(.dateTime.month(.wide).year(.defaultDigits))
   }
   
 }

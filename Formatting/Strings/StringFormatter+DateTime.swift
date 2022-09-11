@@ -24,7 +24,7 @@ public extension StringFormatter {
     capitalized: Bool = true
   ) -> String {
 
-    let timeString: String = timeFormatter.string(from: date)
+    let timeString: String = date.formatted(date: .omitted, time: .shortened)
 
     // If the date is today, we don't need to show any other info than time
     if date.isToday {
@@ -52,7 +52,7 @@ public extension StringFormatter {
       dayString = "next \(date.toFormat("EEEE"))"
 
     } else {
-      dayString = shortDateFormatter.string(from: date)
+      dayString = date.formatted(date: .numeric, time: .omitted)
     }
     
     if capitalized {

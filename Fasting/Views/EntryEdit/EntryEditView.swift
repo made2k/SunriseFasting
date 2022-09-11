@@ -41,7 +41,7 @@ struct EntryEditView: View {
             .aspectRatio(contentMode: .fit)
             
             VStack {
-              Text("Fasting Duration (\(StringFormatter.percent(from: model.progress)))")
+              Text("Fasting Duration (\(model.progress.formatted(.percent))")
                 .monospaced(font: .footnote)
                 .foregroundColor(Color(UIColor.secondaryLabel))
               Text(model.entity.currentInterval.formatted(.shortDuration))

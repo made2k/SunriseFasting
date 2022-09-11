@@ -158,7 +158,6 @@
 		92DAB3132703D4CF00629B0C /* StringFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 927DD7CA2630ADAE00E6C33A /* StringFormatter.swift */; };
 		92DAB3142703D4CF00629B0C /* StringFormatter+DateTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9295C319263282C00084C3AA /* StringFormatter+DateTime.swift */; };
 		92DAB3152703D4CF00629B0C /* StringFormatter+TimeIntervals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9295C318263282C00084C3AA /* StringFormatter+TimeIntervals.swift */; };
-		92DAB3162703D4CF00629B0C /* StringFormatter+Percentage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D739D126325500008DD386 /* StringFormatter+Percentage.swift */; };
 		92DAB3182703D4E100629B0C /* SwiftDateDynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 92DAB3172703D4E100629B0C /* SwiftDateDynamic */; };
 		92DBCE282702A20300C0B9B1 /* FastStorage.h in Headers */ = {isa = PBXBuildFile; fileRef = 92DBCE272702A20300C0B9B1 /* FastStorage.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		92DBCE2B2702A20300C0B9B1 /* FastStorage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92DBCE252702A20300C0B9B1 /* FastStorage.framework */; };
@@ -527,7 +526,6 @@
 		92D63980263CF37500081D3B /* GraphicCornerBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphicCornerBuilder.swift; sourceTree = "<group>"; };
 		92D63982263CFAB800081D3B /* GraphicExtraLargeBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphicExtraLargeBuilder.swift; sourceTree = "<group>"; };
 		92D63984263CFB6B00081D3B /* UtilitarianSmallBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UtilitarianSmallBuilder.swift; sourceTree = "<group>"; };
-		92D739D126325500008DD386 /* StringFormatter+Percentage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StringFormatter+Percentage.swift"; sourceTree = "<group>"; };
 		92D739D326325F44008DD386 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		92D739D526326187008DD386 /* UserDefaults+Publishing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+Publishing.swift"; sourceTree = "<group>"; };
 		92D739D726326667008DD386 /* UserDefaultKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultKeys.swift; sourceTree = "<group>"; };
@@ -991,7 +989,6 @@
 			children = (
 				927DD7CA2630ADAE00E6C33A /* StringFormatter.swift */,
 				9295C319263282C00084C3AA /* StringFormatter+DateTime.swift */,
-				92D739D126325500008DD386 /* StringFormatter+Percentage.swift */,
 				9295C318263282C00084C3AA /* StringFormatter+TimeIntervals.swift */,
 			);
 			path = Strings;
@@ -2124,7 +2121,6 @@
 				92DAB3142703D4CF00629B0C /* StringFormatter+DateTime.swift in Sources */,
 				92DAB3132703D4CF00629B0C /* StringFormatter.swift in Sources */,
 				92FEC21528CD85EC00904C59 /* DurationFormatStyle.swift in Sources */,
-				92DAB3162703D4CF00629B0C /* StringFormatter+Percentage.swift in Sources */,
 				92DAB3152703D4CF00629B0C /* StringFormatter+TimeIntervals.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
