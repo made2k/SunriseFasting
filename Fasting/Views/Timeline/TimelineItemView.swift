@@ -29,7 +29,7 @@ struct TimelineItemView: View {
         VStack(alignment: .leading) {
           Text(model.startDate.formatted(date: .abbreviated, time: .omitted))
             .foregroundColor(Color(.secondaryLabel))
-          Text(model.progress.formatted(.percent.rounded(rule: .toNearestOrAwayFromZero, increment: 1)))
+          Text(model.progress.formatted(.percentRounded))
           Text("\(Self.roundedHours(from: model.entity.currentInterval))/\(Self.roundedHours(from: model.entity.targetInterval))h")
         }
 

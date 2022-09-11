@@ -74,7 +74,7 @@ struct ActiveFastHomeView: View {
               .thickness(thickness)
               .aspectRatio(contentMode: .fit)
           VStack {
-            Text("Elapsed time (\(progressViewModel.progress.formatted(.percent.rounded(rule: .toNearestOrAwayFromZero, increment: 1))))")
+            Text("Elapsed time (\(progressViewModel.progress.formatted(.percentRounded)))")
               .monospaced(font: .footnote)
               .foregroundColor(Color(UIColor.secondaryLabel))
             IntervalCountingView(referenceDate: fast.startDate, formatStyle: .shortDuration)

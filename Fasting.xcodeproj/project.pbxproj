@@ -148,6 +148,7 @@
 		92D63981263CF37500081D3B /* GraphicCornerBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D63980263CF37500081D3B /* GraphicCornerBuilder.swift */; };
 		92D63983263CFAB800081D3B /* GraphicExtraLargeBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D63982263CFAB800081D3B /* GraphicExtraLargeBuilder.swift */; };
 		92D63985263CFB6B00081D3B /* UtilitarianSmallBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D63984263CFB6B00081D3B /* UtilitarianSmallBuilder.swift */; };
+		92D6ADE428CE693F00E58725 /* FloatingPointFormatStyle+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D6ADE328CE693F00E58725 /* FloatingPointFormatStyle+Additions.swift */; };
 		92D739D426325F44008DD386 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D739D326325F44008DD386 /* DataManager.swift */; };
 		92D739D626326187008DD386 /* UserDefaults+Publishing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D739D526326187008DD386 /* UserDefaults+Publishing.swift */; };
 		92D81A80263106CD007E884A /* FastingGoalPickerItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D81A7F263106CD007E884A /* FastingGoalPickerItemView.swift */; };
@@ -532,6 +533,7 @@
 		92D63980263CF37500081D3B /* GraphicCornerBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphicCornerBuilder.swift; sourceTree = "<group>"; };
 		92D63982263CFAB800081D3B /* GraphicExtraLargeBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphicExtraLargeBuilder.swift; sourceTree = "<group>"; };
 		92D63984263CFB6B00081D3B /* UtilitarianSmallBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UtilitarianSmallBuilder.swift; sourceTree = "<group>"; };
+		92D6ADE328CE693F00E58725 /* FloatingPointFormatStyle+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FloatingPointFormatStyle+Additions.swift"; sourceTree = "<group>"; };
 		92D739D326325F44008DD386 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		92D739D526326187008DD386 /* UserDefaults+Publishing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+Publishing.swift"; sourceTree = "<group>"; };
 		92D739D726326667008DD386 /* UserDefaultKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultKeys.swift; sourceTree = "<group>"; };
@@ -1515,8 +1517,8 @@
 		92FEC21628CD911B00904C59 /* Utility */ = {
 			isa = PBXGroup;
 			children = (
-				92B70EA228CE608E00763D12 /* Keyboard */,
 				92FEC21728CD912100904C59 /* Extensions */,
+				92B70EA228CE608E00763D12 /* Keyboard */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -1525,6 +1527,7 @@
 			isa = PBXGroup;
 			children = (
 				92FEC21A28CD914900904C59 /* Binding+Optional.swift */,
+				92D6ADE328CE693F00E58725 /* FloatingPointFormatStyle+Additions.swift */,
 				92FEC21828CD912E00904C59 /* Optional+String.swift */,
 				92B70E9D28CE573000763D12 /* View+ContitionalModifiers.swift */,
 			);
@@ -2042,6 +2045,7 @@
 				92A974F82700DB4200AA05A2 /* NotificationHandler.swift in Sources */,
 				9278B7F6262FC01A00893C7D /* ActiveFastHomeView.swift in Sources */,
 				92A8ED1F2630D2B700BE00F0 /* StartTimeInfoView.swift in Sources */,
+				92D6ADE428CE693F00E58725 /* FloatingPointFormatStyle+Additions.swift in Sources */,
 				92A8ED232630DA4C00BE00F0 /* EndTimeInfoView.swift in Sources */,
 				92D81A82263106FD007E884A /* FastingGoalPickerView.swift in Sources */,
 				92F2EBA02633465C001EBCFD /* BlurView.swift in Sources */,
