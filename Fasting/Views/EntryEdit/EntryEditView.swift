@@ -11,9 +11,10 @@ import RingView
 import SwiftUI
 
 struct EntryEditView: View {
-
+  
   @ObservedObject var model: FastModel
   @State var presented: AnyView?
+  @ObservedObject var keyboardHeightHelper = KeyboardHeightHelper()
   
   var buttonColor: Color {
     model.entity.progress < 1 ?
@@ -23,77 +24,82 @@ struct EntryEditView: View {
   
   init(_ model: FastModel) {
     self.model = model
+    // TODO: in iOS 16 use .scrollDismissesKeyboard(.interactively)
+    UIScrollView.appearance().keyboardDismissMode = .interactive
   }
   
   var body: some View {
     
     ZStack {
       
-      ScrollView {
-        
-        VStack {
+      ScrollViewReader { reader in
+        ScrollView {
           
-          ZStack {
-          RingView(ConstantUpdater(model.entity.progress))
-            .applyProgressiveStyle(model.entity.progress)
-            .thickness(32)
-            .aspectRatio(contentMode: .fit)
+          VStack {
             
-            VStack {
-              Text("Fasting Duration (\(model.progress.formatted(.percent))")
-                .monospaced(font: .footnote)
-                .foregroundColor(Color(UIColor.secondaryLabel))
-              Text(model.entity.currentInterval.formatted(.shortDuration))
-                .monospaced(font: .largeTitle)
+            ZStack {
+              RingView(ConstantUpdater(model.entity.progress))
+                .applyProgressiveStyle(model.entity.progress)
+                .thickness(32)
+                .aspectRatio(contentMode: .fit)
+              
+              VStack {
+                Text("Fasting Duration (\(model.progress.formatted(.percent))")
+                  .monospaced(font: .footnote)
+                  .foregroundColor(Color(UIColor.secondaryLabel))
+                Text(model.entity.currentInterval.formatted(.shortDuration))
+                  .monospaced(font: .largeTitle)
+              }
             }
-          }
-          
-          HStack {
-            Button(model.startDate.formatted(date: .omitted, time: .shortened)) {
-              editStartTime()
+            
+            HStack {
+              Button(model.startDate.formatted(date: .omitted, time: .shortened)) {
+                editStartTime()
+              }
+              Text(" - ")
+              Button(model.endDate?.formatted(date: .omitted, time: .shortened) ?? "?") {
+                editEndTime()
+              }
             }
-            Text(" - ")
-            Button(model.endDate?.formatted(date: .omitted, time: .shortened) ?? "?") {
-              editEndTime()
+            .buttonStyle(PaddedButtonStyle(foregroundColor: buttonColor))
+            
+            HStack {
+              Spacer()
+              MoodButton(mood: $model.mood, tintColor: model.entity.progress < 1 ? Color.buttonForegroundIncomplete : Color.buttonForegroundComplete)
+                .padding(.trailing, 24)
             }
+            
+            TextEntryView(text: $model.note, textStyle: .constant(.body))
+              .backgroundColor(.systemBackground)
+              .cornerRadius(14)
+              .overlay(
+                RoundedRectangle(cornerRadius: 14)
+                  .stroke(Color.secondaryLabel, lineWidth: 2)
+              )
+              .frame(height: 200)
+              .overlay(alignment: .topLeading) {
+                Text("Enter notes about your fast")
+                  .foregroundColor(.secondaryLabel)
+                  .padding(.top, 7)
+                  .padding(.leading, 6)
+                  .isHidden(model.note.isNilOrEmpty == false)
+              }
+              .padding([.leading, .trailing], 24)
+              .id(1)
           }
-          .buttonStyle(PaddedButtonStyle(foregroundColor: buttonColor))
-
-          HStack {
-            Spacer()
-            MoodButton(mood: $model.mood, tintColor: model.entity.progress < 1 ? Color.buttonForegroundIncomplete : Color.buttonForegroundComplete)
-              .padding(.trailing, 24)
+        }
+        .background(Color.secondarySystemBackground)
+        .onChange(of: keyboardHeightHelper.keyboardHeight) { _ in
+          withAnimation {
+            reader.scrollTo(1)
           }
-          
-          ZStack {
-            // TODO: When TextEditor has placeholder, remove this
-            if model.note == nil || model.note!.isEmpty {
-              TextEditor(text: .constant("Notes on this fast"))
-                .foregroundColor(Color.secondaryLabel)
-                .disabled(true)
-            }
-            TextEditor(text: $model.note ?? "")
-              .foregroundColor(Color.label)
-              .opacity(model.note.isNilOrEmpty ? 0.25 : 1)
-          }
-          .font(.body)
-          .cornerRadius(14)
-          .overlay(
-            RoundedRectangle(cornerRadius: 14)
-              .stroke(Color.secondaryLabel, lineWidth: 2)
-          )
-          .frame(minHeight: 200, maxHeight: 200)
-          .padding([.leading, .trailing], 24)
-          
         }
       }
-      .background(Color.secondarySystemBackground)
       
       if let presented = presented {
         presented
           .zIndex(2)
       }
-      
       
     }
   }

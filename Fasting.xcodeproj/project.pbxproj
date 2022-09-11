@@ -131,6 +131,9 @@
 		92ADC09C263B6486009B348F /* WatchDataModel+WCSessionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92ADC09B263B6486009B348F /* WatchDataModel+WCSessionDelegate.swift */; };
 		92ADC09F263B66AF009B348F /* StringFormater.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92ADC09E263B66AF009B348F /* StringFormater.swift */; };
 		92AE6F4927056298007FE051 /* Formatting.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92DAB3082703D4BE00629B0C /* Formatting.framework */; platformFilter = ios; };
+		92B70E9C28CE52B500763D12 /* TextEntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B70E9B28CE52B500763D12 /* TextEntryView.swift */; };
+		92B70E9E28CE573000763D12 /* View+ContitionalModifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B70E9D28CE573000763D12 /* View+ContitionalModifiers.swift */; };
+		92B70EA428CE609900763D12 /* KeyboardHeightHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B70EA328CE609900763D12 /* KeyboardHeightHelper.swift */; };
 		92B7398626323607002D5261 /* FastingGoal+Descriptors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B7398526323607002D5261 /* FastingGoal+Descriptors.swift */; };
 		92B7398E26323D88002D5261 /* FastModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B7398D26323D88002D5261 /* FastModel.swift */; };
 		92B7399126323EB4002D5261 /* FastModel+Previewing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B7399026323EB4002D5261 /* FastModel+Previewing.swift */; };
@@ -509,6 +512,9 @@
 		92ADC099263B5FF3009B348F /* WatchDataModel+API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WatchDataModel+API.swift"; sourceTree = "<group>"; };
 		92ADC09B263B6486009B348F /* WatchDataModel+WCSessionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WatchDataModel+WCSessionDelegate.swift"; sourceTree = "<group>"; };
 		92ADC09E263B66AF009B348F /* StringFormater.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringFormater.swift; sourceTree = "<group>"; };
+		92B70E9B28CE52B500763D12 /* TextEntryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextEntryView.swift; sourceTree = "<group>"; };
+		92B70E9D28CE573000763D12 /* View+ContitionalModifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+ContitionalModifiers.swift"; sourceTree = "<group>"; };
+		92B70EA328CE609900763D12 /* KeyboardHeightHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardHeightHelper.swift; sourceTree = "<group>"; };
 		92B7398526323607002D5261 /* FastingGoal+Descriptors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FastingGoal+Descriptors.swift"; sourceTree = "<group>"; };
 		92B73987263238BD002D5261 /* FastingGoal+Equality.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FastingGoal+Equality.swift"; sourceTree = "<group>"; };
 		92B7398926323913002D5261 /* FastingGoal+Codable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FastingGoal+Codable.swift"; sourceTree = "<group>"; };
@@ -1083,6 +1089,7 @@
 				921A632327CD7C010040395A /* Mood */,
 				928ED2192631C72900F496F7 /* NumberTextField.swift */,
 				927DD7C32630AC6F00E6C33A /* TextButtonGroup.swift */,
+				92B70E9B28CE52B500763D12 /* TextEntryView.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -1257,6 +1264,14 @@
 				92962023263CB78D002F6AB0 /* Controller */,
 			);
 			path = Complications;
+			sourceTree = "<group>";
+		};
+		92B70EA228CE608E00763D12 /* Keyboard */ = {
+			isa = PBXGroup;
+			children = (
+				92B70EA328CE609900763D12 /* KeyboardHeightHelper.swift */,
+			);
+			path = Keyboard;
 			sourceTree = "<group>";
 		};
 		92B7398F26323E26002D5261 /* FastModel */ = {
@@ -1500,6 +1515,7 @@
 		92FEC21628CD911B00904C59 /* Utility */ = {
 			isa = PBXGroup;
 			children = (
+				92B70EA228CE608E00763D12 /* Keyboard */,
 				92FEC21728CD912100904C59 /* Extensions */,
 			);
 			path = Utility;
@@ -1510,6 +1526,7 @@
 			children = (
 				92FEC21A28CD914900904C59 /* Binding+Optional.swift */,
 				92FEC21828CD912E00904C59 /* Optional+String.swift */,
+				92B70E9D28CE573000763D12 /* View+ContitionalModifiers.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -2045,8 +2062,10 @@
 				927DD7C72630AD0300E6C33A /* IntervalCountingView.swift in Sources */,
 				92D739D626326187008DD386 /* UserDefaults+Publishing.swift in Sources */,
 				9212D07828CD6783009EA509 /* Color+UIColor.swift in Sources */,
+				92B70E9C28CE52B500763D12 /* TextEntryView.swift in Sources */,
 				9282A89C26332F1A00CA24A6 /* Connectable.swift in Sources */,
 				9261A13A26339CF7005E8AAD /* TimelineView.swift in Sources */,
+				92B70E9E28CE573000763D12 /* View+ContitionalModifiers.swift in Sources */,
 				9219DD51263B041A00FBE9C5 /* WatchManager.swift in Sources */,
 				9282A89A26332F0E00CA24A6 /* View+Connections.swift in Sources */,
 				92FEC21B28CD914900904C59 /* Binding+Optional.swift in Sources */,
@@ -2057,6 +2076,7 @@
 				92B7399126323EB4002D5261 /* FastModel+Previewing.swift in Sources */,
 				92F2EBA22633472C001EBCFD /* DatePickerRangeFactory.swift in Sources */,
 				92B7398E26323D88002D5261 /* FastModel.swift in Sources */,
+				92B70EA428CE609900763D12 /* KeyboardHeightHelper.swift in Sources */,
 				92B7399426323F73002D5261 /* Fast+Initialization.swift in Sources */,
 				92792B442633984B00ECF89F /* HomeTabView.swift in Sources */,
 				9225DD4C26C87BEC00BCF2C2 /* ExportableFast.swift in Sources */,
