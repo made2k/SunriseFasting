@@ -24,6 +24,10 @@ final class FastModel: ObservableObject, Identifiable {
   }
 
   let logger = Logger.create(.dataModel)
+  
+  var id: ObjectIdentifier {
+    entity.id
+  }
 
   /// Our managed object reference
   let entity: Fast
