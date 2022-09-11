@@ -14,25 +14,23 @@ class EndFastIntentHandler: NSObject, EndFastIntentHandling {
   
   private let logger = Logger.create(.siriIntent)
   
-  func confirm(intent: EndFastIntent, completion: @escaping (EndFastIntentResponse) -> Void) {
-    completion(EndFastIntentResponse(code: .ready, userActivity: nil))
+  func confirm(intent: EndFastIntent) async -> EndFastIntentResponse {
+    EndFastIntentResponse(code: .ready, userActivity: nil)
   }
   
-  func handle(intent: EndFastIntent, completion: @escaping (EndFastIntentResponse) -> Void) {
+  func handle(intent: EndFastIntent) async -> EndFastIntentResponse {
     
     do {
       
       guard let currentFast = try SiriDataManager.shared.getCurrentFast() else {
-        completion(.failure(failureReason: IntentError.noActiveFast.localizedDescription))
-        return
+        return .failure(failureReason: IntentError.noActiveFast.localizedDescription)
       }
 
       try SiriDataManager.shared.endExistingFast(currentFast)
-      completion(EndFastIntentResponse(code: .success, userActivity: nil))
+      return EndFastIntentResponse(code: .success, userActivity: nil)
 
     } catch {
-      completion(.failure(failureReason: "An unknown error occurred"))
-      return
+      return .failure(failureReason: "An unknown error occurred")
     }
     
   }

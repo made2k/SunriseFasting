@@ -72,7 +72,7 @@ final class NotificationHandler: NSObject, UNUserNotificationCenterDelegate {
   
   // MARK: - Notification Center Delegate
   
-  func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
+  func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse) async {
     guard let model = model else { return }
     
     guard response.notification.request.content.categoryIdentifier == FastNotificationIdentifiers.actionCategory else {
@@ -93,8 +93,7 @@ final class NotificationHandler: NSObject, UNUserNotificationCenterDelegate {
     default:
       logger.warning("Unknown notificatio action identifier \(response.actionIdentifier)")
     }
-    
-    completionHandler()
+
   }
   
 }

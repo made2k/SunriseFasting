@@ -31,26 +31,30 @@ final class NotificationManager {
     // Cancel existing notifications
     cancelNotification()
     
-    let center = UNUserNotificationCenter.current()
-    center.getNotificationSettings { [weak self] (settings: UNNotificationSettings) in
+    Task {
       
-      if settings.authorizationStatus == .notDetermined {
-        self?.requestAccess {
-          self?.requestNotification(forDeliveryAt: date)
-        }
+      let center = UNUserNotificationCenter.current()
+      
+      let settings: UNNotificationSettings = await center.notificationSettings()
+      
+      switch settings.authorizationStatus {
         
-        return
+      case .notDetermined:
+        await requestAccess()
+        requestNotification(forDeliveryAt: date)
+        
+      case .authorized, .provisional:
+        scheduleNotification(for: date)
+        
+      case .denied, .ephemeral:
+        fallthrough
+        
+      @unknown default:
+        logger.debug("Unable to set notification, not authorized")
       }
-      
-      guard settings.authorizationStatus == .authorized || settings.authorizationStatus == .provisional else {
-        self?.logger.debug("Unable to set notification, not authorized")
-        return
-      }
-      
-      self?.scheduleNotification(for: date)
       
     }
-
+    
   }
   
   func cancelNotification() {
@@ -64,22 +68,15 @@ final class NotificationManager {
     UNUserNotificationCenter.current().removeAllDeliveredNotifications()
   }
   
-  private func requestAccess(completion: @escaping () -> Void) {
+  private func requestAccess() async {
     
     logger.debug("Requestion notification access")
     
-    UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound, .provisional]) { [weak self] granted, error in
-      guard granted else {
-        self?.logger.debug("Notification access not grated")
-        return
-      }
-      
-      if let error = error {
-        self?.logger.error("Error requesting notification access \(error.localizedDescription, privacy: .public)")
-        return
-      }
-      
-      completion()
+    do {
+      let granted: Bool = try await UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound, .provisional])
+      logger.debug("Notification access granted: \(granted)")
+    } catch {
+      logger.error("Error requesting notification access \(error.localizedDescription, privacy: .public)")
     }
     
   }
@@ -114,40 +111,43 @@ final class NotificationManager {
       trigger: trigger
     )
     
-    let notificationCenter = UNUserNotificationCenter.current()
-    notificationCenter.add(request) { [weak self] error in
+    Task {
       
-      if let error = error {
-        self?.logger.error("Failed to add notification \(error.localizedDescription, privacy: .public)")
+      let notificationCenter = UNUserNotificationCenter.current()
+      do {
+        try await notificationCenter.add(request)
+        
+      } catch {
+        logger.error("Failed to add notification \(error.localizedDescription, privacy: .public)")
+        return
       }
       
+      let saveAction = UNNotificationAction.create(
+        identifier: FastNotificationIdentifiers.saveAction,
+        title: "Save and End",
+        iconName: "sdcard"
+      )
+      let editAction = UNNotificationAction.create(
+        identifier: FastNotificationIdentifiers.editAction,
+        title: "Edit Fast",
+        options: [.foreground],
+        iconName: "pencil"
+      )
+      let deleteAction = UNNotificationAction.create(
+        identifier: FastNotificationIdentifiers.deleteAction,
+        title: "Delete Fast",
+        options: [.destructive, .authenticationRequired],
+        iconName: "trash"
+      )
+      
+      let category = UNNotificationCategory(
+        identifier: FastNotificationIdentifiers.actionCategory,
+        actions: [saveAction, editAction, deleteAction],
+        intentIdentifiers: [],
+        options: []
+      )
+      notificationCenter.setNotificationCategories([category])
     }
-    
-    let saveAction = UNNotificationAction.create(
-      identifier: FastNotificationIdentifiers.saveAction,
-      title: "Save and End",
-      iconName: "sdcard"
-    )
-    let editAction = UNNotificationAction.create(
-      identifier: FastNotificationIdentifiers.editAction,
-      title: "Edit Fast",
-      options: [.foreground],
-      iconName: "pencil"
-    )
-    let deleteAction = UNNotificationAction.create(
-      identifier: FastNotificationIdentifiers.deleteAction,
-      title: "Delete Fast",
-      options: [.destructive, .authenticationRequired],
-      iconName: "trash"
-    )
-    
-    let category = UNNotificationCategory(
-      identifier: FastNotificationIdentifiers.actionCategory,
-      actions: [saveAction, editAction, deleteAction],
-      intentIdentifiers: [],
-      options: []
-    )
-    notificationCenter.setNotificationCategories([category])
   }
   
 }
