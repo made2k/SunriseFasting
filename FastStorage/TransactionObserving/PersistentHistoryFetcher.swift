@@ -46,9 +46,8 @@ struct PersistentHistoryFetcher {
         predicates.append(NSPredicate(format: "%K != %@", #keyPath(NSPersistentHistoryTransaction.contextName), contextName))
       }
 
-      // Only find results authored by us (ie ignore migrations)
+      // Only find results authored by us (ie ignore migrations). We set the context and migration does not
       predicates.append(NSPredicate(format: "%K != nil", #keyPath(NSPersistentHistoryTransaction.contextName)))
-//      predicates.append(NSPredicate(format: "%K IN %@", #keyPath(NSPersistentHistoryTransaction.author), AppTarget.allCases.map(\.tranactionAuthor)))
       
       fetchRequest.predicate = NSCompoundPredicate(type: .and, subpredicates: predicates)
       historyFetchRequest.fetchRequest = fetchRequest
