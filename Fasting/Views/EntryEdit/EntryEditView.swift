@@ -23,9 +23,6 @@ struct EntryEditView: View {
   
   init(_ model: FastModel) {
     self.model = model
-    
-    // TODO: With iOS 16 we can set TextEditor background color
-    UITextView.appearance().backgroundColor = .secondarySystemBackground
   }
   
   var body: some View {
@@ -90,6 +87,7 @@ struct EntryEditView: View {
           
         }
       }
+      .background(Color.secondarySystemBackground)
       
       if let presented = presented {
         presented
