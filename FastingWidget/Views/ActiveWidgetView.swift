@@ -50,7 +50,7 @@ struct ActiveWidgetView: View {
       }
       Spacer(minLength: 16)
       progressView()
-      Text(data.startDate, style: .timer)
+      Text(data.startDate, style: .relative)
         .font(.body)
     }
     .padding()
@@ -63,7 +63,7 @@ struct ActiveWidgetView: View {
       VStack(alignment: .leading) {
         Spacer()
         progressView()
-        Text(data.startDate, style: .timer)
+        Text(data.startDate, style: .relative)
           .font(Font.monospacedDigit(.largeTitle)())
           .lineLimit(1)
           .minimumScaleFactor(0.6)
