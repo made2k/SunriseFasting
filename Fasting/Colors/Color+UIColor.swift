@@ -26,5 +26,9 @@ extension Color {
     Color(UIColor.secondarySystemBackground)
   }
   
+  static var opaqueSeparator: Color {
+    Color(UIColor.opaqueSeparator)
+  }
+  
   
 }
