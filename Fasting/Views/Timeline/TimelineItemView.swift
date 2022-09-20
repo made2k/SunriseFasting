@@ -52,7 +52,7 @@ struct TimelineItemView: View {
         }
 
       }
-      .font(.caption)
+      .font(.footnote)
       .foregroundColor(.secondary)
     }
     .cornerRadius(8)
