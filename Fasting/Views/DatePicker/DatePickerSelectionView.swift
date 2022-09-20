@@ -18,8 +18,6 @@ struct DatePickerSelectionView: View {
   
   // We can modify this value without committing to our persisted data
   @State private var localDate: Date
-  // Used for animations
-  @State private var scale: CGFloat
   
   // Since native date pickers only allow for open and closed range
   // date values for min/max, we construct our date range and store
@@ -42,7 +40,6 @@ struct DatePickerSelectionView: View {
     self._presented = presented
     self.dateRange = DatePickerRangeFactory.range(from: minDate, maxDate: maxDate)
     self._localDate = State<Date>(initialValue: date.wrappedValue)
-    self._scale = State<CGFloat>(initialValue: animate ? 0.0 : 1.0)
   }
   
   var body: some View {
@@ -55,37 +52,32 @@ struct DatePickerSelectionView: View {
             presented = nil
           }
         }
-      VStack {
+      VStack(spacing:0) {
         DatePicker("", selection: $localDate, in: dateRange)
-          .datePickerStyle(GraphicalDatePickerStyle())
-          .onAppear {
-            guard self.scale != 1 else { return }
-            DispatchQueue.main.asyncAfter(deadline: .now() + .milliseconds(100)) {
-              withAnimation(.easeInOut(duration: 0.2)) {
-                self.scale = 1
-              }
-            }
-          }
+          .datePickerStyle(.graphical)
           .padding()
+        // Empty separator view
+        Rectangle()
+          .frame(maxHeight: 1)
+          .foregroundColor(.opaqueSeparator)
         HStack(spacing: 0) {
           Button(action: cancelButtonPressed) {
             Text("Cancel")
-              .frame(maxWidth: .infinity, minHeight: 48)
+              .frame(maxWidth: .infinity, maxHeight: 48)
           }
           // Empty separator view
-          Text("")
-            .frame(minWidth: 1, minHeight: 48)
-            .background(Color(UIColor.separator))
+          Rectangle()
+            .frame(maxWidth: 1, maxHeight: 48)
+            .foregroundColor(.opaqueSeparator)
           Button(action: saveButtonPressed) {
             Text("Save")
-              .frame(maxWidth: .infinity, minHeight: 48)
+              .frame(maxWidth: .infinity, maxHeight: 48)
           }
         }
       }
-      .background(Color(UIColor.systemBackground))
+      .background(.background)
       .cornerRadius(12)
       .padding()
-      .scaleEffect(scale)
       
     }
     
