@@ -57,7 +57,6 @@ struct EntryEditView: View {
                     .monospaced(font: .largeTitle)
                 }
               }
-              .id(0)
               .frame(maxHeight: 350)
               
               HStack {
@@ -83,7 +82,7 @@ struct EntryEditView: View {
                   .foregroundColor(.secondaryLabel)
                   .padding([.leading], 8)
                 TextEditor(text: $model.note ?? "")
-                  .frame(height: 200)
+                  .frame(idealHeight: 200)
                   .cornerRadius(14)
                   .toolbar {
                     ToolbarItemGroup(placement: .keyboard) {
@@ -109,17 +108,12 @@ struct EntryEditView: View {
               .id(1)
               
             }
+            .padding([.bottom])
           }
           .keyboardDismissal()
           .onChange(of: keyboardHeightHelper.keyboardHeight) { _ in
             withAnimation {
-              if keyboardHeightHelper.keyboardHeight > 0 {
-                reader.scrollTo(1)
-                
-              } else {
-                reader.scrollTo(0)
-              }
-              
+              reader.scrollTo(1, anchor: .bottom)
             }
           }
         }
