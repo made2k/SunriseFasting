@@ -121,6 +121,7 @@
 		929A6F38270292C7003927BD /* FastingIntents.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 929A6F36270292B9003927BD /* FastingIntents.intentdefinition */; settings = {ATTRIBUTES = (no_codegen, ); }; };
 		929C0420270A43F400D536E4 /* SharedDataWriter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929C041F270A43F400D536E4 /* SharedDataWriter.swift */; };
 		929C0421270A441E00D536E4 /* SharedData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92250A6A26371D1900DF1A87 /* SharedData.framework */; platformFilter = ios; };
+		929C3EBF28D9598700FD4F67 /* View+Keyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929C3EBE28D9598700FD4F67 /* View+Keyboard.swift */; };
 		92A8ED1F2630D2B700BE00F0 /* StartTimeInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A8ED1E2630D2B700BE00F0 /* StartTimeInfoView.swift */; };
 		92A8ED232630DA4C00BE00F0 /* EndTimeInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A8ED222630DA4C00BE00F0 /* EndTimeInfoView.swift */; };
 		92A974F62700DA2C00AA05A2 /* FastNotificationIdentifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A974F52700DA2C00AA05A2 /* FastNotificationIdentifiers.swift */; };
@@ -503,6 +504,7 @@
 		929A6F36270292B9003927BD /* FastingIntents.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; path = FastingIntents.intentdefinition; sourceTree = "<group>"; };
 		929A6F3E27029470003927BD /* Intents.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Intents.framework; path = System/Library/Frameworks/Intents.framework; sourceTree = SDKROOT; };
 		929C041F270A43F400D536E4 /* SharedDataWriter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedDataWriter.swift; sourceTree = "<group>"; };
+		929C3EBE28D9598700FD4F67 /* View+Keyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Keyboard.swift"; sourceTree = "<group>"; };
 		92A8ED1E2630D2B700BE00F0 /* StartTimeInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartTimeInfoView.swift; sourceTree = "<group>"; };
 		92A8ED222630DA4C00BE00F0 /* EndTimeInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndTimeInfoView.swift; sourceTree = "<group>"; };
 		92A974F52700DA2C00AA05A2 /* FastNotificationIdentifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FastNotificationIdentifiers.swift; sourceTree = "<group>"; };
@@ -1527,6 +1529,7 @@
 				92D6ADE328CE693F00E58725 /* FloatingPointFormatStyle+Additions.swift */,
 				92FEC21828CD912E00904C59 /* Optional+String.swift */,
 				92B70E9D28CE573000763D12 /* View+ContitionalModifiers.swift */,
+				929C3EBE28D9598700FD4F67 /* View+Keyboard.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -2074,6 +2077,7 @@
 				9219DD53263B392A00FBE9C5 /* WatchAPIError.swift in Sources */,
 				927DD7DE2630B39300E6C33A /* FastForecastedEndView.swift in Sources */,
 				92B7399126323EB4002D5261 /* FastModel+Previewing.swift in Sources */,
+				929C3EBF28D9598700FD4F67 /* View+Keyboard.swift in Sources */,
 				92F2EBA22633472C001EBCFD /* DatePickerRangeFactory.swift in Sources */,
 				92B7398E26323D88002D5261 /* FastModel.swift in Sources */,
 				92B70EA428CE609900763D12 /* KeyboardHeightHelper.swift in Sources */,
