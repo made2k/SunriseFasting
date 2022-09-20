@@ -40,7 +40,7 @@ struct EntryEditView: View {
             ZStack {
               RingView(ConstantUpdater(model.entity.progress))
                 .applyProgressiveStyle(model.entity.progress)
-                .thickness(32)
+                .thickness(28)
                 .aspectRatio(contentMode: .fit)
               
               VStack {
@@ -51,6 +51,7 @@ struct EntryEditView: View {
                   .monospaced(font: .largeTitle)
               }
             }
+            .frame(maxHeight: 350)
             
             HStack {
               Button(model.startDate.formatted(date: .omitted, time: .shortened)) {
@@ -69,23 +70,22 @@ struct EntryEditView: View {
                 .padding(.trailing, 24)
             }
             
-            TextEntryView(text: $model.note, textStyle: .constant(.body))
-              .backgroundColor(.systemBackground)
-              .cornerRadius(14)
-              .overlay(
-                RoundedRectangle(cornerRadius: 14)
-                  .stroke(Color.secondaryLabel, lineWidth: 2)
-              )
-              .frame(height: 200)
-              .overlay(alignment: .topLeading) {
-                Text("Enter notes about your fast")
-                  .foregroundColor(.secondaryLabel)
-                  .padding(.top, 7)
-                  .padding(.leading, 6)
-                  .isHidden(model.note.isNilOrEmpty == false)
-              }
-              .padding([.leading, .trailing], 24)
-              .id(1)
+            VStack(alignment: .leading) {
+              Text("Enter notes about your fast")
+                .font(.callout)
+                .foregroundColor(.secondaryLabel)
+                .padding([.leading], 8)
+              TextEditor(text: $model.note ?? "")
+                .frame(height: 200)
+                .cornerRadius(14)
+                .overlay(
+                  RoundedRectangle(cornerRadius: 14)
+                    .stroke(Color.secondaryLabel, lineWidth: 2)
+                )
+            }
+            .padding([.leading, .trailing], 24)
+            .id(1)
+
           }
         }
         .background(Color.secondarySystemBackground)
