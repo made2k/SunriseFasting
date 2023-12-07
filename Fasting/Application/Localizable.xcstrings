@@ -40,8 +40,14 @@
     "Clear Mood" : {
 
     },
+    "custom description" : {
+
+    },
     "Custom Duration (Hours)" : {
       "comment" : "Placeholder for setting a custom fasting target"
+    },
+    "custom title" : {
+
     },
     "Delete Fast" : {
 
@@ -76,6 +82,12 @@
     "Fasts" : {
       "comment" : "Fast tab title"
     },
+    "fourteen description" : {
+
+    },
+    "fourteen title" : {
+
+    },
     "Get started with your first fast." : {
 
     },
@@ -91,6 +103,12 @@
     "Mood: %@" : {
       "comment" : "Describes the current mode with an emoji as the value"
     },
+    "nineteen description" : {
+
+    },
+    "nineteen title" : {
+
+    },
     "Okay" : {
 
     },
@@ -105,6 +123,12 @@
     },
     "Set your own custom fasting target here" : {
       "comment" : "Custom fast modal title"
+    },
+    "sixteen description" : {
+
+    },
+    "sixteen title" : {
+
     },
     "Start Fast" : {
 
@@ -129,6 +153,12 @@
     },
     "Timeline" : {
       "comment" : "Timeline tab title"
+    },
+    "twenty three description" : {
+
+    },
+    "twenty three title" : {
+
     }
   },
   "version" : "1.0"

@@ -1,0 +1,126 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "custom description" : {
+      "comment" : "custom fasting description",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Don't be restricted by these presets. You can choose your own fasting goals that fit with your life style."
+          }
+        }
+      }
+    },
+    "custom title" : {
+      "comment" : "custom fasting title",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Custom Fast"
+          }
+        }
+      }
+    },
+    "fourteen description" : {
+      "comment" : "14 hour fasting description",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "This time restricted fast gives you a 10 hour eating window, with a 14 hour fast. Usually this involves a final meal at dinner and a late breakfast."
+          }
+        }
+      }
+    },
+    "fourteen title" : {
+      "comment" : "14 hour fasting title",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "14:10 Intermittent Fast"
+          }
+        }
+      }
+    },
+    "nineteen description" : {
+      "comment" : "19 hour fasting description",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "This fast is more restrictive only giving you a 5 hour eating window."
+          }
+        }
+      }
+    },
+    "nineteen title" : {
+      "comment" : "19 hour fasting title",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "19:5 Intermittent Fast"
+          }
+        }
+      }
+    },
+    "sixteen description" : {
+      "comment" : "16 hour fasting description",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "This fast is pretty common. It gives you an 8 hour eating window (typically lunch and dinner) with a 16 hour fast."
+          }
+        }
+      }
+    },
+    "sixteen title" : {
+      "comment" : "16 hour fasting title",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "16:8 Intermittent Fast"
+          }
+        }
+      }
+    },
+    "twenty three description" : {
+      "comment" : "23 hour fasting description",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "This fast is known as the One Meal a Day fast. It has only a 1 hour eating window, typically enough for a single meal."
+          }
+        }
+      }
+    },
+    "twenty three title" : {
+      "comment" : "23 hour fasting title",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "23:1 Intermittent Fast"
+          }
+        }
+      }
+    }
+  },
+  "version" : "1.0"
+}
