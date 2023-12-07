@@ -40,7 +40,7 @@ struct ActiveFastHomeView: View {
     self.fast = fast
     self.namespace = namespace
     self._progressViewModel = StateObject(wrappedValue: FastProgressUpdatingViewModel(fast))
-
+    
     // Workaround for geometry readers positioning issues
     // Thickness needs to be shrunk on small devices like SE
     thickness = UIScreen.main.bounds.height > 568 ? 32 : 24
@@ -69,27 +69,30 @@ struct ActiveFastHomeView: View {
         Spacer()
         
         ZStack {
-            RingView(progressViewModel)
-              .applyProgressiveStyle(progressViewModel.progress)
-              .thickness(thickness)
-              .aspectRatio(contentMode: .fit)
+          RingView(progressViewModel)
+            .applyProgressiveStyle(progressViewModel.progress)
+            .thickness(thickness)
+            .aspectRatio(contentMode: .fit)
           VStack {
-            Text("Elapsed time (\(progressViewModel.progress.formatted(.percentRounded)))")
-              .monospaced(font: .footnote)
-              .foregroundColor(Color(UIColor.secondaryLabel))
+            Text(
+              "Elapsed time (\(progressViewModel.progress.formatted(.percentRounded)))",
+              comment: "Inner fast details with a percentage value"
+            )
+            .monospaced(font: .footnote)
+            .foregroundColor(Color(UIColor.secondaryLabel))
             IntervalCountingView(referenceDate: fast.startDate, formatStyle: .shortDuration)
               .monospaced(font: .largeTitle)
           }
           .matchedGeometryEffect(id: "interval", in: namespace)
         }
         .autoConnect(progressViewModel)
-
+        
         HStack {
           Spacer()
           MoodButton(mood: $fast.mood, tintColor: buttonColor)
             .padding(.trailing, 24)
         }
-
+        
         Spacer()
         
         Button("End Fast", action: endFastAction)

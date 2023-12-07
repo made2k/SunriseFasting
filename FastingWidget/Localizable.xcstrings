@@ -1,0 +1,33 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "(%@)" : {
+      "comment" : "Percentage value for time elapsed during a fast"
+    },
+    "Completed" : {
+
+    },
+    "Elapsed" : {
+      "comment" : "Elapsed title followed by a percentage value"
+    },
+    "Fasting Widget" : {
+      "comment" : "Widget title"
+    },
+    "Get Started" : {
+
+    },
+    "Get Started!" : {
+
+    },
+    "Last Fast" : {
+
+    },
+    "This displays information about your fasts." : {
+      "comment" : "Widget description"
+    },
+    "Time Since Last Fast" : {
+
+    }
+  },
+  "version" : "1.0"
+}

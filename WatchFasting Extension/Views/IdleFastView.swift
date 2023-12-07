@@ -8,11 +8,11 @@
 import SwiftUI
 
 struct IdleFastView: View {
-
+  
   @EnvironmentObject var model: WatchDataModel
-
+  
   var body: some View {
-
+    
     VStack {
       
       Spacer()
@@ -21,17 +21,20 @@ struct IdleFastView: View {
         .font(.title3)
       
       Spacer()
-
-      Button("Start Fast") {
+      
+      Button {
         model.sendRequestToStartFast()
+        
+      } label: {
+        Text("Start Fast")
       }
       .disabled(model.isPending)
-
+      
     }
     .padding()
-
+    
   }
-
+  
 }
 
 

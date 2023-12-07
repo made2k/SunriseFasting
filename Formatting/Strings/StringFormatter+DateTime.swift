@@ -23,34 +23,34 @@ public extension StringFormatter {
     separator: String? = nil,
     capitalized: Bool = true
   ) -> String {
-
+    
     let timeString: String = date.formatted(date: .omitted, time: .shortened)
-
+    
     // If the date is today, we don't need to show any other info than time
     if date.isToday {
       return timeString
     }
-
+    
     // We need to figure out what date string to use that makes sense.
     // If it's within the same week or two as now we can refer to it as the weekday name
     // If it's outside of a two week span, we'll refer to it simply by the numerical date
     var dayString: String
-
+    
     if date.isTomorrow {
-      dayString = "tomorrow"
-
+      dayString = String(localized: "tomorrow", comment: "colloquial date desciptor")
+      
     } else if date.isYesterday {
-      dayString = "yesterday"
-
+      dayString = String(localized: "yesterday", comment: "colloquial date desciptor")
+      
     } else if date.isInside(date: Date(), granularity: .weekOfYear) {
       dayString = date.toFormat("EEEE")
-
+      
     } else if date.isInside(date: Date().dateByAdding(-1, .weekOfYear).date, granularity: .weekOfYear) {
-      dayString = "last \(date.toFormat("EEEE"))"
-
+      dayString = String(localized: "last \(date.toFormat("EEEE"))", comment: "colloquial date desciptor for weekday within the last week")
+      
     } else if date.isInside(date: Date().dateByAdding(1, .weekOfYear).date, granularity: .weekOfYear) {
-      dayString = "next \(date.toFormat("EEEE"))"
-
+      dayString = String(localized: "next \(date.toFormat("EEEE"))", comment: "colloquial date desciptor for weekday within the next week")
+      
     } else {
       dayString = date.formatted(date: .numeric, time: .omitted)
     }
@@ -65,7 +65,7 @@ public extension StringFormatter {
     } else {
       return "\(dayString) \(timeString)"
     }
-
+    
   }
   
 }

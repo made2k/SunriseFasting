@@ -1,0 +1,45 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "day" : {
+      "comment" : "Countdown element day"
+    },
+    "hour" : {
+      "comment" : "Countdown element hour"
+    },
+    "hr" : {
+      "comment" : "Shortened countdown element hr"
+    },
+    "last %@" : {
+      "comment" : "colloquial date desciptor for weekday within the last week"
+    },
+    "min" : {
+      "comment" : "Shortened countdown element minute"
+    },
+    "minute" : {
+      "comment" : "Countdown element minute"
+    },
+    "next %@" : {
+      "comment" : "colloquial date desciptor for weekday within the next week"
+    },
+    "sec" : {
+      "comment" : "Shortened countdown element second"
+    },
+    "second" : {
+      "comment" : "Countdown element second"
+    },
+    "tomorrow" : {
+      "comment" : "colloquial date desciptor"
+    },
+    "year" : {
+      "comment" : "Countdown element year"
+    },
+    "yesterday" : {
+      "comment" : "colloquial date desciptor"
+    },
+    "yr" : {
+      "comment" : "Shortened countdown element year"
+    }
+  },
+  "version" : "1.0"
+}

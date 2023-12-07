@@ -9,31 +9,31 @@ import SharedDataWatch
 import SwiftUI
 
 struct SaveFastView: View {
-  
+
   @EnvironmentObject var model: WatchDataModel
-  
+
   let intervalString: String
   let intervalColor: Color
   let startedString: String
   let stoppedString: String
-  
+
   let fastInfo: SharedFastInfo
   let stopDate: Date
-  
+
   init(_ fastInfo: SharedFastInfo, stopDate: Date) {
     let elapsedInterval: TimeInterval = stopDate.timeIntervalSince(fastInfo.startDate)
-    
+
     intervalString = StringFormatter.countdown(from: elapsedInterval)
     intervalColor = elapsedInterval >= fastInfo.targetInterval ? .green : .orange
     startedString = StringFormatter.dateText(from: fastInfo.startDate)
     stoppedString = StringFormatter.dateText(from: stopDate)
-    
+
     self.fastInfo = fastInfo
     self.stopDate = stopDate
   }
-  
+
   var body: some View {
-    
+
     ScrollView {
       VStack(spacing: 4) {
         Text(intervalString)
@@ -47,32 +47,41 @@ struct SaveFastView: View {
               .font(.caption2)
             Text(startedString)
           }
-          
+
           Spacer()
-          
+
           VStack {
             Text("Stopped")
               .font(.caption2)
             Text(stoppedString)
           }
         }
-        Button("Save") {
+        Button {
           model.sendRequestToEndFast(stopDate)
+
+        } label: {
+          Text("Save")
         }
-        Button("Cancel") {
+        Button {
           model.interfaceState = .active(fastInfo: fastInfo)
+
+        } label: {
+          Text("Cancel")
         }
-        Button("Delete") {
+        Button {
           model.sendRequestToDeleteCurrentFast()
+
+        } label: {
+          Text("Delete")
         }
         .foregroundColor(.red)
-        
+
       }
       .padding()
     }
 
   }
-  
+
 }
 
 struct SaveFastView_Previews: PreviewProvider {

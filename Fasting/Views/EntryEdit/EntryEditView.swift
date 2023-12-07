@@ -11,71 +11,74 @@ import RingView
 import SwiftUI
 
 struct EntryEditView: View {
-  
+
   @ObservedObject var model: FastModel
   @State var presented: AnyView?
   @ObservedObject var keyboardHeightHelper = KeyboardHeightHelper()
   @Environment(\.dismiss) private var dismiss
-  
+
   var buttonColor: Color {
     model.entity.progress < 1 ?
     Color.buttonForegroundIncomplete :
     Color.buttonForegroundComplete
   }
-  
+
   init(_ model: FastModel) {
     self.model = model
     // TODO: in iOS 16 use .scrollDismissesKeyboard(.interactively)
     UIScrollView.appearance().keyboardDismissMode = .interactive
   }
-  
+
   var body: some View {
-    
+
     NavigationView {
-      
+
       ZStack {
-        
+
         Color.secondarySystemBackground
           .ignoresSafeArea(.all)
-        
+
         ScrollViewReader { reader in
           ScrollView {
-            
+
             VStack {
-              
+
               ZStack {
                 RingView(ConstantUpdater(model.entity.progress))
                   .applyProgressiveStyle(model.entity.progress)
                   .thickness(28)
                   .aspectRatio(contentMode: .fit)
-                
+
                 VStack {
-                  Text("Fasting Duration (\(model.progress.formatted(.percentRounded)))")
-                    .monospaced(font: .footnote)
-                    .foregroundColor(Color(UIColor.secondaryLabel))
+                  Text(
+                    "Fasting Duration (\(model.progress.formatted(.percentRounded)))",
+                    comment: "Header for duration of a completed fast with a percent value"
+                  )
+                  .monospaced(font: .footnote)
+                  .foregroundColor(Color(UIColor.secondaryLabel))
                   Text(model.entity.currentInterval.formatted(.shortDuration))
                     .monospaced(font: .largeTitle)
                 }
               }
               .frame(maxHeight: 350)
-              
+
               HStack {
                 Button(model.startDate.formatted(date: .omitted, time: .shortened)) {
                   editStartTime()
                 }
-                Text(" - ")
+                Text(" - ", comment: "Separator for a start and end date edit buttons")
                 Button(model.endDate?.formatted(date: .omitted, time: .shortened) ?? "?") {
                   editEndTime()
                 }
               }
               .buttonStyle(PaddedButtonStyle(foregroundColor: buttonColor))
-              
+
               HStack {
                 Spacer()
                 MoodButton(mood: $model.mood, tintColor: model.entity.progress < 1 ? Color.buttonForegroundIncomplete : Color.buttonForegroundComplete)
                   .padding(.trailing, 24)
               }
-              
+
               VStack(alignment: .leading) {
                 Text("Enter notes about your fast")
                   .font(.callout)
@@ -106,7 +109,7 @@ struct EntryEditView: View {
               }
               .padding([.leading, .trailing], 24)
               .id(1)
-              
+
             }
             .padding([.bottom])
           }
@@ -127,19 +130,19 @@ struct EntryEditView: View {
           })
         }
         .tint(.secondaryLabel)
-        
-        
+
+
         if let presented = presented {
           presented
             .zIndex(2)
         }
       }
-      
+
     }
   }
-  
+
   private func editStartTime() {
-    
+
     var picker = DatePickerSelectionView(
       date: .constant(model.startDate),
       minDate: nil,
@@ -150,15 +153,15 @@ struct EntryEditView: View {
     picker.onDateSelected = {
       model.startDate = $0
     }
-    
+
     withAnimation {
       presented = AnyView(picker)
     }
-    
+
   }
   
   private func editEndTime() {
-    
+
     var picker = DatePickerSelectionView(
       date: .constant(model.endDate!),
       minDate: model.startDate,
@@ -169,13 +172,13 @@ struct EntryEditView: View {
     picker.onDateSelected = {
       model.endDate = $0
     }
-    
+
     withAnimation {
       presented = AnyView(picker)
     }
-    
+
   }
-  
+
 }
 
 struct EntryEditView_Previews: PreviewProvider {

@@ -22,7 +22,7 @@ struct Provider: TimelineProvider {
   }
   
   func getTimeline(in context: Context, completion: @escaping (Timeline<Entry>) -> ()) {
-    let entries = WidgetDataLoader.loadTimeline()    
+    let entries = WidgetDataLoader.loadTimeline()
     let timeline = Timeline(entries: entries, policy: .never)
     completion(timeline)
   }
@@ -56,8 +56,8 @@ struct FastingWidget: Widget {
     StaticConfiguration(kind: kind, provider: Provider()) { entry in
       FastingWidgetEntryView(entry: entry)
     }
-    .configurationDisplayName("Fasting Widget")
-    .description("This displays information about your fasts.")
+    .configurationDisplayName(Text("Fasting Widget", comment: "Widget title"))
+    .description(Text("This displays information about your fasts.", comment: "Widget description"))
     .supportedFamilies([.systemSmall, .systemMedium])
   }
 }

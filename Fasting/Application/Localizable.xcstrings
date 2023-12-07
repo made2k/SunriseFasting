@@ -1,0 +1,135 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "" : {
+
+    },
+    " - " : {
+      "comment" : "Separator for a start and end date edit buttons"
+    },
+    "%@ - %@" : {
+      "comment" : "Presenting a date range",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@ - %2$@"
+          }
+        }
+      }
+    },
+    "%@/%@h" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@/%2$@h"
+          }
+        }
+      }
+    },
+    "Awful" : {
+
+    },
+    "Bad" : {
+
+    },
+    "Cancel" : {
+
+    },
+    "Clear Mood" : {
+
+    },
+    "Custom Duration (Hours)" : {
+      "comment" : "Placeholder for setting a custom fasting target"
+    },
+    "Delete Fast" : {
+
+    },
+    "Edit End Time" : {
+
+    },
+    "Edit Start" : {
+
+    },
+    "Elapsed time (%@)" : {
+      "comment" : "Inner fast details with a percentage value"
+    },
+    "End Fast" : {
+
+    },
+    "Enter notes about your fast" : {
+
+    },
+    "Export" : {
+
+    },
+    "Fast Started" : {
+
+    },
+    "Fasting Duration (%@)" : {
+      "comment" : "Header for duration of a completed fast with a percent value"
+    },
+    "Fasting Goal" : {
+
+    },
+    "Fasts" : {
+      "comment" : "Fast tab title"
+    },
+    "Get started with your first fast." : {
+
+    },
+    "Good" : {
+
+    },
+    "Great!" : {
+
+    },
+    "Import" : {
+
+    },
+    "Mood: %@" : {
+      "comment" : "Describes the current mode with an emoji as the value"
+    },
+    "Okay" : {
+
+    },
+    "Options" : {
+
+    },
+    "Save" : {
+
+    },
+    "Save Fast" : {
+
+    },
+    "Set your own custom fasting target here" : {
+      "comment" : "Custom fast modal title"
+    },
+    "Start Fast" : {
+
+    },
+    "Starting your fast now will complete it:" : {
+
+    },
+    "Stop Fasting?" : {
+
+    },
+    "Target End" : {
+      "comment" : "Title showing the end date/time for the current fast"
+    },
+    "Test Button" : {
+
+    },
+    "This text should be blurred" : {
+
+    },
+    "Time since last fast" : {
+
+    },
+    "Timeline" : {
+      "comment" : "Timeline tab title"
+    }
+  },
+  "version" : "1.0"
+}

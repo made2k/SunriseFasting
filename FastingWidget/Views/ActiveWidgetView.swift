@@ -27,7 +27,7 @@ struct ActiveWidgetView: View {
   var body: some View {
     
     switch family {
-    
+      
     case .systemSmall:
       smallWidget()
       
@@ -88,9 +88,9 @@ struct ActiveWidgetView: View {
       
     } else {
       HStack(alignment: .center, spacing: 4) {
-        Text("Elapsed")
+        Text("Elapsed", comment: "Elapsed title followed by a percentage value")
           .font(.headline)
-        Text("(\(percentString()))")
+        Text("(\(percentString()))", comment: "Percentage value for time elapsed during a fast")
           .font(.caption)
           .bold()
           .foregroundColor(Color(UIColor.secondaryLabel))
@@ -118,10 +118,10 @@ struct ActiveWidgetView_Previews: PreviewProvider {
     Group {
       ActiveWidgetView(date: Date(), data: SharedFastInfo(Date().addingTimeInterval(-24*60), interval: 60*60))
         .previewContext(WidgetPreviewContext(family: .systemSmall))
-
+      
       ActiveWidgetView(date: Date(), data: SharedFastInfo(Date().addingTimeInterval(-64*60), interval: 60*60))
         .previewContext(WidgetPreviewContext(family: .systemSmall))
-
+      
       
       ActiveWidgetView(date: Date(), data: SharedFastInfo(Date().addingTimeInterval(-24*60), interval: 60*60))
         .previewContext(WidgetPreviewContext(family: .systemMedium))

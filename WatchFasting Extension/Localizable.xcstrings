@@ -1,0 +1,36 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "Cancel" : {
+
+    },
+    "Delete" : {
+
+    },
+    "Goal" : {
+
+    },
+    "No ongoing fasts" : {
+
+    },
+    "Not Fasting" : {
+
+    },
+    "Save" : {
+
+    },
+    "Start Fast" : {
+
+    },
+    "Started" : {
+
+    },
+    "Stop Fast" : {
+
+    },
+    "Stopped" : {
+
+    }
+  },
+  "version" : "1.0"
+}
