@@ -42,7 +42,7 @@ struct WatchInactiveWidgetView: View {
   }
   
   private func accessoryInline() -> some View {
-    Text("No active fast")
+    Text("Sunrise Fasting")
   }
 
   private func accessoryCircular() -> some View {
