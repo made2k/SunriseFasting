@@ -47,7 +47,7 @@ extension WatchDataModel: WCSessionDelegate {
 
   private func decodeAppDataUpdate(_ data: Data) {
     
-    var rawData = data
+    let rawData = data
     let originalState = self.interfaceState
 
     do {
@@ -59,7 +59,7 @@ extension WatchDataModel: WCSessionDelegate {
         logger.warning("New interface state was detected")
         UserDefaults(suiteName: "group.com.zachmcgaughey.Fasting")?.set(rawData, forKey: "watch-widget-data")
         
-        if #available(watchOSApplicationExtension 9.0, *) {
+        if #available(watchOS 9.0, *) {
           logger.warning("Requesting reload of timelines")
           WidgetCenter.shared.reloadTimelines(ofKind: "FastingWatchWidget")
         } else {

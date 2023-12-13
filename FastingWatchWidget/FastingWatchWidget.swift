@@ -35,7 +35,7 @@ struct FastingWatchWidgetEntryView : View {
 
   var body: some View {
     switch entry.data {
-    case .idle(let value):
+    case .idle:
       Text("IDLE TODO")
 
     case .active(let value):
