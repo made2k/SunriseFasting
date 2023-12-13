@@ -35,8 +35,8 @@ struct FastingWatchWidgetEntryView : View {
 
   var body: some View {
     switch entry.data {
-    case .idle:
-      Text("IDLE TODO")
+    case .idle(let lastFastDate):
+      WatchInactiveWidgetView(lastFastDate: lastFastDate)
 
     case .active(let value):
       WatchActiveWidgetView(date: entry.date, data: value)

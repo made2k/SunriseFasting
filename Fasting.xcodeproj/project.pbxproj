@@ -66,6 +66,7 @@
 		922C1D44263A5EFA00F34AE9 /* SharedDataWatch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 922C1D2F263A5EF900F34AE9 /* SharedDataWatch.framework */; };
 		922C1D45263A5EFA00F34AE9 /* SharedDataWatch.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 922C1D2F263A5EF900F34AE9 /* SharedDataWatch.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		923E717F2B2A2CD5007812E2 /* SharedDataWatch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 922C1D2F263A5EF900F34AE9 /* SharedDataWatch.framework */; };
+		923E71852B2A300D007812E2 /* WatchInactiveWidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 923E71842B2A300D007812E2 /* WatchInactiveWidgetView.swift */; };
 		9252544D26C95BDA002FCE2D /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9252544C26C95BDA002FCE2D /* NotificationManager.swift */; };
 		9254F9A0262FBAB300589377 /* FastingApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9254F99F262FBAB300589377 /* FastingApp.swift */; };
 		9254F9A4262FBAB300589377 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9254F9A3262FBAB300589377 /* Assets.xcassets */; };
@@ -470,6 +471,7 @@
 		923194DC2B29F2C900790311 /* WatchFasting.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = WatchFasting.entitlements; sourceTree = "<group>"; };
 		923194DD2B29F52900790311 /* WatchFasting Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "WatchFasting Extension.entitlements"; sourceTree = "<group>"; };
 		9236BA3F263508AF0056EFDD /* Logger+Initialization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Logger+Initialization.swift"; sourceTree = "<group>"; };
+		923E71842B2A300D007812E2 /* WatchInactiveWidgetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchInactiveWidgetView.swift; sourceTree = "<group>"; };
 		9252544C26C95BDA002FCE2D /* NotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
 		92534CDE2634752300D95681 /* Fast+Properties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Fast+Properties.swift"; sourceTree = "<group>"; };
 		9254F99C262FBAB300589377 /* Fasting.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Fasting.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -705,6 +707,7 @@
 			isa = PBXGroup;
 			children = (
 				92056C8A2B29623700EAD329 /* WatchActiveWidgetView.swift */,
+				923E71842B2A300D007812E2 /* WatchInactiveWidgetView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -2043,6 +2046,7 @@
 				92056C8B2B29623700EAD329 /* WatchActiveWidgetView.swift in Sources */,
 				92056C862B295FA400EAD329 /* WatchWidgetDataLoader.swift in Sources */,
 				92056C7A2B295F4000EAD329 /* FastingWatchWidget.swift in Sources */,
+				923E71852B2A300D007812E2 /* WatchInactiveWidgetView.swift in Sources */,
 				92056C882B295FCA00EAD329 /* WatchWidgetEntry.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -29,15 +29,19 @@ struct WatchActiveWidgetView: View {
 
     case .accessoryCircular:
       accessoryCircular()
+        .containerBackground(for: .widget) { }
 
     case .accessoryRectangular:
       accessoryRectangular()
+        .containerBackground(for: .widget) { }
 
     case .accessoryCorner:
       accessoryCorner()
+        .containerBackground(for: .widget) { }
 
     default:
       unknown()
+        .containerBackground(for: .widget) { }
     }
 
   }
@@ -54,16 +58,17 @@ struct WatchActiveWidgetView: View {
       Image(systemName: "fork.knife")
     }
     .gaugeStyle(.accessoryCircularCapacity)
+    .tint(percent >= 1 ? Color.green : Color.orange)
   }
   
   private func accessoryCorner() -> some View {
-    Gauge(
-      value: percent,
-      in: 0...1
-    ) {
-      Image(systemName: "fork.knife")
-    }
-    .gaugeStyle(.accessoryCircularCapacity)
+    Text(percent.formatted(.percent.precision(.fractionLength(0))))
+      .widgetCurvesContent()
+      .widgetLabel {
+        ProgressView(value: percent, total: 1)
+          .tint(percent >= 1 ? Color.green : Color.orange)
+          .widgetAccentable()
+      }
   }
   
   private func accessoryRectangular() -> some View {
@@ -72,19 +77,20 @@ struct WatchActiveWidgetView: View {
         value: percent,
         in: 0...1
       ) {
-        Image(systemName: "fork.knife")
-      }
-      .gaugeStyle(.accessoryCircularCapacity)
-      .layoutPriority(0)
+        HStack(spacing: 8) {
+          Image(systemName: "fork.knife")
+          VStack(alignment: .leading) {
+            Text("Current Fast")
+              .lineLimit(1)
+              .font(.headline)
+            Text(percent.formatted(.percent.precision(.fractionLength(0))))
+              .font(.subheadline)
+          }
 
-      VStack(alignment: .leading) {
-        Text("Current Fast")
-          .lineLimit(1)
-          .font(.headline)
-        Text(percent.formatted(.percent.precision(.significantDigits(3))))
-          .font(.subheadline)
+        }
       }
-      .layoutPriority(1)
+      .gaugeStyle(.accessoryLinearCapacity)
+      .tint(percent >= 1 ? Color.green : Color.orange)
     }
   }
 
@@ -94,14 +100,13 @@ struct WatchActiveWidgetView_Previews: PreviewProvider {
   static var previews: some View {
 
     Group {
-      WatchActiveWidgetView(date: Date(), data: SharedFastInfo(Date().addingTimeInterval(-24*60), interval: 60*60))
+      WatchActiveWidgetView(date: Date(), data: SharedFastInfo(Date().addingTimeInterval(-40*60), interval: 60*60))
         .previewContext(WidgetPreviewContext(family: .accessoryCorner))
 
-      WatchActiveWidgetView(date: Date(), data: SharedFastInfo(Date().addingTimeInterval(-64*60), interval: 60*60))
+      WatchActiveWidgetView(date: Date(), data: SharedFastInfo(Date().addingTimeInterval(-24*60), interval: 60*60))
         .previewContext(WidgetPreviewContext(family: .accessoryCircular))
 
-
-      WatchActiveWidgetView(date: Date(), data: SharedFastInfo(Date().addingTimeInterval(-24*60), interval: 60*60))
+      WatchActiveWidgetView(date: Date(), data: SharedFastInfo(Date().addingTimeInterval(-24*60+3), interval: 60*60))
         .previewContext(WidgetPreviewContext(family: .accessoryRectangular))
     }
 
