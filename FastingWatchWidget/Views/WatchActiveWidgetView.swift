@@ -39,15 +39,20 @@ struct WatchActiveWidgetView: View {
       accessoryCorner()
         .containerBackground(for: .widget) { }
 
-    default:
-      unknown()
+    case .accessoryInline:
+      accessoryInline()
         .containerBackground(for: .widget) { }
+      
+    @unknown default:
+      accessoryCircular()
+        .containerBackground(for: .widget) { }
+
     }
 
   }
   
-  private func unknown() -> some View {
-    Text("Unknown")
+  private func accessoryInline() -> some View {
+    Text("\(percent.formatted(.percent.precision(.fractionLength(0)))) complete")
   }
 
   private func accessoryCircular() -> some View {
@@ -106,8 +111,12 @@ struct WatchActiveWidgetView_Previews: PreviewProvider {
       WatchActiveWidgetView(date: Date(), data: SharedFastInfo(Date().addingTimeInterval(-24*60), interval: 60*60))
         .previewContext(WidgetPreviewContext(family: .accessoryCircular))
 
-      WatchActiveWidgetView(date: Date(), data: SharedFastInfo(Date().addingTimeInterval(-24*60+3), interval: 60*60))
+      WatchActiveWidgetView(date: Date(), data: SharedFastInfo(Date().addingTimeInterval(-24*60), interval: 60*60))
         .previewContext(WidgetPreviewContext(family: .accessoryRectangular))
+      
+      WatchActiveWidgetView(date: Date(), data: SharedFastInfo(Date().addingTimeInterval(-28*60), interval: 60*60))
+        .previewContext(WidgetPreviewContext(family: .accessoryInline))
+      
     }
 
   }

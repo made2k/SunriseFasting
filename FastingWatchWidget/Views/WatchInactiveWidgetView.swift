@@ -33,16 +33,16 @@ struct WatchInactiveWidgetView: View {
     case .accessoryCorner:
       accessoryCorner()
         .containerBackground(for: .widget) { }
-
-    default:
-      unknown()
+      
+    case .accessoryInline:
+      accessoryInline()
         .containerBackground(for: .widget) { }
     }
 
   }
   
-  private func unknown() -> some View {
-    Text("Unknown")
+  private func accessoryInline() -> some View {
+    Text("No active fast")
   }
 
   private func accessoryCircular() -> some View {
@@ -93,6 +93,9 @@ struct WatchInactiveWidgetView_Previews: PreviewProvider {
 
       WatchInactiveWidgetView(lastFastDate: Date().addingTimeInterval(-1 * 60 * 65))
         .previewContext(WidgetPreviewContext(family: .accessoryRectangular))
+      
+      WatchInactiveWidgetView(lastFastDate: Date().addingTimeInterval(-1 * 60 * 65))
+        .previewContext(WidgetPreviewContext(family: .accessoryInline))
     }
 
   }
