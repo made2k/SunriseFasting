@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 52;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -12,6 +12,14 @@
 		92021AD026326D06006C00C1 /* AppModel+DataLoading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92021ACF26326D06006C00C1 /* AppModel+DataLoading.swift */; };
 		92021AD226326F2A006C00C1 /* FastModel+FastActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92021AD126326F2A006C00C1 /* FastModel+FastActions.swift */; };
 		92021AD426327238006C00C1 /* FastModel+Equatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92021AD326327238006C00C1 /* FastModel+Equatable.swift */; };
+		92056C762B295F4000EAD329 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92250A4D26371A6100DF1A87 /* WidgetKit.framework */; };
+		92056C772B295F4000EAD329 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92250A4F26371A6100DF1A87 /* SwiftUI.framework */; };
+		92056C7A2B295F4000EAD329 /* FastingWatchWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92056C792B295F4000EAD329 /* FastingWatchWidget.swift */; };
+		92056C7C2B295F4100EAD329 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 92056C7B2B295F4100EAD329 /* Assets.xcassets */; };
+		92056C802B295F4100EAD329 /* FastingWatchWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 92056C752B295F4000EAD329 /* FastingWatchWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		92056C862B295FA400EAD329 /* WatchWidgetDataLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92056C852B295FA400EAD329 /* WatchWidgetDataLoader.swift */; };
+		92056C882B295FCA00EAD329 /* WatchWidgetEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92056C872B295FCA00EAD329 /* WatchWidgetEntry.swift */; };
+		92056C8B2B29623700EAD329 /* WatchActiveWidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92056C8A2B29623700EAD329 /* WatchActiveWidgetView.swift */; };
 		9209B2042703FB1D0069715D /* UserDefaults+TransactionTracking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9209B2032703FB1D0069715D /* UserDefaults+TransactionTracking.swift */; };
 		920E50E62633C21A0014E7B5 /* Algorithms in Frameworks */ = {isa = PBXBuildFile; productRef = 920E50E52633C21A0014E7B5 /* Algorithms */; };
 		920E50E92633C79D0014E7B5 /* FastGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920E50E82633C79D0014E7B5 /* FastGroup.swift */; };
@@ -191,6 +199,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		92056C7E2B295F4100EAD329 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9254F994262FBAB300589377 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 92056C742B295F4000EAD329;
+			remoteInfo = FastingWatchWidgetExtension;
+		};
 		92250A5726371A6200DF1A87 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 9254F994262FBAB300589377 /* Project object */;
@@ -313,6 +328,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		92056C812B295F4100EAD329 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				92056C802B295F4100EAD329 /* FastingWatchWidgetExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		92250A5A26371A6200DF1A87 /* Embed App Extensions */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -393,6 +419,13 @@
 		92021ACF26326D06006C00C1 /* AppModel+DataLoading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppModel+DataLoading.swift"; sourceTree = "<group>"; };
 		92021AD126326F2A006C00C1 /* FastModel+FastActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FastModel+FastActions.swift"; sourceTree = "<group>"; };
 		92021AD326327238006C00C1 /* FastModel+Equatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FastModel+Equatable.swift"; sourceTree = "<group>"; };
+		92056C752B295F4000EAD329 /* FastingWatchWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = FastingWatchWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		92056C792B295F4000EAD329 /* FastingWatchWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FastingWatchWidget.swift; sourceTree = "<group>"; };
+		92056C7B2B295F4100EAD329 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		92056C7D2B295F4100EAD329 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		92056C852B295FA400EAD329 /* WatchWidgetDataLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchWidgetDataLoader.swift; sourceTree = "<group>"; };
+		92056C872B295FCA00EAD329 /* WatchWidgetEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchWidgetEntry.swift; sourceTree = "<group>"; };
+		92056C8A2B29623700EAD329 /* WatchActiveWidgetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchActiveWidgetView.swift; sourceTree = "<group>"; };
 		9209B2032703FB1D0069715D /* UserDefaults+TransactionTracking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+TransactionTracking.swift"; sourceTree = "<group>"; };
 		920E50E82633C79D0014E7B5 /* FastGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FastGroup.swift; sourceTree = "<group>"; };
 		920E50EA2633C7BC0014E7B5 /* FastGroup+Identifiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FastGroup+Identifiable.swift"; sourceTree = "<group>"; };
@@ -445,6 +478,9 @@
 		922C1D2F263A5EF900F34AE9 /* SharedDataWatch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SharedDataWatch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		922C1D31263A5EFA00F34AE9 /* SharedDataWatch.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SharedDataWatch.h; sourceTree = "<group>"; };
 		922C1D32263A5EFA00F34AE9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		923194DB2B29686F00790311 /* FastingWatchWidgetExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FastingWatchWidgetExtension.entitlements; sourceTree = "<group>"; };
+		923194DC2B29F2C900790311 /* WatchFasting.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = WatchFasting.entitlements; sourceTree = "<group>"; };
+		923194DD2B29F52900790311 /* WatchFasting Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "WatchFasting Extension.entitlements"; sourceTree = "<group>"; };
 		9236BA3F263508AF0056EFDD /* Logger+Initialization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Logger+Initialization.swift"; sourceTree = "<group>"; };
 		9252544C26C95BDA002FCE2D /* NotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
 		92534CDE2634752300D95681 /* Fast+Properties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Fast+Properties.swift"; sourceTree = "<group>"; };
@@ -562,6 +598,15 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		92056C722B295F4000EAD329 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				92056C772B295F4000EAD329 /* SwiftUI.framework in Frameworks */,
+				92056C762B295F4000EAD329 /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		92250A4826371A6100DF1A87 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -661,6 +706,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		92056C782B295F4000EAD329 /* FastingWatchWidget */ = {
+			isa = PBXGroup;
+			children = (
+				92056C892B29622500EAD329 /* Views */,
+				92056C7D2B295F4100EAD329 /* Info.plist */,
+				92056C792B295F4000EAD329 /* FastingWatchWidget.swift */,
+				92056C852B295FA400EAD329 /* WatchWidgetDataLoader.swift */,
+				92056C872B295FCA00EAD329 /* WatchWidgetEntry.swift */,
+				92056C7B2B295F4100EAD329 /* Assets.xcassets */,
+			);
+			path = FastingWatchWidget;
+			sourceTree = "<group>";
+		};
+		92056C892B29622500EAD329 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				92056C8A2B29623700EAD329 /* WatchActiveWidgetView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		9209B1FE2703F97F0069715D /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -782,11 +848,11 @@
 		92250A5126371A6100DF1A87 /* FastingWidget */ = {
 			isa = PBXGroup;
 			children = (
-				92250A5426371A6200DF1A87 /* Assets.xcassets */,
-				925F95F526375592006BA9F2 /* Data */,
-				92250A5226371A6100DF1A87 /* FastingWidget.swift */,
 				92250A5F26371A7300DF1A87 /* FastingWidgetExtension.entitlements */,
 				92250A5626371A6200DF1A87 /* Info.plist */,
+				92250A5226371A6100DF1A87 /* FastingWidget.swift */,
+				92250A5426371A6200DF1A87 /* Assets.xcassets */,
+				925F95F526375592006BA9F2 /* Data */,
 				928E4F4B263750EC00037894 /* Views */,
 			);
 			path = FastingWidget;
@@ -847,6 +913,7 @@
 		922C1CF4263A573400F34AE9 /* WatchFasting */ = {
 			isa = PBXGroup;
 			children = (
+				923194DC2B29F2C900790311 /* WatchFasting.entitlements */,
 				922C1CF5263A573500F34AE9 /* Assets.xcassets */,
 				922C1CF7263A573500F34AE9 /* Info.plist */,
 			);
@@ -856,6 +923,7 @@
 		922C1D00263A573500F34AE9 /* WatchFasting Extension */ = {
 			isa = PBXGroup;
 			children = (
+				923194DD2B29F52900790311 /* WatchFasting Extension.entitlements */,
 				922C1D10263A573500F34AE9 /* Info.plist */,
 				922C1D0B263A573500F34AE9 /* Assets.xcassets */,
 				9200EF3D264101DA00111355 /* Colors.xcassets */,
@@ -913,11 +981,13 @@
 		9254F993262FBAB300589377 = {
 			isa = PBXGroup;
 			children = (
+				923194DB2B29686F00790311 /* FastingWatchWidgetExtension.entitlements */,
 				9254F99E262FBAB300589377 /* Fasting */,
 				92CEBAD32702A5E4005DEB4B /* FastingIntents */,
 				92250A5126371A6100DF1A87 /* FastingWidget */,
 				92DBCE262702A20300C0B9B1 /* FastStorage */,
 				92DAB3092703D4BE00629B0C /* Formatting */,
+				92056C782B295F4000EAD329 /* FastingWatchWidget */,
 				92250A4C26371A6100DF1A87 /* Frameworks */,
 				92EF04E72703770C00D939C3 /* Logging */,
 				9254F99D262FBAB300589377 /* Products */,
@@ -943,6 +1013,7 @@
 				92CEBAD12702A5E4005DEB4B /* FastingIntents.appex */,
 				92EF04E62703770C00D939C3 /* Logging.framework */,
 				92DAB3082703D4BE00629B0C /* Formatting.framework */,
+				92056C752B295F4000EAD329 /* FastingWatchWidgetExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -1588,6 +1659,23 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		92056C742B295F4000EAD329 /* FastingWatchWidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 92056C842B295F4100EAD329 /* Build configuration list for PBXNativeTarget "FastingWatchWidgetExtension" */;
+			buildPhases = (
+				92056C712B295F4000EAD329 /* Sources */,
+				92056C722B295F4000EAD329 /* Frameworks */,
+				92056C732B295F4000EAD329 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FastingWatchWidgetExtension;
+			productName = FastingWatchWidgetExtension;
+			productReference = 92056C752B295F4000EAD329 /* FastingWatchWidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		92250A4A26371A6100DF1A87 /* FastingWidgetExtension */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 92250A5D26371A6200DF1A87 /* Build configuration list for PBXNativeTarget "FastingWidgetExtension" */;
@@ -1651,11 +1739,13 @@
 				922C1CF9263A573500F34AE9 /* Frameworks */,
 				922C1CFA263A573500F34AE9 /* Resources */,
 				922C1D23263A5E3A00F34AE9 /* Embed Frameworks */,
+				92056C812B295F4100EAD329 /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 				922C1D43263A5EFA00F34AE9 /* PBXTargetDependency */,
+				92056C7F2B295F4100EAD329 /* PBXTargetDependency */,
 			);
 			name = "WatchFasting Extension";
 			productName = "WatchFasting Extension";
@@ -1816,9 +1906,12 @@
 		9254F994262FBAB300589377 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1300;
+				LastSwiftUpdateCheck = 1510;
 				LastUpgradeCheck = 1240;
 				TargetAttributes = {
+					92056C742B295F4000EAD329 = {
+						CreatedOnToolsVersion = 15.1;
+					};
 					92250A4A26371A6100DF1A87 = {
 						CreatedOnToolsVersion = 12.4;
 					};
@@ -1884,11 +1977,20 @@
 				92CEBAD02702A5E4005DEB4B /* FastingIntents */,
 				92EF04E52703770C00D939C3 /* Logging */,
 				92DAB3072703D4BE00629B0C /* Formatting */,
+				92056C742B295F4000EAD329 /* FastingWatchWidgetExtension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		92056C732B295F4000EAD329 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				92056C7C2B295F4100EAD329 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		92250A4926371A6100DF1A87 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1980,6 +2082,17 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		92056C712B295F4000EAD329 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				92056C8B2B29623700EAD329 /* WatchActiveWidgetView.swift in Sources */,
+				92056C862B295FA400EAD329 /* WatchWidgetDataLoader.swift in Sources */,
+				92056C7A2B295F4000EAD329 /* FastingWatchWidget.swift in Sources */,
+				92056C882B295FCA00EAD329 /* WatchWidgetEntry.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		92250A4726371A6100DF1A87 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -2187,6 +2300,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		92056C7F2B295F4100EAD329 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 92056C742B295F4000EAD329 /* FastingWatchWidgetExtension */;
+			targetProxy = 92056C7E2B295F4100EAD329 /* PBXContainerItemProxy */;
+		};
 		92250A5826371A6200DF1A87 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 92250A4A26371A6100DF1A87 /* FastingWidgetExtension */;
@@ -2278,6 +2396,79 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		92056C822B295F4100EAD329 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CODE_SIGN_ENTITLEMENTS = FastingWatchWidgetExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8QEC3K9K4B;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = FastingWatchWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = FastingWatchWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.zachmcgaughey.Fasting.watchkitapp.watchkitextension.FastingWatchWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 10.2;
+			};
+			name = Debug;
+		};
+		92056C832B295F4100EAD329 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CODE_SIGN_ENTITLEMENTS = FastingWatchWidgetExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8QEC3K9K4B;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = FastingWatchWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = FastingWatchWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.zachmcgaughey.Fasting.watchkitapp.watchkitextension.FastingWatchWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 10.2;
+			};
+			name = Release;
+		};
 		92250A5B26371A6200DF1A87 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -2399,6 +2590,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = WatchFasting/WatchFasting.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 8QEC3K9K4B;
@@ -2424,6 +2616,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = WatchFasting/WatchFasting.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 8QEC3K9K4B;
@@ -2447,6 +2640,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_ENTITLEMENTS = "WatchFasting Extension/WatchFasting Extension.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"WatchFasting Extension/Preview Content\"";
@@ -2472,6 +2666,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_ENTITLEMENTS = "WatchFasting Extension/WatchFasting Extension.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"WatchFasting Extension/Preview Content\"";
@@ -3065,6 +3260,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		92056C842B295F4100EAD329 /* Build configuration list for PBXNativeTarget "FastingWatchWidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				92056C822B295F4100EAD329 /* Debug */,
+				92056C832B295F4100EAD329 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		92250A5D26371A6200DF1A87 /* Build configuration list for PBXNativeTarget "FastingWidgetExtension" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
