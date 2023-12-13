@@ -37,6 +37,11 @@ struct WatchInactiveWidgetView: View {
     case .accessoryInline:
       accessoryInline()
         .containerBackground(for: .widget) { }
+      
+    @unknown default:
+      accessoryCircular()
+        .containerBackground(for: .widget) { }
+
     }
 
   }
