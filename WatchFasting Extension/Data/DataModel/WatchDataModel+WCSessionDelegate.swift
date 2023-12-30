@@ -56,23 +56,19 @@ extension WatchDataModel: WCSessionDelegate {
       self.interfaceState = .init(from: data)
       
       if originalState != interfaceState {
-        logger.warning("New interface state was detected")
+        logger.info("New interface state was detected")
         UserDefaults(suiteName: "group.com.zachmcgaughey.Fasting")?.set(rawData, forKey: "watch-widget-data")
         
         if #available(watchOS 9.0, *) {
-          logger.warning("Requesting reload of timelines")
+          logger.debug("Requesting reload of timelines")
           WidgetCenter.shared.reloadTimelines(ofKind: "FastingWatchWidget")
-        } else {
-          // Fallback on earlier versions
         }
       }
-
 
       // If our complication hooks are empty, this update happened outside
       // of a complication which means they're no longer valid. Force a
       // refresh of all complications.
       if complicationHooks.isEmpty {
-
         CLKComplicationServer.sharedInstance().activeComplications?.forEach {
           CLKComplicationServer.sharedInstance().reloadTimeline(for: $0)
         }
