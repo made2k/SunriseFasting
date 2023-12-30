@@ -15,15 +15,12 @@ struct Provider: TimelineProvider {
   }
   
   func getSnapshot(in context: Context, completion: @escaping (WatchWidgetEntry) -> ()) {
-    Logger(subsystem: "com.zachmcgaughey.Fasting", category: "Test").warning("Getting snapshot from provier")
-    Logger(subsystem: "com.zachmcgaughey.Fasting", category: "Test").warning("Snapshot info: \(context.isPreview)")
     let data = WatchWidgetDataLoader.shared.loadSharedData()
     let entry = WatchWidgetEntry(date: Date(), data: data)
     completion(entry)
   }
   
   func getTimeline(in context: Context, completion: @escaping (Timeline<Entry>) -> ()) {
-    Logger(subsystem: "com.zachmcgaughey.Fasting", category: "Test").warning("Getting timeline from provider")
     let entries: [Entry] =  WatchWidgetDataLoader.shared.loadTimeline()
     let timeline = Timeline(entries: entries, policy: .never)
     completion(timeline)

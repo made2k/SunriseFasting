@@ -22,16 +22,16 @@ class WatchWidgetDataLoader: NSObject {
   }
   
   func loadTimeline() -> [WatchWidgetEntry] {
-    logger.warning("Loading timeline")
+    logger.debug("Loading timeline")
     let data = loadSharedData()
     
     switch data {
     case .active(let fastInfo):
-      logger.warning("Loaded active fast with: \(fastInfo.startDate)")
+      logger.debug("Loaded active fast with: \(fastInfo.startDate)")
       return getActiveTimeline(from: fastInfo)
       
     case .idle(let lastFast):
-      logger.warning("Loaded idle fast")
+      logger.debug("Loaded idle fast")
       return getIdleTimeline(with: lastFast)
 
     }
