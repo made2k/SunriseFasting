@@ -9,6 +9,7 @@ import ClockKit
 import Foundation
 import SharedDataWatch
 import WatchConnectivity
+import WidgetKit
 
 extension WatchDataModel: WCSessionDelegate {
 
@@ -45,17 +46,29 @@ extension WatchDataModel: WCSessionDelegate {
   }
 
   private func decodeAppDataUpdate(_ data: Data) {
+    
+    let rawData = data
+    let originalState = self.interfaceState
 
     do {
       let decoder = JSONDecoder()
       let data = try decoder.decode(SharedWidgetDataType.self, from: data)
       self.interfaceState = .init(from: data)
+      
+      if originalState != interfaceState {
+        logger.info("New interface state was detected")
+        UserDefaults(suiteName: "group.com.zachmcgaughey.Fasting")?.set(rawData, forKey: "watch-widget-data")
+        
+        if #available(watchOS 9.0, *) {
+          logger.debug("Requesting reload of timelines")
+          WidgetCenter.shared.reloadTimelines(ofKind: "FastingWatchWidget")
+        }
+      }
 
       // If our complication hooks are empty, this update happened outside
       // of a complication which means they're no longer valid. Force a
       // refresh of all complications.
       if complicationHooks.isEmpty {
-
         CLKComplicationServer.sharedInstance().activeComplications?.forEach {
           CLKComplicationServer.sharedInstance().reloadTimeline(for: $0)
         }

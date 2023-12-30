@@ -11,27 +11,64 @@ import SwiftUI
 import WidgetKit
 
 struct IdleWidgetView: View {
-  
+
   @Environment(\.widgetFamily) var family
-  
+
   let lastFastDate: Date?
-  
+
   var body: some View {
-    
+
     switch family {
-    
+
+    case .accessoryCircular:
+      if #available(iOSApplicationExtension 16.0, *) {
+        accessoryCircular()
+      }
+
+    case .accessoryRectangular:
+      if #available(iOSApplicationExtension 16.0, *) {
+        accessoryRectangular()
+      }
+
     case .systemSmall:
       smallWidget()
-      
+
     default:
       mediumWidget()
-      
+
     }
-    
+
   }
-  
+
+  @available(iOSApplicationExtension 16.0, *)
+  private func accessoryCircular() -> some View {
+    Gauge(value: 0) {
+      Image(systemName: "fork.knife")
+    }
+    .gaugeStyle(.accessoryCircularCapacity)
+  }
+
+  @available(iOSApplicationExtension 16.0, *)
+  private func accessoryRectangular() -> some View {
+    HStack {
+      Gauge(value: 0) {
+        Image(systemName: "fork.knife")
+      }
+      .gaugeStyle(.accessoryCircularCapacity)
+      .layoutPriority(0)
+
+      VStack(alignment: .leading) {
+        Text("No Active Fast")
+          .lineLimit(1)
+          .font(.headline)
+      }
+      .layoutPriority(1)
+    }
+
+  }
+
   private func smallWidget() -> some View {
-    
+
     VStack(alignment: .leading) {
       HStack {
         Spacer()
@@ -53,14 +90,13 @@ struct IdleWidgetView: View {
           .font(.title)
           .minimumScaleFactor(0.2)
       }
-      
+
     }
-    .padding()
-    
+
   }
-  
+
   private func mediumWidget() -> some View {
-    
+
     HStack {
       VStack(alignment: .leading) {
         Spacer()
@@ -85,29 +121,29 @@ struct IdleWidgetView: View {
         .thickness(14)
         .frame(minWidth: 100, minHeight: 100)
     }
-    .padding()
-    
+
   }
-  
+
 }
 
 struct IdleWidgetView_Previews: PreviewProvider {
   static var previews: some View {
-    
+
     Group {
       IdleWidgetView(lastFastDate: nil)
         .previewContext(WidgetPreviewContext(family: .systemSmall))
-      
+
       IdleWidgetView(lastFastDate: Date().addingTimeInterval(-45 * 60))
         .previewContext(WidgetPreviewContext(family: .systemSmall))
-      
+
       IdleWidgetView(lastFastDate: nil)
         .previewContext(WidgetPreviewContext(family: .systemMedium))
-      
+
       IdleWidgetView(lastFastDate: Date().addingTimeInterval(-45 * 60))
         .previewContext(WidgetPreviewContext(family: .systemMedium))
     }
-    
-    
+
+
   }
 }
+

@@ -12,34 +12,78 @@ import SwiftUI
 import WidgetKit
 
 struct ActiveWidgetView: View {
-  
+
   @Environment(\.widgetFamily) var family
-  
+
   let date: Date
   let data: SharedFastInfo
-  
+
   var percent: Double {
     return min(date.timeIntervalSince(data.startDate) / data.targetInterval, 1)
   }
-  
+
   // MARK: - Views
-  
+
   var body: some View {
-    
+
     switch family {
-    
+
+    case .accessoryCircular:
+      if #available(iOSApplicationExtension 16.0, *) {
+        accessoryCircular()
+      }
+
+    case .accessoryRectangular:
+      if #available(iOSApplicationExtension 16.0, *) {
+        accessoryRectangular()
+      }
+
     case .systemSmall:
       smallWidget()
-      
+
     default:
       mediumWidget()
-      
+
     }
-    
+
   }
-  
+
+  @available(iOSApplicationExtension 16.0, *)
+  private func accessoryCircular() -> some View {
+    Gauge(
+      value: percent,
+      in: 0...1
+    ) {
+      Image(systemName: "fork.knife")
+    }
+    .gaugeStyle(.accessoryCircularCapacity)
+  }
+
+  @available(iOSApplicationExtension 16.0, *)
+  private func accessoryRectangular() -> some View {
+    HStack {
+      Gauge(
+        value: percent,
+        in: 0...1
+      ) {
+        Image(systemName: "fork.knife")
+      }
+      .gaugeStyle(.accessoryCircularCapacity)
+      .layoutPriority(0)
+
+      VStack(alignment: .leading) {
+        Text("Current Fast")
+          .lineLimit(1)
+          .font(.headline)
+        Text(percent.formatted(.percent.precision(.significantDigits(3))))
+          .font(.subheadline)
+      }
+      .layoutPriority(1)
+    }
+  }
+
   private func smallWidget() -> some View {
-    
+
     VStack(alignment: .leading) {
       HStack {
         Spacer()
@@ -53,12 +97,11 @@ struct ActiveWidgetView: View {
       Text(data.startDate, style: .relative)
         .font(.body)
     }
-    .padding()
-    
+
   }
-  
+
   private func mediumWidget() -> some View {
-    
+
     HStack {
       VStack(alignment: .leading) {
         Spacer()
@@ -73,19 +116,18 @@ struct ActiveWidgetView: View {
         .applyProgressiveStyle(percent)
         .thickness(14)
         .frame(minWidth: 100, minHeight: 100)
-      
+
     }
-    .padding()
-    
+
   }
-  
+
   @ViewBuilder
   private func progressView() -> some View {
-    
+
     if percent >= 1 {
       Text("Completed")
         .font(.headline)
-      
+
     } else {
       HStack(alignment: .center, spacing: 4) {
         Text("Elapsed")
@@ -96,25 +138,25 @@ struct ActiveWidgetView: View {
           .foregroundColor(Color(UIColor.secondaryLabel))
       }
     }
-    
+
   }
-  
+
   // MARK: - Formatting
-  
+
   private func percentString() -> String {
     let formatter = NumberFormatter()
     formatter.numberStyle = .percent
     formatter.roundingMode = .floor
     formatter.maximumFractionDigits = 0
-    
+
     return formatter.string(from: NSNumber(value: percent)) ?? "??"
   }
-  
+
 }
 
 struct ActiveWidgetView_Previews: PreviewProvider {
   static var previews: some View {
-    
+
     Group {
       ActiveWidgetView(date: Date(), data: SharedFastInfo(Date().addingTimeInterval(-24*60), interval: 60*60))
         .previewContext(WidgetPreviewContext(family: .systemSmall))
@@ -122,14 +164,14 @@ struct ActiveWidgetView_Previews: PreviewProvider {
       ActiveWidgetView(date: Date(), data: SharedFastInfo(Date().addingTimeInterval(-64*60), interval: 60*60))
         .previewContext(WidgetPreviewContext(family: .systemSmall))
 
-      
+
       ActiveWidgetView(date: Date(), data: SharedFastInfo(Date().addingTimeInterval(-24*60), interval: 60*60))
         .previewContext(WidgetPreviewContext(family: .systemMedium))
-      
+
       ActiveWidgetView(date: Date(), data: SharedFastInfo(Date().addingTimeInterval(-64*60), interval: 60*60))
         .previewContext(WidgetPreviewContext(family: .systemMedium))
-      
+
     }
-    
+
   }
 }

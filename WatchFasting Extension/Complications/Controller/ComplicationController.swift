@@ -9,10 +9,15 @@ import ClockKit
 import SharedDataWatch
 import SwiftUI
 
-class ComplicationController: NSObject, CLKComplicationDataSource {
+class ComplicationController: NSObject, CLKComplicationDataSource, CLKComplicationWidgetMigrator {
   
   private let dataModel = WatchDataModel.shared
   private var cachedType: SharedWidgetDataType?
+  
+  @available(watchOS 9.0, *)
+  var widgetMigrator: CLKComplicationWidgetMigrator {
+    return self
+  }
 
   // MARK: - Data Loading
 
@@ -200,6 +205,16 @@ class ComplicationController: NSObject, CLKComplicationDataSource {
   func getLocalizableSampleTemplate(for complication: CLKComplication, withHandler handler: @escaping (CLKComplicationTemplate?) -> Void) {
     // This method will be called once per supported complication, and the results will be cached
     handler(nil)
+  }
+  
+  // MARK: - WidgetKit Migration
+  
+  @available(watchOS 9.0, *)
+  func widgetConfiguration(from complicationDescriptor: CLKComplicationDescriptor) async -> CLKComplicationWidgetMigrationConfiguration? {
+    CLKComplicationStaticWidgetMigrationConfiguration(
+      kind: "FastingWatchWidget",
+      extensionBundleIdentifier: "com.zachmcgaughey.Fasting.watchkitapp.FastingWatchWidget"
+    )
   }
 
   // MARK: - Helpers
