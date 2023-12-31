@@ -72,6 +72,7 @@ final class NotificationHandler: NSObject, UNUserNotificationCenterDelegate {
   
   // MARK: - Notification Center Delegate
   
+  @MainActor
   func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse) async {
     guard let model = model else { return }
     
@@ -90,10 +91,13 @@ final class NotificationHandler: NSObject, UNUserNotificationCenterDelegate {
     case FastNotificationIdentifiers.deleteAction:
       deleteFast(model)
       
+    case UNNotificationDefaultActionIdentifier:
+      return
+      
     default:
       logger.warning("Unknown notificatio action identifier \(response.actionIdentifier)")
     }
 
   }
-  
+
 }
