@@ -162,7 +162,6 @@
 		92D739D626326187008DD386 /* UserDefaults+Publishing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D739D526326187008DD386 /* UserDefaults+Publishing.swift */; };
 		92D81A80263106CD007E884A /* FastingGoalPickerItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D81A7F263106CD007E884A /* FastingGoalPickerItemView.swift */; };
 		92D81A82263106FD007E884A /* FastingGoalPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D81A81263106FD007E884A /* FastingGoalPickerView.swift */; };
-		92D81A8526310913007E884A /* FastingGoal.strings in Resources */ = {isa = PBXBuildFile; fileRef = 92D81A8426310913007E884A /* FastingGoal.strings */; };
 		92DAB3002703CDB200629B0C /* IntentError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92DAB2FF2703CDB200629B0C /* IntentError.swift */; };
 		92DAB3022703D33200629B0C /* EndFastIntentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92DAB3012703D33200629B0C /* EndFastIntentHandler.swift */; };
 		92DAB30B2703D4BE00629B0C /* Formatting.h in Headers */ = {isa = PBXBuildFile; fileRef = 92DAB30A2703D4BE00629B0C /* Formatting.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -187,6 +186,11 @@
 		92EF04F62703774300D939C3 /* Logging.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92EF04E62703770C00D939C3 /* Logging.framework */; };
 		92F2EBA02633465C001EBCFD /* BlurView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92F2EB9F2633465C001EBCFD /* BlurView.swift */; };
 		92F2EBA22633472C001EBCFD /* DatePickerRangeFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92F2EBA12633472C001EBCFD /* DatePickerRangeFactory.swift */; };
+		92F34AA92B214BCE007C136F /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 92F34AA82B214BCE007C136F /* Localizable.xcstrings */; };
+		92F34AAB2B21535C007C136F /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 92F34AAA2B21535C007C136F /* Localizable.xcstrings */; };
+		92F34AAE2B2212C6007C136F /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 92F34AAC2B22129F007C136F /* Localizable.xcstrings */; };
+		92F34AB02B221948007C136F /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 92F34AAF2B221948007C136F /* Localizable.xcstrings */; };
+		92F34AB22B223474007C136F /* FastingGoal.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 92F34AB12B223474007C136F /* FastingGoal.xcstrings */; };
 		92F4F856263A603B00205600 /* WatchDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922C1D1D263A5E0400F34AE9 /* WatchDataModel.swift */; };
 		92F4F857263A604300205600 /* SharedWidgetDataType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92250A7C26371D4200DF1A87 /* SharedWidgetDataType.swift */; };
 		92F4F858263A604300205600 /* SharedFastInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92250A7826371D2B00DF1A87 /* SharedFastInfo.swift */; };
@@ -565,7 +569,6 @@
 		92D739D726326667008DD386 /* UserDefaultKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultKeys.swift; sourceTree = "<group>"; };
 		92D81A7F263106CD007E884A /* FastingGoalPickerItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FastingGoalPickerItemView.swift; sourceTree = "<group>"; };
 		92D81A81263106FD007E884A /* FastingGoalPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FastingGoalPickerView.swift; sourceTree = "<group>"; };
-		92D81A8426310913007E884A /* FastingGoal.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = FastingGoal.strings; sourceTree = "<group>"; };
 		92DAB2FD2703CCA700629B0C /* FastingIntents.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FastingIntents.entitlements; sourceTree = "<group>"; };
 		92DAB2FF2703CDB200629B0C /* IntentError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntentError.swift; sourceTree = "<group>"; };
 		92DAB3012703D33200629B0C /* EndFastIntentHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndFastIntentHandler.swift; sourceTree = "<group>"; };
@@ -578,6 +581,11 @@
 		92F1D21D2630814400ED6F81 /* FastingGoal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FastingGoal.swift; sourceTree = "<group>"; };
 		92F2EB9F2633465C001EBCFD /* BlurView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlurView.swift; sourceTree = "<group>"; };
 		92F2EBA12633472C001EBCFD /* DatePickerRangeFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerRangeFactory.swift; sourceTree = "<group>"; };
+		92F34AA82B214BCE007C136F /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
+		92F34AAA2B21535C007C136F /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
+		92F34AAC2B22129F007C136F /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
+		92F34AAF2B221948007C136F /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
+		92F34AB12B223474007C136F /* FastingGoal.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = FastingGoal.xcstrings; sourceTree = "<group>"; };
 		92F4F85A263A6CD200205600 /* WatchDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchDataProvider.swift; sourceTree = "<group>"; };
 		92F4F85D263AE9A400205600 /* IdleFastView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdleFastView.swift; sourceTree = "<group>"; };
 		92F4F85F263AECB800205600 /* ActiveFastView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveFastView.swift; sourceTree = "<group>"; };
@@ -837,6 +845,7 @@
 				92250A5626371A6200DF1A87 /* Info.plist */,
 				92250A5226371A6100DF1A87 /* FastingWidget.swift */,
 				92250A5426371A6200DF1A87 /* Assets.xcassets */,
+				92F34AAC2B22129F007C136F /* Localizable.xcstrings */,
 				925F95F526375592006BA9F2 /* Data */,
 				928E4F4B263750EC00037894 /* Views */,
 			);
@@ -912,6 +921,7 @@
 				922C1D10263A573500F34AE9 /* Info.plist */,
 				922C1D0B263A573500F34AE9 /* Assets.xcassets */,
 				9200EF3D264101DA00111355 /* Colors.xcassets */,
+				92F34AAF2B221948007C136F /* Localizable.xcstrings */,
 				92ADC0A0263B6D9E009B348F /* Application */,
 				92ADC0A1263B6F76009B348F /* Complications */,
 				92ADC095263B5E64009B348F /* Data */,
@@ -942,12 +952,13 @@
 		9246FCF8262FBE4200B6375D /* Application */ = {
 			isa = PBXGroup;
 			children = (
+				921FA0E426C8A38B00E87751 /* Settings.bundle */,
+				92250A6026371A9000DF1A87 /* Fasting.entitlements */,
+				9254F9AD262FBAB300589377 /* Info.plist */,
+				9254F99F262FBAB300589377 /* FastingApp.swift */,
 				9254F9A3262FBAB300589377 /* Assets.xcassets */,
 				92978B2826331FD800944D12 /* Colors.xcassets */,
-				92250A6026371A9000DF1A87 /* Fasting.entitlements */,
-				9254F99F262FBAB300589377 /* FastingApp.swift */,
-				9254F9AD262FBAB300589377 /* Info.plist */,
-				921FA0E426C8A38B00E87751 /* Settings.bundle */,
+				92F34AA82B214BCE007C136F /* Localizable.xcstrings */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -1436,7 +1447,7 @@
 		92D81A8326310902007E884A /* FastingGoal */ = {
 			isa = PBXGroup;
 			children = (
-				92D81A8426310913007E884A /* FastingGoal.strings */,
+				92F34AB12B223474007C136F /* FastingGoal.xcstrings */,
 				92B7398526323607002D5261 /* FastingGoal+Descriptors.swift */,
 			);
 			path = FastingGoal;
@@ -1445,9 +1456,10 @@
 		92DAB3092703D4BE00629B0C /* Formatting */ = {
 			isa = PBXGroup;
 			children = (
+				92DAB30A2703D4BE00629B0C /* Formatting.h */,
+				92F34AAA2B21535C007C136F /* Localizable.xcstrings */,
 				92FEC21128CD84BE00904C59 /* FormatStyle */,
 				92656CCC26324C9B00C9C232 /* Strings */,
-				92DAB30A2703D4BE00629B0C /* Formatting.h */,
 			);
 			path = Formatting;
 			sourceTree = "<group>";
@@ -1921,6 +1933,7 @@
 			knownRegions = (
 				en,
 				Base,
+				sv,
 			);
 			mainGroup = 9254F993262FBAB300589377;
 			packageReferences = (
@@ -1961,6 +1974,7 @@
 			files = (
 				92250A5526371A6200DF1A87 /* Assets.xcassets in Resources */,
 				928E4F44263740C100037894 /* Colors.xcassets in Resources */,
+				92F34AAE2B2212C6007C136F /* Localizable.xcstrings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1977,6 +1991,7 @@
 			files = (
 				922C1CF6263A573500F34AE9 /* Assets.xcassets in Resources */,
 				922C1D0F263A573500F34AE9 /* Preview Assets.xcassets in Resources */,
+				92F34AB02B221948007C136F /* Localizable.xcstrings in Resources */,
 				922C1D0C263A573500F34AE9 /* Assets.xcassets in Resources */,
 				9200EF3E264101DA00111355 /* Colors.xcassets in Resources */,
 			);
@@ -1997,7 +2012,8 @@
 				92656F4626373E9A00AD5F67 /* Colors.xcassets in Resources */,
 				921FA0E526C8A38B00E87751 /* Settings.bundle in Resources */,
 				9254F9A4262FBAB300589377 /* Assets.xcassets in Resources */,
-				92D81A8526310913007E884A /* FastingGoal.strings in Resources */,
+				92F34AA92B214BCE007C136F /* Localizable.xcstrings in Resources */,
+				92F34AB22B223474007C136F /* FastingGoal.xcstrings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2019,6 +2035,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				92F34AAB2B21535C007C136F /* Localizable.xcstrings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2708,6 +2725,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MARKETING_VERSION = 1.3.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -2766,6 +2784,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MARKETING_VERSION = 1.3.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -2798,6 +2817,7 @@
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -2825,6 +2845,7 @@
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};

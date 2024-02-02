@@ -12,12 +12,12 @@ import SwiftUI
 struct ActiveFastView: View {
 
   @EnvironmentObject var model: WatchDataModel
-  
+
   private let fastInfo: SharedFastInfo?
-  
+
   private let startDateText: String
   private let endDateText: String
-  
+
   @State private var progress: Double = 0.0
   @State private var progressColor: Color = .orange
   @State private var durationText: String = "--:--:--"
@@ -28,12 +28,12 @@ struct ActiveFastView: View {
     if let info = fastInfo {
       startDateText = StringFormatter.dateText(from: info.startDate)
       endDateText = StringFormatter.dateText(from: info.targetEndDate)
-      
+
     } else {
       startDateText = "--:--"
       endDateText = "--:--"
     }
-    
+
   }
 
   var timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
@@ -65,9 +65,12 @@ struct ActiveFastView: View {
           Text(endDateText)
         }
       }
-      Button("Stop Fast") {
+      Button {
         guard let fastInfo = fastInfo else { return }
         model.askToSaveFastingData(fastInfo)
+
+      } label: {
+        Text("Stop Fast")
       }
       .disabled(model.isPending)
     }
@@ -77,28 +80,28 @@ struct ActiveFastView: View {
     }
 
   }
-  
+
   private func updateView(with fastingInfo: SharedFastInfo?, date: Date) {
-    
+
     if let info = fastInfo {
       updateViewWithInfo(info, now: date)
-      
+
     } else {
       updateViewWithPending()
     }
-    
+
   }
-  
+
   private func updateViewWithInfo(_ info: SharedFastInfo, now: Date) {
 
     let now: Date = Date()
     let currentInterval: TimeInterval = now.timeIntervalSince(info.startDate)
-    
+
     progress = min(currentInterval / info.targetInterval, 1.0)
     progressColor = progress < 1 ? .orange : .green
     durationText = StringFormatter.countdown(from: currentInterval)
   }
-  
+
   private func updateViewWithPending() {
     progress = 0.0
     progressColor = .gray
@@ -111,6 +114,6 @@ struct ActiveFastView_Previews: PreviewProvider {
   static var previews: some View {
     ActiveFastView(SharedFastInfo(Date(), interval: 60))
       .environmentObject(WatchDataModel.preview())
-    
+
   }
 }

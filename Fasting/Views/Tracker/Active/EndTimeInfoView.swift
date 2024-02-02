@@ -9,18 +9,21 @@ import Formatting
 import SwiftUI
 
 struct EndTimeInfoView: View {
-
+  
   private var dateText: String
-
+  
   init(referenceDate: Date) {
     self.dateText = StringFormatter.colloquialDateTime(from: referenceDate)
   }
   
   var body: some View {
     VStack {
-      Text("Target End")
-        .font(.callout)
-        .fontWeight(.semibold)
+      Text(
+        "Target End",
+        comment: "Title showing the end date/time for the current fast"
+      )
+      .font(.callout)
+      .fontWeight(.semibold)
       Text(dateText)
         .foregroundColor(Color(UIColor.secondaryLabel))
         .font(.callout)
@@ -28,7 +31,7 @@ struct EndTimeInfoView: View {
         .minimumScaleFactor(0.8)
     }
   }
-
+  
 }
 
 

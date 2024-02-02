@@ -12,36 +12,25 @@ extension FastingGoal {
   
   private static var table: String { "FastingGoal" }
   
-  /// Helper function to fetch a localized string given a key.
-  ///
-  /// This function encapsulates the bundle and table so only the key is required to
-  /// access the string.
-  ///
-  /// - Parameter key: Key to fetch for the string
-  /// - Returns: The localized string associated with the key.
-  private static func string(for key: String) -> String {
-    Bundle.main.localizedString(forKey: key, value: nil, table: table)
-  }
-  
   /// The descriptive title of the FastingGoal case.
   var caseTitle: String {
     
     switch self {
     
     case .fourteen:
-      return Self.string(for: "fourteen title")
+      return String(localized: "fourteen title", table: Self.table)
       
     case .sixteen:
-      return Self.string(for: "sixteen title")
-      
+      return String(localized: "sixteen title", table: Self.table)
+
     case .nineteen:
-      return Self.string(for: "nineteen title")
+      return String(localized: "nineteen title", table: Self.table)
 
     case .twentyThree:
-      return Self.string(for: "twenty three title")
-      
+      return String(localized: "twenty three title", table: Self.table)
+
     case .custom(_):
-      return Self.string(for: "custom title")
+      return String(localized: "custom title", table: Self.table)
     }
     
   }
@@ -52,19 +41,19 @@ extension FastingGoal {
     switch self {
     
     case .fourteen:
-      return Self.string(for: "fourteen description")
-      
+      return String(localized: "fourteen description", table: Self.table)
+
     case .sixteen:
-      return Self.string(for: "sixteen description")
-      
+      return String(localized: "sixteen description", table: Self.table)
+
     case .nineteen:
-      return Self.string(for: "nineteen description")
+      return String(localized: "nineteen description", table: Self.table)
 
     case .twentyThree:
-      return Self.string(for: "twenty three description")
-      
+      return String(localized: "twenty three description", table: Self.table)
+
     case .custom(_):
-      return Self.string(for: "custom description")
+      return String(localized: "custom description", table: Self.table)
     }
     
   }

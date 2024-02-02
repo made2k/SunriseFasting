@@ -9,20 +9,28 @@ import SwiftUI
 
 struct HomeTabView: View {
   var body: some View {
-
+    
     TabView {
       TrackerHomeView()
         .tabItem {
-          Label("Fasts", systemImage: "person.crop.circle")
+          Label {
+            Text("Fasts", comment: "Fast tab title")
+          } icon: {
+            Image(systemName: "person.crop.circle")
+          }
         }
       NavigationView {
         TimelineView()
       }
       .tabItem {
-        Label("Timeline", systemImage: "list.bullet")
+        Label {
+          Text("Timeline", comment: "Timeline tab title")
+        } icon: {
+          Image(systemName: "list.bullet")
+        }
       }
     }
-
+    
   }
 }
 

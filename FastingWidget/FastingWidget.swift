@@ -58,8 +58,8 @@ struct FastingWidget: Widget {
     StaticConfiguration(kind: kind, provider: Provider()) { entry in
       FastingWidgetEntryView(entry: entry)
     }
-    .configurationDisplayName("Fasting Widget")
-    .description("This displays information about your fasts.")
+    .configurationDisplayName(Text("Fasting Widget", comment: "Widget title"))
+    .description(Text("This displays information about your fasts.", comment: "Widget description"))
     .supportedFamilies(supportedFamilies)
   }
 

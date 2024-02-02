@@ -1,0 +1,149 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "day" : {
+      "comment" : "Countdown element day",
+      "localizations" : {
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "dag"
+          }
+        }
+      }
+    },
+    "hour" : {
+      "comment" : "Countdown element hour",
+      "localizations" : {
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "timme"
+          }
+        }
+      }
+    },
+    "hr" : {
+      "comment" : "Shortened countdown element hr",
+      "localizations" : {
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "h"
+          }
+        }
+      }
+    },
+    "last %@" : {
+      "comment" : "colloquial date desciptor for weekday within the last week",
+      "localizations" : {
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "förra %@"
+          }
+        }
+      }
+    },
+    "min" : {
+      "comment" : "Shortened countdown element minute",
+      "localizations" : {
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "min"
+          }
+        }
+      }
+    },
+    "minute" : {
+      "comment" : "Countdown element minute",
+      "localizations" : {
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "minut"
+          }
+        }
+      }
+    },
+    "next %@" : {
+      "comment" : "colloquial date desciptor for weekday within the next week",
+      "localizations" : {
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "nästa %@"
+          }
+        }
+      }
+    },
+    "sec" : {
+      "comment" : "Shortened countdown element second",
+      "localizations" : {
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "sek"
+          }
+        }
+      }
+    },
+    "second" : {
+      "comment" : "Countdown element second",
+      "localizations" : {
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "sekund"
+          }
+        }
+      }
+    },
+    "tomorrow" : {
+      "comment" : "colloquial date desciptor",
+      "localizations" : {
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "imorgon"
+          }
+        }
+      }
+    },
+    "year" : {
+      "comment" : "Countdown element year",
+      "localizations" : {
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "år"
+          }
+        }
+      }
+    },
+    "yesterday" : {
+      "comment" : "colloquial date desciptor",
+      "localizations" : {
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "igår"
+          }
+        }
+      }
+    },
+    "yr" : {
+      "comment" : "Shortened countdown element year",
+      "localizations" : {
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "år"
+          }
+        }
+      }
+    }
+  },
+  "version" : "1.0"
+}

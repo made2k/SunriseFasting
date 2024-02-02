@@ -1,0 +1,501 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "" : {
+
+    },
+    " - " : {
+      "comment" : "Separator for a start and end date edit buttons",
+      "localizations" : {
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : " - "
+          }
+        }
+      }
+    },
+    "%@ - %@" : {
+      "comment" : "Presenting a date range",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@ - %2$@"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$@ - %2$@"
+          }
+        }
+      }
+    },
+    "%@/%@h" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@/%2$@h"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$@/%2$@h"
+          }
+        }
+      }
+    },
+    "Awful" : {
+      "localizations" : {
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Usel"
+          }
+        }
+      }
+    },
+    "Bad" : {
+      "localizations" : {
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dålig"
+          }
+        }
+      }
+    },
+    "Cancel" : {
+      "localizations" : {
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Avbryt"
+          }
+        }
+      }
+    },
+    "Clear Mood" : {
+      "localizations" : {
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Rensa Sinnesstämning"
+          }
+        }
+      }
+    },
+    "custom description" : {
+      "localizations" : {
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "anpassad beskrivning"
+          }
+        }
+      }
+    },
+    "Custom Duration (Hours)" : {
+      "comment" : "Placeholder for setting a custom fasting target",
+      "localizations" : {
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Anpassad Varaktighet (Timmar)"
+          }
+        }
+      }
+    },
+    "custom title" : {
+      "localizations" : {
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "anpassad titel"
+          }
+        }
+      }
+    },
+    "Delete Fast" : {
+      "localizations" : {
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ta bort Fasta"
+          }
+        }
+      }
+    },
+    "Edit End Time" : {
+      "localizations" : {
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Redigera Sluttid"
+          }
+        }
+      }
+    },
+    "Edit Start" : {
+      "localizations" : {
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Redigera Start"
+          }
+        }
+      }
+    },
+    "Elapsed time (%@)" : {
+      "comment" : "Inner fast details with a percentage value",
+      "localizations" : {
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Förfluten tid (%@)"
+          }
+        }
+      }
+    },
+    "End Fast" : {
+      "localizations" : {
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Avsluta Fasta"
+          }
+        }
+      }
+    },
+    "Enter notes about your fast" : {
+      "localizations" : {
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ange anteckningar om din fasta"
+          }
+        }
+      }
+    },
+    "Export" : {
+      "localizations" : {
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Exportera"
+          }
+        }
+      }
+    },
+    "Fast Started" : {
+      "localizations" : {
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fasta Påbörjad"
+          }
+        }
+      }
+    },
+    "Fasting Duration (%@)" : {
+      "comment" : "Header for duration of a completed fast with a percent value",
+      "localizations" : {
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fastans Varaktighet (%@)"
+          }
+        }
+      }
+    },
+    "Fasting Goal" : {
+      "localizations" : {
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fastemål"
+          }
+        }
+      }
+    },
+    "Fasts" : {
+      "comment" : "Fast tab title",
+      "localizations" : {
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Faster"
+          }
+        }
+      }
+    },
+    "fourteen description" : {
+      "localizations" : {
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "fjorton beskrivning"
+          }
+        }
+      }
+    },
+    "fourteen title" : {
+      "localizations" : {
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "fjorton titel"
+          }
+        }
+      }
+    },
+    "Get started with your first fast." : {
+      "localizations" : {
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Börja med din första fasta."
+          }
+        }
+      }
+    },
+    "Good" : {
+      "localizations" : {
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bra"
+          }
+        }
+      }
+    },
+    "Great!" : {
+      "localizations" : {
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Utmärkt!"
+          }
+        }
+      }
+    },
+    "Import" : {
+      "localizations" : {
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Importera"
+          }
+        }
+      }
+    },
+    "Mood: %@" : {
+      "comment" : "Describes the current mode with an emoji as the value",
+      "localizations" : {
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sinnesstämning: %@"
+          }
+        }
+      }
+    },
+    "nineteen description" : {
+      "localizations" : {
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "nitton beskrivning"
+          }
+        }
+      }
+    },
+    "nineteen title" : {
+      "localizations" : {
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "nitton titel"
+          }
+        }
+      }
+    },
+    "Okay" : {
+      "localizations" : {
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Okej"
+          }
+        }
+      }
+    },
+    "Options" : {
+      "localizations" : {
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Alternativ"
+          }
+        }
+      }
+    },
+    "Save" : {
+      "localizations" : {
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Spara"
+          }
+        }
+      }
+    },
+    "Save Fast" : {
+      "localizations" : {
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Spara Fasta"
+          }
+        }
+      }
+    },
+    "Set your own custom fasting target here" : {
+      "comment" : "Custom fast modal title",
+      "localizations" : {
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ange ditt egna anpassade fasta mål här"
+          }
+        }
+      }
+    },
+    "sixteen description" : {
+      "localizations" : {
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "sexton beskrivning"
+          }
+        }
+      }
+    },
+    "sixteen title" : {
+      "localizations" : {
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "sexton titel"
+          }
+        }
+      }
+    },
+    "Start Fast" : {
+      "localizations" : {
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Starta Fasta"
+          }
+        }
+      }
+    },
+    "Starting your fast now will complete it:" : {
+      "localizations" : {
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Att börja din fasta nu kommer att slutföra den:"
+          }
+        }
+      }
+    },
+    "Stop Fasting?" : {
+      "localizations" : {
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sluta Fasta?"
+          }
+        }
+      }
+    },
+    "Target End" : {
+      "comment" : "Title showing the end date/time for the current fast",
+      "localizations" : {
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Måldatum"
+          }
+        }
+      }
+    },
+    "Test Button" : {
+      "localizations" : {
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Testknapp"
+          }
+        }
+      }
+    },
+    "This text should be blurred" : {
+      "localizations" : {
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Denna text bör vara suddig"
+          }
+        }
+      }
+    },
+    "Time since last fast" : {
+      "localizations" : {
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tid sedan senaste fasta"
+          }
+        }
+      }
+    },
+    "Timeline" : {
+      "comment" : "Timeline tab title",
+      "localizations" : {
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tidslinje"
+          }
+        }
+      }
+    },
+    "twenty three description" : {
+      "localizations" : {
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "tjugotre beskrivning"
+          }
+        }
+      }
+    },
+    "twenty three title" : {
+      "localizations" : {
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "tjugotre titel"
+          }
+        }
+      }
+    }
+  },
+  "version" : "1.0"
+}

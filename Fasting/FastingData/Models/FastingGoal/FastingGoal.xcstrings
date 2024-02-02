@@ -1,0 +1,186 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "custom description" : {
+      "comment" : "custom fasting description",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Don't be restricted by these presets. You can choose your own fasting goals that fit with your life style."
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Begränsa dig inte av dessa förinställningar. Du kan välja dina egna fasta mål som passar din livsstil."
+          }
+        }
+      }
+    },
+    "custom title" : {
+      "comment" : "custom fasting title",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Custom Fast"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Anpassad Fasta"
+          }
+        }
+      }
+    },
+    "fourteen description" : {
+      "comment" : "14 hour fasting description",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "This time restricted fast gives you a 10 hour eating window, with a 14 hour fast. Usually this involves a final meal at dinner and a late breakfast."
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Denna tidsbegränsade fasta ger dig ett 10-timmars ätfönster med en 14-timmars fasta. Vanligtvis innebär detta en sista måltid på kvällen och en sen frukost."
+          }
+        }
+      }
+    },
+    "fourteen title" : {
+      "comment" : "14 hour fasting title",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "14:10 Intermittent Fast"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "14:10 Intermittent Fasta"
+          }
+        }
+      }
+    },
+    "nineteen description" : {
+      "comment" : "19 hour fasting description",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "This fast is more restrictive only giving you a 5 hour eating window."
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Denna fasta är mer restriktiv och ger dig endast ett 5-timmars ätfönster."
+          }
+        }
+      }
+    },
+    "nineteen title" : {
+      "comment" : "19 hour fasting title",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "19:5 Intermittent Fast"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "19:5 Intermittent Fasta"
+          }
+        }
+      }
+    },
+    "sixteen description" : {
+      "comment" : "16 hour fasting description",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "This fast is pretty common. It gives you an 8 hour eating window (typically lunch and dinner) with a 16 hour fast."
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Denna fasta är ganska vanlig. Den ger dig ett 8-timmars ätfönster (vanligtvis lunch och middag) med en 16-timmars fasta."
+          }
+        }
+      }
+    },
+    "sixteen title" : {
+      "comment" : "16 hour fasting title",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "16:8 Intermittent Fast"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "16:8 Intermittent Fasta"
+          }
+        }
+      }
+    },
+    "twenty three description" : {
+      "comment" : "23 hour fasting description",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "This fast is known as the One Meal a Day fast. It has only a 1 hour eating window, typically enough for a single meal."
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Denna fasta kallas för En Måltid om Dagen-fasta. Den har endast ett 1-timmars ätfönster, vanligtvis tillräckligt för en enda måltid."
+          }
+        }
+      }
+    },
+    "twenty three title" : {
+      "comment" : "23 hour fasting title",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "23:1 Intermittent Fast"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "23:1 Intermittent Fasta"
+          }
+        }
+      }
+    }
+  },
+  "version" : "1.0"
+}

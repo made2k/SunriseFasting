@@ -56,11 +56,19 @@ public extension StringFormatter {
     let days = (interval / (3600 * 24)) % 365
     let years = (interval / (3600 * 24 * 365))
     
-    let yearValue: String = full ? "year" : "yr"
-    let dayValue: String = full ? "day" : "day"
-    let hourValue: String = full ? "hour" : "hr"
-    let minuteValue: String = full ? "minute" : "min"
-    let secondValue: String = full ? "second" : "sec"
+    let yearValue: String = full ?
+    String(localized: "year", comment: "Countdown element year") :
+    String(localized: "yr", comment: "Shortened countdown element year")
+    let dayValue: String = String(localized: "day", comment: "Countdown element day")
+    let hourValue: String = full ?
+    String(localized: "hour", comment: "Countdown element hour") :
+    String(localized: "hr", comment: "Shortened countdown element hr")
+    let minuteValue: String = full ?
+    String(localized: "minute", comment: "Countdown element minute") :
+    String(localized: "min", comment: "Shortened countdown element minute")
+    let secondValue: String = full ?
+    String(localized: "second", comment: "Countdown element second") :
+    String(localized: "sec", comment: "Shortened countdown element second")
     
     var elements: [String] = []
     
@@ -85,7 +93,7 @@ public extension StringFormatter {
     }
     
     return elements.joined(separator: " ")
-
+    
   }
   
 }
