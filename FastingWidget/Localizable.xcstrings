@@ -2,31 +2,98 @@
   "sourceLanguage" : "en",
   "strings" : {
     "(%@)" : {
-      "comment" : "Percentage value for time elapsed during a fast"
+      "comment" : "Percentage value for time elapsed during a fast",
+      "localizations" : {
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "(%@)"
+          }
+        }
+      }
     },
     "Completed" : {
-
+      "localizations" : {
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Slutförd"
+          }
+        }
+      }
     },
     "Elapsed" : {
-      "comment" : "Elapsed title followed by a percentage value"
+      "comment" : "Elapsed title followed by a percentage value",
+      "localizations" : {
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Förfluten tid"
+          }
+        }
+      }
     },
     "Fasting Widget" : {
-      "comment" : "Widget title"
+      "comment" : "Widget title",
+      "localizations" : {
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fasta Widget"
+          }
+        }
+      }
     },
     "Get Started" : {
-
+      "localizations" : {
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kom igång"
+          }
+        }
+      }
     },
     "Get Started!" : {
-
+      "localizations" : {
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kom igång!"
+          }
+        }
+      }
     },
     "Last Fast" : {
-
+      "localizations" : {
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Senaste Fasta"
+          }
+        }
+      }
     },
     "This displays information about your fasts." : {
-      "comment" : "Widget description"
+      "comment" : "Widget description",
+      "localizations" : {
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Detta visar information om dina fastor."
+          }
+        }
+      }
     },
     "Time Since Last Fast" : {
-
+      "localizations" : {
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tid sedan senaste fasta"
+          }
+        }
+      }
     }
   },
   "version" : "1.0"
