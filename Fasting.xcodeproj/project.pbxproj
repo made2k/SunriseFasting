@@ -67,6 +67,9 @@
 		922C1D45263A5EFA00F34AE9 /* SharedDataWatch.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 922C1D2F263A5EF900F34AE9 /* SharedDataWatch.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		923E717F2B2A2CD5007812E2 /* SharedDataWatch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 922C1D2F263A5EF900F34AE9 /* SharedDataWatch.framework */; };
 		923E71852B2A300D007812E2 /* WatchInactiveWidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 923E71842B2A300D007812E2 /* WatchInactiveWidgetView.swift */; };
+		924951F02B6DCA190020BCDC /* FastingIntents.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 924951F42B6DCA190020BCDC /* FastingIntents.intentdefinition */; settings = {ATTRIBUTES = (no_codegen, ); }; };
+		924951F12B6DCA190020BCDC /* FastingIntents.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 924951F42B6DCA190020BCDC /* FastingIntents.intentdefinition */; };
+		924951F22B6DCA190020BCDC /* FastingIntents.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 924951F42B6DCA190020BCDC /* FastingIntents.intentdefinition */; settings = {ATTRIBUTES = (no_codegen, ); }; };
 		9252544D26C95BDA002FCE2D /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9252544C26C95BDA002FCE2D /* NotificationManager.swift */; };
 		9254F9A0262FBAB300589377 /* FastingApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9254F99F262FBAB300589377 /* FastingApp.swift */; };
 		9254F9A4262FBAB300589377 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9254F9A3262FBAB300589377 /* Assets.xcassets */; };
@@ -127,7 +130,6 @@
 		928ED21A2631C72900F496F7 /* NumberTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 928ED2192631C72900F496F7 /* NumberTextField.swift */; };
 		92962025263CB7A3002F6AB0 /* ComplicationTemplateFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92962024263CB7A3002F6AB0 /* ComplicationTemplateFactory.swift */; };
 		92978B2526331D1400944D12 /* FastProgressUpdatingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92978B2426331D1400944D12 /* FastProgressUpdatingViewModel.swift */; };
-		929A6F38270292C7003927BD /* FastingIntents.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 929A6F36270292B9003927BD /* FastingIntents.intentdefinition */; settings = {ATTRIBUTES = (no_codegen, ); }; };
 		929C0420270A43F400D536E4 /* SharedDataWriter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929C041F270A43F400D536E4 /* SharedDataWriter.swift */; };
 		929C0421270A441E00D536E4 /* SharedData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92250A6A26371D1900DF1A87 /* SharedData.framework */; platformFilter = ios; };
 		929C3EBF28D9598700FD4F67 /* View+Keyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929C3EBE28D9598700FD4F67 /* View+Keyboard.swift */; };
@@ -151,7 +153,6 @@
 		92CEBAD52702A5E4005DEB4B /* IntentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92CEBAD42702A5E4005DEB4B /* IntentHandler.swift */; };
 		92CEBAD92702A5E4005DEB4B /* FastingIntents.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 92CEBAD12702A5E4005DEB4B /* FastingIntents.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		92CEBADD2702A5EE005DEB4B /* FastStorage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92DBCE252702A20300C0B9B1 /* FastStorage.framework */; platformFilter = ios; };
-		92CEBAE22702A5FF005DEB4B /* FastingIntents.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 929A6F36270292B9003927BD /* FastingIntents.intentdefinition */; settings = {ATTRIBUTES = (no_codegen, ); }; };
 		92CEBAE42702A623005DEB4B /* SiriDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92CEBAE32702A623005DEB4B /* SiriDataManager.swift */; };
 		92CEBAE62702A635005DEB4B /* StartFastIntentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92CEBAE52702A635005DEB4B /* StartFastIntentHandler.swift */; };
 		92D63981263CF37500081D3B /* GraphicCornerBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D63980263CF37500081D3B /* GraphicCornerBuilder.swift */; };
@@ -174,7 +175,6 @@
 		92DBCE282702A20300C0B9B1 /* FastStorage.h in Headers */ = {isa = PBXBuildFile; fileRef = 92DBCE272702A20300C0B9B1 /* FastStorage.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		92DBCE2B2702A20300C0B9B1 /* FastStorage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92DBCE252702A20300C0B9B1 /* FastStorage.framework */; };
 		92DBCE2C2702A20300C0B9B1 /* FastStorage.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 92DBCE252702A20300C0B9B1 /* FastStorage.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		92DBCE332702A24E00C0B9B1 /* FastingIntents.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 929A6F36270292B9003927BD /* FastingIntents.intentdefinition */; };
 		92EF04CE27036F5000D939C3 /* PersistenceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9254F9A8262FBAB300589377 /* PersistenceController.swift */; };
 		92EF04CF270373B000D939C3 /* Fasting.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9254F9AA262FBAB300589377 /* Fasting.xcdatamodeld */; };
 		92EF04D0270375F400D939C3 /* Fast+Properties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92534CDE2634752300D95681 /* Fast+Properties.swift */; };
@@ -476,6 +476,7 @@
 		923194DD2B29F52900790311 /* WatchFasting Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "WatchFasting Extension.entitlements"; sourceTree = "<group>"; };
 		9236BA3F263508AF0056EFDD /* Logger+Initialization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Logger+Initialization.swift"; sourceTree = "<group>"; };
 		923E71842B2A300D007812E2 /* WatchInactiveWidgetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchInactiveWidgetView.swift; sourceTree = "<group>"; };
+		924951F32B6DCA190020BCDC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; name = Base; path = Base.lproj/FastingIntents.intentdefinition; sourceTree = "<group>"; };
 		9252544C26C95BDA002FCE2D /* NotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
 		92534CDE2634752300D95681 /* Fast+Properties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Fast+Properties.swift"; sourceTree = "<group>"; };
 		9254F99C262FBAB300589377 /* Fasting.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Fasting.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -531,7 +532,6 @@
 		92962024263CB7A3002F6AB0 /* ComplicationTemplateFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicationTemplateFactory.swift; sourceTree = "<group>"; };
 		92978B2426331D1400944D12 /* FastProgressUpdatingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FastProgressUpdatingViewModel.swift; sourceTree = "<group>"; };
 		92978B2826331FD800944D12 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
-		929A6F36270292B9003927BD /* FastingIntents.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; path = FastingIntents.intentdefinition; sourceTree = "<group>"; };
 		929A6F3E27029470003927BD /* Intents.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Intents.framework; path = System/Library/Frameworks/Intents.framework; sourceTree = SDKROOT; };
 		929C041F270A43F400D536E4 /* SharedDataWriter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedDataWriter.swift; sourceTree = "<group>"; };
 		929C3EBE28D9598700FD4F67 /* View+Keyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Keyboard.swift"; sourceTree = "<group>"; };
@@ -740,7 +740,7 @@
 		9209B2002703F9BA0069715D /* Intents */ = {
 			isa = PBXGroup;
 			children = (
-				929A6F36270292B9003927BD /* FastingIntents.intentdefinition */,
+				924951F42B6DCA190020BCDC /* FastingIntents.intentdefinition */,
 			);
 			path = Intents;
 			sourceTree = "<group>";
@@ -1887,7 +1887,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = YES;
 				LastSwiftUpdateCheck = 1510;
-				LastUpgradeCheck = 1510;
+				LastUpgradeCheck = 1520;
 				TargetAttributes = {
 					92056C742B295F4000EAD329 = {
 						CreatedOnToolsVersion = 15.1;
@@ -2140,7 +2140,7 @@
 				92021AD026326D06006C00C1 /* AppModel+DataLoading.swift in Sources */,
 				92A974F62700DA2C00AA05A2 /* FastNotificationIdentifiers.swift in Sources */,
 				92B7398626323607002D5261 /* FastingGoal+Descriptors.swift in Sources */,
-				929A6F38270292C7003927BD /* FastingIntents.intentdefinition in Sources */,
+				924951F02B6DCA190020BCDC /* FastingIntents.intentdefinition in Sources */,
 				92FEC21928CD912E00904C59 /* Optional+String.swift in Sources */,
 				9225DD5126C883EC00BCF2C2 /* DocumentPicker.swift in Sources */,
 				922A9A942631167700CBC0EF /* DatePickerSelectionView.swift in Sources */,
@@ -2220,7 +2220,7 @@
 				92CEBAD52702A5E4005DEB4B /* IntentHandler.swift in Sources */,
 				92CEBAE42702A623005DEB4B /* SiriDataManager.swift in Sources */,
 				92DAB3022703D33200629B0C /* EndFastIntentHandler.swift in Sources */,
-				92CEBAE22702A5FF005DEB4B /* FastingIntents.intentdefinition in Sources */,
+				924951F22B6DCA190020BCDC /* FastingIntents.intentdefinition in Sources */,
 				92CEBAE62702A635005DEB4B /* StartFastIntentHandler.swift in Sources */,
 				92DAB3002703CDB200629B0C /* IntentError.swift in Sources */,
 			);
@@ -2251,7 +2251,7 @@
 				92EF04CF270373B000D939C3 /* Fasting.xcdatamodeld in Sources */,
 				92EF04CE27036F5000D939C3 /* PersistenceController.swift in Sources */,
 				9284D7F2270393E10055E106 /* PersistentHistoryObserver.swift in Sources */,
-				92DBCE332702A24E00C0B9B1 /* FastingIntents.intentdefinition in Sources */,
+				924951F12B6DCA190020BCDC /* FastingIntents.intentdefinition in Sources */,
 				9284D7FC2703A2C30055E106 /* UserDefaultKeys.swift in Sources */,
 				9209B2042703FB1D0069715D /* UserDefaults+TransactionTracking.swift in Sources */,
 				9284D8032703A3DA0055E106 /* FastingGoal+Codable.swift in Sources */,
@@ -2369,6 +2369,17 @@
 			targetProxy = 92EF04F82703774300D939C3 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		924951F42B6DCA190020BCDC /* FastingIntents.intentdefinition */ = {
+			isa = PBXVariantGroup;
+			children = (
+				924951F32B6DCA190020BCDC /* Base */,
+			);
+			name = FastingIntents.intentdefinition;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		92056C822B295F4100EAD329 /* Debug */ = {
@@ -2675,6 +2686,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -2740,6 +2752,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
