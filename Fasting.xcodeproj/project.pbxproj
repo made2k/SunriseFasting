@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		92001B022B6DCBD300B437FD /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 92978B2826331FD800944D12 /* Colors.xcassets */; };
 		9200956027CD501000134D8C /* MoodButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9200955F27CD501000134D8C /* MoodButton.swift */; };
 		9200EF3E264101DA00111355 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9200EF3D264101DA00111355 /* Colors.xcassets */; };
 		92021AD026326D06006C00C1 /* AppModel+DataLoading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92021ACF26326D06006C00C1 /* AppModel+DataLoading.swift */; };
@@ -48,7 +49,6 @@
 		92250A7D26371D4200DF1A87 /* SharedWidgetDataType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92250A7C26371D4200DF1A87 /* SharedWidgetDataType.swift */; };
 		92250A8C2637286300DF1A87 /* SharedData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92250A6A26371D1900DF1A87 /* SharedData.framework */; };
 		92250A9626372E3900DF1A87 /* ActiveWidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92250A9226372E3500DF1A87 /* ActiveWidgetView.swift */; };
-		9225DD4426C8583E00BCF2C2 /* Color+Custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9225DD4326C8583E00BCF2C2 /* Color+Custom.swift */; };
 		9225DD4726C8740900BCF2C2 /* ActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9225DD4626C8740900BCF2C2 /* ActivityView.swift */; };
 		9225DD4A26C8788400BCF2C2 /* ExportManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9225DD4926C8788400BCF2C2 /* ExportManager.swift */; };
 		9225DD4C26C87BEC00BCF2C2 /* ExportableFast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9225DD4B26C87BEC00BCF2C2 /* ExportableFast.swift */; };
@@ -91,8 +91,6 @@
 		92656F2626373CB200AD5F67 /* RingTipShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92656F2526373CB200AD5F67 /* RingTipShape.swift */; };
 		92656F2A26373CEF00AD5F67 /* RingBackgroundShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92656F2926373CEF00AD5F67 /* RingBackgroundShape.swift */; };
 		92656F3226373DAE00AD5F67 /* RingViewStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92656F3126373DAE00AD5F67 /* RingViewStyles.swift */; };
-		92656F3526373DF800AD5F67 /* Color+Custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92CC52FA26337BEC00D82E6C /* Color+Custom.swift */; };
-		92656F3A26373DFB00AD5F67 /* UIColor+Custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92CC52FC26337C1400D82E6C /* UIColor+Custom.swift */; };
 		92656F4626373E9A00AD5F67 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 92978B2826331FD800944D12 /* Colors.xcassets */; };
 		92656F4B26373FB900AD5F67 /* RingView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92656EF82637380000AD5F67 /* RingView.framework */; };
 		926B23A526331BB2000E3373 /* Fast+Preview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 926B23A426331BB2000E3373 /* Fast+Preview.swift */; };
@@ -451,7 +449,6 @@
 		92250A7826371D2B00DF1A87 /* SharedFastInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedFastInfo.swift; sourceTree = "<group>"; };
 		92250A7C26371D4200DF1A87 /* SharedWidgetDataType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedWidgetDataType.swift; sourceTree = "<group>"; };
 		92250A9226372E3500DF1A87 /* ActiveWidgetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveWidgetView.swift; sourceTree = "<group>"; };
-		9225DD4326C8583E00BCF2C2 /* Color+Custom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Custom.swift"; sourceTree = "<group>"; };
 		9225DD4626C8740900BCF2C2 /* ActivityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityView.swift; sourceTree = "<group>"; };
 		9225DD4926C8788400BCF2C2 /* ExportManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExportManager.swift; sourceTree = "<group>"; };
 		9225DD4B26C87BEC00BCF2C2 /* ExportableFast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExportableFast.swift; sourceTree = "<group>"; };
@@ -553,8 +550,6 @@
 		92B7398D26323D88002D5261 /* FastModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FastModel.swift; sourceTree = "<group>"; };
 		92B7399026323EB4002D5261 /* FastModel+Previewing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FastModel+Previewing.swift"; sourceTree = "<group>"; };
 		92B7399326323F73002D5261 /* Fast+Initialization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Fast+Initialization.swift"; sourceTree = "<group>"; };
-		92CC52FA26337BEC00D82E6C /* Color+Custom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Custom.swift"; sourceTree = "<group>"; };
-		92CC52FC26337C1400D82E6C /* UIColor+Custom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Custom.swift"; sourceTree = "<group>"; };
 		92CEBAD12702A5E4005DEB4B /* FastingIntents.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = FastingIntents.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		92CEBAD42702A5E4005DEB4B /* IntentHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntentHandler.swift; sourceTree = "<group>"; };
 		92CEBAD62702A5E4005DEB4B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -874,7 +869,6 @@
 		9225DD4226C8581200BCF2C2 /* Colors */ = {
 			isa = PBXGroup;
 			children = (
-				9225DD4326C8583E00BCF2C2 /* Color+Custom.swift */,
 				9212D07628CD66F3009EA509 /* Color+UIColor.swift */,
 			);
 			path = Colors;
@@ -1092,7 +1086,6 @@
 		92656F1D26373BFA00AD5F67 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				92CC52F926337BDC00D82E6C /* Colors */,
 				9260D5D8263521D3003B2F3D /* Comparable+Clamp.swift */,
 			);
 			path = Extensions;
@@ -1387,15 +1380,6 @@
 				92792B432633984B00ECF89F /* HomeTabView.swift */,
 			);
 			path = HomeTab;
-			sourceTree = "<group>";
-		};
-		92CC52F926337BDC00D82E6C /* Colors */ = {
-			isa = PBXGroup;
-			children = (
-				92CC52FA26337BEC00D82E6C /* Color+Custom.swift */,
-				92CC52FC26337C1400D82E6C /* UIColor+Custom.swift */,
-			);
-			path = Colors;
 			sourceTree = "<group>";
 		};
 		92CEBAD32702A5E4005DEB4B /* FastingIntents */ = {
@@ -2021,6 +2005,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				92001B022B6DCBD300B437FD /* Colors.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2129,7 +2114,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				9225DD4A26C8788400BCF2C2 /* ExportManager.swift in Sources */,
-				9225DD4426C8583E00BCF2C2 /* Color+Custom.swift in Sources */,
 				92A974F82700DB4200AA05A2 /* NotificationHandler.swift in Sources */,
 				9278B7F6262FC01A00893C7D /* ActiveFastHomeView.swift in Sources */,
 				92A8ED1F2630D2B700BE00F0 /* StartTimeInfoView.swift in Sources */,
@@ -2199,10 +2183,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				92656F3526373DF800AD5F67 /* Color+Custom.swift in Sources */,
 				92656F0C263738BC00AD5F67 /* Comparable+Clamp.swift in Sources */,
 				92656F2226373C4F00AD5F67 /* RingShape.swift in Sources */,
-				92656F3A26373DFB00AD5F67 /* UIColor+Custom.swift in Sources */,
 				92656F1826373BB800AD5F67 /* ConstantUpdater.swift in Sources */,
 				92656F2626373CB200AD5F67 /* RingTipShape.swift in Sources */,
 				92656F092637383A00AD5F67 /* ProgressUpdater.swift in Sources */,
@@ -2686,6 +2668,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
@@ -2752,6 +2735,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
